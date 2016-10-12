@@ -1,3 +1,3 @@
 #WDI 62 X-Files Repository
 
-![xfiles.jpg](xfiles)
+![xfiles.jpg](xfiles.jpg)
