@@ -1,101 +1,205 @@
-![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+![HACKING THE SYSTEM](https://media.giphy.com/media/eCqFYAVjjDksg/giphy.gif)
 
-# Hit the Ground Running with HTML and CSS
+# Javascript Basics Check In
 
-**Welcome to your first morning exercise!**
+Let's take a swing and try some fundamental things you might have seen in the pre-work!
 
-Morning exercises are from 9:00-10:00am. Today you will work on the assignment until 9:45. We will use the rest of the time to go over questions.
-
-## Objectives
-- Use HTML to construct a simple web page
-- Use CSS to style our HTML elements
-- Begin to use documentation
+Often in programming, you will come across a situation where you're looking at someone else's code and you need to make heads or tails of it (like when we're instructing!). This exercise will gauge your ability to understand code you haven't written!
 
 ## Setup
-This morning you will be creating a simple HTML/CSS web page. To get started, follow the set up instructions below. You will want to use Sublime Text to edit the files and Chrome to view the web page in the browser. Refreshing the page in Chrome will show changes made to the HTML and CSS files.
 
-1. Create new index.html and style.css files
+For each question, take a moment to answer without using any code - you can jot down the answer in your notes or in the ANSWER HERE blocks in this markdown file.
 
-2. Link your HTML and CSS files in the head of index.html
+Afterwards, feel free to run ` node starter.js ` to see if your answer is correct - you'll need to un-comment each part of ` starter.js ` first.
 
-## Assignment
-You will be building a simple web page using HTML and CSS. We will do our styling in a the CSS file and use ids and classes to select our HTML elements.
+If you get stuck on something, just move onto the next problem.
 
-1. In the body of your html file create a div with the id "container".
+## Completion
 
-2. In your CSS file set the styling of the container div to:
-  - give the div a white background color
-  - make the div take up the full width and height of the screen
-  - give it a solid red, 3px border
+There are 10 questions - complete each one without using any coding! Feel free to work by yourselves or with a partner.
 
-3. Now add a header text (h1 element) with the text "WDI X-Files"
+## Question 1
 
-4. Add the class "title" to the h1 and use CSS to give it the font "helvetica", a red font color, and center it in the container div.
+```javascript
+var a = 5;
+var b = 4;
+a = b;
+console.log('Question 1: a = ',a);
+console.log('Question 1: b = ',b);
+```
 
-5. Under the h1 and still inside the container div add a paragraph tag with the class "content" and your name as the text. Add the following styles:
-  - font-family: geneva
-  - color: red
+At the end of this program, what are the values of a and b? Try to explain, in plain English, how you got your answer for each one.
 
-6. Next create an image tag with the src pointing to an image from the X-Files and give it the class name "image". Style the image so that the maximum width is 200px.
+```
+ANSWER HERE
+```
 
-7. Last, style the p and img elements so that they are displayed side by side in the browser.
+## Question 2
 
-## Bonus
-Type out your answers in a new file called "answers.md"
-1. What is the difference between a CSS class and id?
+```javascript
+var e = 3;
+var f = 9;
+var g = e + f;
+f = g;
+e = 5;
+console.log('Question 2: e = ',e);
+console.log('Question 2: f = ',f);
+console.log('Question 2: g = ',g);
+```
 
-2. Which has a larger font size: h2 or h4?
+At the end of this program, what are the values of e, f, and g? Try to explain, in plain English, how you got your answer for each one.
 
-3. How would you make the div border appear dashed instead of solid?
+```
+ANSWER HERE
+```
 
-4. How would you comment out a line of CSS? What about HTML?
+## Question 3
 
-5. What does the CSS selector * do?
+```javascript
+var weather = "cloudy"
+weather === "cloudy"
+console.log('Question 3: weather = ',weather);
+console.log('Question 3: weather === "cloudy" returns ',weather==="cloudy");
+```
 
-6. Explain the differences between inline and block elements.
+What is the difference between the first two statements? Explain your answer.
 
-7. What is the difference between article and section elements? How are they different from div elements?
+```
+ANSWER HERE
+```
 
-8. Explain the CSS property 'clear' and why it is useful when using the 'float' property.
+## Question 4
 
-9. What do HTML and CSS stand for?
+```javascript
+var x = 2;
 
-## Tips
-1. Google is your friend
-2. Work with each other
-3. Using online resources and documentation is an important part of learning to program. Click [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) for a link to MDN, a well respected source for documentation.
-4. Use your resources first, but please ask for help if you are truly stuck.
-5. If you are having trouble setting up the HTML or CSS files, check out the following examples.
+if(x === 3) {
+  console.log("In Question 4, the sushi is tasty!");
+} else if (x > 0) {
+  console.log("In Question 4, the sushi is cheap and good for the value");
+} else {
+  console.log("In Question 4, we couldn't find any sushi!")
+}
+```
 
-In index.html:
+Imagine that you run this code. What sushi-based statement would be the output? Explain your answer.
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>Simple Web Page</title>
-      <link rel="stylesheet" type="text/css" href="style.css" />
-    </head>
-    <body>
+```
+ANSWER HERE
+```
 
-      <div id="container">
-        <p class="content">Jared</p>
-        <img class="image" src="some_url" />
-      </div>
+## Question 5
 
-    </body>
-    </html>
-In style.css:
-    #container {
-      border: 1px solid black;
-    }
+```javascript
+  var q = "4" + 10;
+  console.log("Question 5: q = ",q);
+```
 
-    .title {
-      font-family: halvetica;
-    }
+What are the two datatypes being added in the definition of ` q `? What would happen here and why?
 
-## Suggested Resources
-- [HTML Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
-- [CSS Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
-- [Stack Overflow](http://stackoverflow.com/)
-- Prework
-- Google
+```
+ANSWER HERE
+```
+
+## Question 6
+
+```javascript
+ var turtles = ["Leonardo", "Raphael", "Michelangelo", "Donatello"];
+ console.log('Question 6: turtles[0] = ',turtles[0]);
+ console.log('Question 6: turtles[1] = ',turtles[1]);
+ console.log('Question 6: turtles[2] = ',turtles[2]);
+ console.log('Question 6: turtles[3] = ',turtles[3]);
+ console.log('Question 6: turtles[4] = ',turtles[4]);
+```
+
+What is the index value of "Michelangelo"?
+
+```
+ANSWER HERE
+```
+
+## Question 7
+
+```javascript
+var turtles = ["Leonardo", "Raphael", "Michelangelo", "Donatello"]
+
+for(i = 0; i < 2; i++){
+  console.log('Question 7: turtles[' + i + '] = ',turtles[i]);
+}
+```
+
+* Examine the above code and imagine that you run it.
+* What do you expect the outcome will be? Explain your answer.
+* Would you make any changes to this code?
+
+```
+ANSWER HERE
+```
+
+## Question 8
+
+```javascript
+var turtles = ["Leonardo", "Raphael", "Michelangelo", "Donatello"]
+
+ turtles.forEach(function(turtle) {
+   console.log("Question 8:", turtle + "!");
+ });
+```
+
+ * Examine the above code and imagine that you run it.
+ * What do you expect the outcome will be? Explain your answer.
+ * Why would you use a forEach loop instead of the for loop in question 7?
+
+## Question 9
+
+```javascript
+var turtles = {};
+
+turtles.names = ["Leonardo", "Raphael", "Michelangelo", "Donatello"];
+turtles.group = "Ninga Turtles";
+
+turtles.message = turtles.names.map(function(turtle) {
+  return turtle + " is one of the " + turtles.group;
+})
+
+console.log("Question 9:", turtles.names);
+console.log("Question 9:", turtles.message);
+
+```
+
+* Examine the above code and imagine that you run it.
+* What do you expect the outcome will be? Explain your answer.
+* What is different between .forEach and .map? When would you want to use .map?
+
+## Question 10
+``` javascript
+var turtles = {
+  leonardo = {
+    name: "Leonardo",
+    color: "blue",
+    weapon: "katanas",
+    named_after: "Leonardo da Vinci"
+  }
+}
+
+turtles.donatello = {};
+turtles.donatello.name= "Donatello";
+turtles.donatello.color= "purple";
+turtles.donatello.weapon= "staff";
+turtles.donatello.named_after= "Donato di Niccolò di Betto Bardi";
+
+turtles["raphael"] = {};
+turtles["raphael"]["name"] = "Raphael";
+turtles["raphael"]["color"] = "red";
+turtles["raphael"]["weapon "]= "twin sai";
+turtles["raphael"]["named_after"] = "Raffaello Sanzio da Urbino";
+
+console.log("Question 10":, turtles.raphael.name);
+console.log("Question 10:", turtles["donatello"]);
+console.log("Question 10:", turtles)
+```
+
+* What will be the output of the console.logs?
+* How would you console.log who Donatello is named after?
+* Which character in the turtle object was created using bracket notation? What is the difference between dot and bracket notation?
+* How would you add Michelangelo to the turtles object? Give him the color orange, nunchucks for weapon, and note that he is named after Michelangelo Buonarroti.
