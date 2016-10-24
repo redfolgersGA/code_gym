@@ -3,7 +3,7 @@ console.log("script loaded");
 
 var degreesInFahrenheit = prompt("give temperature Fahrenheit and I will convert it to Celsius");
 
-var degreesInCelsius = ((degreesInFahrenheit - 32) * .555 / 9);
+var degreesInCelsius = ((degreesInFahrenheit - 32) * 5 / 9);
 
 alert(degreesInCelsius);
 
