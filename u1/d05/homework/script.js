@@ -17,7 +17,7 @@ var firstSide = prompt("Ok I'm a genius. To ascertain the length of the third si
 
 var secondSide = prompt("How long is the second side friend?");
 
-var thirdSide = Math.pow(firstSide, 2) + Math.pow(secondSide, 2);
+var thirdSide = Math.sqrt(Math.pow(firstSide, 2) + Math.pow(secondSide, 2));
 
 alert(thirdSide);
 
