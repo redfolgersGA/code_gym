@@ -1,6 +1,6 @@
-"use strict";
+//"use strict";
 
-(function(){
+/*$("document").ready(function(){*/
 
 	var pokemon = [
 		['Voltorb','images/voltorb.png',100],
@@ -16,36 +16,103 @@
 		['Gastly','images/gastly.png',50]
 	];
 
-	var chooseEnemy = function(){
-	//picks random enemy from pokemon array. populates initial page with their data.
-	}
-	var enemy = chooseEnemy();
+/* global variables that can be called in any functions*/
+
+var $enemyimg = $("#enemy_img");
+var $enemyname = $("#enemy .name");
+var $enemyhealth = $("#enemy .health");
+var $textbox = $("#status_text");
+
+var chooseEnemy = function() {
+
+var pokemonIndex = Math.floor(Math.random()*(pokemon.length);
+var selectEnemy = pokemon[pokemonIndex]
+var pickName = selectEnemy[0]
+var pickImage = selectEnemy[1]
+var pickEnemHealth = selectEnemy[2]
 
 
-	var doHeal = function(){
-	//heals your character with a random ammount from 25-50
-	}
 
-	var enemyAttack = function(){
-	//10% chance to miss.
-	//90% chance to do between 5-30 damage.
-	//after completed, if you aren't dead... buttons reappear.
-	//check if your health <= 0.
-	}
+$enemyname.text(pickName" ");
+$($enemyimg).attr('src', battleEnemy[1]);
+$($enemyhealth).text("Health: " + battleEnemy[2]);
+$($textbox).text("A wild " + battleEnemy[0] + " appeared!");
+return battleEnemy;
 
-	var youAttack = function(){
-	//10% chance to miss.
-	//90% chance to do between 5-30 damage.
-	//after completed, says 'enemy will attack in 3 seconds' (buttons hidden during this time)
-	//check if enemy health is <= 0.
-	}
+};
 
-	var addEventListeners = function(){
-	//add the click events on the attak and heal buttons.
-	}
+var enemy = chooseEnemy ();
+console.log(enemy);
 
-	$(document).ready(function(){
-		addEventListeners();
-	})
+//document.getElementById('enemy_img').innerHTML = pokemon[chooseEnemy];
 
-})();
+
+
+
+/*$($'pokemon').each( function (index)) {
+
+var enemyPic = $($chooseEnemy).val()
+
+ $("#enemy_img").val(enemyPic);
+});*/
+
+$("#attack_btn").click(function() {
+  $(this).hide();})/*it hides forever but you have to make it hide for 3 seconds then reappear*/
+
+$("#enemy_img").click(function() {
+  var enemyPic = $(this).val("chooseEnemy");
+})
+
+
+
+
+
+
+
+
+/*if(pokemon === [0]) {
+  alert("Wild Voltorb appeared!");
+}*/
+
+/*$("#attack_btn").click(function(event) {
+   alert("Your Attack was super effective!");
+   });
+
+$("#heal_btn").click(function(event) {
+  alert("Purple Drink heals Pikachu...'PIKACHU!!!'");
+});*/
+
+      /*if === true) {
+      console.log("this is clicked yes")*/
+
+
+
+
+
+
+/*var enemyDetails = arr.push(enemyRandNumber); //pushed chooseenemy number into an array
+var enemyName = enemyDetails[0];
+var enemyLook = enemyDetails[1];
+var enemyHealth = enemyDetails[2];
+console.log(enemyDetails)
+
+var $enemy = $('<div class="enemyPoke">+enemyName+'</div>'')
+
+
+};*/
+
+/*You can attack or heal by clicking the buttons.
+
+/*$("#attack_btn").click(function(event) {
+   console.log("clicked: " +event.target);
+   });
+
+      if("#attack_btn.click" === true) {
+      console.log("this is clicked yes")*/
+
+
+
+
+
+
+

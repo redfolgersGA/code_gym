@@ -10,6 +10,14 @@ jQuery(function() {
     var duck = $('<div class="duck"></div>');
     body.append(duck);
 
+    duck.click(function(el){
+      $(this).addClass('shot');
+
+      setTimeout(function(){
+        duck.remove();
+      }, 1000)
+    })
+
     // 2. Toggles the "flap" class on the duck every 250 ms (1/4 second)
     setInterval(function() {
       duck.toggleClass('flap');
@@ -29,6 +37,12 @@ jQuery(function() {
     return duck;
   }
 
+  function checkForWinner(){
+    if($('.duck').length ===0){
+      alert('YOU WIN!');
+    }
+  }
+
   // 7. Creates 5 ducks
   for(var i=0; i<5; i++) {
     createDuck();
@@ -38,7 +52,9 @@ jQuery(function() {
 
   // 11. BOOM. Attach a "click" handler that adds the "shot" class to
   //     the duck when you click on it!
-
+$('.shot').click(function() {
+ createDuck().append('duck')
+});
   // 12. After a duck has been clicked on, remove it from the DOM after
   //     a short delay (1 second)
 

@@ -2,8 +2,12 @@ jQuery(function() {
 
   var body = $('body');
 
+
+  var createDuck = function() {
   // 1. Creates a <div> with the class "duck" named "duck"
   var duck = $('<div class="duck"></div>');
+  duck.css('top', Math.random() * window.innerHeight);
+  duck.css('left', Math.random() * window.innerWidth);
   body.append(duck);
 
   // 2. Toggles the "flap" class on the duck every 250 ms (1/4 second)
@@ -12,13 +16,21 @@ jQuery(function() {
   }, 250)
 
   // 3. Moves the duck using CSS "top" and "left"
-  duck.css("top", 250);
-  duck.css("left", 250);
 
   // 4. Moves the duck to a different location after 1 second
-  setTimeout(function() {
-    duck.css("left", 500);
+  setInterval(function(){
+    duck.css('top', Math.random() * window.innerHeight);
+    duck.css('left', Math.random() * window.innerWidth);
   }, 1000)
+
+  return duck;
+};
+
+for(var i =0; i <5; i++){
+   createDuck();
+}
+
+
 
   // 5. ------ Here we go! ------
 
