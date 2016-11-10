@@ -26,11 +26,5 @@ Part 1: Build HTML & CSS copy
 
 Part 2: Hit API at https://randomuser.me with AJAX and console.log response 
 
-Part 3: On page load, fill in dynamic information
-
-Part 4: Button to trigger AJAX call and update information on the DOM
-
-Part 5: Refactor - Seperation of Concerns
-
 
 
