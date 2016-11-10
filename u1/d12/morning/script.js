@@ -55,6 +55,20 @@ $(document).ready(function() {
 
   console.log('script loaded');
 
-  // your code here
-  
+var $inputBox = $("input");
+
+$("input").submit(function( event) {
+  console.log(input);
+});
+
+
+
+
+
+
+
+
+
+
+
 });
