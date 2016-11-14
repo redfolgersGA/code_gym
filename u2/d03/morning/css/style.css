@@ -1,0 +1,22 @@
+header {
+  background-color: black;
+  width: 70%;
+  height: 100%;
+  padding: 60px 0;
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+
+
+
+
+.nav {
+  display: inline;
+
+}
+
+nav {
+  margin: 0 auto;
+}
