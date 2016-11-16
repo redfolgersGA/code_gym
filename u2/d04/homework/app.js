@@ -12,4 +12,8 @@ var getHTML = function(res){
 
 }
 
-
+var getCSS = function(res){
+  res.writeHead(200, {"Content-type": "text/css"});
+  var css = fs.readFileSync(__dirname + "/public/style.css");
+  res.end(css);
+}
