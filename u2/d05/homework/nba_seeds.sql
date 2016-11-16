@@ -4,9 +4,6 @@ DROP TABLE IF EXISTS players;
 -- add create table here
 
 
--- add insert player here
-
-
 -- this needs to include YOUR PATH!! YOURS! NOT THE PATH LISTED BELOW!
 COPY players
   (name, age, team, games, points)
