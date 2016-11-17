@@ -356,6 +356,14 @@ ourFilter(isOdd, [1, 2, 3, 4]);
 
 ```
 
+As an exercise, try writing a function 'remove' that is the reverse of `filter`; that is, it _removes_ all the elements `filter` keeps. So:
+
+```javascript
+remove(isOdd, [1, 2, 3, 4]);
+// result:
+// [2, 4]
+
+```
 
 # reduce
 
