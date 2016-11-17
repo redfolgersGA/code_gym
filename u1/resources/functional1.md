@@ -1,5 +1,7 @@
 # Basic Array Methods and Functional Programming
 
+This document provides a preliminary introduction to functional programming, and three important functional array methods: `map`, `filter`, and `reduce`.
+
 ## Imperative and Functional Programming Styles
 
 A distinction is often drawn between __imperative__ and __declarative__ styles of programming. This distinction is often explained as the difference between saying _how_ to do something (imperative), and _what_ it is that one wants done (declarative). In many cases the line between "what" and "how" is both fuzzy and prone to shift as computers become more complex and powerful. Object-oriented programming is usually considered an example of imperative programming, functional programming is usually considered an example of declarative programming. On a practical level, the most important difference between the two styles is their varying approach to _change_.
@@ -201,7 +203,7 @@ var ourMap = function(f, arr){
   var resultArray = []; // initialize a new array, to be returned at the end of this function
   for(var i = 0; i < arr.length; i++){ // loop over all elements of arr
     var arrElement = arr[i]; // get the element at index i of arr
-    var processedElement = f(arrElement); // call f on it to get some result
+    var processedElement = f(arrElement); // **call f on it to get some result**
     resultArray.push(processedElement); // push the result to the end of the new array
   }
   return resultArray; // return the new array
