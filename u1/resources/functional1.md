@@ -375,7 +375,7 @@ var sum = 0;
 for(var i = 0; i < arr.length; i++){
   sum += arr[i];
 }
-console.log(sum);
+// sum is now 36
 ```
 
 In this example, we iterate through `arr`, adding the value of each element to `sum` at each step, then printing out the result.
@@ -392,7 +392,7 @@ for(var i = 0; i < arr.length; i++){
     greatest = arr[i];
   }
 }
-console.log(greatest);
+// greatest is now 16
 ```
 
 Here we start with `greatest` set to a value guaranteed to be less than every other possible value, then move over every element in the array `arr`, setting `greatest` to that element if it is greater than the current value of `greatest`. When we're done looping over every element, `greatest` will be set to the greatest of these values.
@@ -427,16 +427,15 @@ var sum = 0;
 for(var i = 0; i < arr.length; i++){
   sum += arr[i];
 }
-console.log(sum);
+// sum is now 36
 
 // new way, using reduce:
 var arr = [3, 16, 8, 9];
-console.log(
-  arr.reduce(
+arr.reduce(
     function(sum, el){return sum + el;}, // reducing function
     0 // initial value
-  )
 );
+// result: 36
 ```
 
 The result is the same, but we avoid writing a `for` loop. The reducing function in this case takes two arguments, `sum` and `el`. `sum` is roughly the same as `sum` in the first way: a value that we keep adding to as we move over the array. `el` is set to the element of the array at each step. The reducing function returns the value we'll pass in as the value of `sum` on the _next_ step. If we're at the end of the array. The result of the whole `reduce` invocation (or "reduction", as we sometimes say) is just the last return value of the reducing function.
@@ -516,7 +515,7 @@ arr.reduce(f, 0);
 
 ```
 
-Like `map` and `filter`, `reduce` is implemented in Javascript as a method of `Array`s. We can easily implement it ourselves, however. Notice how the implementation below implementation resembles the programs for summing the elements of an array, and finding the greatest element.
+Like `map` and `filter`, `reduce` is implemented in Javascript as a method of `Array`s. We can easily implement it ourselves, however. Notice how the implementation below resembles the programs for summing the elements of an array, and finding the greatest element.
 
 ```javascript
 
@@ -530,7 +529,7 @@ var ourReduce = function(reducingFunction, initialValue, arr){
 };
 ```
 
-With `ourReduce` defined as above, we can now use it to find the sum of elements in an array and the greatest element in an array.
+We can now use `ourReduce` to find the sum of elements in an array, and the greatest element in an array.
 
 Sum:
 
@@ -565,9 +564,10 @@ ourReduce(
   function(greatest, el){return greatest < el ? el : greatest;},
   -Infinity,
   arr);
+// result: 16
 ```
 
-We can even implement `map` and `filter`. Again, pay attention to how the reducing function resembles the body of the loop in `ourMap` and `ourFilter`.
+We can even implement `map` and `filter` using `ourReduce` (or `reduce`). Again, pay attention to how the reducing function resembles the body of the loop in `ourMap` and `ourFilter`.
 
 Map:
 
@@ -608,6 +608,7 @@ Filter:
 
 ```javascript
 
+// we can use ourReduce to get filter-like effects:
 var arr = [3, 16, 8, 9];
 ourReduce(
   function(arr2, el){
