@@ -334,7 +334,28 @@ biomes
 // []
 ```
 
-As an exercise, try writing your own implementation of `filter`, as we wrote our own implementation of `map` above.
+As with `map`, we can implement `filter` ourselves:
+
+```javascript
+
+var ourFilter = function(pred, arr){
+  var resultArray = []; // initialize a new array, to be returned at the end of this function
+  for(var i = 0; i < arr.length; i++){ // loop over all elements of arr
+    var arrElement = arr[i]; // get the element at index i of arr
+    if(pred(arrElement)){ // if pred(arrElement) returns true...
+      resultArray.push(arrElement); // push arrElement to the end of the new array
+    }
+  }
+  return resultArray; // return the new array.
+};
+
+
+ourFilter(isOdd, [1, 2, 3, 4]);
+// result:
+// [1, 3]
+
+```
+
 
 # reduce
 
