@@ -492,25 +492,29 @@ Another way to look at this is as a series of nested invocations of our reducing
 
 var arr = [3, 16, 8, 9];
 
-((((0 + arr[0]) + arr[1]) + arr[2]) + arr[3])
+((((0 + arr[0]) + arr[1]) + arr[2]) + arr[3]);
 // result: 36
-
+  
 // or, equivalently:
-var f = function(sum, el){
+
+var plus = function(sum, el){
   return sum + el;  
 };
-f(
-  f(
-    f(
-      f(0,
-        arr[0]),
+
+plus(
+  plus(
+    plus(
+      plus(0,
+           arr[0]),
       arr[1]),
     arr[2]),
   arr[3]);
 // result: 36
 
 // or, equivalently:
-arr.reduce(f, 0);
+
+arr.reduce(plus, 0);
+
 // result: 36
 
 ```
