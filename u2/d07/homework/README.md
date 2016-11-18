@@ -96,7 +96,7 @@ Working in your `/homework`directory, we will be continuing where we left off in
 No files are provided for you. You will need add the directories `db`, `views`, and `public`.
 The **db** directory will hold your schema, queries, and seed files. You will also need to create a **public** directory that stores your static css file, and a **views** directory for your views!
 
-Make sure to include an **app.js** as your entry point. You will need to run npm init, set up your package.json, install the necessary npm packages ([mustache](https://mustache.github.io/), [express](http://expressjs.com/en/guide/routing.html), [pg promise](https://github.com/vitaly-t/pg-promise), build out your app.js, and make sure your html and css are correctly linked.
+Make sure to include an **app.js** as your entry point. You will need to run npm init, set up your package.json, install the necessary npm packages ([mustache](https://mustache.github.io/), [express](http://expressjs.com/en/guide/routing.html), [pg promise](https://github.com/vitaly-t/pg-promise)), build out your app.js, and make sure your html and css are correctly linked.
 
 The application should have at least the following routes in app.js:
 
