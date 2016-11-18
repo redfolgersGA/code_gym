@@ -125,4 +125,5 @@ Add the following routes `Hint` - Checkout Join Tables
 
 ### Super Easy EXTRA Shiny Happy Bonus!!!
 ![kawaii japanese](http://blog.modes4u.com/images/A-Unique-Christmas-Gift-Idea-for-school-classes/sticker-sack-cats-Japan-kawaii-133029-1.jpg)
+
 Get ahead of the game and spend some time learning about the concepts of [MVC Architecture](https://developer.chrome.com/apps/app_frameworks#mvc). 
