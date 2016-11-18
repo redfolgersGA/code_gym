@@ -2,7 +2,7 @@
 
 # Morning Exercise - SQL 64
 
-Take the following schema for a movies and theaters SQL database
+Take the following schema for a N64 SQL database
 
 ``` SQL
  CREATE TABLE Games (
