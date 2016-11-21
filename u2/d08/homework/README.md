@@ -12,7 +12,7 @@ As a member of Dumbledore's Army it's up to YOU to set up some ingenious Muggle 
 
 - Practicing setting up databases
 - Learning to set up test databases and testing commands within them
-- Practicing integrating SQL into Express apps using the PG-Promise gem
+- Practicing integrating SQL into Express apps using the PG-Promise package 
 - Practicing displaying templated data in RESTful routes
 - Learning to implement CRUD apps in Express
 - Learning to use method overrides to implement patch and delete HTTP actions
@@ -43,7 +43,7 @@ Then seed the database by running:
 
 2) Create a node app that uses Express, Mustache, Mustache-Express and PG-Promise
 
-In your app.js file make sure to initialize a database connection using the 'pg-promise' gem.
+In your app.js file make sure to initialize a database connection using the 'pg-promise' package.
 
 3) Create a `views` folder that will hold all of your html templates. Inside of `views` you should have 3 folders:
  - home/
