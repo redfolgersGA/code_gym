@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS cohorts;
+DROP TABLE IF EXISTS monsters;
 DROP TABLE IF EXISTS students;
 
 CREATE TABLE monsters(
