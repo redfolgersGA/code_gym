@@ -1,0 +1,17 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "![Bryan Mytko](mytko_reality.jpg) > “As soon as the land of any country has all become private property, > the landlords, like all other men, love to reap where they never sowed, > and demand a rent even for its natural produce. ”",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mustache": "^2.3.0",
+    "nodemon": "^1.11.0",
+    "pg-promise": "^5.4.2"
+  }
+}

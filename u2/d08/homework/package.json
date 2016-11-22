@@ -1,12 +1,14 @@
 {
-  "name": "beer_list",
+  "name": "homework",
   "version": "1.0.0",
-  "description": "![beer](http://i.imgur.com/EDTZyFL.jpg)",
-  "main": "app.js",
+  "description": "![:image](http://media.tumblr.com/tumblr_lkcdbhvjCH1qeg89k.png)",
+  "main": "index.js",
   "dependencies": {
     "express": "^4.14.0",
+    "mustache": "^2.3.0",
     "mustache-express": "^1.2.2",
-    "pg-promise": "^5.3.5"
+    "nodemon": "^1.11.0",
+    "pg-promise": "^5.4.3"
   },
   "devDependencies": {},
   "scripts": {
