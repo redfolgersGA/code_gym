@@ -1,0 +1,15 @@
+h1 {
+  color: red;
+}
+
+.shake-crazy {
+
+  background-image: url("http://i.imgur.com/cfk2wfc.gif");
+  background-repeat:  no-repeat;
+  background-position: 9px -1px;
+  height: 144px;
+  width: 90px;
+  left: 0px;
+  position: absolute;
+
+

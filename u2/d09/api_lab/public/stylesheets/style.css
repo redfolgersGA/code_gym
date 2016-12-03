@@ -1,0 +1,50 @@
+body {
+  font-family: Ablefont, Irish Grover;
+  text-align: center;
+  font-color: #7C2A30;
+}
+
+nav {
+  padding: 15px;
+  background-color: #D8AE48;
+  border-radius: 40px 0 40px 0;
+}
+
+h1 {
+  font-size: 50px;
+  color: pink;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+.species {
+
+  display: inline-block;
+  background-color: #D8AE48;
+  width: 350px;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border: 10px solid black;
+  border-radius: 10%;
+}
+
+.house {
+  display: inline-block;
+}
+
+.house img {
+  display: block;
+}
+
+img {
+  border-radius: 40%;
+  height: 300px;
+}
+
+.roster{
+  width: 100%;
+  margin: 0 auto;
+}
