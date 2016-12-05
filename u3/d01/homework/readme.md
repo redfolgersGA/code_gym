@@ -141,7 +141,7 @@ students = [
 ```
 ### Part 5 - I Know Where You Code
 
-Filname: `githubs.rb`
+Filname: `cohorts.rb`
 
 1. List the students in the array above by printing their names to the terminal.
 2. Print out the students names in all caps.
