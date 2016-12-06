@@ -5,7 +5,7 @@
 
 
 ## Assignment
-For this weekend's homework you will be building a small Sinatra app from scratch. For each route, the response should be some html text from an `erb` file. Try to reuse `erb` files if you can, by using `instance variables` from the `server.rb` file Be sure to set up your Sinatra app correctly, and to include the `gems` you need.
+For this homework you will be building a small Sinatra app from scratch. For each route, the response should be some html text from an `erb` file. Try to reuse `erb` files if you can, by using `instance variables` from the `server.rb` file Be sure to set up your Sinatra app correctly, and to include the `gems` you need.
 
 ## Completion
 Completion is all problems for this assignment.
