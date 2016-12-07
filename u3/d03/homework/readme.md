@@ -1,255 +1,68 @@
-# The Apartment Complex
+## WDI Pick-Me-Up
 
-![:image](http://i.giphy.com/6KJBlxVTRGrjq.gif)
+![A sample compliment](imgs/compliment.png)
 
-## Instructions
+You have been tasked with creating your own version of [Emergency Compliment](http://emergencycompliment.com/), except with  WDI-themed compliments. When a user visits the site, they should be greeted with a WDI-themed compliment to cheer them up.
 
-### The Problem
+### Learning Objectives
 
- Dražen Morley, C.E.O. of Pangolins Realty, has recently heard of Ruby and it's object-oriented design. He's interested in re-modeling his database of NYC real estate after Ruby classes. Typical clients... Make your client happy and model this apartment complex using classes in Ruby!
+  - Practice serving static & templated content using Sinatra
 
 ### Setup
+The file directory structure has been provided for you; however, all or most of these files are mostly empty. Look back to your notes from Thursday to see what belongs in each file (hint: [Magnum](https://github.com/ga-students/magnum/tree/master/u3_the_server/d29_sinatra/instructor/hello_world),[Blue Steel](https://github.com/ga-students/blue_steel/tree/master/u3_the_server/d29_sinatra/instructor/hello_world)).
 
-1. Do the work in your `student/homework` folder for today.
-1. Save your changes using `git` often! At the very least, use `git add .` and `git commit -m "..."` after you finish each part. This means that whenever you submit your homework, you will send us your most updated work!
-1. When specified work in the appropriately named file.
-1. **[Timeboxing](http://en.wikipedia.org/wiki/Timeboxing)**: limiting how much time you will devote to a problem before you move on. We will not give specific timeframe, but you should estimate and assess your estimations. Read through each part of the hw and comment into your code an estimate of how much time you think it'll take to solve. After it's done compare the time.
-1. When prompted to define a class, write the class definition inside of a file with the same name as the class. (**Example:** A `Unicorn` class would be in a file named `unicorn.rb`)
-1. The example code blocks should illustrate how the class could be used, either in `pry` or in a program.
+#### Completion
 
-### Completion
+Completion for tonight's assignment is to get through part 3. More is better, but it's a weekend, enjoy yourselves. We'll try to make ourselves available on Slack to help anyone with questions. If you're really having trouble, stay tuned, a screencast will be coming out Friday night to assist y'all.
 
-**Finish at least the first 4 parts.** As always: more is better; healthy living is best. Only do the bonus if you have completed every single part. Do not expect to get the bonus finished EVER.
+#### Useful Rsources
 
-## Part 1
+- [Sinatra Docs](http://www.sinatrarb.com/intro.html)
 
-**filename `tenant.rb`**
+#### Part 1: Generate and Serve a Generic Compliment
 
-Create a **tenant** class to store tenant data and behavior. A tenant should have the following attributes:
+When you visit the root (`"/"`) of your app, it should render the `index` view and display:
+- a generic greeting
+- a randomly chosen compliment (sample comments below)
+- an achor (`<a>`) tag that links back to the root (`"/"`) and displays the text `"I'm still emotionally vacant. Give me another compliment."`
+- another anchor tag, but this one displaying the text `"I'm ready to soldier on."`, and takes the user to the Ruby docs when clicked.
 
-> Set at initialize
-* f_name
-* l_name
-* born_on
-* gender
-
-> Set after instantiation with setter and getter methods
-* nickname
-* occupation
-
-Example Usage:
-
-```rb
-p1 = Tenant.new("Calvin", "Clifford", "male", "December 21st, 1929")
-p1.nickname = "Bud"
-p1.occupation = "Office Drone"
+```ruby
+# some sample compliments
+compliments = [
+  "People behind you in class think you are the perfect height.",
+  "Your instructors think you're amazing.",
+  "Your posture during breaks effectively masks your exhaustion.",
+  "Your commit messages are an inspiration to us all",
+  "Your fingers are magic on the keys",
+  "You are the moon of my life...my sun and stars"
+]
 ```
 
-## Part 2
+#### Part 2: Personalized Compliment
 
-A **tenant** should have a `full_name` method that returns a string of their first name, last name and nickname (if they have one).
+When you visit `"/:name"` (ie: `"/josh"`), the greeting should personalize itself to the provided name. There should still be a random compliment.
 
-Example Usage:
+> Greetings Josh, Your fingers are magic on the keys..
 
-```rb
-p1 = Tenant.new("Calvin", "Clifford", "male", "December 21, 1929")
-p1.nickname = "Bud"
-p1.full_name #=> "Calvin 'Bud' Clifford"
-```
+#### Part 3: Make It Look Good
 
-## Part 3
+Style really hard with css.
 
-**filename `apartment.rb`**
+#### Bonus
 
-An **apartment** should have the following attributes:
+#### Part 4: Randomize Background Color
 
-> Set at initialize
-* unit
-* num_beds
-* num_baths
-* tenants (the collection of people renting the apartment)
+Make it so that anytime the page is loaded or refreshed, the background color changes.
 
-Example Usage:
 
-```rb
-a1 = Apartment.new("B", 2, 1)
-```
-## Part 4
+#### Related Readings
 
-An **apartment's** price should be dynamically calculated based on the number of beds ($1000 per bed) and the number of bathrooms ($500 per bathroom).
-
-Example Usage:
-
-```rb
-a2 = Apartment.new("A", 2, 1)
-a2.price #=> "$2500"
-```
-
-## Part 5
-
-An **apartment** should have a predicate method to determine if it's a studio (has only one bedroom).
-
-Example Usage:
-
-```rb
-a1 = Apartment.new("B", 2, 1)
-a2 = Apartment.new("A", 1, 1)
-a1.studio? #=> false
-a2.studio? #=> true
-```
-
-## Part 6
-
-An **apartment** should have *several* methods related to its tenants.
-
-`move_in` should take a tenant object as an argument and add it to the list of tenants.
-
-Example Usage:
-
-```rb
-a1 = Apartment.new("B", 1, 1)
-p1 = Person.new("Fran", "Kubelik", "female", "May 8, 1935")
-a1.move_in(p1)
-a1.tenants          #=> [#<Tenant:0x01>]
-                    #   The above means an array
-                    #   of Tenant instances!
-a1.tenants.class    #=> Array < Object
-a1.tenants[0].class #=> Tenant < Object
-a1.tenants.size     #=> 1
-```
-
-## Part 7
-
-`empty?` should return `true` if an apartment doesn't have any tenants and `false` if it has tenants.
-
-Example Usage:
-
-```rb
-a1 = Apartment.new("B", 1, 1)
-a1.empty? #=> true
-p1 = Person.new("Fran", "Kubelik", "female", "May 8, 1935")
-a1.move_in(p1)
-a1.empty? #=> false
-```
-
-`full?` should return true if the number of tenants in an apartment is equal to the number of bedrooms.
-
-Example Usage:
-
-```rb
-a2 = Apartment.new("B", 2, 1)
-p1 = Tenant.new("Al", "Kirkeby", "male", "January 23, 1949")
-p2 = Tenant.new("Karl", "Matuschka", "male", "June 27, 1949")
-a2.empty? #=> true
-a2.full?  #=> false
-a2.move_in(p1)
-a2.empty? #=> false
-a2.full?  #=> true
-a2.move_in(p2)
-a2.full?  #=> true
-```
-
-## Part 8
-
-If you try to add more tenants than an apartment's bedrooms you'll receive a message `"We're full! <TENANT NAME> can't move in!"`
-
-Example Usage:
-
-```rb
-p1 = Tenant.new("Mildred", "Dreyfuss", "female", "July 18, 1942")
-p2 = Tenant.new("Jeff", "Sheldrake", "male", "November 18, 1941")
-p3 = Tenant.new("Joe", "Dobisch", "male", "May 17, 1939")
-a3 = Apartment.new("F", 2, 1)
-a3.move_in(p1)
-a3.move_in(p2)
-a3.full?        #=> true
-a3.move_in(p3)  #=> "We're full! Joe Dobisch can't move in"
-a3.tenants.size #=> 2
-```
-
-## Part 9
-
-**filename `building.rb`**
-
-A **building** should have the following attributes:
-
-> At initialize
-* address
-* number of floors
-
-> with getters and setters
-* apartments
-
-Example Usage:
-
-```rb
-b1 = Building.new("208 Leonard St", 3)
-b1.apartments #=> []
-```
-
-Define an instance method called `add` that takes the floor number and an apartment object as inputs and adds that apartment to the specified floor.
-
-Example Usage:
-
-```rb
-a1 = Apartment.new("B", 2, 1)
-a2 = Apartment.new("A", 1, 1)
-a3 = Apartment.new("A", 1, 1)
-
-# Specifiy the floor and apartment object
-b1.add(1, a1)
-b1.add(1, a2)
-b1.add(2, a3)
-```
-
-Define an instance method called `floor` that takes a floor number as an input and returns an array of the apartments on that floor.
-
-Example Usage:
-
-```
-b1.floor(1) #=> [<#Apartment:01>, <#Apartment:02>]
-b1.floor(2) #=> [<#Apartment:03>]
-```
-
-Define an instance method called `collect_rents` that returns the combined prices of its apartments.
-
-Example Usage:
-
-```rb
-b1.collect_rents #=>    #=> 1000000
-```
-
-Define a predicate method called `vancancies?`
-that returns true if any of the apartments aren't full.
-
-```rb
-b1 = Building.new("208 Leonard St", 3)
-p1 = Tenant.new("Al", "Kirkeby", "male", "January 23, 1949")
-a1 = Apartment.new("B", 2, 1)
-a1.move_in(p1)
-b1.vancancies? #=> true
-```
-
-## Bonus
-
-Require Ruby's 'date' library and save a tenant's `born_on` attribute as a `Date`.
-
-Example Usage:
-
-```rb
-p1 = Tenant.new("Mildred", "Dreyfuss", "female", "July 18, 1942")
-p1.born_on.class #=> Date < Object
-```
-
-Implement an `age` method that returns their age in years.
-
-Example Usage:
-
-```rb
-p2 = Tenant.new("Jeff", "Sheldrake", "male", "November 18, 1941")
-p2.age #=> 73
-```
-
-## Bonuser
-
-Can you write a ruby script that can manage your buildings, apartments, and tenants?
+- **HTTP and Networking**
+  + [Simple HTTP Definition](http://simple.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
+  + [More Complex HTTP Description](http://www.jmarshall.com/easy/http/)
+  + [Simple Client-Server Definition](http://simple.wikipedia.org/wiki/Client-server)
+- **[Rack](http://rack.github.io/)**
+- **Sinatra**
+  + [Documentation](http://www.sinatrarb.com/intro.html)
+  + [Source](https://github.com/sinatra/sinatra)
