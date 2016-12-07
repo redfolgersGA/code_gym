@@ -6,7 +6,7 @@
 
 ### The Problem
 
- Dražen Morley, C.E.O. of XFiles Realty, has recently heard of Ruby and it's object-oriented design. He's interested in re-modeling his database of NYC real estate after Ruby classes. Typical clients... Make your client happy and model this apartment complex using classes in Ruby!
+ Dražen Morley, C.E.O. of Pangolins Realty, has recently heard of Ruby and it's object-oriented design. He's interested in re-modeling his database of NYC real estate after Ruby classes. Typical clients... Make your client happy and model this apartment complex using classes in Ruby!
 
 ### Setup
 
