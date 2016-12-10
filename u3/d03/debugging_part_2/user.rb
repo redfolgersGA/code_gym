@@ -2,8 +2,8 @@ def print_name(first_name, last_name)
   p combine_names(first_name, last_name)
 end
 
-def combine_namies(first_name, last_name)
-  unless first_name && last_name
+def combine_names(first_name, last_name)
+  unless !(first_name && last_name)
     name = "#{first_name} #{last_name}"
   end
 

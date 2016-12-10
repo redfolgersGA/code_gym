@@ -1,9 +1,9 @@
-require byebug
+require 'byebug'
 
-class food
+class Food
   def editable
     response = true
-    puts "editable? - ${response}"
+    puts "editable? - #{response}"
   end
 end
 
@@ -15,12 +15,15 @@ end
 
 class Array
   def saythings
-    self.each |x|
+    self.each do |x|
       puts x
-    end
-end
 
-Food.editable
+    end
+  end
+end
+casserole = Food.new
+casserole.editable
+
 
 [1,3,4].saythings
 
