@@ -1,10 +1,32 @@
+
+
 <h1>Cheese menu</h1>
+<h2>Add a new Cheese</h2>
+<%= form_for :cheese, method: 'post', url: {action: 'create'} do |f| %>
+<%= label(:cheese, :name) %><br>
+<%= f.text_field :name %><br>
+<%= label(:cheese, :milk_type) %><br>
+<%= f.text_field :milk_type %><br>
+<%= f.label(:cheese, :image_url) %><br>
+<%= f.text_field :image_url %><br>
+<%= f.label(:cheese, :description)%><br>
+<%= f.text_field :desctiption %><br>
+<br>
+<%= f.submit "Create Cheese" %>
+<% end %>
 
 <% @cheeses.each do |cheese| %>
-<h2><%= cheese.name %> </h2>
-<p><%= cheese.milk_type %> </p>
-<p><%= cheese.description %> </p>
-<%= image_tag cheese.image_url %>
-<br />
+ <a href = "/cheeses/<%= cheese.id %>">
+    <ul>
+    <h3> <%= cheese.name %> </h3>
+    </ul>
+  </a>
+
+    <button>  <%= link_to 'eat this cheese!', cheese, method: :delete %></li><br></button>
+
+
+
+<a href="/cheeses/new">Make a new cheese!</a>
+
 
 <% end %>

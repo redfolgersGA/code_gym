@@ -1,0 +1,16 @@
+<h2> holla edits</h2>
+
+<%= form_for :cheese, method: 'post', url: {action: 'update'} do |f| %>
+<%= label(:cheese, :name) %><br>
+<%= f.text_field :name %><br>
+<%= label(:cheese, :milk_type)%><br>
+<%= f.text_field :milk_type %><br>
+<%= label(:cheese, :image_url) %><br>
+<%= f.text_field :image_url %><br>
+<%= label(:cheese, :description)%><br>
+<%= f.text_field :description %><br>
+<%= f.submit "Edit Cheese" %><br>
+
+
+<% end %>
+

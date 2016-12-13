@@ -1,0 +1,8 @@
+<h1>faux cheese and wines</h1>
+<h3> <%= @cheese['name'] %> </h3>
+<p><a href="/cheeses/<%= @cheese.id%>/edit">Edit this cheese</a></p>
+
+  <p> <%= @cheese.description %> </p>
+  <p> <%= @cheese.milk_type %> </p>
+
+  <%= image_tag @cheese.image_url %>
