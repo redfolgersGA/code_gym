@@ -1,66 +1,59 @@
-![](http://i.giphy.com/BDDQCaXmBrhCg.gif)
+# Homework - Pig Latin
 
-# Homework - Model Associations
+![Pig Speaking Latin](http://www.ccalanguagesolutions.com/wp-content/uploads/2013/12/pig-300x248.jpg)
 
 ## Introduction
-Now that you are all experts in Rails' associations we are going to practice everything by creating a GA Forum application!
+
+Tonight we will continue out journey into RSpec and Test Driven Development!
+(_hold for applause_)
 
 ## Setup
-Do all work in your `homework` directory. No work or application has been supplied to you. Good Luck :)!
+
+Write a Word class in the lib/word.rb file that meets the requirements specified by the RSpec tests.
+
+All of the rspec has been supplied for you in the `spec` directory. You will be doing all of your work in the `word.rb` file in the `lib` directory.
+
+To test your Word class, run `rspec` in the homework directory.
+
+Once you have your first test passing, go into the spec/word_spec.rb file and remove the `x` before the next test. Do this after each test.
 
 ## Completion
-Complete through part 5.
+Parts 1-3
 
 ## Assignment
-You have been given a blank canvas - nothing has been provided for you, so you must do the following:
 
-#### 1. Create a rails application called `ga_forum_app`
-  - Make sure you go through all the proper steps of setting up your application.
+#### Part 1
 
-#### 2. Generate your models
-Generate models with the following:
-  - course
-    * course_name
-    * class_name
-  - user
-    * name
-    * email
-    * course_id
-  - topic
-    * name
-    * content
-    * user_id
-    * created_at
-  - comment
-    * content
-    * topic_id
-    * user_id
-    * created_at
+Your job will be to implement a Word class with an instance method `Word#to_pig` that returns the pig latin equivalent of the word. The specs are written for you.
 
-#### 3. Draw out an ERD diagramming the relations for this application
+Description of the rules from Wikipedia:
 
-#### 4. Create model associations
-  - Go through your models and schema, adding the correct associations between each table.
+For words that begin with vowel sounds or silent letter, "way" is added at the end of the word. Examples are
 
-#### 5. Set up your app to create content!
-  - Your app should allow creation of users, courses, topics, and comments.
-  - The app should have pages for courses (including which students are enrolled), users (showing which course they are enrolled in), and topics (including the comments)
-  - We should be able to see which user created each comment.
+* "egg" → "eggway"
+* "inbox" → "inboxway"
+* "eight" → "eightway"
 
-# Part 2
+For words that begin with consonant sounds, the initial consonant or consonant cluster is moved to the end of the word, and "ay" is added, as in the following examples:
 
-![emails gif](https://media.giphy.com/media/xTiTnHtsQnLS8kTp0k/giphy.gif)
+* "happy" → "appyhay"
+* "duck" → "uckday"
+* "glove" → "oveglay"
 
-#### 6. Use the GA forum app you worked on for this section.
 
- -  Add subscription functionality for your forum.
- - Create a "subscribe" button on your index page. If a user clicks it, have that user be redirected to a page saying that they have subscribed.
- - Make sure you set up a Subscribers model (which should reference the Users model), Subscribers controller, and views, and capture the user's data when they subscribe.
- -  Send the subscriber an initial "Welcome to my forum!" email when the user successfully subscribes (is successfully added to the database).
+#### Part 2
+
+The letter 'y' can play the role of either consonant or vowel, depending on its location
+
+* "yellow" → "ellowyay"
+* "rhythm" → "ythmrhay"
+
+#### Part 3
+
+How do you deal with words starting with "qu" or "squ" ?
+
+* "queen" → "eenquay"
+* "squeal" → "ealsquay"
 
 # Bonus
- -  Every time a new post is added to your forum, send the user an email with the subject "New Post: (title of post)" and a link to that post in the body of the email.
-
-## Resources
- -  https://launchschool.com/blog/handling-emails-in-rails
- -  http://guides.rubyonrails.org/action_mailer_basics.html
+Have the Word class inherent from the class String
