@@ -33,6 +33,10 @@ Yar me hearties, good work! Lest the Captain be crushing your barnicles or blow'
 #Ysar.
  If ye be confused, read the docks. Argh.
 
+ John ARRRRRRRR Bell
+
+ ![john bell pirate](http://i.giphy.com/SSmDlehhBmGvm.gif)
+
 [Docks](http://www.thewayofthepirates.com/pirate-life/pirate-slang/)
 [Docks](http://reference.yourdictionary.com/resources/pirate-terms-phrases.html)
 [Docks](http://www.pirateglossary.com/namecalling/)
