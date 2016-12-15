@@ -31,7 +31,7 @@ Let none of you be swinging the lead...saavy?
 Yar me hearties, good work! Lest the Captain be crushing your barnicles or blow'n you down to Davey Jone's Locker, time to merge all yer werk together. Though Jared, the old salt, be not believ'n it possible, Heidi has kept the faith in ye, and holds a glorous bounty on the poop deck for the first ship to sail the seas with a completed app.
 
 #Ysar.
- If ye be confused, read the docks. Argh.
+ If ye be confused, read the docks. Argh. If ye be ask'n for help without read'n the blessed prompt ye will be shark bait ye bigle rat!
 
  John ARRRRRRRR Bell
 
