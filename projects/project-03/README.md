@@ -1,4 +1,4 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #3: Building Your First Full-stack RAILS Application
+k# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #3: Building Your First Full-stack RAILS Application
 
 ### Overview
 
@@ -7,22 +7,22 @@ This project is another foray into **building a full-stack application**. You'll
 **This is exciting!** It's a lot, but we've given you the tools to be able build what you need, and you get to decide what you do with it. And you get to be creative in choosing what sort of application you want to build!
 
 **You will be working in teams for this project**, and you'll be designing the app yourself. We hope you'll exercise creativity on this project, sketch some wireframes before you start, and write user stories to define what your users will want to do with the app. Make sure you have time to run these ideas by your instructors to get their feedback before you dive too deep into code! Remember to keep things small and focus on mastering the fundamentals – scope creep/feature creep is the biggest pitfall for any project!
-
+		
 
 ---
 ### Teams
 
-Puneet, Matt, Taj, Jayan, Laura
+Jennifer, Matt, Taj, Jayan, Laura
 
 Carson, Peck, Bryan, Michelle, Miriam
 
-Xinke, Marcos, Kristie, Jennifer, Wynter
+Xinke, Marcos, Kristie, Puneet, Wynter
 
-Nick, Justin J, Marcella, Daniel, Emmanuel
+Glenn, Justin J, Marcella, Daniel, Emmanuel
 
 Danielle, Fariha, Maz, Dom, Hillary
 
-Rob, Mike, Leslie, Glenn, James
+Rob, Mike, Leslie, Nick, James
 
 Connie, Jonathan,Vanice, Bairon, Miko
 
@@ -49,8 +49,10 @@ Your app must:
 
 ### Recomended Reach Goals
 * **Authentication** with Devise, OAuth, or BCrypt
+* **Utilize Active Mailer**
 * **Actually Make It Look Good** without using Materialize, or something similar
 * **Present In a Tuxedo** or similarly fancy attire
+* **Add at least 5 RSpec Tests**
 
 ### Necessary Deliverables
 
@@ -59,6 +61,7 @@ Your app must:
 * **A ``readme.md`` file** with explanations of the technologies used, the approach taken, installation instructions, unsolved problems, etc.
 * **Wireframes of your app**, hosted somewhere & linked in your readme
 * **User stories** in your readme
+* **ERD** diagram for your database setup
 * Available online on Heroku
 
 ---
