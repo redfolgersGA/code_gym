@@ -11,12 +11,12 @@ RSpec.describe PostsController do
 
     it "should find a post by its slug" do
       get :show, id: post.slug
-      expect(assigns(:id)).to eq(post)
+      expect(assigns(:post)).to eq(post)
     end
 
     it "renders the :show view" do
       get :show, id: post.slug
-      expect(response).to_render_template(:show)
+      expect(response).to render_template(:show)
     end
   end
 end

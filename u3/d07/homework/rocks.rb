@@ -1,4 +1,4 @@
-Gem.destory_all
+Gem.destroy_all
 
 Gem.create([
   { name: "Matrix Opal",

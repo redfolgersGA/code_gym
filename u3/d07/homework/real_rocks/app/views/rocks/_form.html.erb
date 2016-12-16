@@ -1,0 +1,11 @@
+<%= form_for :rock, method: 'post', url: {action: 'update'} do |f| %>
+<%= f.label :name %><br>
+<%= f.text_field :name %><br>
+<%= f.label :description %><br>
+<%= f.text_field :description %><br>
+<%= f.label :image %><br>
+<%= f.text_field :image %><br>
+
+<%= f.submit "Edit Rock" %><br>
+
+<% end %>

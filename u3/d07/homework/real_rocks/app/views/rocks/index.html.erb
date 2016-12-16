@@ -1,0 +1,22 @@
+<h2>The Gallery of Rocks</h2>
+
+
+<% @rocks.each do |rock| %>
+<a href = "/rocks/<%=rock.id %>"</a>
+<ul>
+<h3><%=rock.name %></h3>
+</ul>
+
+<button>  <%= link_to 'DELETE ROCK', rock, method: :delete %></li><br></button>
+
+
+
+
+
+
+
+
+
+<% end %>
+
+
