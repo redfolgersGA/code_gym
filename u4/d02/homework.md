@@ -7,7 +7,7 @@ Completion: Parts 1-3
 
 ## Part 1 - Regular Expressions
 
-Setup: Use [Rubular](http://rubular.com/) to test out your Regular Expressions, and save your answers in the provided `script.js`. You should provide a matching string with your regular expression, as well as at least 2 similar strings which do not pass.
+Setup: Use [Rubular](http://rubular.com/) to test out your Regular Expressions, and save your answers in a `script.js` file. You should provide a matching string with your regular expression, as well as at least 2 similar strings which do not pass.
 
 ##### 1. Write a regular expression that will grab each string that contains numbers.
 
