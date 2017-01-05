@@ -24,25 +24,23 @@ Each group needs to create a getting started tutorial on their topic. It should 
 
 1. [Angular2](https://angular.io/)
 
-1. [Django](https://www.djangoproject.com/)
+1. [Python & Django](https://www.djangoproject.com/)
 
 1. [Gosu](https://www.libgosu.org/)
 
-1. [Grape API](https://github.com/ruby-grape/grape)                                             
+1. [Vue.js](https://vuejs.org/)                                             
 
 1. [Electron](http://electron.atom.io/)
 
-1. [React Native](https://facebook.github.io/react-native/)                                             
+1. [React Native](https://facebook.github.io/react-native/)
+
+1. [Elixir & Phoenix](http://www.phoenixframework.org/)
+
+1. [D3](https://d3js.org/)      
+
+
 
 ##### Presentation
 Each group needs to prepare a presentation where they walk the rest of the class through the basics of the library/framework, demo the app they made, and talk about what use cases the tech has. Why would someone choose to use your group's tech? You should be prepared to answer questions from the class - and when you are in the audience, ask questions of the other groups. You should feel free to use whatever teaching techniques you'd like! Make to to make your presentations interesting and engaging, as everyone has to sit through them :).
 
-##### Groups and Topics
-
-| Golang        | Angular2     | Python & Django        | Gosu         | Elixir & Phoenix     | D3      | React Native  |
-|---------------|---------------|---------------|---------------|---------------|---------------|---------------|
-| Noah          | Dave          | Sarah         | Jeff          | Stefan        | Will          | Ian           |
-| Ethan         | John          | Seiji         | Chris         | Morgan        | Michael       | Nick          |
-| Anthony       | Gabby         | Carolina      | Rick          | Annette       | Daouda        | Alejandra     |
-|               | Rob           |               |               |               |               |               |
 
