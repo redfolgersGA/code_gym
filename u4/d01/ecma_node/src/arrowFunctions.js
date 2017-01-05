@@ -18,7 +18,9 @@ function uses () {
 	    {name: 'Shadow', species: 'Hedgehog'},
 	    {name: 'Knuckles', species: 'Echidna'}];
   console.log(db);
-
+  console.log(
+  db.map(x => x.species.length)
+  );
   cn.text("Old way to get all the hedgehogs:");
   console.log(
     db.filter(function(x){return x.species === "Hedgehog";})
@@ -54,7 +56,7 @@ function basicArrowFunctions () {
   console.log(
     (() => 1 + 1)()
   );
-  
+
   cn.text('One arg:');
   console.log(
     ((x) => x + 1)(1)
@@ -106,7 +108,7 @@ function blockBodies () {
 function keywordThis () {
   cn.text("Unlike other Javascript functions, arrow functions",
 	  "do not bind keyword 'this'.");
-  
+
   var someObject = {
     someData: "this is some data on some object",
     normalFunction: function(){console.log(this);},
@@ -118,7 +120,7 @@ function keywordThis () {
     normalFunctionCalling_OUTER_ArrowFunction:  function(){
       this.arrowFunction();
     }
-  };  
+  };
 
   cn.text('Normal Javascript function in an object has that object bound to',
 	  'keyword \'this\' by default:');
@@ -134,7 +136,44 @@ function keywordThis () {
   cn.text("But if an arrow function is merely called (rather than defined) by a normal",
 	  "function, it will not:");
   someObject.normalFunctionCalling_OUTER_ArrowFunction();
-  
+
+console.log('class practice');
+var normalWay = function(name, age){
+  return({
+    name: name,
+    age: age,
+    selfReport: function(){
+      return "My name is " + this.name + " and my age is " + this.age;
+    }
+  });
+};
+
+console.log('normal way:');
+console.log (
+  normalWay("Phil", 50).selfReport()
+  );
+
+var otherWay = function(name, age){
+  var obj = {
+
+    name: name,
+    age: age,
+  };
+    var selfReport = () => {
+      return "My name is " + obj.name + " and my age is " + obj.age;
+    };
+    obj.selfReport = selfReport;
+    return( obj );
+
+};
+
+console.log('otherWay:');
+var oldPhil = otherWay('Phil', 50);
+oldPhil.age = 1000;
+console.log (
+  oldPhil.selfReport()
+  );
+
 }
 
 

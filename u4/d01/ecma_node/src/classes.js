@@ -32,8 +32,8 @@ function basicSyntax(){
     // Getter! Sort of like in Ruby!
     get introduction(){
       return(
-	this._introduction |
-	  "Hello, my name is " + this.name + 
+	this._introduction ||
+	  "Hello, my name is " + this.name +
 	  " and I am " + this.age +
 	  " years old!"
       );
@@ -41,7 +41,7 @@ function basicSyntax(){
 
     // Setter! Sort of like in Ruby!
     set introduction(intro){
-      this._introduction = intro;      
+      this._introduction = intro;
     }
   };
 
@@ -65,7 +65,7 @@ function basicSyntax(){
     get introduction(){
       return(
 	this._introduction |
-	  "Hello, my name is " + this.name + 
+	  "Hello, my name is " + this.name +
 	  " and I am " + this.age +
 	  " years old!"
       );
@@ -73,7 +73,7 @@ function basicSyntax(){
 
     // Setter! Sort of like in Ruby!
     set introduction(intro){
-      this._introduction = intro;      
+      this._introduction = intro;
     }
   }
 
@@ -96,7 +96,7 @@ function inheritance(){
     get momentum (){
       return(this.mass * this.velocity);
     }
-    
+
   };
 
   var Car = class extends Rigidbody{
@@ -115,7 +115,7 @@ function inheritance(){
   };
 
   var someFord = new Car(2, 40, "Ford");
-  
+
   console.log('Momentum:');
   console.log(someFord.momentum);
   console.log('Brand:');
@@ -140,7 +140,7 @@ function strictMode(){
       console.log(util.inspect(this, {depth: 0}));
     }
   };
-  
+
   console.log(lumpOfData.selfReport());
 
   cn.text("When we detach the reportData function from lumpOfData:");
