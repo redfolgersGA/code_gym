@@ -4,7 +4,7 @@ Sweet libs is an opportunity to test your ability to pick up new technology with
 
 ### Timeline
 
-You will have from right now until Monday morning to work with your group. Presentations will start on Monday morning. Each group will have 20 minutes to present.
+You will have from right now until Monday morning to work with your group. Presentations will start on Monday morning. Each group will have 10 minutes to present.
 
 ### Expectations
 
@@ -44,12 +44,21 @@ Each group needs to create a getting started tutorial on their topic. It should 
 Each group needs to prepare a presentation where they walk the rest of the class through the basics of the library/framework, demo the app they made, and talk about what use cases the tech has. Why would someone choose to use your group's tech? You should be prepared to answer questions from the class - and when you are in the audience, ask questions of the other groups. You should feel free to use whatever teaching techniques you'd like! Make to to make your presentations interesting and engaging, as everyone has to sit through them :).
 
 
-Fariha, Leslie, James, Marcela
-kiba wynter jonathan, byron
-Justin Johnson, Michelle Brant, Danielle Twaalfhoven, Nick Costanzo
-Taylor Halsted, Hilary Kane, kristy and Laura Ayala
-Carson Connie, Miko
-Matt, Taj, Jayan, and Justin
-Mike, Dominique , Miriam, Marcos - Team Jared
-Glenn, Daniel, Jennifer, Emmanuel - Team Rocket
-team MAZE =1-maze 2- xinke 3-bryan 4-puneet
+_**Gosu**_ - Fariha, Leslie, James, Marcela
+
+_**React Native**_ - Kiba, Wynter, Jonathan, Byron
+
+_**Elixir & Phoenix**_ - Justin Johnson, Michelle Brant, Danielle Twaalfhoven, Nick Costanzo
+
+_**Angular2**_ - Matt, Taj, Jayan, Justin
+
+_**D3**_ - Taylor, Hilary, Kristy, Laura
+
+_**Electron**_ - Carson, Connie, Miko
+
+_**Vue.js**_ - Maz, Xinke, Bryan, Puneet
+
+_**Golang**_ - Mike, Dominique , Miriam, Marcos
+
+_**Python & Django**_ - Glenn, Daniel, Jennifer, Emmanuel
+
