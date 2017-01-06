@@ -44,3 +44,12 @@ Each group needs to create a getting started tutorial on their topic. It should 
 Each group needs to prepare a presentation where they walk the rest of the class through the basics of the library/framework, demo the app they made, and talk about what use cases the tech has. Why would someone choose to use your group's tech? You should be prepared to answer questions from the class - and when you are in the audience, ask questions of the other groups. You should feel free to use whatever teaching techniques you'd like! Make to to make your presentations interesting and engaging, as everyone has to sit through them :).
 
 
+Fariha, Leslie, James, Marcela
+kiba wynter jonathan, byron
+Justin Johnson, Michelle Brant, Danielle Twaalfhoven, Nick Costanzo
+Taylor Halsted, Hilary Kane, kristy and Laura Ayala
+Carson Connie, Miko
+Matt, Taj, Jayan, and Justin
+Mike, Dominique , Miriam, Marcos - Team Jared
+Glenn, Daniel, Jennifer, Emmanuel - Team Rocket
+team MAZE =1-maze 2- xinke 3-bryan 4-puneet
