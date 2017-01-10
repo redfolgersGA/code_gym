@@ -29,9 +29,8 @@ export default class BookList extends Component {
       return (
         <li
           key={book.title} className="list-group-item"
-          // call select book function here! vvv
-          // onClick={ () => this.props.selectBook(book) }
-          >
+          onClick={ () => this.props.selectBook(book) }
+        >
           {book.title}
         </li>
       );
