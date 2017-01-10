@@ -69,7 +69,7 @@ Some Things to Consider:
 * Reducers pass the new state back to and update the store which then immediately is available to the components.
 * `{ connect }` allows us to pass props to a component. We use it in our export.
 * mapStateToProps(passInEntireReduxState) - returns the part of our redux store that we ask for in our map and return it to the component requesting it. It only has access to the part of the store we tell it, not the entire redux store. We pass this into our connect function
-* mapDispatchToProps() - calls `bindActionCreators` takes the action creator, setting equal to a prop on a component, so when we call it redux knows to fire off reducers. We pass this into our connect function. Remember, ALL reducers are notified when an action is dispatched, but only the one that matches the `type` responds.
+* mapDispatchToProps() - calls `bindActionCreators` takes the action creator, setting it equal to a prop on a component, so when we call it redux knows to fire off reducers. We pass this into our connect function. Remember, ALL reducers are notified when an action is dispatched, but only the one that matches the `type` responds.
 
 -----
 
