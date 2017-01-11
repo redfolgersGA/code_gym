@@ -1,31 +1,20 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component }from 'react';
 import { Link } from 'react-router';
 import rooms from './rooms.js'
 
 class RoomShow extends Component {
-
-  constructor(props){
-    super(props);
-    //this.state = {
-     // rooms,
-      //currentRoom: this.rooms[this.props.params.roomName]
-    //}
-  }
-
-  static contextTypes = {
-    router: PropTypes.object
-  }
-
   render(){
-    const imageStyles = { maxWidth: '500px' }
+    const imageStyles = { maxWidth: '500px', maxHeight: '400px' }
+    const divStyles= {paddingLeft: '50px', paddingTop: '50px'}
     const currentRoom = this.props.params.roomName;
-    const { name, image, description, nextRoom } = rooms[currentRoom];//this.state.currentRoom;
+    const { name, image, description } = rooms[currentRoom];//this.state.currentRoom;
+    let nextRoom = rooms[currentRoom].nextRoom ? `/rooms/${rooms[currentRoom].nextRoom}` : "/"
     return (
-      <div className="room_show">
+      <div style={divStyles} className="room_show">
         <img style={ imageStyles } alt="room" src={image} />
         <h3>{ name }</h3>
         <p>{ description }</p>
-        <Link to={`/rooms/${nextRoom}`}> Next Room </Link>
+        <Link to={`${nextRoom}`}> Next Room </Link>
       </div>
     );
   }
