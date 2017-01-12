@@ -2,6 +2,8 @@
 
 ### Overview
 
+![x-files](http://i.giphy.com/l2JHZkNAJMTYCQRhe.gif)
+
 **You’ve come a long way, and it's time to show it.** This will be your most advanced project to date, and if you put creativity into it, it'll hopefully be the thing you want to show off most prominently in your portfolio.
 
 **You get to call the shots and invent your own idea**, choosing a framework & tools that are appropriate for what you want to build. Pull from everything you've learned so far, and **tackle something that'll push you a little outside of your comfort zone.**
