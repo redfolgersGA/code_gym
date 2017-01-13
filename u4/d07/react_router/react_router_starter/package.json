@@ -8,8 +8,12 @@
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+<<<<<<< HEAD
     "react-materialize": "^0.17.7",
     "react-router": "^3.0.0"
+=======
+    "react-materialize": "^0.17.7"
+>>>>>>> c874d43f878c28f46e21e8448880b0b0beca6b39
   },
   "scripts": {
     "start": "react-scripts start",

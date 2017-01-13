@@ -9,8 +9,11 @@ class App extends Component {
         <Link to="/">
           <h1 style={{fontFamily: "Pacifico"}}>Redux Blawwg</h1>
         </Link>
+<<<<<<< HEAD
         { this.props.children }
 
+=======
+>>>>>>> c874d43f878c28f46e21e8448880b0b0beca6b39
 
       </div>
     );

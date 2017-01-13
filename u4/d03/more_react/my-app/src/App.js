@@ -2,15 +2,21 @@ import React, { Component } from 'react';
 import {sep, plabeled} from './helpers.jsx';
 import './App.css';
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> c874d43f878c28f46e21e8448880b0b0beca6b39
 class CTest extends Component {
   constructor(props){
     super(props);
     sep();
     console.log('In CTest constructor. Receiving these props: ');
     console.log(props);
+<<<<<<< HEAD
 
+=======
+>>>>>>> c874d43f878c28f46e21e8448880b0b0beca6b39
   }
 
   componentWillUpdate(nextProps, nextState){
@@ -34,6 +40,7 @@ class App extends Component {
     console.log('------------------------------------------------------------');
     console.log('In App constructor. Receiving these props: ');
     console.log(props);
+<<<<<<< HEAD
     this.state = {clickNum: 0};//initializing the state
     this.state = {clickNum: 0,
                  running: false
@@ -91,6 +98,17 @@ class App extends Component {
       // console.log('state');
       // console.log(this.state);
 
+=======
+    this.state = {clickNum: 0};
+  }
+
+  
+  render() {
+    const clickhandler = (e)=>{
+      this.setState(
+	{clickNum: this.state.clickNum + 1}
+      );
+>>>>>>> c874d43f878c28f46e21e8448880b0b0beca6b39
     };
     return (
       <div className="App">

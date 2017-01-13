@@ -30,4 +30,8 @@ class PostsIndex extends Component {
   }
 }
 
+<<<<<<< HEAD
 export default PostsIndex;
+=======
+
+>>>>>>> c874d43f878c28f46e21e8448880b0b0beca6b39

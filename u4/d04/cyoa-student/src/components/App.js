@@ -3,18 +3,27 @@ import '../css/App.css';
 
 import adventures from '../adventures';
 
+<<<<<<< HEAD
 import Choice from './Choice';
 import End from './End';
+=======
+// import Choice from './Choice';
+// import Lose from './Lose';
+>>>>>>> c874d43f878c28f46e21e8448880b0b0beca6b39
 
 class App extends Component {
   constructor(){
     super();
     this.state = {
+<<<<<<< HEAD
       current_adventure: 0,
+=======
+>>>>>>> c874d43f878c28f46e21e8448880b0b0beca6b39
       adventures
     };
   }
 
+<<<<<<< HEAD
   changeAdventure(to){
 
     this.setState({
@@ -48,6 +57,17 @@ class App extends Component {
 
       return (<p key={i}> {el}</p>);
     });
+=======
+  changeAdventure(to){ }
+
+  resetGame(){ }
+
+  showOptions(options){ }
+
+  render() {
+    const data = this.state.adventures[0]; // hard-coded adventure
+
+>>>>>>> c874d43f878c28f46e21e8448880b0b0beca6b39
     return(
       <div className="main-container" style={{ backgroundImage: 'url(' + data.image + ')' }}>
         <nav>
@@ -56,9 +76,14 @@ class App extends Component {
           </h1>
         </nav>
         <div className="current-adventure">
+<<<<<<< HEAD
            {text}
           <div className="choices">
           {this.showOptions(data.options) }
+=======
+          Lorem Ipsum Dolor Sit.
+          <div className="choices">
+>>>>>>> c874d43f878c28f46e21e8448880b0b0beca6b39
           </div>
         </div>
       </div>
