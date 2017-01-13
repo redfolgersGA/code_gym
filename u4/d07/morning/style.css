@@ -1,0 +1,45 @@
+.outer-border {
+  width: 100px;
+  height: 100px;
+  border: .5px solid black;
+  position: absolute;
+
+
+/* border-top:    .5px solid  #ff0;
+border-right:  .5px solid #f0F;
+border-bottom: .5px solid #f00;
+border-left:   .5px solid  #09f; */
+}
+
+.inner-border {
+  width: 50px;
+  height: 50px;
+  border: .25px solid black;
+  margin: 0 auto;
+
+}
+
+.circle{
+    background: #C4B5B5;
+    border-radius: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    margin: -25px 0 0 -25px;
+}
+
+/* .circle_inner:before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -7px;
+} */
