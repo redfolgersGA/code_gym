@@ -1,12 +1,55 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Pick me up</title>
-	<link rel="stylesheet" href="/style.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pick me up</title>
+   <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+    <link rel="stylesheet" href="/style.css">
+<!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-	
+<div class='container'>
+  <div class='row'>
+    <div class='col s12 center'>
+      <h3>randomly generated compliment below!</h3>
+      Compliment for you:<h5><%= @nameTest %><%= @compliment %></h5>
+
+      </div>
+  </div>
+   <div class="divider"></div>
+  <div class='row'>
+    <div class='col s12 center'>
+      <ul class=''>
+      <li><a href='/' class='uno hoverable waves-effect waves-light btn-large'><i class="large material-icons left"><span class='largeIcon'>add</span></i>I'm still emotionally vacant. Give me another compliment.</a></li>
+      <li><a href='https://rubydocs.org/' class='dos hoverable waves-effect waves-light btn-large'><i class="material-icons right"><span class='largeIcon'>send</span></i>I'm ready to soldier on.</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+var hexOptions = [1,2,3,4,5,6,7,8,9,0,'a','b','c','d','e','f','A','B','C','D','E','F'];
+var body = document.querySelector('body')
+var aUno = document.querySelector('a.uno')
+var aDos = document.querySelector('a.dos')
+var divider = document.querySelector('.divider')
+var makeHex = function(){
+  var hex = '#';
+  for(var i = 0; i < 6; i++){
+   hex += hexOptions[Math.floor(Math.random()*hexOptions.length)];
+  }
+  return hex;
+}
+body.style.backgroundColor = makeHex()
+aUno.style.backgroundColor = makeHex()
+aDos.style.backgroundColor = makeHex()
+body.style.color = makeHex()
+aUno.style.color = makeHex()
+aDos.style.color = makeHex()
+divider.style.backgroundColor = makeHex()
+</script>
 </body>
 </html>

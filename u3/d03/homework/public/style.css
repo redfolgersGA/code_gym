@@ -1,0 +1,16 @@
+ul {
+  display: inline-flex;
+}
+
+li {
+      margin: 20px;
+}
+.btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i {
+    font-size: .7rem;
+    line-height: inherit;
+}
+
+
+.largeIcon {
+  font-size: 45px;
+}

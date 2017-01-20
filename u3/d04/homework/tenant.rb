@@ -1,27 +1,29 @@
 class Tenant
-  attr_accessor :f_name, :l_name, :born_on, :gender
-  attr_reader :nickname, :occupation
+
+attr_accessor :nickname, :occupation
 
 def initialize(f_name, l_name, born_on, gender)
-    @f_name = f_name
-    @l_name = l_name
-    @born_on = born_on
-    @gender = gender
-    @nickname = nickname
-    @occupation = occupation
-
+@f_name = f_name
+@l_name = l_name
+@born_on = born_on
+@gender = gender
 end
 
-human1 = Tenant.new("Becca", "Gardner", "11/01/2016", "Female")
+def full_name
+  if nickname == nil
+    @full_name = "#{@f_name} #{@l_name}"
+  else
+@full_name = "#{@f_name} #{nickname} #{@l_name}"
+end
+end
 
-human1.nickname = "shorty"
+def Tenant_info
+[fname: @f_name, lname: @l_name, born: @born_on, gender: @gender]
+  end
 
+def Occupation
+occupation
+  end
 
-
-puts human1.f_name
-puts human1.l_name
-puts human1.born_on
-puts human1.gender
-puts human1.nickname
 end
 
