@@ -90,27 +90,27 @@ var leaveTheShire = function() {
   setTimeout(forgeTheFellowShip, 2000)
 }
 
-var forgeTheFellowShip = function() {
-  // Create a div with an id of 'the-fellowship' within the section.land for "Rivendell"
-  var $fellowship = $('<div id="the-fellowship"></div>')
-  // Add each hobbit and buddy one at a time to 'div#the-fellowship'
-  var $hobbitz = $('ul#hobbits')
-  Array.from($hobbitz).forEach(function(i){
-    $($fellowship).append($hobbitz+i)
+// var forgeTheFellowShip = function() {
+//   // Create a div with an id of 'the-fellowship' within the section.land for "Rivendell"
+//   var $fellowship = $('<div id="the-fellowship"></div>')
+//   // Add each hobbit and buddy one at a time to 'div#the-fellowship'
+//   var $hobbitz = $('ul#hobbits')
+//   Array.from($hobbitz).forEach(function(i){
+//     $($fellowship).append($hobbitz+i)
 
-  })
+//   })
 
-  // After each character is added make an alert that they have joined your party
-  // Use setTimeout to delay the execution of the next function by several seconds
-}
-
-
+//   // After each character is added make an alert that they have joined your party
+//   // Use setTimeout to delay the execution of the next function by several seconds
+// }
 
 
 
 
 
-setTimeout(makeMiddleEarth, 2000)
+
+
+// setTimeout(makeMiddleEarth, 2000)
 
 
 
