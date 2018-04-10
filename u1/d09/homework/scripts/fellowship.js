@@ -1,4 +1,4 @@
-console.log("followship.js loaded");
+console.log("followship.js loaded code_gym");
 
 
 
@@ -85,24 +85,41 @@ var beautifulStranger = function() {
 var leaveTheShire = function() {
   // Assemble the Hobbits and move them to Rivendell
   var $rivendell = $('article.land:nth-child(2) h1')
-  $rivendell.after($('ul#hobbits'));
+  $rivendell.after($('li.hobbit'));
   // Use setTimeout to delay the execution of the next function
   setTimeout(forgeTheFellowShip, 2000)
 }
 
-// var forgeTheFellowShip = function() {
-//   // Create a div with an id of 'the-fellowship' within the section.land for "Rivendell"
-//   var $fellowship = $('<div id="the-fellowship"></div>')
-//   // Add each hobbit and buddy one at a time to 'div#the-fellowship'
-//   var $hobbitz = $('ul#hobbits')
-//   Array.from($hobbitz).forEach(function(i){
-//     $($fellowship).append($hobbitz+i)
+var forgeTheFellowShip = function() {
+  // Create a div with an id of 'the-fellowship' within the section.land for "Rivendell"
+  var $fellowship = $('<div id="the-fellowship"></div>')
+  var $rivendell = $('article.land:nth-child(2) h1')
 
-//   })
+  $($rivendell).after($fellowship)
+  // Add each hobbit and buddy one at a time to 'div#the-fellowship'
+  var $hobbitz = $('li.hobbit')
 
-//   // After each character is added make an alert that they have joined your party
-//   // Use setTimeout to delay the execution of the next function by several seconds
-// }
+  $($hobbitz).each(function(i){
+    $($fellowship).after(this)
+    alert(this.textContent + "has joined the party")
+
+  })
+
+  // After each character is added make an alert that they have joined your party
+  // Use setTimeout to delay the execution of the next function by several seconds
+  setTimeout(theBalrog, 1000)
+}
+
+var theBalrog = function() {
+  // Select the "li.buddy" for "Gandalf"
+  var $gandalf = $('.buddies').first()
+  // And change its textNode to "Gandalf the White"
+  $gandalf.text('Gandalf The great BIG WHITE')
+  // Apply style to the element, adding a "3px solid white" border to it
+  $gandalf.css({border: "3px solid white"})
+  // Use setTimeout to delay the execution of the next function
+  setTimeout(hornOfGondor, 1000)
+}
 
 
 
@@ -110,7 +127,9 @@ var leaveTheShire = function() {
 
 
 
-// setTimeout(makeMiddleEarth, 2000)
+
+
+setTimeout(makeMiddleEarth, 2000)
 
 
 
