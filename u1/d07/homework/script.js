@@ -46,13 +46,136 @@ for(i=0; i < alien.length; i++) {
   }
 */
 
+// var subtitle = document.getElementById('subtitle');
+// console.log(subtitle);
+
+// var clickListItem = document.getElementById('clickListItem');
+// clickListItem.onclick = function() {
+// console.log("You have clicked the li with the text 'Click Me'")};
+
+// var detectives = {
+//   mulder: {
+//     name: "Fox Mulder",
+//     actor: "David Duchovny",
+//     school: "Oxford",
+//     degree: "Pscychology"
+//   },
+//   scully: {
+//     name: "Dana Scully",
+//     actor: "Gillian Anderson",
+//     school: "University of Maryland",
+//     degree: "Physics"
+//   }
+// };
+
+// console.log(detectives.scully.name)
+// var string ="";
+// for(var property in detectives.mulder){
+//   string = string + " " + detectives.mulder[property]
+
+
+// }
+
+// console.log(string)
+
+// console.log(detectives.mulder.name + ' and ' + detectives.scully.name +
+//   ", played by " + detectives.mulder.actor + " and " + detectives.scully.actor +
+//   ", are detectives in the X-Files")
+
+// var readingList = [
+//   {
+//     title: "The Hobbit",
+//     author: "J.R.R. Tolkien",
+//     alreadyRead: false
+//   },
+//   {
+//     title: "Harry Potter and the Order of the Phoenix",
+//     author: "J.K. Rowling",
+//     alreadyRead: true
+//   }
+// ];
+
+// for(i=0;i<readingList.length;i++){
+//   if(readingList[i].alreadyRead === true){
+//     console.log("You already read " + readingList[i].title +
+//       " by " + readingList[i].author)
+
+//   } else {
+//     console.log("You still need to read " + readingList[i].title + " by " +
+//       readingList[i].author)
+//   }
+
+// }
+
+// var alien = {
+//   title: "Alien",
+//   director: "Ridley Scott",
+//   duration: 117,
+//   releaseYear: 1979,
+//   stars: ["Tom Skerritt", "Sigourney Weaver", "Veronica Cartwright", "Harry Dean Stanton", "John Hurt", "Ian Holm", "Yaphet Kotto"]
+// }
+
+// function movieOutput(obj){
+//   var buffer = '';
+//   buffer += obj.title + ", directed by " +
+//     obj.director + " and released in "
+//     + obj.releaseYear + " lasts for " +
+//     obj.duration + " minutes. Stars: ";
+
+//     for(var i=0; i<obj.stars.length; i++){
+//       buffer+= ", " + obj.stars[i]
+//     }
+//     console.log(buffer)
+
+
+//     // +
+//     // obj.stars.join(', '))
+// }
+
+// movieOutput(alien)
+
 var subtitle = document.getElementById('subtitle');
-console.log(subtitle);
+console.log(subtitle)
 
-var clickListItem = document.getElementById('clickListItem');
-clickListItem.onclick = function() {
-console.log("You have clicked the li with the text 'Click Me'")};
+var clickListItem = document.getElementById('clickListItem')
 
+// clickListItem.onclick = function() {
+//   console.log("You have clicked the li with the text 'Click Me'")
+// }
+clickListItem.addEventListener("onclick", function(event) {
+  console.log("you have clicke the li tag")
+})
+
+var printDatum=""
+var aboutMe = {
+  firstName:'Emmanuel',
+  nickName:"Emoney",
+  lastName:"Paulino",
+  age:29,
+  hometown:"New York City",
+  favoriteAnimal:"Dog",
+  printData: function(){
+  var printDatum = "";
+  for(var prop in this) {
+    if (typeof this[prop] !='function') {
+      printDatum += this[prop]
+    }
+
+  }
+  console.log(printDatum)
+  alert(printDatum)
+}
+}
+aboutMe.printData();
+
+var hoverListItem = document.getElementById("hoverListItem");
+hoverListItem.addEventListener("mouseover", function(event) {
+  console.log("you hovered")
+})
+
+// hoverListItem.mouseover = function() {
+//   console.log("You have hovered over the li with the text 'Hover Over Me'")
+// }
 
 
 

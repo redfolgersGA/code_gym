@@ -6,12 +6,11 @@ var userName = prompt("What is your name?");
 var cat_count = prompt("How many cats do you want? (Maximum: 3)");
 
 for(i = 0; i <= cat_count; i++){
-  var new_cat = document.createElement("div");
+  var new_cat = createElement("div");
   new_cat.className = "cat";
   new_cat.className = "cat-" + i;
-  var container = document.querySelector('#cat_container')
+  var container = querySelector('.cat_container')
   container.appendChild(new_cat);
-  debugger
 }
 
 })();

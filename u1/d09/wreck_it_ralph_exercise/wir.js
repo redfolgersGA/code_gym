@@ -13,7 +13,9 @@
 
 
 	  // 1. Add the class "ralph" to this div. Append $ralph to the page.
-    var $ralph = $('<div id="ralph1"></div>');
+    $ralph.addClass('ralph')
+
+    $($body).append($ralph)
 
 
 
@@ -22,38 +24,25 @@
 	  // i.e. ralph1 should become ralph2, ralph2 becomes ralph3 and so on...
 	  // You'll might into an issue here. Maybe you should log the number you are
 	  // incrementing and then look at the class names in the css file. (DEBUG IT!)
+   var counter = 2
+    $($ralph).click(function(){
+      $ralph.attr('id', 'ralph' +(counter-1))
+      $ralph.attr('id', 'ralph' + counter)
+      console.log(counter)
+      counter++
 
 
 
-		// 3. There are 11 frames in the total animation. When #ralph11 (the last frame)
-		// is displayed, restart the animation back to the first.
+    // if(counter== 12){
+    //   counter = 1
+    // } else if(counter == 6){
+    //   var $speech1 = $('<div id="speech1"></div>');
+    //   $($body).append($speech1)
 
 
 
 
-		// 4. When the counter hits the 5th frame (suprised), you should append a div with
-		// the ID of 'speech1' to the page.
 
 
-
-    // 5. On frame 6, reassign the ID attribute of the 'speech1' div to 'speech2'
-
-
-
-    // 6. On frame 7, remove the speech div completely.
-
-
-
-    // 7. On the last frame, add an alert letting the user know Ralph is just kidding!
-
-
-
-		// 8. Congratulations!
-
-
-
-		//Bonus: Open the image, explore other series of frames.
-		// Create css rules and write more jQuery to create a new animation.
-
-	})
+	}
 })();
