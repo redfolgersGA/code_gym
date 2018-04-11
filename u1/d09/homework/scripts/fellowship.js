@@ -121,6 +121,36 @@ var theBalrog = function() {
   setTimeout(hornOfGondor, 1000)
 }
 
+// Boromir's been killed by the Uruk-hai!
+var hornOfGondor = function() {
+  // Pop up an alert that the Horn of Gondor has been blown
+  alert('The Horn of Gondor has been blown!')
+  // Put a line-through on Boromir's name
+  var $boromir = $('li.buddies').last()
+  $boromir.css('text-decoration', 'line-through')
+  // And fade Boromir's opacity to 0.3 (he lives on in spirit)
+  $boromir.css({opacity: "0.3"})
+  // Use setTimeout to delay the execution of the next function
+  setTimeout(itsDangerousToGoAlone, 1000)
+}
+
+var itsDangerousToGoAlone = function(){
+  // Take Frodo and Sam out of The Fellowship and move them to Mordor
+  var $frodo = $('li.hobbit').last()
+  var $mordor = $('li.hobbit').eq(2)
+  // Add a div with an id of 'mount-doom' to Mordor
+  var $newDiv = $('<div id="mount-doom"></div>')
+  // Use setTimeout to delay the execution of the next function
+  setTimeout(weWantsIt, 1000)
+}
+var weWantsIt = function() {
+  // Create a div with an id of 'gollum' and add it to Mordor
+  // Remove The Ring from Frodo and give it to Gollum
+  // Move Gollum into Mount Doom
+  // Use setTimeout to delay the execution of the next function
+}
+
+
 
 
 
