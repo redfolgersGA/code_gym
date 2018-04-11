@@ -136,17 +136,28 @@ var hornOfGondor = function() {
 
 var itsDangerousToGoAlone = function(){
   // Take Frodo and Sam out of The Fellowship and move them to Mordor
-  var $frodo = $('li.hobbit').last()
-  var $mordor = $('li.hobbit').eq(2)
+
   // Add a div with an id of 'mount-doom' to Mordor
   var $newDiv = $('<div id="mount-doom"></div>')
+  var $mordor= $('article.land:nth-child(3)')
+  var $frodo = $('li.hobbit').last().appendTo($mordor)
+  var $mordor = $('li.hobbit').eq(2).appendTo($mordor)
+  $($newDiv).appendTo($mordor)
   // Use setTimeout to delay the execution of the next function
+  $($newDiv).appendTo($mordor)
   setTimeout(weWantsIt, 1000)
 }
 var weWantsIt = function() {
   // Create a div with an id of 'gollum' and add it to Mordor
+  var $gollum = $('<div id="gollum"></div>')
+  var $mordor= $('article.land:nth-child(3)')
+  $($gollum).appendTo($mordor)
   // Remove The Ring from Frodo and give it to Gollum
+  var $magicRing = $('div.magic-imbued-jewelry').appendTo($gollum)
+
   // Move Gollum into Mount Doom
+  var $mountDoom = $('div#mount-doom')
+  $(gollum).appendTo($mountDoom)
   // Use setTimeout to delay the execution of the next function
 }
 
