@@ -159,7 +159,24 @@ var weWantsIt = function() {
   var $mountDoom = $('div#mount-doom')
   $(gollum).appendTo($mountDoom)
   // Use setTimeout to delay the execution of the next function
+  setTimeout(thereAndBackAgain, 1000)
 }
+
+var thereAndBackAgain = function() {
+  // Remove Gollum and the Ring from the document
+  var $gollum = $('div#gollum')
+  $(gollum).remove()
+  // Move all the hobbits back to The Shire
+  var $hobbits = $('li.hobbit')
+  $($hobbits).appendTo('article.land:nth-child(1)')
+  // Add the class "collapse" to Mordor
+  var $mordor= $('article.land:nth-child(3)')
+  $($mordor).addClass('collapse')
+
+  console.log("omfg you did it")
+
+}
+
 
 
 
