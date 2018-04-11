@@ -1,6 +1,14 @@
 //"use strict";
 
-/*$("document").ready(function(){*/
+$("document").ready(function(){
+  console.log("jquery is ready")
+
+
+
+
+
+  // comment IN the .ready method for the document to access jquery
+  // all we are doing is selecting elements from the DOM and changing them dynamically
 
 	var pokemon = [
 		['Voltorb','images/voltorb.png',100],
@@ -15,34 +23,70 @@
 		['Magikarp','images/magikarp.gif',40],
 		['Gastly','images/gastly.png',50]
 	];
+// for(i=0;i<pokemon.length;i++){
+//    // console.log(pokemon[i])
+//       for(j=0;j<[i].length;j++)
+//       console.log(pokemon[i][j])
+//   }
+// console.log(Math.round(Math.random()*pokemon.length))
+
+// This for loop console.logs(array in array index [1] REMEMBER ARRAYS ARE 0 based in JS)
+
+// Grabbing reference to the enemy IMAGE...Now add an image to it from the ARRAY...Then randomize
+// the image selection process
+
+var $enemyImage = $('img#enemy_img')
+var $addEnem;
+function addEnemyImage() {
+
+for(i=0;i<pokemon.length;i++){
+   // console.log(pokemon[i])
+      for(j=0;j<pokemon[i].length;j++) {
+       // console.log(pokemon[i][j])
+          if(j=1){
+        $addEnem = pokemon[i][j]
+        $enemyImage.attr('src', $addEnem)
+
+          if(j=1){
+            break
+          }
+       // console.log(j)
+          }
+      }
+
+
+  }
+
+}
+setTimeout(addEnemyImage, 1000)
 
 /* global variables that can be called in any functions*/
 
-var $enemyimg = $("#enemy_img");
-var $enemyname = $("#enemy .name");
-var $enemyhealth = $("#enemy .health");
-var $textbox = $("#status_text");
+// var $enemyimg = $("#enemy_img");
+// var $enemyname = $("#enemy .name");
+// var $enemyhealth = $("#enemy .health");
+// var $textbox = $("#status_text");
 
-var chooseEnemy = function() {
+// var chooseEnemy = function() {
 
-var pokemonIndex = Math.floor(Math.random()*(pokemon.length);
-var selectEnemy = pokemon[pokemonIndex]
-var pickName = selectEnemy[0]
-var pickImage = selectEnemy[1]
-var pickEnemHealth = selectEnemy[2]
+// var pokemonIndex = Math.floor(Math.random()*(pokemon.length);
+// var selectEnemy = pokemon[pokemonIndex]
+// var pickName = selectEnemy[0]
+// var pickImage = selectEnemy[1]
+// var pickEnemHealth = selectEnemy[2]
 
 
 
-$enemyname.text(pickName" ");
-$($enemyimg).attr('src', battleEnemy[1]);
-$($enemyhealth).text("Health: " + battleEnemy[2]);
-$($textbox).text("A wild " + battleEnemy[0] + " appeared!");
-return battleEnemy;
+// $enemyname.text(pickName" ");
+// $($enemyimg).attr('src', battleEnemy[1]);
+// $($enemyhealth).text("Health: " + battleEnemy[2]);
+// $($textbox).text("A wild " + battleEnemy[0] + " appeared!");
+// return battleEnemy;
 
-};
+// };
 
-var enemy = chooseEnemy ();
-console.log(enemy);
+// var enemy = chooseEnemy ();
+// console.log(enemy);
 
 //document.getElementById('enemy_img').innerHTML = pokemon[chooseEnemy];
 
@@ -56,12 +100,12 @@ var enemyPic = $($chooseEnemy).val()
  $("#enemy_img").val(enemyPic);
 });*/
 
-$("#attack_btn").click(function() {
-  $(this).hide();})/*it hides forever but you have to make it hide for 3 seconds then reappear*/
+// $("#attack_btn").click(function() {
+//   $(this).hide();})it hides forever but you have to make it hide for 3 seconds then reappear
 
-$("#enemy_img").click(function() {
-  var enemyPic = $(this).val("chooseEnemy");
-})
+// $("#enemy_img").click(function() {
+//   var enemyPic = $(this).val("chooseEnemy");
+// })
 
 
 
@@ -113,6 +157,6 @@ var $enemy = $('<div class="enemyPoke">+enemyName+'</div>'')
 
 
 
-
-
+// END END END END
+});
 
