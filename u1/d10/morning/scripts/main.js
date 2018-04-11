@@ -30,10 +30,14 @@ var $poorSouls = $('.collateral-damage');
 //you need to use your own variable names in place of the ones down here. this is an example
 
 function removeSouls(){
+  var $li = $('.collateral-damage')
   $poorSouls.each(function(i){
+
     $(this).remove()
 
-    setTimeout(1000)
+
+
+
   })
 }
 setTimeout(removeSouls, 4000)
