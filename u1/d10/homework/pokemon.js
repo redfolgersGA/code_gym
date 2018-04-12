@@ -47,9 +47,10 @@ randPoke()
 // attach event listener to attack button which will deplete the p.health number
 function attack($randPokemon) {
   var $attackButton = $('p#attack_btn');
+  var $enemyHealthStatus = $randPokemon[2]
 
   $($attackButton).on('click', function(){
-    $($enemyHealth).text($randPokemon[2] - 1000)
+    $($enemyHealth).text($enemyHealthStatus+= - Math.floor(Math.random() * (31 - 5) + 5))
   })
 
 }
