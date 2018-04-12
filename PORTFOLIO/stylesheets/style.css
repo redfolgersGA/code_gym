@@ -8,9 +8,22 @@ li {
   color: red;
 }
 
+#name {
+
+}
+
+#name h1{
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+
+
+}
+
 #header_lis {
   border: solid;
   height: 150px;
   margin: 0 auto;
   width: 80%;
+  background-color: black;
+
 }
