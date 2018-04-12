@@ -34,21 +34,29 @@ $("document").ready(function(){
 
 // Grabbing reference to the enemy IMAGE...Now add an image to it from the ARRAY...Then randomize
 // the image selection process
-
+var $statusText = $('span#status_text')
 var $enemyImage = $('img#enemy_img')
 var $addEnem;
+
+
 function addEnemyImage() {
 
 for(i=0;i<pokemon.length;i++){
    // console.log(pokemon[i])
       for(j=0;j<pokemon[i].length;j++) {
        // console.log(pokemon[i][j])
+
+
+          }
           if(j=1){
             // maybe my Math.random function will go here
         // $addEnem = pokemon[i][j] this will always give me back the image in the last array in the array which is ghastly b/c of dynamic typing
         $addEnem = pokemon[Math.round(Math.random()*pokemon.length)][j]
+
         console.log($addEnem + "oh snap")
         $enemyImage.attr('src', $addEnem)
+
+
 
           if(j=1){
             break
@@ -60,8 +68,15 @@ for(i=0;i<pokemon.length;i++){
 
   }
 
-}
+
 setTimeout(addEnemyImage, 1000)
+
+// function displayEnemyText (){
+//   for(i=0;i<pokemon.length;i++){
+//     for
+//   }
+
+// }
 
 /* global variables that can be called in any functions*/
 
