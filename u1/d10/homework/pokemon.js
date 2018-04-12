@@ -3,7 +3,9 @@
 $("document").ready(function(){
   console.log("jquery is ready")
 
-
+var $statusText = $('span#status_text')
+var $enemyImage = $('img#enemy_img')
+var $addEnem;
 
 
 
@@ -23,6 +25,17 @@ $("document").ready(function(){
 		['Magikarp','images/magikarp.gif',40],
 		['Gastly','images/gastly.png',50]
 	];
+
+  function randPoke (){
+    var $randPokemon = pokemon[Math.round(Math.random()*pokemon.length)]
+    $($enemyImage).attr('src', $randPokemon[1])
+    $($statusText).text('A wild' + $randPokemon[0] + 'appeared')
+
+
+
+}
+
+randPoke()
 // for(i=0;i<pokemon.length;i++){
 //    // console.log(pokemon[i])
 //       for(j=0;j<[i].length;j++)
@@ -34,46 +47,48 @@ $("document").ready(function(){
 
 // Grabbing reference to the enemy IMAGE...Now add an image to it from the ARRAY...Then randomize
 // the image selection process
-var $statusText = $('span#status_text')
-var $enemyImage = $('img#enemy_img')
-var $addEnem;
-
-
-function addEnemyImage() {
-
-for(i=0;i<pokemon.length;i++){
-   // console.log(pokemon[i])
-      for(j=0;j<pokemon[i].length;j++) {
-       // console.log(pokemon[i][j])
-
-
-          }
-          if(j=1){
-            // maybe my Math.random function will go here
-        // $addEnem = pokemon[i][j] this will always give me back the image in the last array in the array which is ghastly b/c of dynamic typing
-        $addEnem = pokemon[Math.round(Math.random()*pokemon.length)][j]
-
-        console.log($addEnem + "oh snap")
-        $enemyImage.attr('src', $addEnem)
 
 
 
-          if(j=1){
-            break
-          }
-       // console.log(j)
-          }
-      }
+// function addEnemyImage() {
+
+// for(i=0;i<pokemon.length;i++){
+//    // console.log(pokemon[i])
+//       for(j=0;j<pokemon[i].length;j++) {
+//        // console.log(pokemon[i][j])
 
 
-  }
+//           }
+//           if(j=1){
+//             // maybe my Math.random function will go here
+//         // $addEnem = pokemon[i][j] this will always give me back the image in the last array in the array which is ghastly b/c of dynamic typing
+//         $addEnem = pokemon[Math.round(Math.random()*pokemon.length)][j]
+//         $($statusText).text('a wild' + $addEnem.slice(3, 6))
+
+//         console.log($addEnem + "oh snap")
+//         $enemyImage.attr('src', $addEnem)
 
 
-setTimeout(addEnemyImage, 1000)
 
-// function displayEnemyText (){
+
+//           if(j=1){
+//             break
+//           }
+//        // console.log(j)
+//           }
+//       }
+// // displayEnemyText($addEnem)
+
+//   }
+
+
+// setTimeout(addEnemyImage, 1000)
+
+// function displayEnemyText (a){
 //   for(i=0;i<pokemon.length;i++){
-//     for
+
+//     $($statusText).text('a wild' +'appeared')
+//     $addEnem.
 //   }
 
 // }
