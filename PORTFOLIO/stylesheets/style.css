@@ -2,6 +2,8 @@ li {
   display:  inline;
   float: right;
   padding: 10px;
+  font-family: 'PT Sans', sans-serif;
+
 
   color: red;
 }
