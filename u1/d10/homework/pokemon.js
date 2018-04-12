@@ -50,12 +50,31 @@ function attack($randPokemon) {
   var $enemyHealthStatus = $randPokemon[2]
   var $randomAttckNumber = Math.floor(Math.random() * (31 - 5) + 5)
 
+
   $($attackButton).on('click', function(){
     $($enemyHealth).text($enemyHealthStatus+= - $randomAttckNumber)
     $($statusText).text('Attack was successful!! Enemy health was lowered by ???!')
-  })
+    console.log($enemyHealthStatus)
+
+        gameOver($enemyHealthStatus)
+
+
+
+      })
+
+
+  }
+
+
+function gameOver($enemyHealthStatus){
+  if($enemyHealthStatus < 0) {
+        alert("GAME OVER YOU WINs")
+      }
+
 
 }
+
+
 // for(i=0;i<pokemon.length;i++){
 //    // console.log(pokemon[i])
 //       for(j=0;j<[i].length;j++)
