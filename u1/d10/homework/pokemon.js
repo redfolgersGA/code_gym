@@ -7,6 +7,8 @@ var $statusText = $('span#status_text')
 var $enemyImage = $('img#enemy_img')
 var $enemyName = $('div#enemy p.name')
 var $enemyHealth = $('div#enemy p.health')
+
+
 var $addEnem;
 
 
@@ -36,10 +38,21 @@ var $addEnem;
     $($enemyHealth).text($randPokemon[2])
 
 
-
+attack($randPokemon)
+console.log($randPokemon)
 }
 
 randPoke()
+
+// attach event listener to attack button which will deplete the p.health number
+function attack($randPokemon) {
+  var $attackButton = $('p#attack_btn');
+
+  $($attackButton).on('click', function(){
+    $($enemyHealth).text($randPokemon[2] - 1000)
+  })
+
+}
 // for(i=0;i<pokemon.length;i++){
 //    // console.log(pokemon[i])
 //       for(j=0;j<[i].length;j++)
