@@ -5,6 +5,8 @@ $("document").ready(function(){
 
 var $statusText = $('span#status_text')
 var $enemyImage = $('img#enemy_img')
+var $enemyName = $('div#enemy p.name')
+var $enemyHealth = $('div#enemy p.health')
 var $addEnem;
 
 
@@ -29,7 +31,9 @@ var $addEnem;
   function randPoke (){
     var $randPokemon = pokemon[Math.round(Math.random()*pokemon.length)]
     $($enemyImage).attr('src', $randPokemon[1])
-    $($statusText).text('A wild' + $randPokemon[0] + 'appeared')
+    $($statusText).text('A wild ' + $randPokemon[0] + ' appeared')
+    $($enemyName).text($randPokemon[0])
+    $($enemyHealth).text($randPokemon[2])
 
 
 
