@@ -48,9 +48,11 @@ randPoke()
 function attack($randPokemon) {
   var $attackButton = $('p#attack_btn');
   var $enemyHealthStatus = $randPokemon[2]
+  var $randomAttckNumber = Math.floor(Math.random() * (31 - 5) + 5)
 
   $($attackButton).on('click', function(){
-    $($enemyHealth).text($enemyHealthStatus+= - Math.floor(Math.random() * (31 - 5) + 5))
+    $($enemyHealth).text($enemyHealthStatus+= - $randomAttckNumber)
+    $($statusText).text('Attack was successful!! Enemy health was lowered by ???!')
   })
 
 }

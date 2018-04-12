@@ -1,0 +1,14 @@
+li {
+  display:  inline;
+  float: right;
+  padding: 10px;
+
+  color: red;
+}
+
+#header_lis {
+  border: solid;
+  height: 150px;
+  margin: 0 auto;
+  width: 80%;
+}
