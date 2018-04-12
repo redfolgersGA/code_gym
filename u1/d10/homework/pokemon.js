@@ -44,7 +44,10 @@ for(i=0;i<pokemon.length;i++){
       for(j=0;j<pokemon[i].length;j++) {
        // console.log(pokemon[i][j])
           if(j=1){
-        $addEnem = pokemon[i][j]
+            // maybe my Math.random function will go here
+        // $addEnem = pokemon[i][j] this will always give me back the image in the last array in the array which is ghastly b/c of dynamic typing
+        $addEnem = pokemon[Math.round(Math.random()*pokemon.length)][j]
+        console.log($addEnem + "oh snap")
         $enemyImage.attr('src', $addEnem)
 
           if(j=1){
