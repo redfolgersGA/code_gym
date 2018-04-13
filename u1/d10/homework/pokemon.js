@@ -65,6 +65,9 @@ function attack($randPokemon) {
 // and it will break out of the function...this means you will have to wrap your functions
 // code in an if statement..AND make a variable that logs the Math.random number
   $($attackButton).on('click', function(tenPercentMissed){
+    var tenPercentMissed = Math.floor(Math.random() * (11 - 1) + 1)
+    console.log(tenPercentMissed)
+
     if(tenPercentMissed !== 5){
 
     $($enemyHealth).text($enemyHealthStatus+= - $randomAttckNumber)
