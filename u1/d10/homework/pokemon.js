@@ -50,11 +50,20 @@ function attack($randPokemon) {
   var $enemyHealthStatus = $randPokemon[2]
   var $randomAttckNumber = Math.floor(Math.random() * (31 - 5) + 5)
 
+ function tenPercentMiss() {
+    var tenPercentMissed = Math.floor(Math.random() * (11 - 1) + 1)
+    console.log(tenPercentMissed)
+
+
+
+  }
+  tenPercentMiss()
+
 // Math.random will generate a random number between 1 and 10 and put it in a variable
 // if the random number generated is say 5 then it will console.log your attack missed!
 // and it will break out of the function...this means you will have to wrap your functions
 // code in an if statement..AND make a variable that logs the Math.random number
-  $($attackButton).on('click', function(){
+  $($attackButton).on('click', function(tenPercentMiss){
 
     $($enemyHealth).text($enemyHealthStatus+= - $randomAttckNumber)
     $($statusText).text('Attack was successful!! Enemy health was lowered by ???!')
