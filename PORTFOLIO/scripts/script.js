@@ -16,16 +16,25 @@ function switchImage() {
 
 setInterval(switchImage, 2000)
 
+
+
 function navBarHide() {
   var $navBar = $('nav#header_lis')
   var $h1 = $('div#name h1')
   $h1.on('click', function(){
-    $navBar.show()
+    $navBar.toggle()
+
   })
-  $navBar.hide();
+
 
 }
 navBarHide()
+
+
+
+
+// }
+// navBarShow()
 
 
 
