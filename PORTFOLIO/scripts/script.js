@@ -4,6 +4,9 @@ $("document").ready(function(){
 var $img2 = $('div#img2')
 $($img2).hide()
 
+
+// return an array of HTML elements....The elements in the array will be associated
+// with an image
 function switchImage() {
   var $img1 = $('div#img1')
   var $img2 = $('div#img2')
