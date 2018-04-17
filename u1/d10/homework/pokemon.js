@@ -95,6 +95,10 @@ function gameOver($enemyHealthStatus){
 
 }
 
+
+
+
+
 function healPokemon(){
   var $healButton = $('p#heal_btn')
   // get $healthBar to return a number NOT an object like it is doing right now
@@ -104,6 +108,10 @@ function healPokemon(){
 
   $healButton.on('click', function(){
     $healthBar.text($currentHealth += healed)
+    $healButton.toggle(function(){
+      $healButton.toggle()
+    })
+
   })
 }
 
