@@ -97,10 +97,12 @@ function gameOver($enemyHealthStatus){
 
 function healPokemon(){
   var $healButton = $('p#heal_btn')
-  var $health = $('p.health').eq(0)
+  // get $healthBar to return a number NOT an object like it is doing right now
+  var $healthBar = $('p.health').eq(0)
+  var healed = Math.floor(Math.random() * (50 - 25) + 25)
 
   $healButton.on('click', function(){
-    $health.text('3000')
+    $healthBar.text(healed += healed)
   })
 }
 
