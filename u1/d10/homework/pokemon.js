@@ -100,9 +100,10 @@ function healPokemon(){
   // get $healthBar to return a number NOT an object like it is doing right now
   var $healthBar = $('p.health').eq(0)
   var healed = Math.floor(Math.random() * (50 - 25) + 25)
+  var $currentHealth = parseInt($('p.health').eq(0).text())
 
   $healButton.on('click', function(){
-    $healthBar.text(healed += healed)
+    $healthBar.text($currentHealth += healed)
   })
 }
 
