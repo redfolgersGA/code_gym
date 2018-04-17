@@ -72,6 +72,7 @@ function attack($randPokemon) {
 
     $($enemyHealth).text($enemyHealthStatus+= - $randomAttckNumber)
     $($statusText).text('Attack was successful!! Enemy health was lowered by ???!')
+
     console.log($enemyHealthStatus)
 
         gameOver($enemyHealthStatus)
@@ -93,6 +94,17 @@ function gameOver($enemyHealthStatus){
 
 
 }
+
+function healPokemon(){
+  var $healButton = $('p#heal_btn')
+  var $health = $('p.health').eq(0)
+
+  $healButton.on('click', function(){
+    $health.text('3000')
+  })
+}
+
+healPokemon()
 
 
 // for(i=0;i<pokemon.length;i++){
