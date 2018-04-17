@@ -71,8 +71,9 @@ function attack($randPokemon) {
     if(tenPercentMissed !== 5){
 
     $($enemyHealth).text($enemyHealthStatus+= - $randomAttckNumber)
-    $attackButton.toggle(function(){
-      $attackButton.toggle()
+    $attackButton.hide('fast', function(){
+      // Enemy attack function goes here
+      $attackButton.show()
     })
     $($statusText).text('Attack was successful!! Enemy health was lowered by ???!')
 
@@ -111,8 +112,9 @@ function healPokemon(){
 
   $healButton.on('click', function(){
     $healthBar.text($currentHealth += healed)
-    $healButton.toggle(function(){
-      $healButton.toggle()
+    $healButton.hide('fast', function(){
+      // enemy Attack function goes here
+      $healButton.show()
     })
 
   })
