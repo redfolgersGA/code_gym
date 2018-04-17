@@ -73,6 +73,7 @@ function attack($randPokemon) {
     $($enemyHealth).text($enemyHealthStatus+= - $randomAttckNumber)
     $attackButton.hide('fast', function(){
       // Enemy attack function goes here
+      youWereAttacked()
       $attackButton.show()
     })
     $($statusText).text('Attack was successful!! Enemy health was lowered by ???!')
@@ -88,6 +89,11 @@ function attack($randPokemon) {
       })
 
 
+  }
+
+  function youWereAttacked() {
+
+    console.log('you were attacked')
   }
 
 
