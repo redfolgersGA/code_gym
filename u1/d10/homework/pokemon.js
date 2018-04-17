@@ -71,6 +71,9 @@ function attack($randPokemon) {
     if(tenPercentMissed !== 5){
 
     $($enemyHealth).text($enemyHealthStatus+= - $randomAttckNumber)
+    $attackButton.toggle(function(){
+      $attackButton.toggle()
+    })
     $($statusText).text('Attack was successful!! Enemy health was lowered by ???!')
 
     console.log($enemyHealthStatus)
