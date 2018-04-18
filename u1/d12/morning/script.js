@@ -10,7 +10,7 @@ var philosophers = [
     img: "http://thisiscommonsense.com/wp-content/uploads/2015/11/image11.jpg"
   },
   {
-    name: "Aristotle",
+    name: "Aristotle The Great",
     language: "Greek",
     born: "384 BC",
     works: ["The Categories", "Metaphysics", "Nicomachean Ethics"],
@@ -90,6 +90,7 @@ var $button = $("#inputSubmit");
 
   if($userName === 'aristotle') {
     $('img').attr('src', philosophers[1].img)
+    $('.name').text(philosophers[1].name)
   }
 
   })
