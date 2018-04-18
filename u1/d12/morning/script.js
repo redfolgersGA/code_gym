@@ -88,6 +88,10 @@ var $button = $("#inputSubmit");
     $('.quote').text(philosophers[2].famousLine)
   }
 
+  if($userName === 'aristotle') {
+    $('img').attr('src', philosophers[1].img)
+  }
+
   })
 
 
