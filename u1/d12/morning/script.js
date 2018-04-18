@@ -103,6 +103,22 @@ var $button = $("#inputSubmit");
 
   }
 
+  if($userName === 'martin') {
+    $('img').attr('src', philosophers[4].img)
+    $('.name').text(philosophers[4].name)
+    $('.school').text(philosophers[4].school)
+    $('.quote').text(philosophers[4].famousLine)
+  }
+
+  if($userName === 'fred') {
+    $('img').attr('src', philosophers[0].img)
+    $('.name').text(philosophers[0].name)
+    $('.school').text(philosophers[0].school)
+    $('.quote').text(philosophers[0].famousLine)
+  }
+
+  var $userName = ""
+
   })
 
 
