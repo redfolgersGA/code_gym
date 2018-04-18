@@ -55,10 +55,60 @@ $(document).ready(function() {
 
   console.log('script loaded');
 
-var $inputBox = $("input");
+// var $inputBox = $('input');
 
-$("input").submit(function( event) {
-  console.log(input);
+// $("input").submit(function( event) {
+//   console.log(input);
+
+// var inputBox = $('input')
+// var boxValue = inputBox.val()
+// var button = $('button#inputSubmit')
+
+
+// console.log(boxValue)
+
+
+// button.on('click', function(){
+//   console.log('clicked')
+// })
+
+var $button = $("#inputSubmit");
+
+  $button.click(function(){
+    console.log("clicked!");
+    var $userName = $("input").val();
+    console.log($userName);
+
+
+  if($userName === 'hegel') {
+
+    $('img').attr('src', philosophers[0].img)
+  }
+
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// END END END
 });
 
 
@@ -71,4 +121,4 @@ $("input").submit(function( event) {
 
 
 
-});
+
