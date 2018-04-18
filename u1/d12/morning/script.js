@@ -91,6 +91,8 @@ var $button = $("#inputSubmit");
   if($userName === 'aristotle') {
     $('img').attr('src', philosophers[1].img)
     $('.name').text(philosophers[1].name)
+    $('.school').text(philosophers[1].school)
+    $('.quote').text(philosophers[1].famousLine)
   }
 
   })
