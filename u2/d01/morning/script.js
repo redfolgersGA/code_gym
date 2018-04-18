@@ -75,6 +75,35 @@ var logNameEyes = function() {
 logNameEyes()
 
 
+var logByMass = function() {
+  data.people.forEach(function(person){
+    if(person.mass > 75){
+      console.log(person.name + " has a mass of " + person.mass)
+    }
+  })
+};
+
+logByMass()
+
+
+var appendCharacterNames = function() {
+  data.people.forEach(function(person){
+    var $characterDiv = $('div#characters')
+    $characterDiv.append('<p>' + person.name + '</p>')
+
+  })
+};
+
+appendCharacterNames()
+
+
+
+
+
+
+
+
+
 
 
 
