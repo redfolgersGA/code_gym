@@ -107,6 +107,11 @@ function attack($randPokemon) {
 
     $($healthBar).text($currentHealth -= $randomAttckNumber)
 
+      if($currentHealth <= 0){
+        alert('You lose')
+        location.reload()
+      }
+
     // p.health will decrease
 
   }
@@ -117,6 +122,7 @@ function attack($randPokemon) {
 function gameOver($enemyHealthStatus){
   if($enemyHealthStatus <= 0) {
         alert("GAME OVER YOU WINs")
+        location.reload()
       }
 
 
