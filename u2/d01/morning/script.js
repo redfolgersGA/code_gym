@@ -66,6 +66,14 @@ var logNames = function() {
 logNames()
 
 
+var logNameEyes = function() {
+  data.people.forEach(function(person){
+    console.log(person.name + " has " + person.eye_color + " eyes.")
+  })
+};
+
+logNameEyes()
+
 
 
 
