@@ -83,6 +83,8 @@ var $button = $("#inputSubmit");
   if($userName === 'hegel') {
 
     $('img').attr('src', philosophers[0].img)
+    $('.name').text(philosophers[2].name)
+    $('.school').text(philosophers[2].school)
   }
 
   })
