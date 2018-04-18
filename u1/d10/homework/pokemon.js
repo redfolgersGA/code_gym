@@ -7,6 +7,9 @@ var $statusText = $('span#status_text')
 var $enemyImage = $('img#enemy_img')
 var $enemyName = $('div#enemy p.name')
 var $enemyHealth = $('div#enemy p.health')
+var $currentHealth = parseInt($('p.health').eq(0).text())
+var $healthBar = $('p.health').eq(0)
+var $healButton = $('p#heal_btn')
 
 
 var $addEnem;
@@ -92,13 +95,27 @@ function attack($randPokemon) {
   }
 
   function youWereAttacked() {
+    // status text will say you were attacked
 
-    console.log('you were attacked')
+
+
+    var tenPercentMissed = Math.floor(Math.random() * (11 - 1) + 1)
+    var $randomAttckNumber = Math.floor(Math.random() * (31 - 5) + 5)
+    console.log(tenPercentMissed + 'youWereattacked number')
+
+    if(tenPercentMissed !== 5){
+
+    $($healthBar).text($currentHealth -= $randomAttckNumber)
+
+    // p.health will decrease
+
+  }
+    console.log('you were attacked function')
   }
 
 
 function gameOver($enemyHealthStatus){
-  if($enemyHealthStatus < 0) {
+  if($enemyHealthStatus <= 0) {
         alert("GAME OVER YOU WINs")
       }
 
@@ -110,11 +127,11 @@ function gameOver($enemyHealthStatus){
 
 
 function healPokemon(){
-  var $healButton = $('p#heal_btn')
+
   // get $healthBar to return a number NOT an object like it is doing right now
-  var $healthBar = $('p.health').eq(0)
+
   var healed = Math.floor(Math.random() * (50 - 25) + 25)
-  var $currentHealth = parseInt($('p.health').eq(0).text())
+
 
   $healButton.on('click', function(){
     $healthBar.text($currentHealth += healed)
