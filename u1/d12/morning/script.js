@@ -95,6 +95,14 @@ var $button = $("#inputSubmit");
     $('.quote').text(philosophers[1].famousLine)
   }
 
+  if($userName === 'simone') {
+    $('img').attr('src', philosophers[3].img)
+    $('.name').text(philosophers[3].name)
+    $('.school').text(philosophers[3].school)
+    $('.quote').text(philosophers[3].famousLine)
+
+  }
+
   })
 
 
