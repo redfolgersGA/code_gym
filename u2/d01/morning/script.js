@@ -96,6 +96,19 @@ var appendCharacterNames = function() {
 
 appendCharacterNames()
 
+var appendByMass = function() {
+  data.people.forEach(function(person){
+    var $characterDiv = $('div#characters')
+    if(person.mass > 75){
+      $characterDiv.append('<p>' + person.name + '</p>')
+      $('h1#title').text("has mass of greater than 75")
+
+    }
+
+  })
+};
+
+appendByMass()
 
 
 
