@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  var first_film_url = "http://swapi.co/api/films/1/";
+  var first_film_url = "https://swapi.co/api/films/1/";
 
 $.ajax({
   "url": first_film_url,
@@ -27,32 +27,32 @@ $.ajax({
   }//ends success
 })
 });
-
----------------------------------------------------------------------
+//
+// ---------------------------------------------------------------------
 //same as above but done with promises
 
-var first_film_url = "http://swapi.co/api/films/1/";
-  var data_logger = function(data) {
-    console.log(data);
-  }
+// var first_film_url = "http://swapi.co/api/films/1/";
+//   var data_logger = function(data) {
+//     console.log(data);
+//   }
 
-  var initial_request = function() {
-    return $.ajax({
-      "url": first_film_url,
-        "method": "get"
-         })
-  }
+//   var initial_request = function() {
+//     return $.ajax({
+//       "url": first_film_url,
+//         "method": "get"
+//          })
+//   }
 
-  var starShipRequest = function(data) {
-    return $.ajax({
-     "url": data.starships[6],
-      "method": "get"
-  })
-  }
+//   var starShipRequest = function(data) {
+//     return $.ajax({
+//      "url": data.starships[6],
+//       "method": "get"
+//   })
+//   }
 
-intial_request()
- .then(starshipRequest)
- .then(data_logger);
+// intial_request()
+//  .then(starshipRequest)
+//  .then(data_logger);
 
 
 
