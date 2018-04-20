@@ -28,40 +28,69 @@ var frameworks = {
     }
   ]
 }
+
+
+
+  var modifiedFramework = frameworks.frontEnd.map(function(framework){
+    return framework.name + ".js"
+
+  })
+
+  modifiedFramework.forEach(function(framework){
+    console.log(framework)
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Part 1
 //1.
-var modifiedFrontEnd =
-    frameworks.frontEnd.map(function(technologies){
-    return technologies.name + ".js";
-});
-console.log(modifiedFrontEnd)
+// var modifiedFrontEnd =
+//     frameworks.frontEnd.map(function(technologies){
+//     return technologies.name + ".js";
+// });
+// console.log(modifiedFrontEnd)
 
 
-//2.
-var modifiedBackEnd =
-    frameworks.backEnd.map(function(technologies){
-     return technologies.name + ".js";
-});
-console.log(modifiedBackEnd)
+// //2.
+// var modifiedBackEnd =
+//     frameworks.backEnd.map(function(technologies){
+//      return technologies.name + ".js";
+// });
+// console.log(modifiedBackEnd)
 
-//Part 2
-//1.
-var filteredFrontEnd =
-    frameworks.frontEnd.filter(function(long){
-      if(long.description.length >= 30) {
-        return long;
-};
-});
-console.log(filteredFrontEnd);
+// //Part 2
+// //1.
+// var filteredFrontEnd =
+//     frameworks.frontEnd.filter(function(long){
+//       if(long.description.length >= 30) {
+//         return long;
+// };
+// });
+// console.log(filteredFrontEnd);
 
-//2.
-var filteredBackEnd =
-    frameworks.backEnd.filter(function(vowel){
-      if(vowel.name.indexOf()[0] === "a" || "e" || "i" || "o" || "u") {
-        return vowel.name;
-}
-});
-console.log(filteredBackEnd);
+// //2.
+// var filteredBackEnd =
+//     frameworks.backEnd.filter(function(vowel){
+//       if(vowel.name.indexOf()[0] === "a" || "e" || "i" || "o" || "u") {
+//         return vowel.name;
+// }
+// });
+// console.log(filteredBackEnd);
 
 
 

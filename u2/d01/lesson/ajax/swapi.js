@@ -2,6 +2,16 @@ $(document).ready(function(){
   var mainUrl = 'https://swapi.co/api/'
   var first_film_url = "https://swapi.co/api/films/1/";
 
+
+
+
+
+
+
+
+
+
+
 $.ajax({
   type: "GET",
   url: first_film_url,
