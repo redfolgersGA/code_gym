@@ -40,6 +40,14 @@ var frameworks = {
     console.log(framework)
   })
 
+  var modifiedFrameworkTwo = frameworks.backEnd.map(function(framework){
+    return framework.name + ".js"
+  })
+
+  modifiedFrameworkTwo.forEach(function(framework){
+    console.log(framework)
+  })
+
 
 
 
