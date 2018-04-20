@@ -23,6 +23,8 @@ $.get(first_film_url, function(data){
     var wedge = xWingData.pilots[2]
     $.get(wedge, function(wedgeData){
       console.log(wedgeData)
+      var $container = $('#titles #titlecontent p')
+       $container.text(JSON.stringify(wedgeData))
     })
   })
 })
