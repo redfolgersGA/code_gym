@@ -1,32 +1,45 @@
 $(document).ready(function(){
+  var mainUrl = 'https://swapi.co/api/'
   var first_film_url = "https://swapi.co/api/films/1/";
 
-$.ajax({
-  "url": first_film_url,
-  "method": "GET",
-  "success": function(data) {
-    console.log(data);
-     $.ajax({
-       "url": data.starships[6],
-        "method": "get",
-         "success": function(shipData){
-           console.log(shipData);
-           $.ajax({
-             "url": shipData.pilots[2],
-              "method": "get",
-               "success": function(pilotData) {
-                 console.log(pilotData);
-                var container = $('#titles #titlecontent p');
-                container.text(JSON.stringify(pilotData));
+// $.ajax({
 
-            }
-          })//ends shipData[6].pilots[2] getz
-        }
-      })// ends starships[6] get
 
-  }//ends success
+// })
+
+$.get(first_film_url, function(data){
+  console.log(data.title)
 })
+
+
 });
+
+// $.ajax({
+//   "url": first_film_url,
+//   "method": "GET",
+//   "success": function(data) {
+//     console.log(data);
+//      $.ajax({
+//        "url": data.starships[6],
+//         "method": "get",
+//          "success": function(shipData){
+//            console.log(shipData);
+//            $.ajax({
+//              "url": shipData.pilots[2],
+//               "method": "get",
+//                "success": function(pilotData) {
+//                  console.log(pilotData);
+//                 var container = $('#titles #titlecontent p');
+//                 container.text(JSON.stringify(pilotData));
+
+//             }
+//           })//ends shipData[6].pilots[2] getz
+//         }
+//       })// ends starships[6] get
+
+//   }//ends success
+// })
+// });
 //
 // ---------------------------------------------------------------------
 //same as above but done with promises
