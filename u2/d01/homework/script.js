@@ -48,6 +48,14 @@ var frameworks = {
     console.log(framework)
   })
 
+  var filteredFrontEnd = frameworks.frontEnd.filter(function(framework){
+    if(framework.description.length > 30) {
+      console.log(framework)
+    }else {
+     console.log(framework.name +'s' + 'description is too short')
+    }
+  })
+
 
 
 
