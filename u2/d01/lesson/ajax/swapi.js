@@ -7,6 +7,7 @@ $.ajax({
   url: first_film_url,
   success: function(data){
     console.log(data)
+    var starwars = data
   },
 
   error: function(jqXHR, textStatus, error){
@@ -17,11 +18,16 @@ $.ajax({
 })
 
 $.get(first_film_url, function(data){
-  console.log(data)
+  var xWing = data.starships[6]
+  $.get(xWing, function(xWingData){
+    console.log(xWingData)
+  })
 })
 
 
 });
+
+console.log('asynchronous haha')
 
 // $.ajax({
 //   "url": first_film_url,
