@@ -20,7 +20,10 @@ $.ajax({
 $.get(first_film_url, function(data){
   var xWing = data.starships[6]
   $.get(xWing, function(xWingData){
-    console.log(xWingData)
+    var wedge = xWingData.pilots[2]
+    $.get(wedge, function(wedgeData){
+      console.log(wedgeData)
+    })
   })
 })
 
