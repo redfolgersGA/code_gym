@@ -59,7 +59,7 @@ var frameworks = {
 var filteredBackEnd = frameworks.backEnd.filter(function(framework){
 
   if(framework.name[0] === 'a' || framework.name[0] === 'e' || framework.name[0] === 'i' || framework.name[0] === 'o' || framework.name[0] === 'u'){
-    console.log(framework.name + "test")
+    console.log(framework.name + "test. test was succesful")
   }
 })
 
