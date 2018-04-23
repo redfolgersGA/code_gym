@@ -67,6 +67,16 @@ var frameworks = {
  })
 console.log(filteredBackEnd)
 
+
+// BONUS ROUND
+
+var frontEndNames = frameworks.frontEnd.reduce(function(sum, current){
+  return current = frameworks.frontEnd[0].name + ", " + frameworks.frontEnd[1].name + ", " + frameworks.frontEnd[2].name
+})
+
+console.log(frontEndNames)
+
+
   // var filteredBackEnd = frameworks.backEnd.filter(function(framework){
   //   if(framework.name === "React"){
   //     console.log(filteredBackEnd)
