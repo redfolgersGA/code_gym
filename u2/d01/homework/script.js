@@ -56,13 +56,21 @@ var frameworks = {
     }
   })
 
-var filteredBackEnd = frameworks.backEnd.filter(function(framework){
 
-  if(framework.name[0] === 'a' || framework.name[0] === 'e' || framework.name[0] === 'i' || framework.name[0] === 'o' || framework.name[0] === 'u'){
-    console.log(framework.name + "test. test was succesful" + " running another test test was succesful")
+
+ var filteredBackEnd = frameworks.backEnd.filter(function(framework){
+  if(framework.name[0] == "E"){
+    return framework
   }
-})
+ })
 
+ console.log(filteredBackEnd)
+
+  // var filteredBackEnd = frameworks.backEnd.filter(function(framework){
+  //   if(framework.name === "React"){
+  //     console.log(filteredBackEnd)
+  //   }
+  // })
 
 
 
