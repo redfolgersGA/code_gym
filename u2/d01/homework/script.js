@@ -59,12 +59,13 @@ var frameworks = {
 
 
  var filteredBackEnd = frameworks.backEnd.filter(function(framework){
-  if(framework.name[0] == "E"){
+
+   var random = framework.name[0].toLowerCase()
+  if(random === "a" || random === "e" || random === "i"|| random === "o" || random === "u"){
     return framework
   }
  })
-
- console.log(filteredBackEnd)
+console.log(filteredBackEnd)
 
   // var filteredBackEnd = frameworks.backEnd.filter(function(framework){
   //   if(framework.name === "React"){
