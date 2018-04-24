@@ -112,6 +112,12 @@ newFrameworkArray.push(newBackEndReduced)
 
 console.log(newFrameworkArray)
 
+var concatenateStrings = newFrameworkArray.reduce(function(sum,current){
+  return current = newFrameworkArray[0] + newFrameworkArray[1] + "together"
+})
+
+console.log(concatenateStrings)
+
 
 
   // var filteredBackEnd = frameworks.backEnd.filter(function(framework){
