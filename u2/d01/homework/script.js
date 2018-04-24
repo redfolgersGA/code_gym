@@ -86,6 +86,17 @@ for(i=0;i<newFrontEnd.length;i++){
   console.log(newFrontEnd[i])
 }
 
+var newFrontEndReduced = newFrontEnd.reduce(function(sum, current){
+  return current = newFrontEnd[0] + newFrontEnd[1] + newFrontEnd[2] + "are the frontend frameworks"
+})
+
+console.log(newFrontEndReduced)
+
+var newFrontEndArray = []
+
+newFrontEndArray.push(newFrontEndReduced)
+
+console.log(newFrontEndArray)
 
   // var filteredBackEnd = frameworks.backEnd.filter(function(framework){
   //   if(framework.name === "React"){
