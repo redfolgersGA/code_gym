@@ -76,6 +76,16 @@ var frontEndNames = frameworks.frontEnd.reduce(function(sum, current){
 
 console.log(frontEndNames)
 
+var newFrontEnd = frameworks.frontEnd.map(function(framework){
+  return framework.name + ".js"
+})
+
+console.log(newFrontEnd)
+
+for(i=0;i<newFrontEnd.length;i++){
+  console.log(newFrontEnd[i])
+}
+
 
   // var filteredBackEnd = frameworks.backEnd.filter(function(framework){
   //   if(framework.name === "React"){
