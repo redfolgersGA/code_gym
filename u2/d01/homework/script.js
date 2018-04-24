@@ -92,11 +92,27 @@ var newFrontEndReduced = newFrontEnd.reduce(function(sum, current){
 
 console.log(newFrontEndReduced)
 
-var newFrontEndArray = []
+var newFrameworkArray = []
 
-newFrontEndArray.push(newFrontEndReduced)
+newFrameworkArray.push(newFrontEndReduced)
 
-console.log(newFrontEndArray)
+console.log(newFrameworkArray)
+
+var newBackEnd = frameworks.backEnd.map(function(framework){
+  return framework.name + ".js"
+})
+
+var newBackEndReduced = newBackEnd.reduce(function(sum, current){
+  return current = newBackEnd[0] + newBackEnd[1] + newBackEnd[2] + "are the Backend frameworks"
+})
+
+console.log(newBackEndReduced)
+
+newFrameworkArray.push(newBackEndReduced)
+
+console.log(newFrameworkArray)
+
+
 
   // var filteredBackEnd = frameworks.backEnd.filter(function(framework){
   //   if(framework.name === "React"){
