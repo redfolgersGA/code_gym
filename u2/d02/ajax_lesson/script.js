@@ -1,9 +1,28 @@
+$(document).ready(function(){
+
 
 console.log('jsloaded')
-function turnPTagsRed(){
-  var pTag = document.getElementById('p-tag')
-  console.log(pTag)
-  pTag.style.color = "red"
-}
+// function turnPTagsRed(){
+//   var pTag = document.getElementById('p-tag')
+//   console.log(pTag)
+//   pTag.style.color = "red"
+// }
 
-turnPTagsRed()
+// turnPTagsRed()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// END END END
+})
