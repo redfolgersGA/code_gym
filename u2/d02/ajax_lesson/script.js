@@ -14,7 +14,9 @@ $.ajax({
   url: 'https://randomuser.me/api/',
   dataType: 'json',
   success: function(data) {
-    console.log(data.results[0]);
+    console.log(data.results[0].picture.medium);
+    var $imgTag = $('img')
+    $imgTag.attr("src", data.results[0].picture.medium)
 
   }
 });
