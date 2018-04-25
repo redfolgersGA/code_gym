@@ -13,13 +13,24 @@ console.log('jsloaded')
 $.ajax({
   url: 'https://randomuser.me/api/',
   dataType: 'json',
-  success: function(data) {
-    console.log(data.results[0].picture.medium);
-    var $imgTag = $('img')
+  success: randomData
+
+});
+
+function randomData(data){
+  console.log(data.results[0])
+  var $imgTag = $('img')
     $imgTag.attr("src", data.results[0].picture.medium)
 
-  }
-});
+
+    var $nameLi = $('li').eq(0)
+    $nameLi.on("mouseover", function(){
+      $nameLi.text('hi')
+      console.log('hovered')
+    })
+
+
+}
 
 
 
