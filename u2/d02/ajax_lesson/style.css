@@ -1,24 +1,33 @@
 body {
   position: relative;
   margin: 0;
+  z-index: 10px;
 }
 
 header {
   height: 500px;
   width: 100%;
   border: solid;
-  background-color: pink;
+  background-color: rgb(44, 46, 49);
   position: absolute;
   top: 0px;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
 }
 
 .card {
-  height: 261px;
+  height: 400px;
   width: 730px;
   border: solid;
   position: relative;
-  top: 350px;
+  top: 300px;
+  background-color: rgb(255, 255, 255)
+
+  display: block;
+  margin: 0 auto;
+
 
 
 
