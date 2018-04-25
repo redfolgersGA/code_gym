@@ -37,16 +37,21 @@ header {
 
 ul {
   text-align: center;
+
+  top: 27px;
 }
 
 li {
   display: inline;
+  position: relative;
   margin: 40px;
+
 
 
   color: rgb(255, 255, 255);
   text-align: center;
 
 }
+
 
 
