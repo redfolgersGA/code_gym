@@ -1,5 +1,18 @@
-.details {
-  height: 730px;
-  width: 261px;
+header {
+  height: 50%;
+  width: 100%;
   border: solid;
+  background-color: pink;
+  position: relative;
 }
+
+.details {
+  height: 261px;
+  width: 730px;
+  border: solid;
+  margin: 100px auto;
+
+
+}
+
+
