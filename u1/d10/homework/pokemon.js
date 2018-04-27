@@ -142,7 +142,8 @@ function healPokemon(){
   $healButton.on('click', function(){
     $healthBar.text($currentHealth += healed)
     $healButton.hide('fast', function(){
-      // enemy Attack function goes here
+
+
       $healButton.show()
     })
 
