@@ -1,40 +1,11 @@
-
-li {
-  display:  inline;
-  float: right;
-  margin: 10px;
-
-  font-family: 'PT Sans', sans-serif;
-
-
-  color: red;
-}
-
-#name {
-
-}
-
-#name h1{
-  font-family: 'PT Sans', sans-serif;
-  text-align: center;
-
-
-}
-
-#header_lis {
-  border: solid;
-  height: 50px;
-  margin: 0 auto;
+#first-div{
+  height: 1000px;
   width: 100%;
-  background-color: black;
+  background-color: grey;
 
-
+  border: solid;
 }
 
-#header_lis:after{
-  content: "dfdfdfd";
-  display: block;
-  clear: both;
-
-
+#info{
+  font-size:
 }
