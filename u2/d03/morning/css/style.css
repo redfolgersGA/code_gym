@@ -1,13 +1,15 @@
 body{
   width: 100%;
-  background-image: url('../img/rainbow-bg.jpg')
+  background-image: url('../img/rainbow-bg.jpg');
 
 
 
 }
 
-
-/* header {
+header h1 {
+  color: white;
+}
+header {
   background-color: black;
   width: 70%;
   height: 100%;
@@ -15,7 +17,15 @@ body{
   text-align: center;
   margin: 0 auto;
   position: relative;
+  border-bottom-color: red;
 
+}
+
+#main{
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  margin: 0 auto;
 }
 
 
@@ -26,9 +36,9 @@ body{
   display: inline;
 
 }
- */
-/* nav {
+
+nav {
   margin: 0 auto;
 }
- */
+
 
