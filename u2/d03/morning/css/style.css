@@ -1,9 +1,13 @@
-body {
-  background:  url("./img/rainbow-bg.jpg");
+body{
+  width: 100%;
+  background-image: url('../img/rainbow-bg.jpg')
+
+
 
 }
 
-header {
+
+/* header {
   background-color: black;
   width: 70%;
   height: 100%;
@@ -22,9 +26,9 @@ header {
   display: inline;
 
 }
-
-nav {
+ */
+/* nav {
   margin: 0 auto;
 }
-
+ */
 
