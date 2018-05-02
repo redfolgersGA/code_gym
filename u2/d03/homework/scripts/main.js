@@ -16,14 +16,15 @@ $formInput.on("submit", function(event){
 
   $.ajax({
   type: "GET",
-  url: "",
+  url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "{APIKEY}",
   success: function (data){
     var $pForecast = $('p#forecast');
 
 
-    $pForecast.text("The weather in " + data.name + " is " + data.main.temp)
+    $pForecast.text("The temperature in " + data.name + " is " + data.main.temp)
 
   }
+
 
 
 })
