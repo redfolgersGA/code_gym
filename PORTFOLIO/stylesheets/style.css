@@ -7,5 +7,10 @@
 }
 
 #info{
-  font-size:
+  font-size: 32px;
+  margin: 100px;
+  background-position: left;
+  text-align: center;
+  position: absolute;
+
 }
