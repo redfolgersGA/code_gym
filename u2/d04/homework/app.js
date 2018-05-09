@@ -5,7 +5,7 @@ var fs = require("fs");
 
 var getHTML = function(res){
   res.writeHead(200,{"Content-type": "text/html"});
-  var html = fs.readFileSync(__dirname + "");
+  var html = fs.readFileSync(__dirname + "/public/index.html");
   res.end(html);
 
 }
@@ -26,4 +26,4 @@ var server = http.createServer(function(req, res){
 
 var port = 3000;
 server.listen(port);
-console.log("listening on port ", port);
+console.log("Yas! listening on port ", port);
