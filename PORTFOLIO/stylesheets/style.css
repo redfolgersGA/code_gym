@@ -1,8 +1,10 @@
 .wrapper{
   background: #fff;
-  max-width: 100%;
+  max-width: 80%;
   margin: 0 auto;
   padding: 20px;
+  height: 120px;
+  border-bottom: solid;
 }
 
 /* .wrapper:after{
@@ -16,3 +18,5 @@ li {
   float: right;
   margin: 50px;
 }
+
+
