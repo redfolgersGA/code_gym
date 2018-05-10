@@ -1,16 +1,18 @@
-/* #first-div{
-  height: 1000px;
-  width: 100%;
-  background-color: grey;
-
-  border: solid;
+.wrapper{
+  background: #fff;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-#info{
-  font-size: 32px;
-  margin: 100px;
-  background-position: left;
-  text-align: center;
-  position: absolute;
-
+/* .wrapper:after{
+  content:  "";
+  display: block;
+  clear: both;
 } */
+
+li {
+  display: inline-block;
+  float: right;
+  margin: 50px;
+}
