@@ -21,20 +21,29 @@ li {
 }
 
 
-#float-container {
-  height: 200px;
-  width: 100%;
-  position: absolute;
 
-}
-
+@media screen and (min-width:600px) {
 .float-div {
-  height: 20px;
-  width:  20px;
+  height: 200px;
+  width:  200px;
   border: solid;
   position: relative;
   display: inline-block;
+  margin-left: 25%;
+
 
 }
+
+#float-container {
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  margin: 0 auto;
+
+}
+
+}
+
+
 
 
