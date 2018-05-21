@@ -1,4 +1,4 @@
-.wrapper{
+.nav-wrapper{
   background: #fff;
   max-width: 80%;
   margin: 0 auto;
@@ -15,8 +15,26 @@
 
 li {
   display: inline-block;
-  float: right;
-  margin: 50px;
+  position: relative;
+  left: 500px;
+  margin: 20px;
+}
+
+
+#float-container {
+  height: 200px;
+  width: 100%;
+  position: absolute;
+
+}
+
+.float-div {
+  height: 20px;
+  width:  20px;
+  border: solid;
+  position: relative;
+  display: inline-block;
+
 }
 
 
