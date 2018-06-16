@@ -13,21 +13,16 @@ var getCSS = function(res){
   res.end(css);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var server = http.createServer(function(req, res){
+  if (req.url === "/style.css") {
+    getCSS(res);
+  } else if (req.url === "/") {
+    getHTML(res);
+  }
+})
 
 
 
 var port = 8080;
+server.listen(port);
+console.log("listening on port ", port);
