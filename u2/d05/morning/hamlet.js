@@ -10,16 +10,31 @@ var hamlets = [
 ];
 
 // Scene I
-hamlet.forEach(hamlet){
-  var splitHam = hamlet.split(",")
+hamlets.forEach(function(hamlet){
+  console.log("O! the venerable " + hamlet.split(", ")[0] + " starred as Hamlet in the year " + hamlet.split(", ")[1])
+});
 
-  var name = splitHam[0];
-  var year = splitHam[1];
 
-  console.log("O! the venerable" +
-    name + "starred as Hamlet in " +
-    year)
-}
+
+
+
+
+
+
+
+
+
+
+// hamlet.forEach(hamlet){
+//   var splitHam = hamlet.split(",")
+
+//   var name = splitHam[0];
+//   var year = splitHam[1];
+
+//   console.log("O! the venerable" +
+//     name + "starred as Hamlet in " +
+//     year)
+// }
 
 // Scene II
 var numberTwo = hamlets.map(function(ham){
