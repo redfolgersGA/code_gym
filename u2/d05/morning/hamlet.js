@@ -25,16 +25,16 @@ hamlets.forEach(function(hamlet){
 
 
 
-// hamlet.forEach(hamlet){
-//   var splitHam = hamlet.split(",")
+hamlet.forEach(hamlet){
+  var splitHam = hamlet.split(",")
 
-//   var name = splitHam[0];
-//   var year = splitHam[1];
+  var name = splitHam[0];
+  var year = splitHam[1];
 
-//   console.log("O! the venerable" +
-//     name + "starred as Hamlet in " +
-//     year)
-// }
+  console.log("O! the venerable" +
+    name + "starred as Hamlet in " +
+    year)
+}
 
 // Scene II
 var numberTwo = hamlets.map(function(ham){
