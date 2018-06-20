@@ -22,14 +22,53 @@ inputBox.keyup(function(){
       var $item, $thumbnail, $description, $artist, $album, $price;
       console.log($results)
       result.forEach(function(tune){
-        $item = $('<li>');
+        $item = $('<li></li>');
+        console.log($item)
         $thumbnail = $('<img>');
+        console.log($thumbnail)
         $description = $('<div>');
+        console.log($description);
         $artist = $('<p>');
+        console.log($artist)
         $album = $('<p>');
+        console.log($album)
         $price = $('<p>');
+        console.log($price);
+        $item.addClass("item");
+        console.log($item)
+        $thumbnail.addClass("albumCover");
+        console.log($thumbnail)
+        $artist.addClass("album");
+        console.log($artist)
+        $price.addClass("price");
+        console.log($price)
+
+        $thumbnail.attr("src", tune.artworkUrl100);
+        console.log($thumbnail.attr("src"))
+        $artist.text(tune.artistName);
+        $album.text(tune.collectionCensoredName);
+        $price.text(tune.collectionPrice);
+// ERROR IS LIKELY WITH APPEND TO
+        $artist.appendTo($description);
+        $album.appendTo($description);
+        $price.appendTo($description);
+
+        $description.appendTo($item);
+        $thumbnail.appendTo($item);
+        $item.appendTo($results);
+
+
+
+
+
+
+
+
 
       })
+      var $body = $('<body>');
+
+      $results.appendTo($body)
 
     }
 
