@@ -16,7 +16,21 @@ inputBox.keyup(function(){
     dataType: "jsonp",
     data : { term: query, media: "music", entity: "album", limit: 25},
     success: function (data){
-      console.log(data)
+      var result = data.results
+      console.log(result)
+      var $results = $('<ul>')
+      var $item, $thumbnail, $description, $artist, $album, $price;
+      console.log($results)
+      result.forEach(function(tune){
+        $item = $('<li>');
+        $thumbnail = $('<img>');
+        $description = $('<div>');
+        $artist = $('<p>');
+        $album = $('<p>');
+        $price = $('<p>');
+
+      })
+
     }
 
   })
