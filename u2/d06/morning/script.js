@@ -9,8 +9,20 @@ var inputBox = $("input#itunes-search");
 inputBox.keyup(function(){
   var query = $(this).val();
   console.log(query)
+
+  $.ajax({
+    type: "GET",
+    url: "https://itunes.apple.com/search",
+    dataType: "jsonp",
+    data : { term: query, media: "music", entity: "album", limit: 25},
+    success: function (data){
+      console.log(data)
+    }
+
+  })
 })
 
+// AJAX CALL
 
 
 
