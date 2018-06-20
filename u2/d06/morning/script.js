@@ -50,8 +50,11 @@ inputBox.keyup(function(){
         $price.text(tune.collectionPrice);
 // ERROR IS LIKELY WITH APPEND TO
         $artist.appendTo($description);
+        console.log($description)
         $album.appendTo($description);
+        console.log($description)
         $price.appendTo($description);
+        console.log($description)
 
         $description.appendTo($item);
         $thumbnail.appendTo($item);
@@ -66,9 +69,10 @@ inputBox.keyup(function(){
 
 
       })
-      var $body = $('<body>');
+      var $body = $('body');
 
       $results.appendTo($body)
+      console.log($body)
 
     }
 
