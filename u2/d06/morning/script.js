@@ -29,3 +29,11 @@ success: function(data) {
 
 
 });
+
+$.ajax({
+  url:
+  type:
+  data:
+  success:
+  error:
+})
