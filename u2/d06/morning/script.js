@@ -1,6 +1,26 @@
 $(document).ready(function(){
 console.log("loaded")
 
+function getResults (){
+
+var classItem = $('.item');
+classItem.remove()
+var inputBox = $("input#itunes-search");
+inputBox.keyup(function(){
+  var query = $(this).val();
+  console.log(query)
+})
+
+
+
+
+console.log("clicked")
+}
+
+var button = $('button#click-me');
+
+button.on("click", getResults)
+
 
 
 
