@@ -22,27 +22,27 @@ li {
 
 
 
-@media screen and (min-width:600px) {
+
 .float-div {
   height: 200px;
   width:  200px;
   border: solid;
   position: relative;
   display: inline-block;
-  margin-left: 25%;
+  margin: 0 auto;
 
 
 }
 
-#float-container {
+/* .container {
   height: 400px;
   width: 100%;
   position: absolute;
   margin: 0 auto;
 
-}
+} */
 
-}
+
 
 
 

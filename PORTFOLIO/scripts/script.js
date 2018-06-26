@@ -1,6 +1,9 @@
 $("document").ready(function(){
   console.log("jquery is loaded")
 
+
+var $floatDivs = $('.float-div')
+
 var $img2 = $('div#img2')
 $($img2).hide()
 
