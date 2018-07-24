@@ -20,9 +20,16 @@ var makeHobbits = function() {
 
 
   })
-  createHobbits.appendTo('article.land').first()
+  $('article.land').first().append(createHobbits)
   setTimeout(keepItSecretKeepItSafe, 2000)
 
+}
+
+var keepItSecretKeepItSafe = function() {
+  var createDiv = $('<div id="the-ring"></div>')
+  createDiv.addClass("magic-imbued-jewelry");
+  createDiv.click(nazgulScreech)
+  createDiv.appendTo('li.hobbit').first()
 }
 
 
