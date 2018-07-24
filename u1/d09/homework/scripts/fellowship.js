@@ -29,7 +29,7 @@ var keepItSecretKeepItSafe = function() {
   var createDiv = $('<div id="the-ring"></div>')
   createDiv.addClass("magic-imbued-jewelry");
   createDiv.click(nazgulScreech)
-  createDiv.appendTo('li.hobbit').first()
+  $('li.hobbit').first().append(createDiv)
 }
 
 
