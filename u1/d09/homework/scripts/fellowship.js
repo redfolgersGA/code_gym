@@ -88,6 +88,7 @@ var forgeTheFellowShip = function(){
 var theBalrog = function(){
   var gandalf = $('li.buddy').eq(0)
   gandalf.text("Gandalf the White")
+  gandalf.css({"border": "3px solid white"})
 }
 
 
