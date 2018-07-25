@@ -27,8 +27,17 @@ var makeHobbits = function() {
 
 var keepItSecretKeepItSafe = function() {
   var createDiv = $('<div id="the-ring"></div>')
+  var frodo = $('li.hobbit').eq(0)
   createDiv.addClass("magic-imbued-jewelry");
-  createDiv.click(nazgulScreech)
+  createDiv.click(nazgulScreech, frodoFades)
+
+  function frodoFades(){
+    frodo.fadeOut(3000, function(){
+      frodo.fadeIn()
+    })
+
+  }
+
   $('li.hobbit').first().append(createDiv)
   setTimeout(makeBuddies, 2000)
 }
@@ -97,9 +106,54 @@ var hornOfGondor = function() {
   alert("the horn of Gondor has been blown!")
   boromir.css({"text-decoration": "line-through",
                 "opacity": "0.3"})
-
+  setTimeout(itsDangerousToGoAlone, 2000)
 }
 
+var itsDangerousToGoAlone = function(){
+  var mordor = $('article.land').eq(2)
+  var frodo = $('li.hobbit').eq(0)
+  var sam = $('li.hobbit').eq(1)
+  addsFrodoSam()
+
+  function addsFrodoSam (){
+    frodo.appendTo(mordor)
+    sam.appendTo(mordor)
+  }
+
+  var mountDoom = $('<div id="mount-doom"></div>')
+  mordor.append(mountDoom)
+
+  setTimeout(weWantsIt, 2000)
+}
+
+var weWantsIt = function() {
+  var gollumDiv = $('<div id="gollum"></div>')
+  var mordor = $('article.land').eq(2)
+  var frodoRing = $('div#the-ring')
+
+  mordor.append(gollumDiv)
+  gollumDiv.append(frodoRing)
+
+  var mountDoom = $('div#mount-doom')
+  mountDoom.append(gollumDiv)
+  setTimeout(thereAndBackAgain, 2000)
+}
+
+var thereAndBackAgain = function(){
+  var gollumDiv = $('div#gollum')
+  var frodoRing = $('div#the-ring')
+  var theShire = $('article.land').eq(0)
+  var theHobbits = $('li.hobbit')
+  var mordor = $('article.land').eq(2)
+
+  gollumDiv.remove()
+
+  theHobbits.appendTo(theShire)
+  mordor.addClass("collapse")
+
+
+
+}
 
 
 
