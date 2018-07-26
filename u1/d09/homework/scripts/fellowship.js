@@ -27,13 +27,26 @@ var makeHobbits = function() {
 
 var keepItSecretKeepItSafe = function() {
   var createDiv = $('<div id="the-ring"></div>')
+  var clickCount = 0;
+  console.log(clickCount)
   var frodo = $('li.hobbit').eq(0)
   createDiv.addClass("magic-imbued-jewelry");
-  createDiv.click(nazgulScreech, frodoFades)
+  createDiv.click(nazgulScreech)
+  createDiv.click(frodoFades)
+
 
   function frodoFades(){
     frodo.fadeOut(3000, function(){
+
       frodo.fadeIn()
+      clickCount++
+      if(clickCount === 3) {
+        var body = $('body')
+        body.replaceWith("<h1>The Ring has been returned to Sauron and the world is over.</h1>")
+      }
+
+      console.log(clickCount)
+
     })
 
   }
