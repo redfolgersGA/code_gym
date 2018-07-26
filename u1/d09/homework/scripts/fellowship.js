@@ -116,9 +116,13 @@ var theBalrog = function(){
 
 var hornOfGondor = function() {
   var boromir = $('li.buddy').eq(4)
-  alert("the horn of Gondor has been blown!")
+
   boromir.css({"text-decoration": "line-through",
                 "opacity": "0.3"})
+  if(boromir.css('opacity') === "0.3" ) {
+  alert("the horn of Gondor has been blown!")
+  console.log("it worked!")
+}
   setTimeout(itsDangerousToGoAlone, 2000)
 }
 
