@@ -33,124 +33,167 @@ var $addEnem;
 		['Gastly','images/gastly.png',50]
 	];
 
-  function randPoke (){
-    var $randPokemon = pokemon[Math.round(Math.random()*pokemon.length)]
-    $($enemyImage).attr('src', $randPokemon[1])
-    $($statusText).text('A wild ' + $randPokemon[0] + ' appeared')
-    $($enemyName).text($randPokemon[0])
-    $($enemyHealth).text($randPokemon[2])
 
-
-attack($randPokemon)
-console.log($randPokemon)
+function randomPokemon(){
+  var $randomPoke = pokemon[Math.round(Math.random() * pokemon.length)]
+  $enemyImage.attr('src', $randomPoke[1])
 }
 
-randPoke()
-
-// attach event listener to attack button which will deplete the p.health number
-function attack($randPokemon) {
-  var $attackButton = $('p#attack_btn');
-  var $enemyHealthStatus = $randPokemon[2]
-  var $randomAttckNumber = Math.floor(Math.random() * (31 - 5) + 5)
-
-
- function tenPercentMiss() {
-    var tenPercentMissed = Math.floor(Math.random() * (11 - 1) + 1)
-    console.log(tenPercentMissed)
-
-
-
-  }
-  tenPercentMiss()
-
-// Math.random will generate a random number between 1 and 10 and put it in a variable
-// if the random number generated is say 5 then it will console.log your attack missed!
-// and it will break out of the function...this means you will have to wrap your functions
-// code in an if statement..AND make a variable that logs the Math.random number
-  $($attackButton).on('click', function(tenPercentMissed){
-    var tenPercentMissed = Math.floor(Math.random() * (11 - 1) + 1)
-    console.log(tenPercentMissed)
-
-    if(tenPercentMissed !== 5){
-
-    $($enemyHealth).text($enemyHealthStatus+= - $randomAttckNumber)
-    $attackButton.hide('fast', function(){
-      // Enemy attack function goes here
-      youWereAttacked()
-      $attackButton.show()
-    })
-    $($statusText).text('Attack was successful!! Enemy health was lowered by ???!')
-
-    console.log($enemyHealthStatus)
-
-        gameOver($enemyHealthStatus)
-    } else {
-      console.log("Your attack Missed buddy this means the random number was 5")
-    }
-
-
-      })
-
-
-  }
-
-  function youWereAttacked() {
-    // status text will say you were attacked
-
-
-
-    var tenPercentMissed = Math.floor(Math.random() * (11 - 1) + 1)
-    var $randomAttckNumber = Math.floor(Math.random() * (31 - 5) + 5)
-    console.log(tenPercentMissed + 'youWereattacked number')
-
-    if(tenPercentMissed !== 5){
-
-    $($healthBar).text($currentHealth -= $randomAttckNumber)
-
-      if($currentHealth <= 0){
-        alert('You lose')
-        location.reload()
-      }
-
-    // p.health will decrease
-
-  }
-    console.log('you were attacked function')
-  }
-
-
-function gameOver($enemyHealthStatus){
-  if($enemyHealthStatus <= 0) {
-        alert("GAME OVER YOU WINs")
-        location.reload()
-      }
-
-
-}
+randomPokemon()
 
 
 
 
 
-function healPokemon(){
-
-  // get $healthBar to return a number NOT an object like it is doing right now
-
-  var healed = Math.floor(Math.random() * (50 - 25) + 25)
 
 
-  $healButton.on('click', function(){
-    $healthBar.text($currentHealth += healed)
-    $healButton.hide('fast', function(){
 
 
-      $healButton.show()
-    })
 
-  })
-}
 
-healPokemon()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -----------------------------------------------------------REDO BEGINS
+
+
+//   function randPoke (){
+//     var $randPokemon = pokemon[Math.round(Math.random()*pokemon.length)]
+//     $($enemyImage).attr('src', $randPokemon[1])
+//     $($statusText).text('A wild ' + $randPokemon[0] + ' appeared')
+//     $($enemyName).text($randPokemon[0])
+//     $($enemyHealth).text($randPokemon[2])
+
+
+// attack($randPokemon)
+// console.log($randPokemon)
+// }
+
+// randPoke()
+
+// // attach event listener to attack button which will deplete the p.health number
+// function attack($randPokemon) {
+//   var $attackButton = $('p#attack_btn');
+//   var $enemyHealthStatus = $randPokemon[2]
+//   var $randomAttckNumber = Math.floor(Math.random() * (31 - 5) + 5)
+
+
+//  function tenPercentMiss() {
+//     var tenPercentMissed = Math.floor(Math.random() * (11 - 1) + 1)
+//     console.log(tenPercentMissed)
+
+
+
+//   }
+//   tenPercentMiss()
+
+// // Math.random will generate a random number between 1 and 10 and put it in a variable
+// // if the random number generated is say 5 then it will console.log your attack missed!
+// // and it will break out of the function...this means you will have to wrap your functions
+// // code in an if statement..AND make a variable that logs the Math.random number
+//   $($attackButton).on('click', function(tenPercentMissed){
+//     var tenPercentMissed = Math.floor(Math.random() * (11 - 1) + 1)
+//     console.log(tenPercentMissed)
+
+//     if(tenPercentMissed !== 5){
+
+//     $($enemyHealth).text($enemyHealthStatus+= - $randomAttckNumber)
+//     $attackButton.hide('fast', function(){
+//       // Enemy attack function goes here
+//       youWereAttacked()
+//       $attackButton.show()
+//     })
+//     $($statusText).text('Attack was successful!! Enemy health was lowered by ???!')
+
+//     console.log($enemyHealthStatus)
+
+//         gameOver($enemyHealthStatus)
+//     } else {
+//       console.log("Your attack Missed buddy this means the random number was 5")
+//     }
+
+
+//       })
+
+
+//   }
+
+//   function youWereAttacked() {
+//     // status text will say you were attacked
+
+
+
+//     var tenPercentMissed = Math.floor(Math.random() * (11 - 1) + 1)
+//     var $randomAttckNumber = Math.floor(Math.random() * (31 - 5) + 5)
+//     console.log(tenPercentMissed + 'youWereattacked number')
+
+//     if(tenPercentMissed !== 5){
+
+//     $($healthBar).text($currentHealth -= $randomAttckNumber)
+
+//       if($currentHealth <= 0){
+//         alert('You lose')
+//         location.reload()
+//       }
+
+//     // p.health will decrease
+
+//   }
+//     console.log('you were attacked function')
+//   }
+
+
+// function gameOver($enemyHealthStatus){
+//   if($enemyHealthStatus <= 0) {
+//         alert("GAME OVER YOU WINs")
+//         location.reload()
+//       }
+
+
+// }
+
+
+
+
+
+// function healPokemon(){
+
+//   // get $healthBar to return a number NOT an object like it is doing right now
+
+//   var healed = Math.floor(Math.random() * (50 - 25) + 25)
+
+
+//   $healButton.on('click', function(){
+//     $healthBar.text($currentHealth += healed)
+//     $healButton.hide('fast', function(){
+
+
+//       $healButton.show()
+//     })
+
+//   })
+// }
+
+// healPokemon()
+
+// -----------------------------------------------------------REDO ENDS
 
 
 // for(i=0;i<pokemon.length;i++){
