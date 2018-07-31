@@ -37,9 +37,19 @@ var $addEnem;
 function randomPokemon(){
   var $randomPoke = pokemon[Math.round(Math.random() * pokemon.length)]
   $enemyImage.attr('src', $randomPoke[1])
+  $enemyName.text($randomPoke[0])
+  $enemyHealth.text($randomPoke[2])
+
 }
 
 randomPokemon()
+
+function attackEnemy(){
+  var $attckButton = $('p#attack_btn')
+  $attckButton.on('click', function(){
+    $enemyHealth.
+  })
+}
 
 
 
