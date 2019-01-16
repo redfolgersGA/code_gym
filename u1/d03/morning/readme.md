@@ -10,14 +10,15 @@ Today we're going to jump start the day with some math!<br> *(cue cheering sound
 - You can practice these in JS by typing `node` into your terminal opening up a [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop).
 
 #### Solve These by placing parentheses in the correct place
-1.  `5 + 6  * 10 = 110`
+1.  `(5 + 6)  * 10 = 110`
 
-1. `2 ^ 2 + 3  =  32`
+1. `2 ^ (2 + 3)  =  32`
 
-1. `15 - 3 ^ 3 - 1 = 144`
+1. `15 - (3 ^ 3 - 1) = 144`
 
 #### Using `>`,`<`, or `=` fill in the underscore to make this equation true
 1. `(15 + 10) - (12 + 5 - 7 + 15) __  15 + (10 - 12) + 5 - (7 + 15) `
+25 - 25 
 
 #### Find the answer for these equations
 1. `( ( 20 + 5 * 4 / 2 ) / 3 ) ^ 2 = __ `
