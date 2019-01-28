@@ -93,3 +93,4 @@ hammonds_mines = {
   1. Create a new reasonably named variable to track the total annual cost of operation for the mines by adding the previously stored budgets.
 
   1. Access the "Parasaurolophus" specimen.
+  hammonds_mines.mexico.specimens[1]
