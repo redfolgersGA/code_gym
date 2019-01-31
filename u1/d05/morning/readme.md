@@ -73,6 +73,12 @@ console.log(arrayJoiner(words));
 
 #### 6. Using `prompt` and `alert` how would you ask the user for their name, and respond with it in all caps?
 ``` Javascript
+var name = prompt("What is your name?")
+function alertUpperCaseName(named){
+    alert("Dude your name is " + named.toUpperCase())
+}
+
+alertUpperCaseName(name)
 ```
 
 #### 7. Now try using an anonymous function to handle the login of the previous problem. For example:
@@ -100,6 +106,12 @@ alert(response(input));
 #### 8. Create program that prompts the user for a calculation, uses an anonymous function to handle the calculation, and alerts the result to the user.
 Write your program so that it works with addition, subtraction, multiplication, and division.
 Your user flow should look something like:
+
+
+Two ways to solve this
+1.use .eval()...it takes a string and turns it into a solvable math problem given that your string
+contains numbers and operators..
+2.use string methods to slice, split and parse the string...it would scan the string for operators and use if statements to add if + subtract if - multiply if * and divide if / 
 
    > Enter in a calculation for us to figure out:
 
