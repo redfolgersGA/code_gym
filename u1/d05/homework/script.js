@@ -1,6 +1,14 @@
 console.log("script loaded");
 
 
+var tempPrompt = prompt("Enter temperature in Farenheit please.")
+
+function alertInCels (value){
+  alert(value + " is " + (value -32) * 5/9 + " in degrees Celsius" )
+}
+
+alertInCels(tempPrompt)
+
 // var degreesInFahrenheit = prompt("give temperature Fahrenheit and I will convert it to Celsius");
 
 // var degreesInCelsius = degreesInFahrenheit + " in Fahrenheit is " + ((degreesInFahrenheit - 32) * 5 / 9) + " in celsius";
@@ -56,36 +64,36 @@ var...i think my brain ran out of glucose at this point so i just added a pictur
 
 // thirdSide()
 
-var sentence = prompt("Write a Sentence!");
+// var sentence = prompt("Write a Sentence!");
 
 
 
 
-function longestWord () {
-  var logLongestWord = 0;
-  var longWordNow = "";
-  // put each string in a pocket in an array
-  var strToArray = sentence.split(" ")
-  console.log(strToArray)
-// ["We", "Are", "Going", "to", "drink", "wine"]
-  for(i=0; i<strToArray.length; i++) {
-    // if array element passes this test then it becomes the new longWordNow variable
-    if(strToArray[i].length >= logLongestWord) {
-      var logLongestWord = strToArray[i].length
-      var longWordNow = strToArray[i]
+// function longestWord () {
+//   var logLongestWord = 0;
+//   var longWordNow = "";
+//   // put each string in a pocket in an array
+//   var strToArray = sentence.split(" ")
+//   console.log(strToArray)
+// // ["We", "Are", "Going", "to", "drink", "wine"]
+//   for(i=0; i<strToArray.length; i++) {
+//     // if array element passes this test then it becomes the new longWordNow variable
+//     if(strToArray[i].length >= logLongestWord) {
+//       var logLongestWord = strToArray[i].length
+//       var longWordNow = strToArray[i]
 
 
 
 
 
-    }
+//     }
 
-  }
-  alert("the longest word is: " + longWordNow)
+//   }
+//   alert("the longest word is: " + longWordNow)
 
-}
+// }
 
-longestWord()
+// longestWord()
 // Take sentence and put it into an array maybe using split()
 // loop through Array to find the longest word/index with for loop
 // return the longest word in an alert to the user
