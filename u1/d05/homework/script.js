@@ -9,6 +9,32 @@ function alertInCels (value){
 
 alertInCels(tempPrompt)
 
+
+var weightInlbs = prompt("What is your weight in lbs")
+
+var alertInKgs = function (value) {
+  alert(value + " is " + Math.round(value * 1/2.2) + " in kg")
+}
+
+alertInKgs(weightInlbs)
+
+function findsPytagoresTheorem () {
+  var sideA = prompt("what is side 1 equal to?")
+  var sideB = prompt("what is side 2 equal to?")
+
+  var aSquaredPlusBSquared = Math.pow(sideA, 2) + Math.pow(sideB, 2)
+
+  var cSquaredSqrt = Math.sqrt(aSquaredPlusBSquared)
+
+  alert("the third side is equal to " + cSquaredSqrt)
+
+
+
+
+}
+
+findsPytagoresTheorem()
+
 // var degreesInFahrenheit = prompt("give temperature Fahrenheit and I will convert it to Celsius");
 
 // var degreesInCelsius = degreesInFahrenheit + " in Fahrenheit is " + ((degreesInFahrenheit - 32) * 5 / 9) + " in celsius";
