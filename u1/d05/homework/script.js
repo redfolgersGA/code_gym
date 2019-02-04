@@ -26,7 +26,16 @@ function findsPytagoresTheorem () {
 
   var cSquaredSqrt = Math.sqrt(aSquaredPlusBSquared)
 
-  alert("the third side is equal to " + cSquaredSqrt)
+  if(isNaN(cSquaredSqrt) ) {
+    alert("You did NOT enter 2 numbers.")
+
+  } else {
+    alert("the third side is equal to " + cSquaredSqrt)
+
+
+  }
+
+
 
 
 
@@ -35,6 +44,19 @@ function findsPytagoresTheorem () {
 
 findsPytagoresTheorem()
 
+var sentencePrompt = prompt("Say something");
+
+function alertLongestWord (value) {
+
+  console.log(value.split(' '))
+
+  // maybe use array.filter to compare word lengths and store the longest word into a variable that
+  // will then be alerted to the user
+
+
+}
+
+alertLongestWord(sentencePrompt)
 // var degreesInFahrenheit = prompt("give temperature Fahrenheit and I will convert it to Celsius");
 
 // var degreesInCelsius = degreesInFahrenheit + " in Fahrenheit is " + ((degreesInFahrenheit - 32) * 5 / 9) + " in celsius";
