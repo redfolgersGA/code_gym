@@ -47,7 +47,7 @@ randomPokemon()
 function attackEnemy(){
   var $attckButton = $('p#attack_btn')
   $attckButton.on('click', function(){
-    $enemyHealth.
+    $enemyHealth.text(parseInt())
   })
 }
 

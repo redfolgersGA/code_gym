@@ -45,7 +45,7 @@ var numberTwo = hamlets.map(function(ham){
 ]
   return innerArray;
 })
-// console.log(numberTwo)
+console.log(numberTwo)
 // Scene III
 var hamletObj = numberTwo.map(function(actor){
   var obj = { "name": actor[0], "year": actor[1]}

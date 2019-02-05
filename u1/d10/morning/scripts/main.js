@@ -32,8 +32,9 @@ var $poorSouls = $('.collateral-damage');
 function removeSouls(){
   var $li = $('.collateral-damage')
   $poorSouls.each(function(i){
+    console.log(i)
 
-    $(this).remove()
+    // $(this).remove()
 
 
 

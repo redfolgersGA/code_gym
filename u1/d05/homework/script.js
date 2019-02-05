@@ -1,54 +1,66 @@
 console.log("script loaded");
 
 
-var tempPrompt = prompt("Enter temperature in Farenheit please.")
+// var tempPrompt = prompt("Enter temperature in Farenheit please.")
 
-function alertInCels (value){
-  alert(value + " is " + (value -32) * 5/9 + " in degrees Celsius" )
-}
+// function alertInCels (value){
+//   alert(value + " is " + (value -32) * 5/9 + " in degrees Celsius" )
+// }
 
-alertInCels(tempPrompt)
-
-
-var weightInlbs = prompt("What is your weight in lbs")
-
-var alertInKgs = function (value) {
-  alert(value + " is " + Math.round(value * 1/2.2) + " in kg")
-}
-
-alertInKgs(weightInlbs)
-
-function findsPytagoresTheorem () {
-  var sideA = prompt("what is side 1 equal to?")
-  var sideB = prompt("what is side 2 equal to?")
-
-  var aSquaredPlusBSquared = Math.pow(sideA, 2) + Math.pow(sideB, 2)
-
-  var cSquaredSqrt = Math.sqrt(aSquaredPlusBSquared)
-
-  if(isNaN(cSquaredSqrt) ) {
-    alert("You did NOT enter 2 numbers.")
-
-  } else {
-    alert("the third side is equal to " + cSquaredSqrt)
+// alertInCels(tempPrompt)
 
 
-  }
+// var weightInlbs = prompt("What is your weight in lbs")
+
+// var alertInKgs = function (value) {
+//   alert(value + " is " + Math.round(value * 1/2.2) + " in kg")
+// }
+
+// alertInKgs(weightInlbs)
+
+// function findsPytagoresTheorem () {
+//   var sideA = prompt("what is side 1 equal to?")
+//   var sideB = prompt("what is side 2 equal to?")
+
+//   var aSquaredPlusBSquared = Math.pow(sideA, 2) + Math.pow(sideB, 2)
+
+//   var cSquaredSqrt = Math.sqrt(aSquaredPlusBSquared)
+
+//   if(isNaN(cSquaredSqrt) ) {
+//     alert("You did NOT enter 2 numbers.")
+
+//   } else {
+//     alert("the third side is equal to " + cSquaredSqrt)
 
 
+//   }
 
 
 
 
-}
 
-findsPytagoresTheorem()
+
+// }
+
+// findsPytagoresTheorem()
 
 var sentencePrompt = prompt("Say something");
 
 function alertLongestWord (value) {
+  var longWordLength = 0;
+  var longWordNow = "";
 
-  console.log(value.split(' '))
+  var sentenceToArray = sentencePrompt.split(' ')
+  for(i = 0; i < sentenceToArray.length ; i++){
+    if(sentenceToArray[i].length >= longWordLength) {
+     var longWordLength = sentenceToArray[i].length
+     var longWordNow = sentenceToArray[i]
+    }
+    console.log(longWordNow)
+
+    }
+
+
 
   // maybe use array.filter to compare word lengths and store the longest word into a variable that
   // will then be alerted to the user
