@@ -26,4 +26,4 @@ barney = document.querySelector('barney')
 
 barney.remove()
 
-char.innerHTML = "<sleepinghomer>" 
+char.innerHTML = "<sleepinghomer>"
