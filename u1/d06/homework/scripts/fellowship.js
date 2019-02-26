@@ -385,5 +385,28 @@ mountDoom.appendChild(gollumDiv)
 
 weWantsIt()
 
+var thereAndBackAgain = function () {
+  var gollum = document.getElementById('gollum')
+  var theRing = document.querySelector('#the-ring')
 
+  gollum.remove()
+  theRing.remove()
+
+  var buddies = document.querySelectorAll('#the-fellowship li')
+  for(i=0;i<4;i++){
+    buddies[i].remove()
+  }
+
+  var theShire = document.querySelector('article')
+  var hobbits = document.querySelectorAll('#the-fellowship li')
+  var theShireUl = document.createElement('ul')
+  theShire.appendChild(theShireUl)
+
+
+
+  theShire.appendChild(hobbits)
+
+}
+
+thereAndBackAgain()
 
