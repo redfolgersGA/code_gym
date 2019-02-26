@@ -334,5 +334,17 @@ var theBalrog = function () {
 
 theBalrog()
 
+var hornOfGondor = function () {
+  var boromir = document.getElementsByTagName('li')[4]
+  alert("the horn of Gondor has been blown")
+
+  boromir.style.cssText = "text-decoration: line-through"
+  boromir.remove()
+
+
+}
+
+hornOfGondor()
+
 
 
