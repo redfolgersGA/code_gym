@@ -336,7 +336,7 @@ theBalrog()
 
 var hornOfGondor = function () {
   var boromir = document.getElementsByTagName('li')[4]
-  alert("the horn of Gondor has been blown")
+  // alert("the horn of Gondor has been blown")
 
   boromir.style.cssText = "text-decoration: line-through"
   boromir.remove()
@@ -345,6 +345,45 @@ var hornOfGondor = function () {
 }
 
 hornOfGondor()
+
+var itsDangerousToGoAlone = function () {
+  // take Frodo and Sam out of the fellowship and move them to Mordor
+  // add a div with an id of 'mount-doom' to Mordor
+  var frodo = document.querySelectorAll('li')[4]
+  var sam = document.querySelectorAll('li')[5]
+  var mordor = document.querySelectorAll('article')[2]
+
+  mordor.appendChild(sam)
+  mordor.appendChild(frodo)
+
+  var mountDoom = document.createElement('div')
+  mountDoom.id = 'mount-doom'
+  mordor.appendChild(mountDoom)
+
+}
+
+itsDangerousToGoAlone()
+
+var weWantsIt = function () {
+  // Create a div with an id of 'gollum' and add it to Mordor
+  // Remove the ring from Frodo and give it to Gollum
+  // Move Gollum into Mount Doom
+  var mordor = document.querySelectorAll('article')[2]
+  var mountDoom = document.querySelector('#mount-doom')
+  var gollumDiv = document.createElement('div')
+  gollumDiv.id = 'gollum'
+
+  mordor.appendChild(gollumDiv)
+
+var theRing = document.querySelector('#the-ring')
+gollumDiv.appendChild(theRing)
+mountDoom.appendChild(gollumDiv)
+
+
+
+}
+
+weWantsIt()
 
 
 
