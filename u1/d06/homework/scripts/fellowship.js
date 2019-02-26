@@ -260,4 +260,20 @@ var keepItSecretKeepItSafe = function () {
 
 keepItSecretKeepItSafe();
 
+var makeBuddies = function () {
+  var rivendell = document.getElementsByTagName('article')[1]
+  var asideTag = document.createElement('aside')
+  var buddyUl = document.createElement('ul')
+  for(i=0;i<buddies.length;i++){
+    var buddyli = document.createElement('li')
+    buddyli.textContent = buddies[i]
+    buddyUl.appendChild(buddyli)
+    rivendell.appendChild(buddyUl)
+
+  }
+
+}
+
+makeBuddies()
+
 
