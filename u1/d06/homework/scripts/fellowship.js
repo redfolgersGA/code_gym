@@ -312,7 +312,7 @@ var forgeTheFellowShip = function() {
 
   for(i=0; i<hobbitsAndBuddies.length;i++){
     theFellowShipDiv.appendChild(hobbitsAndBuddies[i])
-    alert(hobbitsAndBuddies[i].textContent + " has joined your party")
+    // alert(hobbitsAndBuddies[i].textContent + " has joined your party")
 
   }
 
@@ -323,6 +323,16 @@ var forgeTheFellowShip = function() {
 
 forgeTheFellowShip()
 
+var theBalrog = function () {
+  var theFellowShip = document.getElementById('the-fellowship')
+  var gandalf = theFellowShip.querySelectorAll('li')[0]
+  gandalf.textContent = 'Gandalf the White'
+  gandalf.style.cssText = "background: white"
+  gandalf.style.cssText = "border: 1px solid grey"
+
+}
+
+theBalrog()
 
 
 
