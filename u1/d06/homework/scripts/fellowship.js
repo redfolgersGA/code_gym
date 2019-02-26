@@ -232,5 +232,20 @@ var makeMiddleEarth = function() {
 
 }
 
-makeMiddleEarth()
+makeMiddleEarth();
+
+
+var makeHobbits = function() {
+  var theShire = document.getElementsByTagName('article')[0]
+  var ul = document.createElement('ul')
+for(i=0;i<hobbits.length;i++) {
+  var li = document.createElement('li')
+  li.textContent = hobbits[i]
+  ul.appendChild(li)
+  theShire.appendChild(ul)
+
+}
+}
+
+makeHobbits()
 
