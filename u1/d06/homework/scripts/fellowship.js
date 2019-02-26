@@ -215,9 +215,20 @@ var lands = ['The Shire', 'Rivendell', 'Mordor'];
 // leaveTheShire()
 
 var makeMiddleEarth = function() {
+  var body = document.querySelector('body')
+  var overlay = document.querySelector('.overlay')
   var section = document.createElement('section')
   section.id = 'middle-earth'
   console.log(section)
+
+  for(i=0;i<lands.length;i++) {
+    var landNames = document.createElement('article')
+    landNames.innerHTML += '<h1>' + lands[i] + '</h1>'
+    section.appendChild(landNames)
+    body.insertBefore(section, overlay)
+
+  }
+
 
 }
 
