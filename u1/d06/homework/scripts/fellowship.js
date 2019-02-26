@@ -247,5 +247,17 @@ for(i=0;i<hobbits.length;i++) {
 }
 }
 
-makeHobbits()
+makeHobbits();
+
+var keepItSecretKeepItSafe = function () {
+  var ringDiv = document.createElement('div');
+  ringDiv.id = 'the-ring'
+  ringDiv.className = 'magic-imbued-jewelry'
+  console.log(ringDiv)
+  var frodo = document.querySelector('li')
+  frodo.appendChild(ringDiv)
+}
+
+keepItSecretKeepItSafe();
+
 
