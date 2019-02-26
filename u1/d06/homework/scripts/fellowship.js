@@ -268,12 +268,36 @@ var makeBuddies = function () {
     var buddyli = document.createElement('li')
     buddyli.textContent = buddies[i]
     buddyUl.appendChild(buddyli)
-    rivendell.appendChild(buddyUl)
+    asideTag.appendChild(buddyUl)
+    rivendell.appendChild(asideTag)
 
   }
 
 }
 
 makeBuddies()
+
+var beautifulStranger = function () {
+  var aragorn = 'Aragorn'
+  var strider = document.getElementsByTagName('li')[7]
+  strider.textContent = aragorn
+}
+
+beautifulStranger()
+
+var leaveTheShire = function () {
+  // select hobbits
+  var hobbits = document.querySelector('article ul')
+  // select buddies ul
+  var buddiesUl = document.querySelector('aside ul')
+  console.log(buddiesUl)
+  buddiesUl.appendChild(hobbits)
+
+}
+
+
+leaveTheShire()
+
+
 
 
