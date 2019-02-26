@@ -298,6 +298,31 @@ var leaveTheShire = function () {
 
 leaveTheShire()
 
+var forgeTheFellowShip = function() {
+  // create a new div called 'the-fellowship' within rivendell
+  // add each hobbit and buddy one at a time to 'the-fellowship'
+  // after each character is added make an alert that they have joined your party
+  var rivendell = document.querySelectorAll('article')[1]
+  var hobbitsAndBuddies = document.querySelectorAll('aside ul li')
+
+  var theFellowShipDiv = document.createElement('div')
+  theFellowShipDiv.id = 'the-fellowship'
+
+  rivendell.appendChild(theFellowShipDiv)
+
+  for(i=0; i<hobbitsAndBuddies.length;i++){
+    theFellowShipDiv.appendChild(hobbitsAndBuddies[i])
+    alert(hobbitsAndBuddies[i].textContent + " has joined your party")
+
+  }
+
+
+
+
+}
+
+forgeTheFellowShip()
+
 
 
 
