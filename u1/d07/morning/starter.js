@@ -4,26 +4,89 @@ console.log('U01D07 starter.js is connected!');
 var suits = ["S", "H", "D", "C"];
 var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 
-function fullSuite(){
-  var cards = [];
-  for(i=0;i<values.length;i++){
-    cards.push(suits[0] + values[i])
-  }
-    for(i=0;i<values.length;i++){
-      cards.push(suits[1] + values[i])
-    }
-      for(i=0;i<values.length;i++){
-        cards.push(suits[2] + values[i])
-      }
-        for(i=0;i<values.length;i++){
-          cards.push(suits[3] + values[i])
-        }
 
+var cards = function () {
+var fullSuite = [];
+var suitsIndex = 0;
 
-        console.log(cards)
+for(i=0;i<values.length;i++) {
+  fullSuite.push(suits[suitsIndex] + values[i])
+
 
 }
-fullSuite()
+  for(i=0;i<values.length;i++){
+    if(suitsIndex === 0) {
+      suitsIndex++
+    }
+
+    fullSuite.push(suits[suitsIndex] + values[i])
+
+  }
+
+    for(i=0;i<values.length;i++){
+      if(suitsIndex ===1){
+        suitsIndex++
+      }
+      fullSuite.push(suits[suitsIndex] + values[i])
+    }
+
+      for(i=0;i<values.length;i++){
+        if(suitsIndex === 2){
+          suitsIndex++
+        }
+        fullSuite.push(suits[suitsIndex] + values[i])
+      }
+
+      console.log(fullSuite)
+
+
+
+}
+
+cards()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function fullSuite(){
+//   var cards = [];
+//   for(i=0;i<values.length;i++){
+//     cards.push(suits[0] + values[i])
+//   }
+//     for(i=0;i<values.length;i++){
+//       cards.push(suits[1] + values[i])
+//     }
+//       for(i=0;i<values.length;i++){
+//         cards.push(suits[2] + values[i])
+//       }
+//         for(i=0;i<values.length;i++){
+//           cards.push(suits[3] + values[i])
+//         }
+
+
+//         console.log(cards)
+
+// }
+// fullSuite()
 
 // var suits = ["S", "H", "D", "C"];
 // var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
