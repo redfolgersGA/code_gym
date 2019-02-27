@@ -5,7 +5,8 @@ var detectives = {
     name: "Fox Mulder",
     actor: "David Duchovny",
     school: "Oxford",
-    degree: "Pscychology"
+    degree: "Pscychology",
+    skills: "kung fu"
   },
   scully: {
     name: "Dana Scully",
@@ -16,6 +17,12 @@ var detectives = {
 };
 
 console.log(detectives.scully.name)
+
+for( var property in detectives.mulder){
+  console.log(detectives.mulder[property])
+}
+
+`Fox Mulder and Dana Scully, played by David Duchovny and Gillian Anderson, are detectives in the X-Files `
 
 /*//1.a) uses dot notation to access an item inside an item inside the variable
 console.log(detectives.scully.name);
