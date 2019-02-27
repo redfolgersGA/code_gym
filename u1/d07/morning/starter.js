@@ -3,10 +3,11 @@ console.log('U01D07 starter.js is connected!');
 // DO WORK IN ANY ORDER YOU'D LIKE BELOW, BUT REMEMBER TO HAVE MEANINGFUL VARIABLE NAMES AND CONSOLE.LOG STATEMENTS
 var suits = ["S", "H", "D", "C"];
 var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+var fullSuite = [];
 
 
 var cards = function () {
-var fullSuite = [];
+
 var suitsIndex = 0;
 
 for(i=0;i<values.length;i++) {
@@ -44,6 +45,14 @@ for(i=0;i<values.length;i++) {
 }
 
 cards()
+
+
+function cardValue(arr) {
+
+// returns a random card from the array
+console.log(fullSuite[Math.floor(Math.random() * (fullSuite.length - 0 + 1)) + 0])
+
+}
 
 
 
