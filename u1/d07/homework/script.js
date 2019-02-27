@@ -1,3 +1,22 @@
+console.log("linked")
+
+var detectives = {
+  mulder: {
+    name: "Fox Mulder",
+    actor: "David Duchovny",
+    school: "Oxford",
+    degree: "Pscychology"
+  },
+  scully: {
+    name: "Dana Scully",
+    actor: "Gillian Anderson",
+    school: "University of Maryland",
+    degree: "Physics"
+  }
+};
+
+console.log(detectives.scully.name)
+
 /*//1.a) uses dot notation to access an item inside an item inside the variable
 console.log(detectives.scully.name);
 //1.b) dot notation used to access the object inside the variable then console log it.
@@ -134,44 +153,44 @@ for(i=0; i < alien.length; i++) {
 
 // movieOutput(alien)
 
-var subtitle = document.getElementById('subtitle');
-console.log(subtitle)
+// var subtitle = document.getElementById('subtitle');
+// console.log(subtitle)
 
-var clickListItem = document.getElementById('clickListItem')
+// var clickListItem = document.getElementById('clickListItem')
 
-// clickListItem.onclick = function() {
-//   console.log("You have clicked the li with the text 'Click Me'")
+// // clickListItem.onclick = function() {
+// //   console.log("You have clicked the li with the text 'Click Me'")
+// // }
+// clickListItem.addEventListener("onclick", function(event) {
+//   console.log("you have clicke the li tag")
+// })
+
+// var printDatum=""
+// var aboutMe = {
+//   firstName:'Emmanuel',
+//   nickName:"Emoney",
+//   lastName:"Paulino",
+//   age:29,
+//   hometown:"New York City",
+//   favoriteAnimal:"Dog",
+//   printData: function(){
+//   var printDatum = "";
+//   for(var prop in this) {
+//     if (typeof this[prop] !='function') {
+//       printDatum += this[prop]
+//     }
+
+//   }
+//   console.log(printDatum)
+//   alert(printDatum)
 // }
-clickListItem.addEventListener("onclick", function(event) {
-  console.log("you have clicke the li tag")
-})
+// }
+// aboutMe.printData();
 
-var printDatum=""
-var aboutMe = {
-  firstName:'Emmanuel',
-  nickName:"Emoney",
-  lastName:"Paulino",
-  age:29,
-  hometown:"New York City",
-  favoriteAnimal:"Dog",
-  printData: function(){
-  var printDatum = "";
-  for(var prop in this) {
-    if (typeof this[prop] !='function') {
-      printDatum += this[prop]
-    }
-
-  }
-  console.log(printDatum)
-  alert(printDatum)
-}
-}
-aboutMe.printData();
-
-var hoverListItem = document.getElementById("hoverListItem");
-hoverListItem.addEventListener("mouseover", function(event) {
-  console.log("you hovered")
-})
+// var hoverListItem = document.getElementById("hoverListItem");
+// hoverListItem.addEventListener("mouseover", function(event) {
+//   console.log("you hovered")
+// })
 
 // hoverListItem.mouseover = function() {
 //   console.log("You have hovered over the li with the text 'Hover Over Me'")
