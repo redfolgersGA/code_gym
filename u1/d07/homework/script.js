@@ -20,9 +20,43 @@ console.log(detectives.scully.name)
 
 for( var property in detectives.mulder){
   console.log(detectives.mulder[property])
+  console.log("this is the " + property)
+
+
 }
 
-`Fox Mulder and Dana Scully, played by David Duchovny and Gillian Anderson, are detectives in the X-Files `
+console.log(detectives.mulder.name + " and " + detectives.scully.name +", played by " +
+  detectives.mulder.actor + " and " + detectives.scully.actor + ", are detectives in the X-files")
+
+var readingList = [
+  {
+    title: "The Happiness Hypothesis",
+    author: "Jonathon Haidt",
+    alreadyRead: true
+  },
+
+  {
+    title: "The Power of Now",
+    author: "Eckhart Tolle",
+    alreadyRead: false
+
+  }
+
+
+
+];
+
+for(i=0;i<readingList.length;i++){
+  console.log(readingList[i].title + " by " + readingList[i].author)
+
+  if(readingList[i].alreadyRead === true) {
+    console.log("You already read " + readingList[i].title)
+  } else {
+    console.log("You still need to read " + readingList[i].title)
+  }
+}
+
+// `Fox Mulder and Dana Scully, played by David Duchovny and Gillian Anderson, are detectives in the X-Files `
 
 /*//1.a) uses dot notation to access an item inside an item inside the variable
 console.log(detectives.scully.name);
