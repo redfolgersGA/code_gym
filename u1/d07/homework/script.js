@@ -1,60 +1,93 @@
-console.log("linked")
+// console.log("linked")
 
-var detectives = {
-  mulder: {
-    name: "Fox Mulder",
-    actor: "David Duchovny",
-    school: "Oxford",
-    degree: "Pscychology",
-    skills: "kung fu"
-  },
-  scully: {
-    name: "Dana Scully",
-    actor: "Gillian Anderson",
-    school: "University of Maryland",
-    degree: "Physics"
-  }
-};
+// var detectives = {
+//   mulder: {
+//     name: "Fox Mulder",
+//     actor: "David Duchovny",
+//     school: "Oxford",
+//     degree: "Pscychology",
+//     skills: "kung fu"
+//   },
+//   scully: {
+//     name: "Dana Scully",
+//     actor: "Gillian Anderson",
+//     school: "University of Maryland",
+//     degree: "Physics"
+//   }
+// };
 
-console.log(detectives.scully.name)
+// console.log(detectives.scully.name)
 
-for( var property in detectives.mulder){
-  console.log(detectives.mulder[property])
-  console.log("this is the " + property)
-
-
-}
-
-console.log(detectives.mulder.name + " and " + detectives.scully.name +", played by " +
-  detectives.mulder.actor + " and " + detectives.scully.actor + ", are detectives in the X-files")
-
-var readingList = [
-  {
-    title: "The Happiness Hypothesis",
-    author: "Jonathon Haidt",
-    alreadyRead: true
-  },
-
-  {
-    title: "The Power of Now",
-    author: "Eckhart Tolle",
-    alreadyRead: false
-
-  }
+// for( var property in detectives.mulder){
+//   console.log(detectives.mulder[property])
+//   console.log("this is the " + property)
 
 
+// }
 
-];
+// console.log(detectives.mulder.name + " and " + detectives.scully.name +", played by " +
+//   detectives.mulder.actor + " and " + detectives.scully.actor + ", are detectives in the X-files")
 
-for(i=0;i<readingList.length;i++){
-  console.log(readingList[i].title + " by " + readingList[i].author)
+// var readingList = [
+//   {
+//     title: "The Happiness Hypothesis",
+//     author: "Jonathon Haidt",
+//     alreadyRead: true
+//   },
 
-  if(readingList[i].alreadyRead === true) {
-    console.log("You already read " + readingList[i].title)
-  } else {
-    console.log("You still need to read " + readingList[i].title)
-  }
-}
+//   {
+//     title: "The Power of Now",
+//     author: "Eckhart Tolle",
+//     alreadyRead: false
+
+//   }
+
+
+
+// ];
+
+// for(i=0;i<readingList.length;i++){
+//   console.log(readingList[i].title + " by " + readingList[i].author)
+
+//   if(readingList[i].alreadyRead === true) {
+//     console.log("You already read " + readingList[i].title)
+//   } else {
+//     console.log("You still need to read " + readingList[i].title)
+//   }
+// }
+
+// // Create an object to store the following information about your favorite movie: title
+// // (a string), director (a string), duration in minutes (a number), release year (a number),
+// // and stars (an array of strings).
+
+// var favoriteMovie = {
+//   title: "Fight Club",
+//   director: "David Fincher",
+//   durationInMinutes: 150,
+//   releaseYear: 1999,
+//   stars: ["Brad Pitt", "Edward Norton", "Helen Bonham Carter"]
+
+// };
+
+// console.log(favoriteMovie.stars[0])
+
+// function logFavoriteMovie (obj) {
+//   var starsInMovie = favoriteMovie.stars[0]
+//   for(i=1;i<favoriteMovie.stars.length;i++){
+
+//   var starsInMovie = starsInMovie += " " + favoriteMovie.stars[i]
+//   console.log(starsInMovie)
+// }
+//   console.log(obj.title + " directed by " + obj.director +
+//     " runs for " + obj.durationInMinutes + " minutes. It was realeased in " +
+//     obj.releaseYear + " and stars " + starsInMovie + ".")
+
+// }
+
+
+// logFavoriteMovie(favoriteMovie)
+
+
 
 // `Fox Mulder and Dana Scully, played by David Duchovny and Gillian Anderson, are detectives in the X-Files `
 
