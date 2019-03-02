@@ -87,7 +87,26 @@
 
 // logFavoriteMovie(favoriteMovie)
 
+var aboutMe = {
+  firstName: 'Emmanuel',
+  lastName: 'Paulino',
+  age: 29,
+  hometown: 'New York',
+  favoriteAnimal: 'Lion',
+  printData: function () {
 
+    for(var property in aboutMe){
+      var logged = this.firstName + this.lastName + this.age + this.hometown + this.favoriteAnimal
+      console.log(logged)
+      console.log(typeof(logged))
+
+    }
+
+
+  }
+}
+
+aboutMe.printData()
 
 // `Fox Mulder and Dana Scully, played by David Duchovny and Gillian Anderson, are detectives in the X-Files `
 
