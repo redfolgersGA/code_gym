@@ -96,10 +96,11 @@ var aboutMe = {
   printData: function () {
 
     for(var property in aboutMe){
-      var singleString;
-      singleString += property + ":" + aboutMe[property]
 
-      console.log(typeof(singleString))
+      singleString = property + ":" + aboutMe[property]
+      var singleString;
+
+      console.log(singleString)
 
 
       // var logged = this.firstName + this.lastName + this.age + this.hometown + this.favoriteAnimal
