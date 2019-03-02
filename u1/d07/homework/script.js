@@ -113,6 +113,11 @@ var aboutMe = {
 
 aboutMe.printData()
 
+var hoverListItem = document.getElementById('hoverListItem');
+hoverListItem.addEventListener('mouseover', function() {
+  alert("hovered")
+})
+
 // `Fox Mulder and Dana Scully, played by David Duchovny and Gillian Anderson, are detectives in the X-Files `
 
 /*//1.a) uses dot notation to access an item inside an item inside the variable
