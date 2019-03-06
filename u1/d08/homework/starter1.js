@@ -3,18 +3,60 @@
 console.log('u01d09 hw starter.js linked1');
 
 var allBoxes = document.querySelectorAll('.zone')
+var allClicked = 0;
 
 function changeToGreenAndBack () {
   for(i=0;i<allBoxes.length;i++){
 
-    allBoxes[i].addEventListener("mouseover", function(e) {
+    allBoxes[i].onmouseover = function(e) {
       this.style.backgroundColor = "green";
+      console.log("moused")
 
 
-    })
+    }
 
-    allBoxes[i].addEventListener('mouseout', function(e){
+    allBoxes[i].onmouseout = function(e){
       this.style.backgroundColor = "white"
+    }
+
+    allBoxes[i].onclick = function(e) {
+      // why doesnnt clicked variable increment when i place it in here instead of globally
+
+
+      this.style.backgroundColor = "green"
+      this.setAttribute('clicked', 'yes')
+      allClicked++
+      console.log(allClicked)
+
+      this.onmouseover = function () {
+
+      }
+
+      this.onmouseout = function () {
+
+      }
+      if(allClicked === 4) {
+        console.log("you won")
+      }
+    }
+
+
+
+  }
+
+}
+
+
+function boxClicked () {
+
+  for(i=0;i<allBoxes.length;i++) {
+    allBoxes[i].addEventListener('onclick', function(e){
+
+      console.log('clicked')
+
+      this.mouseover = function () {
+
+      }
     })
 
   }
@@ -22,6 +64,7 @@ function changeToGreenAndBack () {
 }
 
 changeToGreenAndBack()
+boxClicked()
 
 
 
