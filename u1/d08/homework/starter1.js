@@ -47,24 +47,9 @@ function changeToGreenAndBack () {
 }
 
 
-function boxClicked () {
-
-  for(i=0;i<allBoxes.length;i++) {
-    allBoxes[i].addEventListener('onclick', function(e){
-
-      console.log('clicked')
-
-      this.mouseover = function () {
-
-      }
-    })
-
-  }
-
-}
 
 changeToGreenAndBack()
-boxClicked()
+
 
 
 
