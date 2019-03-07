@@ -82,6 +82,19 @@ function zoneThreeTurnGreen () {
       this.style.backgroundColor = 'green'
       winOrderArrayChecker[2] = 'zone-3'
       console.log(winOrderArrayChecker)
+      setTimeout(zoneFourTurnGreen)
+    }
+  }
+}
+
+function zoneFourTurnGreen () {
+  if(winOrderArray[3] === 'zone-4' && winOrderArrayChecker[0] === 'zone-1' &&
+    winOrderArrayChecker[1] === 'zone-2' && winOrderArrayChecker[2] === 'zone-3'){
+    zoneFour.onmouseover = function () {
+      this.style.backgroundColor = 'green'
+      winOrderArrayChecker[3] = 'zone-4'
+      console.log(winOrderArrayChecker)
+      console.log("YOU WON!")
     }
   }
 }
