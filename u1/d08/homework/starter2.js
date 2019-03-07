@@ -8,13 +8,18 @@ var zoneTwo = document.querySelector('#zone-2')
 var zoneThree = document.querySelector('#zone-3')
 var zoneFour = document.querySelector('#zone-4')
 
+
 var winOrderArrayChecker =[]
+console.log(winOrderArrayChecker)
 
 function zoneOneTurnGreen () {
   zoneOne.addEventListener('mouseover', function(e){
     if(winOrderArray[0] === 'zone-1'){
     this.style.backgroundColor = 'green'
     winOrderArrayChecker[0] = 'zone-1'
+    console.log(winOrderArrayChecker)
+
+
     zoneTwo.onmouseover = function () {
       this.style.backgroundColor = 'red'
     zoneTwo.onmouseout = function () {
@@ -42,7 +47,8 @@ function zoneOneTurnGreen () {
 
 
 
-    console.log(winOrderArrayChecker)
+
+    setTimeout(zoneTwoTurnGreen)
 
   } else {
     this.style.backgroundColor = 'red'
@@ -54,7 +60,31 @@ function zoneOneTurnGreen () {
 }
 
 function zoneTwoTurnGreen () {
-  zoneTwo.adde
+
+    if(winOrderArray[1] === 'zone-2' && winOrderArrayChecker[0] === 'zone-1'){
+
+      zoneTwo.onmouseover = function () {
+        zoneTwo.style.backgroundColor = 'green'
+        winOrderArrayChecker[1] = 'zone-2'
+        console.log(winOrderArrayChecker)
+        setTimeout(zoneThreeTurnGreen)
+      }
+    } else {
+      console.log('didnt work')
+    }
+
+}
+
+function zoneThreeTurnGreen () {
+  if(winOrderArray[2] === 'zone-3' && winOrderArrayChecker[0] === 'zone-1' &&
+    winOrderArrayChecker[1] === 'zone-2') {
+    zoneThree.onmouseover = function () {
+      this.style.backgroundColor = 'green'
+      winOrderArrayChecker[2] = 'zone-3'
+      console.log(winOrderArrayChecker)
+    }
+  }
 }
 
 zoneOneTurnGreen()
+
