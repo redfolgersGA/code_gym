@@ -8,6 +8,34 @@ var zoneTwo = document.querySelector('#zone-2')
 var zoneThree = document.querySelector('#zone-3')
 var zoneFour = document.querySelector('#zone-4')
 
-function turnGreen () {
+var winOrderArrayChecker =[]
+
+function zoneOneTurnGreen () {
+  zoneOne.addEventListener('mouseover', function(e){
+    if(winOrderArray[0] === 'zone-1'){
+    this.style.backgroundColor = 'green'
+    winOrderArrayChecker[0] = 'zone-1'
+    zoneTwo.onmouseover = function () {
+      this.style.backgroundColor = 'red'
+    zoneTwo.onmouseout = function () {
+      this.style.backgroundColor = 'white'
+    }
+
+    }
+
+    console.log(winOrderArrayChecker)
+
+  } else {
+    this.style.backgroundColor = 'red'
+  }
+
+
+  })
 
 }
+
+function zoneTwoTurnGreen () {
+  zoneTwo.adde
+}
+
+zoneOneTurnGreen()
