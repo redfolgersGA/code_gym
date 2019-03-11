@@ -92,11 +92,69 @@ var forgeTheFellowShip = function () {
       fellowShipDiv.append(allBuddies[i])
       alert(allBuddies[i].textContent + " has joined the party")
     }
+    setTimeout(theBalrog, 2000)
 }
 
+var theBalrog = function () {
+  var gandalf = $('li.buddy').eq(0)
+  gandalf.text("Gandalf the White")
+  gandalf.css({
+    "border": "3px solid white"
+  })
+setTimeout(hornOfGondor, 2000)
+}
+
+var hornOfGondor = function() {
+  alert("The horn of Gondor has been blown")
+  var boromir = $('li.buddy').eq(4)
+  boromir.css({
+    "text-decoration": "line-through",
+    "opacity": "3.0"
+  })
+setTimeout(itsDangerousToGoAlone, 2000)
+}
+
+var itsDangerousToGoAlone = function() {
+  var frodo = $('li.hobbit').eq(0)
+  var sam = $('li.hobbit').eq(1)
+  var mountDoom = $('<div id="mount-doom"></div>')
+  var mordor = $('article.land').eq(2)
+
+  mordor.append(frodo)
+  mordor.append(sam)
+  mordor.append(mountDoom)
+
+  setTimeout(weWantsIt, 2000)
 
 
+}
 
+var weWantsIt = function() {
+  var gollumDiv = $('<div id="gollum"></div>')
+  var mordor = $('article.land').eq(2)
+  var theRingDiv = $("div#the-ring")
+  var mountDoom = $('<div id="mount-doom"></div>')
+
+  mountDoom.append('gollumDiv')
+
+
+  mordor.append(gollumDiv)
+  gollumDiv.append(theRingDiv)
+
+  setTimeout(thereAndBackAgain, 2000)
+
+}
+
+var thereAndBackAgain = function (){
+  var gollumDiv = $('div#gollum')
+  var allHobbits = $('li.hobbit')
+  var theShire = $('article.land').eq(0)
+  var mordor = $('article.land').eq(2)
+
+  gollumDiv.remove()
+  theShire.append(allHobbits)
+  mordor.addClass('collapse')
+}
 
 
 
