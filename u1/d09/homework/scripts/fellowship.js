@@ -54,6 +54,44 @@ var makeBuddies = function() {
   }
   var rivendell = $('article.land').eq(1)
   rivendell.append(asideTag)
+
+  setTimeout(beautifulStranger, 2000)
+}
+
+var beautifulStranger = function () {
+  var strider = $('li.buddy').eq(3)
+  strider.text('Aragon')
+
+  setTimeout(leaveTheShire, 2000)
+}
+
+var leaveTheShire = function () {
+  var allHobbits = $('li.hobbit')
+  var rivendell = $('article.land').eq(1)
+  rivendell.append(allHobbits)
+
+  setTimeout(forgeTheFellowShip, 2000)
+
+}
+
+var forgeTheFellowShip = function () {
+  var fellowShipDiv = $('<div id="the-fellowship"></div>')
+  var rivendell = $('article.land').eq(1)
+  rivendell.append(fellowShipDiv)
+
+  var allHobbits = $('li.hobbit')
+  var allBuddies = $('li.buddy')
+
+  for(i=0;i<allHobbits.length;i++){
+    fellowShipDiv.append(allHobbits[i])
+    alert(allHobbits[i].textContent + " has joined the party")
+
+  }
+
+  for(i=0;i<allBuddies.length;i++){
+      fellowShipDiv.append(allBuddies[i])
+      alert(allBuddies[i].textContent + " has joined the party")
+    }
 }
 
 
