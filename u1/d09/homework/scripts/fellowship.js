@@ -44,12 +44,16 @@ var keepItSecretKeepItSafe = function () {
 
 var makeBuddies = function() {
   var asideTag = $('<aside></aside>')
-  var buddyUl = $('<ul id=buddies></ul>')
+  var buddyUl = $('<ul id="buddies"></ul>')
   asideTag.append(buddyUl)
 
-  buddies.forEach(function(i){
-    buddyUl.append('<li>' + i + '</li>')
-  })
+  console.log(buddies)
+
+  for(i=0;i<buddies.length;i++){
+    buddyUl.append('<li class="buddy">' + buddies[i] + '</li>')
+  }
+  var rivendell = $('article.land').eq(1)
+  rivendell.append(asideTag)
 }
 
 
