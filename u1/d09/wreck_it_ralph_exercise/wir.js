@@ -24,12 +24,12 @@
 	  // i.e. ralph1 should become ralph2, ralph2 becomes ralph3 and so on...
 	  // You'll might into an issue here. Maybe you should log the number you are
 	  // incrementing and then look at the class names in the css file. (DEBUG IT!)
-   var counter = 2
-    $($ralph).click(function(){
-      $ralph.attr('id', 'ralph' +(counter-1))
-      $ralph.attr('id', 'ralph' + counter)
-      console.log(counter)
-      counter++
+   // var counter = 2
+   //  $($ralph).click(function(){
+   //    $ralph.attr('id', 'ralph' +(counter-1))
+   //    $ralph.attr('id', 'ralph' + counter)
+   //    console.log(counter)
+   //    counter++
 
 
 
@@ -44,5 +44,5 @@
 
 
 
-	}
-})();
+})
+})
