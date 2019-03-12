@@ -11,22 +11,27 @@
 
 	  // I'll do some of the work for you, first I will grab the <body></body>
 	  var $body = $('body');
+
 	  // 1. I'll create a <div> with the id of ralph.
 		var $ralph = $('<div id="ralph1"></div>');
+
 		// Add the class ralph to this div.
 		$ralph.addClass('ralph')
+
 	  // Append duck to the page.
   	$($body).append($ralph)
 
 
+
 	  var counter = 2
+    console.log(counter)
 
 	  // 2. Create a .click function on ralph. When you click him, his ID Attribute
 	  // should increment by one. You'll might into an issue here. Maybe you should
 	  // log the number you are incrementing and then look at the class names in the
 	  // css file.
   	$($ralph).click(function(){
-	    $ralph.attr('id','ralph'+(counter-1));
+	    // $ralph.attr('id','ralph'+(counter-1));
 	    $ralph.attr('id','ralph'+counter)
 		console.log(counter)
 			counter++

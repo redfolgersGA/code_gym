@@ -69,6 +69,28 @@ function alertLongestWord (value) {
 }
 
 alertLongestWord(sentencePrompt)
+
+
+
+function camelCaseThePrompt () {
+  var statementPrompt = prompt ("Enter a statement")
+
+  var statementArr = statementPrompt.split(' ')
+
+  for(i = 0; i < statementArr.length; i++){
+
+    var upperCasedArray = statementArr[i][0].toUpperCase() + statementArr[i]
+    // eliminate the second letter in each array item\
+    var slicedUpperCasedArray = upperCasedArray.slice(0) + upperCasedArray.slice(4)
+    console.log(slicedUpperCasedArray)
+
+  }
+
+
+
+
+}
+camelCaseThePrompt()
 // var degreesInFahrenheit = prompt("give temperature Fahrenheit and I will convert it to Celsius");
 
 // var degreesInCelsius = degreesInFahrenheit + " in Fahrenheit is " + ((degreesInFahrenheit - 32) * 5 / 9) + " in celsius";

@@ -16,6 +16,7 @@ function zoneOneTurnGreen () {
   zoneOne.addEventListener('mouseover', function(e){
     if(winOrderArray[0] === 'zone-1'){
     this.style.backgroundColor = 'green'
+
     winOrderArrayChecker[0] = 'zone-1'
     console.log(winOrderArrayChecker)
 

@@ -50,9 +50,15 @@ cards()
 function cardValue(arr) {
 
 // returns a random card from the array
-console.log(fullSuite[Math.floor(Math.random() * (fullSuite.length - 0 + 1)) + 0])
+var randomCard = arr[Math.floor(Math.random() * (fullSuite.length - 0 + 1)) + 0]
+console.log(randomCard)
+
+
+
 
 }
+
+cardValue(fullSuite)
 
 
 

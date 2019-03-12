@@ -3,16 +3,19 @@
 $("document").ready(function(){
   console.log("jquery is ready")
 
-var $statusText = $('span#status_text')
-var $enemyImage = $('img#enemy_img')
-var $enemyName = $('div#enemy p.name')
-var $enemyHealth = $('div#enemy p.health')
-var $currentHealth = parseInt($('p.health').eq(0).text())
-var $healthBar = $('p.health').eq(0)
-var $healButton = $('p#heal_btn')
+// var $statusText = $('span#status_text')
+// var $enemyImage = $('img#enemy_img')
+// var $enemyName = $('div#enemy p.name')
+// var $enemyHealth = $('div#enemy p.health')
+// var $currentHealth = parseInt($('p.health').eq(0).text())
+// var $healthBar = $('p.health').eq(0)
+// var $healButton = $('p#heal_btn')
 
 
-var $addEnem;
+// var $addEnem;
+
+
+
 
 
 
@@ -33,23 +36,46 @@ var $addEnem;
 		['Gastly','images/gastly.png',50]
 	];
 
+var urHealthBar = $('p.health').eq(0)
+var enemyHealthBar = $('p.health').eq(1).text('100')
+var enemyDiv = $('img#enemy_img')
+var randomEnemy;
 
-function randomPokemon(){
-  var $randomPoke = pokemon[Math.round(Math.random() * pokemon.length)]
-  $enemyImage.attr('src', $randomPoke[1])
-  $enemyName.text($randomPoke[0])
-  $enemyHealth.text($randomPoke[2])
+var randomEnemyGenerator = function () {
+  var enemyDiv = $('img#enemy_img')
+  for(i=0;i<pokemon.length;i++){
 
+
+    var randomEnemy = pokemon[Math.floor(Math.random() * (pokemon.length - 0) + 0)][1]
+    enemyDiv.attr("src", randomEnemy)
+
+
+  }
 }
+randomEnemyGenerator()
 
-randomPokemon()
 
-function attackEnemy(){
-  var $attckButton = $('p#attack_btn')
-  $attckButton.on('click', function(){
-    $enemyHealth.text(parseInt())
-  })
-}
+
+
+
+
+
+// function randomPokemon(){
+//   var $randomPoke = pokemon[Math.round(Math.random() * pokemon.length)]
+//   $enemyImage.attr('src', $randomPoke[1])
+//   $enemyName.text($randomPoke[0])
+//   $enemyHealth.text($randomPoke[2])
+
+// }
+
+// randomPokemon()
+
+// function attackEnemy(){
+//   var $attckButton = $('p#attack_btn')
+//   $attckButton.on('click', function(){
+//     $enemyHealth.text(parseInt())
+//   })
+// }
 
 
 
