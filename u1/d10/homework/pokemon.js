@@ -37,20 +37,22 @@ $("document").ready(function(){
 	];
 
 var urHealthBar = $('p.health').eq(0)
-var enemyHealthBar = $('p.health').eq(1).text('100')
+
 var enemyDiv = $('img#enemy_img')
 var randomEnemy;
 
 var randomEnemyGenerator = function () {
   var enemyDiv = $('img#enemy_img')
-  for(i=0;i<pokemon.length;i++){
+  var enemyRandNumber = Math.floor(Math.random() * (pokemon.length - 0) + 0)
 
 
-    var randomEnemy = pokemon[Math.floor(Math.random() * (pokemon.length - 0) + 0)][1]
+    var randomEnemy = pokemon[enemyRandNumber][1]
+    console.log()
+    var enemyHealthBar = $('p.health').eq(1).text(pokemon[enemyRandNumber][2])
     enemyDiv.attr("src", randomEnemy)
 
 
-  }
+
 }
 randomEnemyGenerator()
 
