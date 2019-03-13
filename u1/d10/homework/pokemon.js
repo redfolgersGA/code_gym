@@ -38,23 +38,56 @@ $("document").ready(function(){
 
 var urHealthBar = $('p.health').eq(0)
 
+
+
+
 var enemyDiv = $('img#enemy_img')
-var randomEnemy;
+var enemyRandNumber = Math.floor(Math.random() * (pokemon.length - 0) + 0)
 
-var randomEnemyGenerator = function () {
-  var enemyDiv = $('img#enemy_img')
-  var enemyRandNumber = Math.floor(Math.random() * (pokemon.length - 0) + 0)
+    // maybe try iterating inside the arrays that are inside the array pokemon with a for loop
 
 
-    var randomEnemy = pokemon[enemyRandNumber][1]
-    console.log()
-    var enemyHealthBar = $('p.health').eq(1).text(pokemon[enemyRandNumber][2])
-    enemyDiv.attr("src", randomEnemy)
+var randomEnemyName = pokemon[enemyRandNumber][0]
+var nameText = $('p.name').eq(1).text(randomEnemyName)
+
+
+var randomEnemyPic = pokemon[enemyRandNumber][1]
+
+
+var randomEnemyHealthBar = $('p.health').eq(1).text(pokemon[enemyRandNumber][2])
+
+
+enemyDiv.attr("src", randomEnemyPic)
+
+
+
+
+
+
+
+function attackEnemy() {
+  var attackBtn = $('p#attack_btn')
+  var enemyHealthBarInteger = parseInt(randomEnemyHealthBar.text())
+  console.log(enemyHealthBarInteger)
+
+  attackBtn.click(function(){
+    enemyHealthBarInteger = enemyHealthBarInteger - Math.floor(Math.random() * (30 - 5) + 5)
+    console.log(enemyHealthBarInteger)
+
+  })
+
 
 
 
 }
-randomEnemyGenerator()
+
+attackEnemy()
+
+
+// randomEnemyGenerator() used to be a function that randomly generated the enemy but now instead
+// randomly generator variables are attached to the global object to allow all functions of the game
+// to have access to those variables
+
 
 
 
