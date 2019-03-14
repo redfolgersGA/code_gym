@@ -89,8 +89,10 @@ function attackEnemy() {
 
     }
 
-    if(enemyHealthBarInteger < 0){
+    if(enemyHealthBarInteger <= 0){
       statusText.text("YOU WIN. " + "You defeated " + randomEnemyName)
+      alert('You win! Press ok to restart game')
+      location.reload()
     }
 
   })
@@ -103,8 +105,24 @@ function attackEnemy() {
 attackEnemy()
 
 function enemyAttacks () {
+  var currentHealth = parseInt(urHealthBar.text())
+
+  var randomAttackNumber = Math.floor(Math.random() * (30 - 5) + 5)
+  var yourHealthDecreaseInteger = parseInt(randomAttackNumber)
+
+  console.log(yourHealthDecreaseInteger, "your health decreased")
 
   console.log("enemyAttacks")
+
+  var yourHealthDecrease = currentHealth - randomAttackNumber
+
+  urHealthBar.text(yourHealthDecrease)
+
+  if(currentHealth <= 0){
+    alert("GAMEOVER YOU LOSE")
+    location.reload()
+  }
+
 }
 
 
