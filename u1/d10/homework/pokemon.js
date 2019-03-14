@@ -37,25 +37,15 @@ $("document").ready(function(){
 	];
 
 var urHealthBar = $('p.health').eq(0)
-
-
-
-
 var enemyDiv = $('img#enemy_img')
 var enemyRandNumber = Math.floor(Math.random() * (pokemon.length - 0) + 0)
 
     // maybe try iterating inside the arrays that are inside the array pokemon with a for loop
-
-
 var randomEnemyName = pokemon[enemyRandNumber][0]
 var nameText = $('p.name').eq(1).text(randomEnemyName)
-
-
 var randomEnemyPic = pokemon[enemyRandNumber][1]
-
-
 var randomEnemyHealthBar = $('p.health').eq(1).text(pokemon[enemyRandNumber][2])
-
+var statusText = $('span#status_text')
 
 enemyDiv.attr("src", randomEnemyPic)
 
@@ -65,14 +55,43 @@ enemyDiv.attr("src", randomEnemyPic)
 
 
 
+
 function attackEnemy() {
+  var attackMissed = 0
   var attackBtn = $('p#attack_btn')
   var enemyHealthBarInteger = parseInt(randomEnemyHealthBar.text())
   console.log(enemyHealthBarInteger)
 
   attackBtn.click(function(){
-    enemyHealthBarInteger = enemyHealthBarInteger - Math.floor(Math.random() * (30 - 5) + 5)
+    attackMissed = Math.round(Math.random() * (10 - 1) + 1)
+    console.log(attackMissed)
+    if(attackMissed === 5 && enemyHealthBarInteger > 0){
+
+    statusText.text('ATTACK MISSED')
+
+
+
+
+    setTimeout(enemyAttacks, 3000)
+
+    console.log(attackMissed)
+
+    } else {
+    var enemyHealthDecrease = Math.floor(Math.random() * (30 - 5) + 5)
+    enemyHealthBarInteger = enemyHealthBarInteger - enemyHealthDecrease
     console.log(enemyHealthBarInteger)
+    randomEnemyHealthBar.text(enemyHealthBarInteger)
+    statusText.text("Your attack was effective. You did " + enemyHealthDecrease + " damage.")
+
+    setTimeout(enemyAttacks, 3000)
+
+
+
+    }
+
+    if(enemyHealthBarInteger < 0){
+      statusText.text("YOU WIN. " + "You defeated " + randomEnemyName)
+    }
 
   })
 
@@ -82,6 +101,11 @@ function attackEnemy() {
 }
 
 attackEnemy()
+
+function enemyAttacks () {
+
+  console.log("enemyAttacks")
+}
 
 
 // randomEnemyGenerator() used to be a function that randomly generated the enemy but now instead
