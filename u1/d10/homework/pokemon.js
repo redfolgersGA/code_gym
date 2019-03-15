@@ -46,11 +46,16 @@ var nameText = $('p.name').eq(1).text(randomEnemyName)
 var randomEnemyPic = pokemon[enemyRandNumber][1]
 var randomEnemyHealthBar = $('p.health').eq(1).text(pokemon[enemyRandNumber][2])
 var statusText = $('span#status_text')
+var attackButton = $('p.attack_btn')
+var healButton = $('p.heal_btn')
+
 
 enemyDiv.attr("src", randomEnemyPic)
 
 
-
+function reloadGame () {
+  location.reload()
+}
 
 
 
@@ -86,6 +91,7 @@ function attackEnemy() {
     randomEnemyHealthBar.text(enemyHealthBarInteger)
     statusText.text("Your attack was effective. You did " + enemyHealthDecrease + " damage.")
 
+
     setTimeout(enemyAttacks, 3000)
 
 
@@ -93,9 +99,11 @@ function attackEnemy() {
     }
 
     if(enemyHealthBarInteger <= 0){
+
+
       statusText.text("YOU WIN. " + "You defeated " + randomEnemyName)
-      alert('You win! Press ok to restart game')
-      location.reload()
+
+
     }
 
   })
@@ -186,9 +194,9 @@ function youLose() {
     var healtButton = $('p#heal_btn')
 
 
-    attackButton.remove()
-    healButton.remove()
+
     statusText.text("OH NO! Pikachu fainted! GAMEOVER")
+    removeButtons()
     // location.reload()
 
 
@@ -196,6 +204,11 @@ function youLose() {
 
 
 
+}
+
+function removeButtons () {
+  attackButton.remove()
+  healButton.remove()
 }
 
 // randomEnemyGenerator() used to be a function that randomly generated the enemy but now instead
