@@ -112,19 +112,38 @@ function enemyAttacks () {
 
   console.log(yourHealthDecreaseInteger, "your health decreased")
 
-  console.log("enemyAttacks")
+  statusText.text("Oh no! " + randomEnemyName + " attacked you. You lose " +
+    yourHealthDecreaseInteger + " points")
 
   var yourHealthDecrease = currentHealth - randomAttackNumber
 
   urHealthBar.text(yourHealthDecrease)
 
   if(currentHealth <= 0){
-    alert("GAMEOVER YOU LOSE")
+    alert("Pikachu fainted! GAMEOVER YOU LOSE")
     location.reload()
   }
 
 }
 
+function healUrPokemon () {
+  var healButton = $('p#heal_btn');
+  var healAmount = Math.floor(Math.random() * (5 - 5) + 5)
+
+  healButton.click(function(){
+    var currentHealth = urHealthBar.text()
+    var currentHealthInteger = parseInt(currentHealth)
+
+    var totalHealthAfterIncrease = currentHealthInteger + healAmount
+
+    urHealthBar.text(totalHealthAfterIncrease)
+
+
+
+  })
+}
+
+healUrPokemon()
 
 // randomEnemyGenerator() used to be a function that randomly generated the enemy but now instead
 // randomly generator variables are attached to the global object to allow all functions of the game
