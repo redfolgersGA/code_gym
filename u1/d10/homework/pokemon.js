@@ -137,6 +137,8 @@ function healUrPokemon () {
     var totalHealthAfterIncrease = currentHealthInteger + healAmount
 
     urHealthBar.text(totalHealthAfterIncrease)
+    setTimeout(enemyAttacks, 3000)
+
 
 
 
