@@ -56,6 +56,7 @@ enemyDiv.attr("src", randomEnemyPic)
 
 
 
+
 function attackEnemy() {
   var attackMissed = 0
   var attackBtn = $('p#attack_btn')
@@ -124,9 +125,16 @@ function enemyAttacks () {
 
   urHealthBar.text(yourHealthDecrease)
 
-  if(currentHealth <= 0){
-    alert("Pikachu fainted! GAMEOVER YOU LOSE")
-    location.reload()
+  if(yourHealthDecrease <= 0){
+    var healButton = $('p#heal_btn')
+    var attackButton = $('p#attack_btn')
+    healButton.remove()
+    attackButton.remove()
+
+
+    statusText.text("Pikachu fainted! GAMEOVER YOU LOSE")
+
+
   }
 
 }
@@ -134,6 +142,7 @@ function enemyAttacks () {
 function healUrPokemon () {
   var healButton = $('p#heal_btn');
   var healAmount = Math.floor(Math.random() * (5 - 5) + 5)
+  youLose()
 
   healButton.click(function(){
     var currentHealth = urHealthBar.text()
@@ -141,8 +150,23 @@ function healUrPokemon () {
 
     var totalHealthAfterIncrease = currentHealthInteger + healAmount
 
+    var pikachuImage = $('img#pikachu_img')
+    pikachuImage.slideUp(1000).slideDown()
+
     urHealthBar.text(totalHealthAfterIncrease)
+
     setTimeout(enemyAttacks, 3000)
+
+    // if(currentHealthInteger <= 0 || totalHealthAfterIncrease <= 0) {
+    //   var attackButton = $('p#attack_btn')
+    //   var healtButton = $('p#heal_btn')
+
+
+    //   attackButton.remove()
+    //   healButton.remove()
+    //   alert("OH NO! Pikachu fainted. GAMEOVER")
+    //   location.reload()
+    // }
 
 
 
@@ -151,6 +175,28 @@ function healUrPokemon () {
 }
 
 healUrPokemon()
+
+function youLose() {
+  var currentHealthAsString = urHealthBar.text()
+  var currentHealthAsInteger = parseInt(currentHealthAsString)
+  console.log("YOULOSE logs current health at" + currentHealthAsInteger)
+
+  if(currentHealthAsInteger <= 0){
+    var attackButton = $('p#attack_btn')
+    var healtButton = $('p#heal_btn')
+
+
+    attackButton.remove()
+    healButton.remove()
+    statusText.text("OH NO! Pikachu fainted! GAMEOVER")
+    // location.reload()
+
+
+  }
+
+
+
+}
 
 // randomEnemyGenerator() used to be a function that randomly generated the enemy but now instead
 // randomly generator variables are attached to the global object to allow all functions of the game
