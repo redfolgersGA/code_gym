@@ -77,6 +77,8 @@ function attackEnemy() {
     console.log(attackMissed)
 
     } else {
+    var randomEnemyPic = $('img#enemy_img')
+    randomEnemyPic.fadeOut().fadeIn()
     var enemyHealthDecrease = Math.floor(Math.random() * (30 - 5) + 5)
     enemyHealthBarInteger = enemyHealthBarInteger - enemyHealthDecrease
     console.log(enemyHealthBarInteger)
@@ -109,6 +111,9 @@ function enemyAttacks () {
 
   var randomAttackNumber = Math.floor(Math.random() * (30 - 5) + 5)
   var yourHealthDecreaseInteger = parseInt(randomAttackNumber)
+
+  var pikachuImage = $('img#pikachu_img')
+  pikachuImage.fadeOut().fadeIn()
 
   console.log(yourHealthDecreaseInteger, "your health decreased")
 
