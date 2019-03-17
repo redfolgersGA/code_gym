@@ -46,16 +46,15 @@ var nameText = $('p.name').eq(1).text(randomEnemyName)
 var randomEnemyPic = pokemon[enemyRandNumber][1]
 var randomEnemyHealthBar = $('p.health').eq(1).text(pokemon[enemyRandNumber][2])
 var statusText = $('span#status_text')
-var attackButton = $('p.attack_btn')
-var healButton = $('p.heal_btn')
+var attackButton = $('p#attack_btn')
+var healButton = $('p#heal_btn')
+var enemyHealthBarInteger = parseInt(randomEnemyHealthBar.text())
+
 
 
 enemyDiv.attr("src", randomEnemyPic)
 
 
-function reloadGame () {
-  location.reload()
-}
 
 
 
@@ -66,11 +65,11 @@ function attackEnemy() {
   var attackMissed = 0
   var attackBtn = $('p#attack_btn')
   var enemyHealthBarInteger = parseInt(randomEnemyHealthBar.text())
-  console.log(enemyHealthBarInteger)
+
 
   attackBtn.click(function(){
     attackMissed = Math.round(Math.random() * (10 - 1) + 1)
-    console.log(attackMissed)
+
     if(attackMissed === 5 && enemyHealthBarInteger > 0){
 
     statusText.text('ATTACK MISSED')
@@ -78,35 +77,50 @@ function attackEnemy() {
 
 
 
-    setTimeout(enemyAttacks, 3000)
+    // setTimeout(enemyAttacks, 3000)
 
-    console.log(attackMissed)
 
-    } else {
+
+    } else if(enemyHealthBarInteger > 0){
     var randomEnemyPic = $('img#enemy_img')
     randomEnemyPic.fadeOut().fadeIn()
+    // generate random number btwn 5 and 30 t0 dcrease enemyHealth by
     var enemyHealthDecrease = Math.floor(Math.random() * (30 - 5) + 5)
     enemyHealthBarInteger = enemyHealthBarInteger - enemyHealthDecrease
-    console.log(enemyHealthBarInteger)
+
     randomEnemyHealthBar.text(enemyHealthBarInteger)
+    console.log(typeof(enemyHealthBarInteger), " is data Type")
     statusText.text("Your attack was effective. You did " + enemyHealthDecrease + " damage.")
 
 
-    setTimeout(enemyAttacks, 3000)
+      if(enemyHealthBarInteger <= 0){
+
+
+
+        statusText.text("YOU WIN!!! " + "You defeated " + randomEnemyName)
+        removeButtons()
+
+
+
+
+    }
+
+
+    // setTimeout(enemyAttacks, 3000)
 
 
 
     }
 
-    if(enemyHealthBarInteger <= 0){
 
-
-      statusText.text("YOU WIN. " + "You defeated " + randomEnemyName)
-
-
-    }
 
   })
+
+
+
+
+
+
 
 
 
@@ -117,6 +131,9 @@ attackEnemy()
 
 function enemyAttacks () {
   var currentHealth = parseInt(urHealthBar.text())
+  var enemyHealthString = $('p.health').eq(1).text()
+  var enemyHealthAsInteger = parseInt(enemyHealthString)
+
 
   var randomAttackNumber = Math.floor(Math.random() * (30 - 5) + 5)
   var yourHealthDecreaseInteger = parseInt(randomAttackNumber)
@@ -140,10 +157,15 @@ function enemyAttacks () {
     attackButton.remove()
 
 
-    statusText.text("Pikachu fainted! GAMEOVER YOU LOSE")
+    statusText.text("Pikachu fainted! GAMEOVER")
 
 
   }
+
+  if(enemyHealthAsInteger <= 0){
+    statusText.text("Your enemy fainted! YOU WIN!")
+  }
+  enemyHealthCheck()
 
 }
 
@@ -206,10 +228,24 @@ function youLose() {
 
 }
 
+function enemyHealthCheck (){
+  if(enemyHealthBarInteger>0) {
+    setTimeout(enemyAttacks, 3000)
+
+  }
+}
+
+function reloadGame () {
+  location.reload()
+}
+
 function removeButtons () {
   attackButton.remove()
   healButton.remove()
 }
+
+
+
 
 // randomEnemyGenerator() used to be a function that randomly generated the enemy but now instead
 // randomly generator variables are attached to the global object to allow all functions of the game
