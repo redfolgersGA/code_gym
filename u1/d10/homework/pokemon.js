@@ -137,7 +137,16 @@ function attackEnemy() {
 attackEnemy()
 
 function enemyAttacks () {
-  if(urHealthBarInteger > 0) {
+  var enemyHealthString = $('p.health').eq(1).text()
+  var enemyHealthNumber = parseInt(enemyHealthString)
+  var urHealthString = $('p.health').eq(0).text()
+  var urHealthNumber = parseInt(urHealthString)
+
+
+
+  if(urHealthNumber > 0 && enemyHealthNumber > 0) {
+    console.log(urHealthNumber)
+    console.log(enemyHealthNumber)
     var currentHealth = parseInt(urHealthBar.text())
     var enemyHealthString = $('p.health').eq(1).text()
     var enemyHealthAsInteger = parseInt(enemyHealthString)
@@ -237,12 +246,7 @@ function youLose() {
 
 }
 
-function enemyHealthCheck (){
-  if(enemyHealthBarInteger>0) {
-    // setTimeout(enemyAttacks, 3000)
 
-  }
-}
 
 function reloadGame () {
   location.reload()
