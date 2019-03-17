@@ -37,6 +37,9 @@ $("document").ready(function(){
 	];
 
 var urHealthBar = $('p.health').eq(0)
+var urHealthBarString = $(urHealthBar).text()
+var urHealthBarInteger = parseInt(urHealthBarString)
+
 var enemyDiv = $('img#enemy_img')
 var enemyRandNumber = Math.floor(Math.random() * (pokemon.length - 0) + 0)
 
@@ -69,7 +72,6 @@ function attackEnemy() {
 
   attackBtn.click(function(){
     attackMissed = Math.round(Math.random() * (10 - 1) + 1)
-
     if(attackMissed === 5 && enemyHealthBarInteger > 0){
 
     statusText.text('ATTACK MISSED')
@@ -77,7 +79,7 @@ function attackEnemy() {
 
 
 
-    // setTimeout(enemyAttacks, 3000)
+    setTimeout(enemyAttacks, 3000)
 
 
 
@@ -91,6 +93,12 @@ function attackEnemy() {
     randomEnemyHealthBar.text(enemyHealthBarInteger)
     console.log(typeof(enemyHealthBarInteger), " is data Type")
     statusText.text("Your attack was effective. You did " + enemyHealthDecrease + " damage.")
+    setTimeout(enemyAttacks, 3000)
+
+
+
+
+
 
 
       if(enemyHealthBarInteger <= 0){
@@ -106,7 +114,6 @@ function attackEnemy() {
     }
 
 
-    // setTimeout(enemyAttacks, 3000)
 
 
 
@@ -130,44 +137,46 @@ function attackEnemy() {
 attackEnemy()
 
 function enemyAttacks () {
-  var currentHealth = parseInt(urHealthBar.text())
-  var enemyHealthString = $('p.health').eq(1).text()
-  var enemyHealthAsInteger = parseInt(enemyHealthString)
+  if(urHealthBarInteger > 0) {
+    var currentHealth = parseInt(urHealthBar.text())
+    var enemyHealthString = $('p.health').eq(1).text()
+    var enemyHealthAsInteger = parseInt(enemyHealthString)
 
 
-  var randomAttackNumber = Math.floor(Math.random() * (30 - 5) + 5)
-  var yourHealthDecreaseInteger = parseInt(randomAttackNumber)
+    var randomAttackNumber = Math.floor(Math.random() * (30 - 5) + 5)
+    var yourHealthDecreaseInteger = parseInt(randomAttackNumber)
 
-  var pikachuImage = $('img#pikachu_img')
-  pikachuImage.fadeOut().fadeIn()
+    var pikachuImage = $('img#pikachu_img')
+    pikachuImage.fadeOut().fadeIn()
 
-  console.log(yourHealthDecreaseInteger, "your health decreased")
+    console.log(yourHealthDecreaseInteger, "your health decreased")
 
-  statusText.text("Oh no! " + randomEnemyName + " attacked you. You lose " +
-    yourHealthDecreaseInteger + " points")
+    statusText.text("Oh no! " + randomEnemyName + " attacked you. You lose " +
+      yourHealthDecreaseInteger + " points")
 
-  var yourHealthDecrease = currentHealth - randomAttackNumber
+    var yourHealthDecrease = currentHealth - randomAttackNumber
 
-  urHealthBar.text(yourHealthDecrease)
+    urHealthBar.text(yourHealthDecrease)
 
-  if(yourHealthDecrease <= 0){
-    var healButton = $('p#heal_btn')
-    var attackButton = $('p#attack_btn')
-    healButton.remove()
-    attackButton.remove()
-
-
-    statusText.text("Pikachu fainted! GAMEOVER")
+    if(yourHealthDecrease <= 0){
+      var healButton = $('p#heal_btn')
+      var attackButton = $('p#attack_btn')
+      healButton.remove()
+      attackButton.remove()
 
 
+      statusText.text("Pikachu fainted! GAMEOVER")
+
+
+    }
+
+    if(enemyHealthAsInteger <= 0){
+      statusText.text("Your enemy fainted! YOU WIN!")
+    }
+
+
+    }
   }
-
-  if(enemyHealthAsInteger <= 0){
-    statusText.text("Your enemy fainted! YOU WIN!")
-  }
-  enemyHealthCheck()
-
-}
 
 function healUrPokemon () {
   var healButton = $('p#heal_btn');
@@ -185,7 +194,7 @@ function healUrPokemon () {
 
     urHealthBar.text(totalHealthAfterIncrease)
 
-    setTimeout(enemyAttacks, 3000)
+    // setTimeout(enemyAttacks, 3000)
 
     // if(currentHealthInteger <= 0 || totalHealthAfterIncrease <= 0) {
     //   var attackButton = $('p#attack_btn')
@@ -230,7 +239,7 @@ function youLose() {
 
 function enemyHealthCheck (){
   if(enemyHealthBarInteger>0) {
-    setTimeout(enemyAttacks, 3000)
+    // setTimeout(enemyAttacks, 3000)
 
   }
 }
