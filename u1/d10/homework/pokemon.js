@@ -203,7 +203,7 @@ function healUrPokemon () {
 
     urHealthBar.text(totalHealthAfterIncrease)
 
-    // setTimeout(enemyAttacks, 3000)
+    setTimeout(enemyAttacks, 3000)
 
     // if(currentHealthInteger <= 0 || totalHealthAfterIncrease <= 0) {
     //   var attackButton = $('p#attack_btn')
