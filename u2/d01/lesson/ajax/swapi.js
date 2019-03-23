@@ -2,47 +2,61 @@ $(document).ready(function(){
   var mainUrl = 'https://swapi.co/api/'
   var first_film_url = "https://swapi.co/api/films/1/";
 
-
-
-
-
-
-
-
-
-
-
 $.ajax({
   type: "GET",
   url: first_film_url,
   success: function(data){
     console.log(data)
-    var starwars = data
-  },
-
-  error: function(jqXHR, textStatus, error){
-    console.log(error)
   }
-
-
 })
 
-$.get(first_film_url, function(data){
-  var xWing = data.starships[6]
-  $.get(xWing, function(xWingData){
-    var wedge = xWingData.pilots[2]
-    $.get(wedge, function(wedgeData){
-      console.log(wedgeData)
-      var $container = $('#titles #titlecontent p')
-       $container.text(JSON.stringify(wedgeData))
-    })
-  })
+$.ajax({
+  type: "GET",
+  url: first_film_url,
+  success: function(data){
+    console.log(data.starships[6])
+  }
 })
+
+
+
+
+
+
+
+
+
+// $.ajax({
+//   type: "GET",
+//   url: first_film_url,
+//   success: function(data){
+//     console.log(data)
+//     var starwars = data
+//   },
+
+//   error: function(jqXHR, textStatus, error){
+//     console.log(error)
+//   }
+
+
+// })
+
+// $.get(first_film_url, function(data){
+//   var xWing = data.starships[6]
+//   $.get(xWing, function(xWingData){
+//     var wedge = xWingData.pilots[2]
+//     $.get(wedge, function(wedgeData){
+//       console.log(wedgeData)
+//       var $container = $('#titles #titlecontent p')
+//        $container.text(JSON.stringify(wedgeData))
+//     })
+//   })
+// })
 
 
 });
 
-console.log('asynchronous haha')
+
 
 // $.ajax({
 //   "url": first_film_url,
