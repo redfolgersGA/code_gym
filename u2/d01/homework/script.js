@@ -29,94 +29,116 @@ var frameworks = {
   ]
 }
 
-
-
-  var modifiedFramework = frameworks.frontEnd.map(function(framework){
-    return framework.name + ".js"
-
-  })
-
-  modifiedFramework.forEach(function(framework){
-    console.log(framework)
-  })
-
-  var modifiedFrameworkTwo = frameworks.backEnd.map(function(framework){
-    return framework.name + ".js"
-  })
-
-  modifiedFrameworkTwo.forEach(function(framework){
-    console.log(framework)
-  })
-
-  var filteredFrontEnd = frameworks.frontEnd.filter(function(framework){
-    if(framework.description.length > 30) {
-      console.log(framework)
-    }else {
-     console.log(framework.name +'s' + 'description is too short')
-    }
-  })
-
-
-
- var filteredBackEnd = frameworks.backEnd.filter(function(framework){
-
-   var random = framework.name[0].toLowerCase()
-  if(random === "a" || random === "e" || random === "i"|| random === "o" || random === "u"){
-    return framework
-  }
- })
-console.log(filteredBackEnd)
-
-
-// BONUS ROUND
-
-var frontEndNames = frameworks.frontEnd.reduce(function(sum, current){
-  return current = frameworks.frontEnd[0].name + ", " + frameworks.frontEnd[1].name + ", " + frameworks.frontEnd[2].name
+var modifiedFrontEnd = frameworks.frontEnd.map(function(fw){
+  return fw.name + "!"
 })
 
-console.log(frontEndNames)
+console.log(modifiedFrontEnd)
 
-var newFrontEnd = frameworks.frontEnd.map(function(framework){
-  return framework.name + ".js"
-})
 
-console.log(newFrontEnd)
 
-for(i=0;i<newFrontEnd.length;i++){
-  console.log(newFrontEnd[i])
-}
 
-var newFrontEndReduced = newFrontEnd.reduce(function(sum, current){
-  return current = newFrontEnd[0] + newFrontEnd[1] + newFrontEnd[2] + "are the frontend frameworks"
-})
 
-console.log(newFrontEndReduced)
 
-var newFrameworkArray = []
 
-newFrameworkArray.push(newFrontEndReduced)
 
-console.log(newFrameworkArray)
 
-var newBackEnd = frameworks.backEnd.map(function(framework){
-  return framework.name + ".js"
-})
 
-var newBackEndReduced = newBackEnd.reduce(function(sum, current){
-  return current = newBackEnd[0] + newBackEnd[1] + newBackEnd[2] + "are the Backend frameworks"
-})
 
-console.log(newBackEndReduced)
 
-newFrameworkArray.push(newBackEndReduced)
 
-console.log(newFrameworkArray)
 
-var concatenateStrings = newFrameworkArray.reduce(function(sum,current){
-  return current = newFrameworkArray[0] + newFrameworkArray[1] + "together"
-})
 
-console.log(concatenateStrings)
+
+
+
+
+//   var modifiedFramework = frameworks.frontEnd.map(function(framework){
+//     return framework.name + ".js"
+
+//   })
+
+//   modifiedFramework.forEach(function(framework){
+//     console.log(framework)
+//   })
+
+//   var modifiedFrameworkTwo = frameworks.backEnd.map(function(framework){
+//     return framework.name + ".js"
+//   })
+
+//   modifiedFrameworkTwo.forEach(function(framework){
+//     console.log(framework)
+//   })
+
+//   var filteredFrontEnd = frameworks.frontEnd.filter(function(framework){
+//     if(framework.description.length > 30) {
+//       console.log(framework)
+//     }else {
+//      console.log(framework.name +'s' + 'description is too short')
+//     }
+//   })
+
+
+
+//  var filteredBackEnd = frameworks.backEnd.filter(function(framework){
+
+//    var random = framework.name[0].toLowerCase()
+//   if(random === "a" || random === "e" || random === "i"|| random === "o" || random === "u"){
+//     return framework
+//   }
+//  })
+// console.log(filteredBackEnd)
+
+
+// // BONUS ROUND
+
+// var frontEndNames = frameworks.frontEnd.reduce(function(sum, current){
+//   return current = frameworks.frontEnd[0].name + ", " + frameworks.frontEnd[1].name + ", " + frameworks.frontEnd[2].name
+// })
+
+// console.log(frontEndNames)
+
+// var newFrontEnd = frameworks.frontEnd.map(function(framework){
+//   return framework.name + ".js"
+// })
+
+// console.log(newFrontEnd)
+
+// for(i=0;i<newFrontEnd.length;i++){
+//   console.log(newFrontEnd[i])
+// }
+
+// var newFrontEndReduced = newFrontEnd.reduce(function(sum, current){
+//   return current = newFrontEnd[0] + newFrontEnd[1] + newFrontEnd[2] + "are the frontend frameworks"
+// })
+
+// console.log(newFrontEndReduced)
+
+// var newFrameworkArray = []
+
+// newFrameworkArray.push(newFrontEndReduced)
+
+// console.log(newFrameworkArray)
+
+// var newBackEnd = frameworks.backEnd.map(function(framework){
+//   return framework.name + ".js"
+// })
+
+// var newBackEndReduced = newBackEnd.reduce(function(sum, current){
+//   return current = newBackEnd[0] + newBackEnd[1] + newBackEnd[2] + "are the Backend frameworks"
+// })
+
+// console.log(newBackEndReduced)
+
+// newFrameworkArray.push(newBackEndReduced)
+
+// console.log(newFrameworkArray)
+
+// var concatenateStrings = newFrameworkArray.reduce(function(sum,current){
+//   return current = newFrameworkArray[0] + newFrameworkArray[1] + "together"
+// })
+
+// console.log(concatenateStrings)
 
 
 
