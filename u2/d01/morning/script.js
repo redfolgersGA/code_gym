@@ -86,6 +86,38 @@ var logByMass = function () {
 logByMass()
 
 
+var appendCharacterNames = function () {
+  var charactersDiv = $('#characters')
+  data.people.forEach(function(person){
+    charactersDiv.append('<p>'+ person.name + '</p>' )
+
+
+
+  })
+}
+
+
+appendCharacterNames()
+
+
+
+var appendByMass = function () {
+  var charactersDiv = $('#characters')
+  var title = $('#title')
+  var personPTags = $('p')
+
+  for(i=0 ; i <data.people.length; i++){
+    if(data.people[i].mass > 75){
+      personPTags.remove()
+      charactersDiv.append('<p>' + data.people[i].name + '</p>')
+    }
+
+  }
+
+
+
+    }
+setTimeout(appendByMass, 3000)
 
 
 
