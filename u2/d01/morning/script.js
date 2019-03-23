@@ -52,63 +52,88 @@ var data =  {
   	}]
 } // ends var data
 
-1.
-  var logData = function() {
-    console.log(data)
+var logData = function () {
+  console.log(data)
 }
-logData();
+
+logData()
 
 var logNames = function() {
-  for(i=0;i<data.people.length;i++)
-    console.log(data.people[i].name)
+  for (i=0; i < data.people.length; i++){
+  console.log(data.people[i].name)
+}
 
-};
+}
+
 logNames()
 
+var logNameEyes = function () {
 
-var logNameEyes = function() {
-  data.people.forEach(function(person){
-    console.log(person.name + " has " + person.eye_color + " eyes.")
-  })
-};
-
-logNameEyes()
+}
 
 
-var logByMass = function() {
-  data.people.forEach(function(person){
-    if(person.mass > 75){
-      console.log(person.name + " has a mass of " + person.mass)
-    }
-  })
-};
-
-logByMass()
 
 
-var appendCharacterNames = function() {
-  data.people.forEach(function(person){
-    var $characterDiv = $('div#characters')
-    $characterDiv.append('<p>' + person.name + '</p>')
 
-  })
-};
 
-appendCharacterNames()
 
-var appendByMass = function() {
-  data.people.forEach(function(person){
-    var $characterDiv = $('div#characters')
-    if(person.mass > 75){
-      $characterDiv.append('<p>' + person.name + '</p>')
-      $('h1#title').text("has mass of greater than 75")
+// 1.
+//   var logData = function() {
+//     console.log(data)
+// }
+// logData();
 
-    }
+// var logNames = function() {
+//   for(i=0;i<data.people.length;i++)
+//     console.log(data.people[i].name)
 
-  })
-};
+// };
+// logNames()
 
-appendByMass()
+
+// var logNameEyes = function() {
+//   data.people.forEach(function(person){
+//     console.log(person.name + " has " + person.eye_color + " eyes.")
+//   })
+// };
+
+// logNameEyes()
+
+
+// var logByMass = function() {
+//   data.people.forEach(function(person){
+//     if(person.mass > 75){
+//       console.log(person.name + " has a mass of " + person.mass)
+//     }
+//   })
+// };
+
+// logByMass()
+
+
+// var appendCharacterNames = function() {
+//   data.people.forEach(function(person){
+//     var $characterDiv = $('div#characters')
+//     $characterDiv.append('<p>' + person.name + '</p>')
+
+//   })
+// };
+
+// appendCharacterNames()
+
+// var appendByMass = function() {
+//   data.people.forEach(function(person){
+//     var $characterDiv = $('div#characters')
+//     if(person.mass > 75){
+//       $characterDiv.append('<p>' + person.name + '</p>')
+//       $('h1#title').text("has mass of greater than 75")
+
+//     }
+
+//   })
+// };
+
+// appendByMass()
 
 
 
