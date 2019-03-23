@@ -30,10 +30,16 @@ var frameworks = {
 }
 
 var modifiedFrontEnd = frameworks.frontEnd.map(function(fw){
-  return fw.name + "!"
+  return fw.name + ".js"
 })
 
 console.log(modifiedFrontEnd)
+
+var modifiedBackEnd = frameworks.backEnd.map(function(fw){
+  return fw.name + ".js"
+})
+
+console.log(modifiedBackEnd)
 
 
 
