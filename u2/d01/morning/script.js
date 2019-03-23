@@ -68,8 +68,22 @@ var logNames = function() {
 logNames()
 
 var logNameEyes = function () {
-
+  for(i=0; i< data.people.length; i++){
+    console.log(data.people[i].name +"'s eye color is " + data.people[i].eye_color)
+  }
 }
+
+logNameEyes()
+
+var logByMass = function () {
+  for(i=0; i < data.people.length; i++){
+    if(parseInt(data.people[i].mass) > 75) {
+    console.log(data.people[i].name + " has mass greater than 75")
+}
+  }
+    }
+
+logByMass()
 
 
 
