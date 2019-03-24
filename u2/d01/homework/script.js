@@ -49,6 +49,13 @@ var filteredFrontEnd = frameworks.frontEnd.filter(function(fw){
 
 console.log(filteredFrontEnd)
 
+var filteredBackEnd = frameworks.backEnd.filter(function(fw){
+  if(fw.name[0] === 'A' || fw.name[0] === 'E' || fw.name[0] === 'I' || fw.name[0] === 'O' || fw.name[0] === 'U'){
+    return fw
+  }
+})
+
+console.log(filteredBackEnd)
 
 
 
