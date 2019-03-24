@@ -41,6 +41,13 @@ var modifiedBackEnd = frameworks.backEnd.map(function(fw){
 
 console.log(modifiedBackEnd)
 
+var filteredFrontEnd = frameworks.frontEnd.filter(function(fw){
+  if(fw.description.length > 30){
+    return fw
+  }
+})
+
+console.log(filteredFrontEnd)
 
 
 
