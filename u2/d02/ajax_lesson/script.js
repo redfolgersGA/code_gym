@@ -39,7 +39,7 @@ $.ajax({
   type: "GET",
   url: "https://randomuser.me/api/",
   success: function(data){
-    console.log(data.results[0])
+    console.log(data.results[0].dob.date)
     var img = $('img')
     img.attr('src', data.results[0].picture.medium)
     var titleParagraph = $('#user_title')
@@ -59,7 +59,21 @@ $.ajax({
         userValue.text(data.results[0].email)
 
       })
-
+    var birthdayLi = $('li').eq(2)
+      birthdayLi.on('mouseover', function(){
+        titleParagraph.text("My birthday is ")
+        userValue.text(data.results[0].dob.date)
+      })
+    var addressLi = $('li').eq(3);
+      addressLi.on('mouseover', function(){
+        titleParagraph.text("My address is ")
+        userValue.text(data.results[0].location.street)
+      })
+    var passwordLi = $('li').eq(4);
+      passwordLi.on('mouseover', function(){
+        titleParagraph.text("My password is ")
+        userValue.text(data.results[0].login.password)
+      })
 
 
 
