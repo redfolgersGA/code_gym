@@ -57,6 +57,13 @@ var filteredBackEnd = frameworks.backEnd.filter(function(fw){
 
 console.log(filteredBackEnd)
 
+var frontEndNames = frameworks.frontEnd.reduce(function(sum,current){
+  var concatStrings = current
+  return var added += current.name
+})
+
+console.log(frontEndNames)
+
 
 
 
