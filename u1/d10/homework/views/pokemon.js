@@ -15,19 +15,19 @@
 
 
 
-// 	var pokemon = [
-// 		['Voltorb','./assets/images/voltorb.png',100],
-// 		['Charizard','./assets/images/charizard.png',200],
-// 		['Gyarados','./assets/images/gyarados.png',125],
-// 		['Mew','./assets/images/mew.png',75],
-// 		['Geodude','./assets/images/geodude.png',90],
-// 		['Snorlax','./assets/images/snorlax.png',110],
-// 		['Kabutops','./assets/images/kabutops.png',95],
-// 		['Eevee','./assets/images/eevee.png',60],
-// 		['Beedrill','./assets/images/beedrill.png',70],
-// 		['Magikarp','./assets/images/magikarp.gif',40],
-// 		['Gastly','./assets/images/gastly.png',50]
-// 	];
+	var pokemon = [
+		['Voltorb','/assets/images/voltorb.png',100],
+		['Charizard','/assets/images/charizard.png',200],
+		['Gyarados','/assets/images/gyarados.png',125],
+		['Mew','/assets/images/mew.png',75],
+		['Geodude','/assets/images/geodude.png',90],
+		['Snorlax','/assets/images/snorlax.png',110],
+		['Kabutops','/assets/images/kabutops.png',95],
+		['Eevee','/assets/images/eevee.png',60],
+		['Beedrill','/assets/images/beedrill.png',70],
+		['Magikarp','/assets/images/magikarp.gif',40],
+		['Gastly','/assets/images/gastly.png',50]
+	];
 
 // var urHealthBar = $('p.health').eq(0)
 // var urHealthBarString = $(urHealthBar).text()
@@ -250,19 +250,24 @@
 //   healButton.remove()
 // }
 
+
+
+
+
+
 // module.exports = {
-//   healUrPokemon : healUrPokemon,
-//   urHealthBar: urHealthBar
+//   urHealthBar: urHealthBar,
+//   attackEnemy: attackEnemy,
+//   enemyAttacks: enemyAttacks,
+//   healUrPokemon: healUrPokemon,
+//   youLose: youLose,
+//   reloadGame: reloadGame,
+//   removeButtons: removeButtons
 // }
 
 
-
-
-
-
-
-// // END END END END
-// // });
+// END END END END
+// });
 
 
 
