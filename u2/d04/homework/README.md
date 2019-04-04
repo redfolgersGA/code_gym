@@ -33,7 +33,7 @@ Using today's code along as a guide, let's create a server that renders the `ind
 1. Create a variable, `port`, that is equal to `8080`. We will have our app return requests from localhost:8080.
 1. Write a function, `getHTML`, that finds our `index.html` file and responds to the client's request with it.
 1. Write a function, `getCSS`, that finds our `style.css` file and responds to the client's request with it.
-1. Write and invoke the `html` Module's `createServer` and `listen` methods to receive a response on `localhost:8080` and respond with the proper html or css document.
+1. Write and invoke the `http` Module's `createServer` and `listen` methods to receive a response on `localhost:8080` and respond with the proper html or css document.
 
 # Part 2
 Let's do some more cool stuff

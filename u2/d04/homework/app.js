@@ -13,17 +13,31 @@ var getHTML = function(res){
   res.end(html)
 }
 
-var getCSS = function(res){
+// var getCSS = function(res){
+//   res.writeHead(200, {"Content-type": "text/css"});
+//   var css = fs.readFileSync(__dirname + "/public/style.css");
+//   res.end(css);
+// }
+
+var getCSS = function(res) {
   res.writeHead(200, {"Content-type": "text/css"});
   var css = fs.readFileSync(__dirname + "/public/style.css");
-  res.end(css);
+  res.end(css)
 }
+
+// var server = http.createServer(function(req, res){
+//   if (req.url === "/style.css") {
+//     getCSS(res);
+//   } else if (req.url === "/") {
+//     getHTML(res);
+//   }
+// })
 
 var server = http.createServer(function(req, res){
   if (req.url === "/style.css") {
     getCSS(res);
   } else if (req.url === "/") {
-    getHTML(res);
+    getHTML(res)
   }
 })
 
