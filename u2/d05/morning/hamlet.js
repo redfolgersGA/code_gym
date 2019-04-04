@@ -16,6 +16,36 @@ hamlets.forEach(function(ham){
   console.log("O the venerable " + hamSplit[0] + " starred as hamlet in " + hamSplit[1])
 })
 
+// Scene II
+
+function hamletsArrayofArrays (){
+  var hamletArrays = [];
+  var hamStringToInteger = [];
+  var finalArrayStringAndNumber = [];
+  hamlets.forEach(function(ham){
+    var hamsplit = ham.split(', ')
+    // var stringToInteger = [];
+    // var stringToInteger = stringToInteger + [parseInt(hamsplit[1])]
+    hamletArrays.push(hamsplit)
+
+
+
+
+
+    // console.log(hamsplit)
+  })
+
+
+    hamletArrays.forEach(function(ham){
+      hamStringToInteger.push(ham[0], parseInt(ham[1]))
+  })
+  console.log(hamStringToInteger)
+  finalArrayStringAndNumber.push(hamStringToInteger)
+  console.log(finalArrayStringAndNumber)
+
+}
+
+hamletsArrayofArrays()
 
 
 
