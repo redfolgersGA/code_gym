@@ -10,63 +10,88 @@ var hamlets = [
 ];
 
 // Scene I
-hamlets.forEach(function(hamlet){
-  console.log("O! the venerable " + hamlet.split(", ")[0] + " starred as Hamlet in the year " + hamlet.split(", ")[1])
-});
 
-
-
-
-
-
-
-
-
-
-
-
-hamlet.forEach(hamlet){
-  var splitHam = hamlet.split(",")
-
-  var name = splitHam[0];
-  var year = splitHam[1];
-
-  console.log("O! the venerable" +
-    name + "starred as Hamlet in " +
-    year)
-}
-
-// Scene II
-var numberTwo = hamlets.map(function(ham){
-  var newHam = ham.split(",");
-  var innerArray = [
-  newHam[0],
-  parseInt(newHam[1])
-]
-  return innerArray;
+hamlets.forEach(function(ham){
+  var hamSplit = ham.split(', ')
+  console.log("O the venerable " + hamSplit[0] + " starred as hamlet in " + hamSplit[1])
 })
-console.log(numberTwo)
-// Scene III
-var hamletObj = numberTwo.map(function(actor){
-  var obj = { "name": actor[0], "year": actor[1]}
-return obj;
-})
-console.log(hamletObj)
 
-// Scene IV
-var swinging_hamlets = hamletObj.filter(function(actor){
-  var year = actor.year.toString();
-  var decade = year[2];
-  return decade === '6';
-})
-console.log(swinging_hamlets);
-// Scene V
-var future_hamlets = hamletObj.filter(function(actor){
-  var year = actor.year.toString();
-  var decade = year[0];
-  return decade === '2';
-})
-console.log(future_hamlets);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// hamlets.forEach(function(hamlet){
+//   console.log("O! the venerable " + hamlet.split(", ")[0] + " starred as Hamlet in the year " + hamlet.split(", ")[1])
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+// hamlet.forEach(hamlet){
+//   var splitHam = hamlet.split(",")
+
+//   var name = splitHam[0];
+//   var year = splitHam[1];
+
+//   console.log("O! the venerable" +
+//     name + "starred as Hamlet in " +
+//     year)
+// }
+
+// // Scene II
+// var numberTwo = hamlets.map(function(ham){
+//   var newHam = ham.split(",");
+//   var innerArray = [
+//   newHam[0],
+//   parseInt(newHam[1])
+// ]
+//   return innerArray;
+// })
+// console.log(numberTwo)
+// // Scene III
+// var hamletObj = numberTwo.map(function(actor){
+//   var obj = { "name": actor[0], "year": actor[1]}
+// return obj;
+// })
+// console.log(hamletObj)
+
+// // Scene IV
+// var swinging_hamlets = hamletObj.filter(function(actor){
+//   var year = actor.year.toString();
+//   var decade = year[2];
+//   return decade === '6';
+// })
+// console.log(swinging_hamlets);
+// // Scene V
+// var future_hamlets = hamletObj.filter(function(actor){
+//   var year = actor.year.toString();
+//   var decade = year[0];
+//   return decade === '2';
+// })
+// console.log(future_hamlets);
 
 // Act II
 
@@ -101,27 +126,27 @@ var quotes = [
 
 
 
-var newQuotes = quoteArray.map(function(quote){
-var line = quote[0];
-var play = quote[1].split("-")[0];
-var actScene = quote[1].split("-")[1];
-var act = actScene.split(", ")[0].replace("(", "");
-var scene = actScene.split(", ")[1].replace(").", "");
-var obj = {quote: line, play: play, act: act, scene: scene}
-return obj;
+// var newQuotes = quoteArray.map(function(quote){
+// var line = quote[0];
+// var play = quote[1].split("-")[0];
+// var actScene = quote[1].split("-")[1];
+// var act = actScene.split(", ")[0].replace("(", "");
+// var scene = actScene.split(", ")[1].replace(").", "");
+// var obj = {quote: line, play: play, act: act, scene: scene}
+// return obj;
 
-})
+// })
 
-console.log(newQuotes);
+// console.log(newQuotes);
 
-var line = quote[0];
-var play = quote[1].split("-")[0];
-var actScene = quote[1].split("-")[1];
-var act = actScene.split(", ")[0].replace("(", "");
-var scene = actScene.split(", ")[1].replace(").", "");
-var obj = {quote: line, play: play, act: act, scene: scene}
-console.log(obj);
-// console.log(quote, line, play);
+// var line = quote[0];
+// var play = quote[1].split("-")[0];
+// var actScene = quote[1].split("-")[1];
+// var act = actScene.split(", ")[0].replace("(", "");
+// var scene = actScene.split(", ")[1].replace(").", "");
+// var obj = {quote: line, play: play, act: act, scene: scene}
+// console.log(obj);
+// // console.log(quote, line, play);
 
 
 
