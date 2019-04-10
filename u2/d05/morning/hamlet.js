@@ -17,6 +17,7 @@ hamlets.forEach(function(ham){
 })
 
 // Scene II
+var finalArrayOfArrays = [];
 
 function hamletsArrayofArrays (){
   var hamletArrays = [];
@@ -43,9 +44,21 @@ function hamletsArrayofArrays (){
   finalArrayStringAndNumber.push(hamStringToInteger)
   console.log(finalArrayStringAndNumber)
 
+  finalArrayOfArrays.push(finalArrayStringAndNumber)
+
+
 }
 
 hamletsArrayofArrays()
+
+console.log("-----------------")
+console.log(finalArrayOfArrays)
+
+
+
+
+
+// Scene III
 
 
 
