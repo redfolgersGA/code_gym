@@ -35,7 +35,10 @@ function getResults() {
     $price.addClass('price')
 
     $thumbnail.attr('src', result[1].artworkUrl100)
-    console.log($thumbnail.attr('src'))
+    $artist.text(result[0].artistName)
+    console.log($artist.text())
+
+
 
 
 
