@@ -9,9 +9,32 @@ function getResults() {
   dataType: 'jsonp',
   data : { term: "", media: "music", entity: "album", limit: 25},
   success: function(data) {
-    console.log(data.results[0].artistName)
-
-  }
+  result = data.results;
+  console.log(result)
+  $results = $('<ul>');
+  console.log($results)
+  var $item, $thumbnail, $description, $artist, $album, $price;
+  // Use a forEach method to iterate over all of the result items and then do
+  // the following in the for loop:
+  //   - USING JQUERY, create a 'li' element and store it in '$item',
+  //   create a '<img>' element and store it in '$thumbnail', create
+  //   a '<div>' element and store it in $decription, and create '<p>'
+  //   elements and store them in $artist, $album, $price
+  //   - Add a class of 'item' to '$item'
+  //   - Add a class of 'albumCover' to '$thumbnail'
+  //   - Add a calss of 'artist' to '$artist'
+  //   - Add a class of 'album' to '$album'
+  //   - Add a class of 'price' to '$price'
+  //   - Find where the thumbnail image is being stored in the result
+  //   object and then set the '$thumbnail's src attribute to it
+  //   - Find where the artist's name is being stored in the object
+  //   and set artist text to that, do the same for the album and price
+  //   - Append $artist, $album, $price to $description
+  //   - Append $thumbmail and $desciption to $item
+  //   - Append $item to $results
+  //  - End forEach method
+  //  - Append $results to $body
+}
  })
 }
 
