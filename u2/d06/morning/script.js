@@ -3,7 +3,16 @@ console.log("loaded")
 
 
 function getResults() {
+ $.ajax({
+  type: "GET",
+  url: "https://itunes.apple.com/lookup?id=909253",
+  dataType: 'jsonp',
+  data : { term: "", media: "music", entity: "album", limit: 25},
+  success: function(data) {
+    console.log(data.results[0].artistName)
 
+  }
+ })
 }
 
 
@@ -13,8 +22,10 @@ function getResults() {
 
 var button = $('button#click-me')
 
-button.on("click", function(){ var inputVal = $('input#itunes-search').val()
-console.log(inputVal)});
+button.on("click", getResults);
+
+// button.on("click", function(){ var inputVal = $('input#itunes-search').val()
+// console.log(inputVal)});
 
 
 
