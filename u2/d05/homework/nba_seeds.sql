@@ -1,7 +1,18 @@
 -- empty out DB
 DROP TABLE IF EXISTS players;
 
-add create table here
+CREATE TABLE players (
+  name varchar(50),
+  age varchar,
+  team varchar,
+  games varchar,
+  points varchar
+
+
+
+
+
+);
 
 
 -- this needs to include YOUR PATH!! YOURS! NOT THE PATH LISTED BELOW!
