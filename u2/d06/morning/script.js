@@ -13,7 +13,7 @@ function getResults() {
   var result = data.results;
   console.log(result)
   $results = $('<ul>');
-  console.log($results)
+
   var $item, $thumbnail, $description, $artist, $album, $price;
 
 
@@ -27,6 +27,15 @@ function getResults() {
     var $artist = $('<p></p>')
     var $album = $('<p></p>')
     var $price = $('<p></p>')
+
+    $item.addClass('item')
+    $thumbnail.addClass('albumCover')
+    $artist.addClass('artist')
+    $album.addClass('album')
+    $price.addClass('price')
+
+    $thumbnail.attr('src', result[1].artworkUrl100)
+    console.log($thumbnail.attr('src'))
 
 
 
