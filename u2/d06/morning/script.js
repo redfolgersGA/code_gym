@@ -9,13 +9,28 @@ function getResults() {
   dataType: 'jsonp',
   data : { term: "", media: "music", entity: "album", limit: 25},
   success: function(data) {
-  result = data.results;
+  // result is an array
+  var result = data.results;
   console.log(result)
   $results = $('<ul>');
   console.log($results)
   var $item, $thumbnail, $description, $artist, $album, $price;
+
+
   // Use a forEach method to iterate over all of the result items and then do
   // the following in the for loop:
+
+  result.forEach(function(item){
+    var $item = $('<li></li>')
+    var $thumbnail = $('<img>')
+    var $description = $('<div></div>')
+    var $artist = $('<p></p>')
+    var $album = $('<p></p>')
+    var $price = $('<p></p>')
+
+
+
+  })
   //   - USING JQUERY, create a 'li' element and store it in '$item',
   //   create a '<img>' element and store it in '$thumbnail', create
   //   a '<div>' element and store it in $decription, and create '<p>'
