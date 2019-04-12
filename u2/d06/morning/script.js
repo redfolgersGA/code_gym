@@ -37,8 +37,8 @@ function getResults() {
     $thumbnail.attr('src', result[1].artworkUrl100)
     $artist.text(result[0].artistName)
     console.log($artist.text())
-
-
+    $album.text(result[1].collectionName)
+    $price.text(result[1].collectionPrice)
 
 
 
