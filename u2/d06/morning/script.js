@@ -3,6 +3,8 @@ console.log("loaded")
 
 
 function getResults() {
+  var classItem = $('.item');
+  classItem.remove()
  $.ajax({
   type: "GET",
   url: "https://itunes.apple.com/lookup?id=909253",
@@ -15,6 +17,7 @@ function getResults() {
   $results = $('<ul>');
 
   var $item, $thumbnail, $description, $artist, $album, $price;
+  var $body = $('body')
 
 
   // Use a forEach method to iterate over all of the result items and then do
@@ -40,9 +43,22 @@ function getResults() {
     $album.text(result[1].collectionName)
     $price.text(result[1].collectionPrice)
 
+    $description.append($artist)
+    $description.append($album)
+    $description.append($price)
+
+
+
+    $item.append($thumbnail)
+    $item.append($description)
+
+
+    $results.append($item)
 
 
   })
+  $body.append($results)
+
   //   - USING JQUERY, create a 'li' element and store it in '$item',
   //   create a '<img>' element and store it in '$thumbnail', create
   //   a '<div>' element and store it in $decription, and create '<p>'
