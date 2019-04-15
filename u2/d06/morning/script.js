@@ -37,14 +37,14 @@ function getResults() {
     $album.addClass('album')
     $price.addClass('price')
 
-    // for(i=0; i <results.length;i++){
-    $thumbnail.attr('src', result[1].artworkUrl100)
-    $artist.text(result[1].artistName)
-    console.log($artist.text())
-    $album.text(result[1].collectionName)
-    $price.text(result[1].collectionPrice)
 
-    // }
+    $thumbnail.attr('src', item.artworkUrl100)
+    $artist.text(item.artistName)
+    console.log($artist.text())
+    $album.text(item.collectionName)
+    $price.text(item.collectionPrice)
+
+
 
 
     $description.append($artist)
