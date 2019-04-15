@@ -1,15 +1,16 @@
 $(document).ready(function(){
 console.log("loaded")
 
+var searchTerm = "drake"
 
 function getResults() {
   var classItem = $('.item');
   classItem.remove()
  $.ajax({
   type: "GET",
-  url: "https://itunes.apple.com/lookup?id=909253",
+  url: "https://itunes.apple.com/search?term=",
   dataType: 'jsonp',
-  data : { term: "", media: "music", entity: "album", limit: 25},
+  data : { term: searchTerm, media: "music", entity: "album", limit: 25},
   success: function(data) {
   // result is an array
   var result = data.results;
