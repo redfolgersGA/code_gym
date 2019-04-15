@@ -3,7 +3,16 @@ console.log("loaded")
 
 var searchTerm = "drake"
 
+var button = $('button#click-me')
+
+button.on("click", getResults);
+
+// button.on("click", function(){ var searchTerm = $('input#itunes-search').val()
+// console.log(searchTerm)});
+
 function getResults() {
+  var searchTerm = $('input#itunes-search').val()
+  console.log(searchTerm)
   var classItem = $('.item');
   classItem.remove()
  $.ajax({
@@ -91,12 +100,7 @@ function getResults() {
 
 
 
-var button = $('button#click-me')
 
-button.on("click", getResults);
-
-// button.on("click", function(){ var inputVal = $('input#itunes-search').val()
-// console.log(inputVal)});
 
 
 
