@@ -25,9 +25,11 @@ function getResults() {
 
   var result = data.results;
   if(result.length === 0){
-
     console.log("error")
+
   } else {
+
+
 
   console.log(result)
   $results = $('<ul>');
