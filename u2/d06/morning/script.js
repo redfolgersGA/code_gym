@@ -22,7 +22,13 @@ function getResults() {
   data : { term: searchTerm, media: "music", entity: "album", limit: 25},
   success: function(data) {
   // result is an array
+
   var result = data.results;
+  if(result.length === 0){
+
+    console.log("error")
+  } else {
+
   console.log(result)
   $results = $('<ul>');
 
@@ -71,6 +77,7 @@ function getResults() {
 
 
   })
+
   $body.append($results)
 
   //   - USING JQUERY, create a 'li' element and store it in '$item',
@@ -91,8 +98,10 @@ function getResults() {
   //   - Append $item to $results
   //  - End forEach method
   //  - Append $results to $body
-}
+}}
  })
+
+
 }
 
 
