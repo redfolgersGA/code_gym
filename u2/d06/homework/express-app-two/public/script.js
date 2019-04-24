@@ -43,4 +43,17 @@ console.log("Youre here again for the third damn time")
 //     ]
 // }
 
+$.ajax({
+  url: "/api/npmPackages",
+  type: "GET",
+  success: function(data){
+    console.log(data.packages)
+    var h1 = $("<h1></h1>")
+
+    console.log(h1)
+
+  }
+
+})
+
 });
