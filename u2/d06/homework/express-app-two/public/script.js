@@ -47,10 +47,13 @@ $.ajax({
   url: "/api/npmPackages",
   type: "GET",
   success: function(data){
-    console.log(data.packages)
+    console.log(data.title)
     var h1 = $("<h1></h1>")
+    var body = $('body')
 
-    console.log(h1)
+    h1.text(data.title)
+    body.append(h1)
+
 
   }
 
