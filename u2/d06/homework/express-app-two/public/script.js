@@ -68,8 +68,15 @@ $.ajax({
       console.log(img)
 
       newh5.text(item.name)
+      newDiv.append(newh5)
+      newp.text(item.category)
+      newDiv.append(newp)
+      img.attr("src", item.img)
+      newDiv.append(img)
 
-      body.append(newh5)
+
+
+      body.append(newDiv)
     })
 
 
