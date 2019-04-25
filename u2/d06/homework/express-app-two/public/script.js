@@ -48,11 +48,29 @@ $.ajax({
   type: "GET",
   success: function(data){
     console.log(data.title)
-    var h1 = $("<h1></h1>")
     var body = $('body')
+    var h1 = $("<h1></h1>")
+    var h3 = $("<h3></h3>")
+
 
     h1.text(data.title)
     body.append(h1)
+
+    h3.text(data.text)
+    body.append(h3)
+
+    data.packages.forEach(function(item){
+      var newDiv = $("<div></div>")
+      var newh5 = $("<h5></h5>")
+      var newp = $("<p></p>")
+      var img = $("<img>")
+      console.log(item)
+      console.log(img)
+
+      newh5.text(item.name)
+
+      body.append(newh5)
+    })
 
 
   }
