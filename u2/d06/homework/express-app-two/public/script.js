@@ -54,8 +54,10 @@ function languageAjaxCall (){
         var h1 = $("<h1></h1>")
         var h3 = $("<h3></h3>")
       data.programmingLanguages.forEach(function(item){
+        // if()
 
         // if there is anything already on the DOM remove it
+        // add image property to language object located in app.js
         var newDiv = $("<div></div>")
         var newh5 = $("<h5></h5>")
         var newp = $("<p></p>")
@@ -84,11 +86,11 @@ function languageAjaxCall (){
 
 }
 
-var button = $('button')
+var languageButton = $('#languageButton')
 
 
 
-button.on("click", languageAjaxCall)
+languageButton.on("click", languageAjaxCall)
 
 
 $.ajax({
@@ -122,6 +124,9 @@ $.ajax({
       img.attr("src", item.img)
       newDiv.append(img)
 
+      newDiv.attr("class", "npmPackages")
+
+
 
 
       body.append(newDiv)
@@ -133,6 +138,15 @@ $.ajax({
 })
 
 });
+
+var removeButton = $("#removeButton")
+
+removeButton.on("click", function(){
+  var div = $(".npmPackages")
+  if(div){
+    div.remove()
+  }
+})
 
 
 
