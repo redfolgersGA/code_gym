@@ -142,6 +142,7 @@ $.ajax({
 var removeButton = $("#removeButton")
 
 removeButton.on("click", function(){
+  // this if statement should remove the .npmPackages when language button is clicked, modify for this functionality
   var div = $(".npmPackages")
   if(div){
     div.remove()
