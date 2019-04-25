@@ -48,7 +48,7 @@ var npmPackages = {
       {
         name: "PG Promise",
         category: "Promises Interface for PostgeSQL Database",
-        img: "https://securedb.co/wp-content/uploads/2015/07/worlds-most-advanced-open-source-database-securedb-encyrption-as-a-service.gif"
+
       }
     ]
 }
@@ -59,3 +59,47 @@ app.get('/api/npmPackages', function(req, res){
 });
 
 
+var languages = {
+
+  programmingLanguages: [
+  {
+    name: "Javascript",
+    description: "Best language ever",
+    img: "no Image"
+  },
+
+  {
+    name: "Ruby",
+    description: "Matz is nice so we are nice",
+    img: "no Image"
+  },
+
+  {
+    name: "Golang",
+    description: "Googles languages",
+    img: "no Image"
+  },
+
+  {
+    name: "Elm",
+    description: "Nightmare on street",
+    img: "no Image"
+  },
+
+  {
+    name: "Elixir",
+    description: "drink it",
+    img: "no Image"
+  },
+
+]
+
+
+}
+
+
+
+app.get('/api/languages', function(req, res){
+  var json_data = languages;
+  res.json(json_data)
+});

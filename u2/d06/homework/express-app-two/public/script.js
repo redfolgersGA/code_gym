@@ -43,6 +43,54 @@ console.log("Youre here again for the third damn time")
 //     ]
 // }
 
+
+function languageAjaxCall (){
+
+  $.ajax({
+    url: "/api/languages",
+    type: "GET",
+    success: function(data) {
+        var body = $('body')
+        var h1 = $("<h1></h1>")
+        var h3 = $("<h3></h3>")
+      data.programmingLanguages.forEach(function(item){
+
+        // if there is anything already on the DOM remove it
+        var newDiv = $("<div></div>")
+        var newh5 = $("<h5></h5>")
+        var newp = $("<p></p>")
+
+        newh5.text(item.name)
+        newDiv.append(newh5)
+
+        newp.text(item.description)
+        newDiv.append(newp)
+
+        console.log(item)
+
+        body.append(newDiv)
+
+
+
+
+
+
+      })
+
+
+    }
+  })
+
+
+}
+
+var button = $('button')
+
+
+
+button.on("click", languageAjaxCall)
+
+
 $.ajax({
   url: "/api/npmPackages",
   type: "GET",
@@ -85,3 +133,6 @@ $.ajax({
 })
 
 });
+
+
+
