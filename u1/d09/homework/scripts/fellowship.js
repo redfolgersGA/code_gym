@@ -53,12 +53,34 @@ function makeHobbits () {
 // }
 
 var keepItSecretKeepItSafe = function() {
+var frodo = $('li.hobbit').eq(0)
 var theRingDiv = $('<div id="the-ring"</div>')
 theRingDiv.attr('class', 'magic-imbued-jewelry')
 theRingDiv.click(nazgulScreech)
+frodo.append(theRingDiv)
+
+setTimeout(makeBuddies, 2000)
 }
 
+var makeBuddies = function(){
+  var rivendell = $('article.land').eq(1)
+  var asideTagForBuddies = $('<aside></aside>')
+  var ulTagForBuddies = $('<ul></ul>')
+  ulTagForBuddies.attr('id', 'buddies')
 
+  asideTagForBuddies.append(ulTagForBuddies)
+  console.log(asideTagForBuddies)
+
+  for(var i =0; i<buddies.length;i++){
+    var buddyLi = $('<li></li>')
+    buddyLi.attr('class', 'buddy')
+    buddyLi.text(buddies[i])
+
+    ulTagForBuddies.append(buddyLi)
+  }
+  rivendell.append(ulTagForBuddies)
+
+}
 
 
 
