@@ -36,7 +36,10 @@ function makeHobbits () {
 
   theShire.append(hobbitsUl)
 
+  setTimeout(keepItSecretKeepItSafe, 2000)
+
 }
+
 
 //   function makeHobbits() {
 //   var theShire = $('article.land').first()
@@ -49,7 +52,11 @@ function makeHobbits () {
 //   // setTimeout(keepItSecretKeepItSafe, 2000)
 // }
 
-
+var keepItSecretKeepItSafe = function() {
+var theRingDiv = $('<div id="the-ring"</div>')
+theRingDiv.attr('class', 'magic-imbued-jewelry')
+theRingDiv.click(nazgulScreech)
+}
 
 
 

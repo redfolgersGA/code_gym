@@ -14,11 +14,20 @@
     <audio id="nazgul-screech" src="./media/nazgul_screech.mp3"></audio>
 
     <script charset="utf-8">
-      // document.querySelector('#hobbit-theme').play();
-      // var nazgulScreech = function (){
-      //   // jQuery doesn't have a play() method, so vanilla js it is
-      //   document.querySelector("#nazgul-screech").play();
-      // }
+       var body = document.querySelector('body')
+       var playButton = document.createElement('p')
+       playButton.innerText = "PLAY"
+       playButton.setAttribute('id', 'play-button')
+       body.appendChild(playButton)
+       body.addEventListener('click', function(){
+        document.querySelector('#hobbit-theme').play();
+
+       })
+
+      var nazgulScreech = function (){
+        // jQuery doesn't have a play() method, so vanilla js it is
+        document.querySelector("#nazgul-screech").play();
+      }
     </script>
 
     <script src="jquery-2.1.4.js"></script>

@@ -33,6 +33,13 @@ body {
   text-shadow: 2px 2px #000000;
 }
 
+/* needs better position AND click event to play() */
+#play-button {
+  font-size:  2.5em;
+  position: absolute;
+  display: inline-block;
+}
+
 h1 {
   font-size: 2.5em;
   margin: 0;
