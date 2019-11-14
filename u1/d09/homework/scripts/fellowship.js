@@ -80,8 +80,58 @@ var makeBuddies = function(){
   }
   rivendell.append(ulTagForBuddies)
 
+  setTimeout(beautifulStranger, 2000)
 }
 
+var beautifulStranger = function(){
+  var green = "green"
+  var strider = $('li.buddy').eq(3)
+  strider.text('Aragorn')
+  strider.css('color', green)
+
+  setTimeout(leaveTheShire, 2000)
+
+}
+
+var leaveTheShire = function(){
+  var hobbits = $('li.hobbit')
+  var rivendell = $('article.land').eq(1)
+
+  for(var i=0; i < hobbits.length; i++){
+    rivendell.append(hobbits[i])
+    console.log(hobbits[i].innerText + " has arrived!")
+
+  }
+
+  setTimeout(forgeTheFellowship, 2000)
+}
+
+var forgeTheFellowship = function() {
+  var theFellowshipDiv = $('<div id=the-fellowship></div>')
+  var rivendell = $('article.land').eq(1)
+  var hobbits = $('li.hobbit')
+  var buddies = $('li.buddy')
+
+  rivendell.append(theFellowshipDiv)
+
+  for(var i = 0; i < hobbits.length; i++){
+    theFellowshipDiv.append(hobbits[i])
+    alert(hobbits[i].innerText + ' has joined the party')
+  }
+
+  for(var i = 0; i < buddies.length; i++){
+    theFellowshipDiv.append(buddies[i])
+    alert(buddies[i].innerText + ' has joined the party')
+  }
+
+  setTimeout(theBalrog, 2000)
+}
+
+var theBalrog = function() {
+  var gandalf = $('li.buddy').eq(0)
+
+  gandalf.text("Gandlaf the White")
+}
 
 
 
