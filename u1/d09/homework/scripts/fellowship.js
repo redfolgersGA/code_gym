@@ -131,6 +131,17 @@ var theBalrog = function() {
   var gandalf = $('li.buddy').eq(0)
 
   gandalf.text("Gandlaf the White")
+  gandalf.css("border", "3px solid white")
+
+  setTimeout(hornOfGondor, 2000)
+}
+
+var hornOfGondor = function(){
+  alert("The Horn of Gondor has been blown")
+  var boromir = $('li.buddy').eq(4)
+
+  boromir.css("text-decoration", "line-through")
+  boromir.css("opacity", "0.3")
 }
 
 
