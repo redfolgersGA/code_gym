@@ -38,6 +38,7 @@ $("document").ready(function(){
   var randomPokemon = pokemon[Math.floor(Math.random() * (pokemon.length - 0 +1) + 0)]
 
   console.log(randomPokemon)
+  // test
 
 
 
