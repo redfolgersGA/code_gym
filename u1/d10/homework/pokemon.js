@@ -31,7 +31,14 @@ $("document").ready(function(){
 
   var urHealthBar = $('p.health').eq(0)
   urHealthBarInteger = parseInt(urHealthBar.text())
-  // contribute
+  var randomChosen = 0
+
+
+
+  var randomPokemon = pokemon[Math.floor(Math.random() * (pokemon.length - 0 +1) + 0)]
+
+  console.log(randomPokemon)
+
 
 
 
