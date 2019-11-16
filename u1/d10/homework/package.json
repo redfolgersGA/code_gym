@@ -1,17 +1,16 @@
 {
-  "name": "poke",
+  "name": "pokemon-the-game",
   "version": "1.0.0",
   "description": "![PIKA](http://49.media.tumblr.com/f151c12a0af53d864ebb413101f64e32/tumblr_nqm3q02d0y1tros9go1_500.gif)",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "jquery": "^3.3.1",
-    "jsdom": "^14.0.0"
+    "path": "^0.12.7"
   }
 }

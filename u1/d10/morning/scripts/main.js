@@ -1,5 +1,5 @@
 console.log("Page Loaded");
-// testing
+
 $(document).ready(function(){
 // Students! Write your playful jQuery code here!
 
