@@ -30,15 +30,20 @@ $("document").ready(function(){
 	];
 
   var urHealthBar = $('p.health').eq(0)
-  urHealthBarInteger = parseInt(urHealthBar.text())
-  var randomChosen = 0
+  var urHealthBarInteger = parseInt(urHealthBar.text())
+  var enemyImageTag = $('img#enemy_img')
+
+
 
 
 
   var randomPokemon = pokemon[Math.floor(Math.random() * (pokemon.length - 0 +1) + 0)]
+  var enemyImage = randomPokemon[1]
+  enemyImageTag.attr('src', enemyImage)
+  console.log(enemyImage)
 
   console.log(randomPokemon)
-  // test
+
 
 
 
