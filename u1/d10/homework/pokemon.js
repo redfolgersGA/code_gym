@@ -32,8 +32,11 @@ $("document").ready(function(){
   var urHealthBar = $('p.health').eq(0)
   var enemyHealthBar = $('p.health').eq(1)
   var urHealthBarInteger = parseInt(urHealthBar.text())
+  // console.log(parseInt(enemyHealthBar.text()))
+  // var enemyHealthBarInteger = parseInt(enemyHealthBar.textContent)
   var enemyImageTag = $('img#enemy_img')
   var enemyNameTag = $('p.name').eq(1)
+  var attackButton = $('p#attack_btn')
 
 
 
@@ -53,6 +56,21 @@ $("document").ready(function(){
 
   console.log(randomPokemon)
 
+
+
+
+
+
+  var attackButton = function() {
+    var enemyHealthBarInteger = parseInt(enemyHealthBar.text())
+    console.log(enemyHealthBarInteger)
+    // attackButton.click(function(){
+
+    // })
+
+  }
+
+  attackButton()
 
 
 
