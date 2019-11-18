@@ -88,16 +88,9 @@ $("document").ready(function(){
       var enemyHealthBarInteger = enemyHealthNow
       enemyHealthBar.text(enemyHealthBarInteger)
 
-
-
-
-
+      setTimeout(enemyAttacksYou, 2000)
       }
-
-
-
     })
-
   }
 
   attackButton()
@@ -115,7 +108,11 @@ $("document").ready(function(){
   // setInterval(numberNows, 2000)
 
 
+function enemyAttacksYou() {
+  console.log("ENEMYATTACKSYOU")
 
+
+}
 
 
 
