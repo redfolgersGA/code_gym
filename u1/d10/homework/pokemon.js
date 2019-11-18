@@ -62,22 +62,39 @@ $("document").ready(function(){
 
 
   var attackButton = function() {
-    var enemyHealthBar = $('p.health').eq(1)
-    var enemyHealthBarInteger = parseInt(enemyHealthBar.text())
-    console.log(enemyHealthBarInteger)
+
+
+
     var attackButton = $('p#attack_btn')
 
     attackButton.click(function(){
+      var enemyHealthBar = $('p.health').eq(1)
+
+      var enemyHealthBarInteger = parseInt(enemyHealthBar.text())
       console.log('attackButton clicked')
       var randomAttackNumber = Math.floor(Math.random() * (30 - 5 + 1)) + 5
-      var randomAttacked = enemyHealthBarInteger - randomAttackNumber
-      enemyHealthBar.text(randomAttackNumber)
+      var enemyHealthNow = enemyHealthBarInteger - randomAttackNumber
+      console.log(enemyHealthBarInteger)
+      var enemyHealthBarInteger = enemyHealthNow
+      enemyHealthBar.text(enemyHealthBarInteger)
 
     })
 
   }
 
   attackButton()
+
+  // var currentNumber = 112
+
+  // var randomNumber = Math.floor(Math.random() * (35 -5) + 5)
+
+  // function numberNows() {
+  //   var numberNow = currentNumber - randomNumber
+  //   currentNumber = numberNow
+  //   console.log(currentNumber)
+  // }
+
+  // setInterval(numberNows, 2000)
 
 
 
