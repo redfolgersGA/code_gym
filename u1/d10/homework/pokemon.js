@@ -68,6 +68,16 @@ $("document").ready(function(){
     var attackButton = $('p#attack_btn')
 
     attackButton.click(function(){
+      var tenPercentMiss = Math.floor(Math.random() * (11- 1) +1)
+
+      if(tenPercentMiss === 5){
+        console.log(tenPercentMiss)
+        console.log('ATTACK MISSED')
+
+
+
+      } else {
+      console.log(tenPercentMiss)
       var enemyHealthBar = $('p.health').eq(1)
 
       var enemyHealthBarInteger = parseInt(enemyHealthBar.text())
@@ -77,6 +87,14 @@ $("document").ready(function(){
       console.log(enemyHealthBarInteger)
       var enemyHealthBarInteger = enemyHealthNow
       enemyHealthBar.text(enemyHealthBarInteger)
+
+
+
+
+
+      }
+
+
 
     })
 
