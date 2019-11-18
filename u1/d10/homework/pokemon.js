@@ -30,16 +30,25 @@ $("document").ready(function(){
 	];
 
   var urHealthBar = $('p.health').eq(0)
+  var enemyHealthBar = $('p.health').eq(1)
   var urHealthBarInteger = parseInt(urHealthBar.text())
   var enemyImageTag = $('img#enemy_img')
+  var enemyNameTag = $('p.name').eq(1)
 
 
 
 
 
   var randomPokemon = pokemon[Math.floor(Math.random() * (pokemon.length - 0 +1) + 0)]
+  // store enemy attributes from pokemon array into accessible variables
   var enemyImage = randomPokemon[1]
+  var enemyHealth = randomPokemon[2]
+  var enemyName = randomPokemon[0]
+
+  // add the pokemon array elements as values on the DOM elements
   enemyImageTag.attr('src', enemyImage)
+  enemyHealthBar.text(enemyHealth)
+  enemyNameTag.text(enemyName)
   console.log(enemyImage)
 
   console.log(randomPokemon)
