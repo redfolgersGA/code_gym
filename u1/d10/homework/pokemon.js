@@ -109,9 +109,29 @@ $("document").ready(function(){
 
 
 function enemyAttacksYou() {
-  console.log("ENEMYATTACKSYOU")
+  var tenPercentMiss = Math.floor(Math.random() * (11- 1) +1)
+
+    if(tenPercentMiss === 5){
+      console.log(tenPercentMiss)
+      console.log('ATTACK MISSED')
 
 
+
+    } else {
+      var yourCurrentHealth = $('p.health').eq(0)
+
+      var yourCurrentHealthInteger = parseInt(yourCurrentHealth.text())
+      console.log(yourCurrentHealthInteger)
+
+      var randomAttackNumber = Math.floor(Math.random() * (30 - 5) + 5)
+      var yourHealthNow = yourCurrentHealthInteger - randomAttackNumber
+
+      var yourCurrentHealthInteger = yourHealthNow
+      yourCurrentHealth.text(yourCurrentHealthInteger)
+    console.log("ENEMYATTACKSYOU")
+
+
+}
 }
 
 
