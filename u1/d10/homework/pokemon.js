@@ -64,9 +64,12 @@ $("document").ready(function(){
   var attackButton = function() {
     var enemyHealthBarInteger = parseInt(enemyHealthBar.text())
     console.log(enemyHealthBarInteger)
-    // attackButton.click(function(){
+    var attackButton = $('p#attack_btn')
 
-    // })
+    attackButton.click(function(){
+      console.log('attackButton clicked')
+
+    })
 
   }
 
