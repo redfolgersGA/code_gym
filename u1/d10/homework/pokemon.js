@@ -128,11 +128,31 @@ function enemyAttacksYou() {
 
       var yourCurrentHealthInteger = yourHealthNow
       yourCurrentHealth.text(yourCurrentHealthInteger)
-    console.log("ENEMYATTACKSYOU")
-
-
+      console.log("ENEMYATTACKSYOU")
+      healYourPokemon()
 }
 }
+
+function healYourPokemon(){
+  var healButton = $('p#heal_btn')
+
+  healButton.click(function(){
+    var urHealth = $('p.health').eq(0)
+    var urHealthInteger = parseInt(urHealth.text())
+
+    var randomHealNumber = Math.floor(Math.random() * (50-25) + 25)
+
+    var urHealthNow = urHealthInteger + randomHealNumber
+    urHealthInteger = urHealthNow
+
+    urHealth.text(urHealthInteger)
+
+    console.log('you healed')
+
+  })
+}
+
+
 
 
 
