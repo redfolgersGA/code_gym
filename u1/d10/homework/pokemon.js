@@ -89,6 +89,9 @@ $("document").ready(function(){
       enemyHealthBar.text(enemyHealthBarInteger)
 
       setTimeout(enemyAttacksYou, 2000)
+      gameOver()
+
+
       }
     })
   }
@@ -130,6 +133,9 @@ function enemyAttacksYou() {
       yourCurrentHealth.text(yourCurrentHealthInteger)
       console.log("ENEMYATTACKSYOU")
       healYourPokemon()
+      gameOver()
+
+
 }
 }
 
@@ -150,8 +156,27 @@ function healYourPokemon(){
     console.log('you healed')
     setTimeout(enemyAttacksYou, 2000)
 
+
+
   })
 }
+
+function gameOver() {
+  var urHealthNow = $('p.health').eq(0)
+  var urHealthNowInteger = parseInt(urHealthNow.text())
+  console.log("gameOver says your health is", urHealthNowInteger)
+
+  var enemyHealthNow = $('p.health').eq(1)
+  var enemyHealthNowInteger = parseInt(enemyHealthNow.text())
+
+  if(urHealthNowInteger <= 0){
+    alert("YOU LOSE")
+  } else if (enemyHealthNowInteger <= 0){
+    alert("YOU WIN")
+  }
+}
+
+
 
 
 
