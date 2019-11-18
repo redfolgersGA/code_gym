@@ -148,6 +148,7 @@ function healYourPokemon(){
     urHealth.text(urHealthInteger)
 
     console.log('you healed')
+    setTimeout(enemyAttacksYou, 2000)
 
   })
 }
