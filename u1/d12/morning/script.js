@@ -92,8 +92,13 @@ button.click(function(){
     nameText.text(hegel.name)
     school.text(hegel.school)
     quote.text(hegel.famousLine)
+  }
 
-
+  if(input === 'nietzsche'){
+    img.attr('src', nietzsche.img)
+    nameText.text(nietzsche.name)
+    school.text(nietzsche.school)
+    quote.text(nietzsche.famousLine)
   }
 })
 
