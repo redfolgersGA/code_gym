@@ -72,54 +72,86 @@ $(document).ready(function() {
 //   console.log('clicked')
 // })
 
-var $button = $("#inputSubmit");
+var button = $('button#inputSubmit')
 
-  $button.click(function(){
-    console.log("clicked!");
-    var $userName = $("input").val();
-    console.log($userName);
+button.click(function(){
+  var input = $('input').val()
 
+  if(input === 'hegel'){
+    console.log('hiiiii')
 
-  if($userName === 'hegel') {
-
-    $('img').attr('src', philosophers[0].img)
-    $('.name').text(philosophers[2].name)
-    $('.school').text(philosophers[2].school)
-    $('.quote').text(philosophers[2].famousLine)
-  }
-
-  if($userName === 'aristotle') {
-    $('img').attr('src', philosophers[1].img)
-    $('.name').text(philosophers[1].name)
-    $('.school').text(philosophers[1].school)
-    $('.quote').text(philosophers[1].famousLine)
-  }
-
-  if($userName === 'simone') {
-    $('img').attr('src', philosophers[3].img)
-    $('.name').text(philosophers[3].name)
-    $('.school').text(philosophers[3].school)
-    $('.quote').text(philosophers[3].famousLine)
 
   }
+  // var img = $('img')
+})
 
-  if($userName === 'martin') {
-    $('img').attr('src', philosophers[4].img)
-    $('.name').text(philosophers[4].name)
-    $('.school').text(philosophers[4].school)
-    $('.quote').text(philosophers[4].famousLine)
-  }
 
-  if($userName === 'fred') {
-    $('img').attr('src', philosophers[0].img)
-    $('.name').text(philosophers[0].name)
-    $('.school').text(philosophers[0].school)
-    $('.quote').text(philosophers[0].famousLine)
-  }
 
-  var $userName = ""
 
-  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// --------------------------------------------------------------- NEW SESSION 11/18/19
+
+// var $button = $("#inputSubmit");
+
+//   $button.click(function(){
+//     console.log("clicked!");
+//     var $userName = $("input").val();
+//     console.log($userName);
+
+
+//   if($userName === 'hegel') {
+
+//     $('img').attr('src', philosophers[0].img)
+//     $('.name').text(philosophers[2].name)
+//     $('.school').text(philosophers[2].school)
+//     $('.quote').text(philosophers[2].famousLine)
+//   }
+
+//   if($userName === 'aristotle') {
+//     $('img').attr('src', philosophers[1].img)
+//     $('.name').text(philosophers[1].name)
+//     $('.school').text(philosophers[1].school)
+//     $('.quote').text(philosophers[1].famousLine)
+//   }
+
+//   if($userName === 'simone') {
+//     $('img').attr('src', philosophers[3].img)
+//     $('.name').text(philosophers[3].name)
+//     $('.school').text(philosophers[3].school)
+//     $('.quote').text(philosophers[3].famousLine)
+
+//   }
+
+//   if($userName === 'martin') {
+//     $('img').attr('src', philosophers[4].img)
+//     $('.name').text(philosophers[4].name)
+//     $('.school').text(philosophers[4].school)
+//     $('.quote').text(philosophers[4].famousLine)
+//   }
+
+//   if($userName === 'fred') {
+//     $('img').attr('src', philosophers[0].img)
+//     $('.name').text(philosophers[0].name)
+//     $('.school').text(philosophers[0].school)
+//     $('.quote').text(philosophers[0].famousLine)
+//   }
+
+//   var $userName = ""
+
+//   })
 
 
 
