@@ -27,7 +27,7 @@ var philosophers = [
     famousLine: "'The history of the world is none other than the progress of the consciousness of freedom.'",
     school: "Absolute Idealism",
     influencedBy: ["Rousseau", "Spinoza"],
-    img: "http://a4.files.biography.com/image/upload/c_fit,cs_srgb,dpr_1.0,h_1200,q_80,w_1200/MTE5NDg0MDU0OTkyMDI5MTk5.jpg"
+    img: "https://i.imgur.com/0rXaRzQ.png"
   },
   {
     name: "Simone de Beauvoir",
@@ -76,13 +76,14 @@ var button = $('button#inputSubmit')
 
 button.click(function(){
   var input = $('input').val()
+  var img = $('img')
+
 
   if(input === 'hegel'){
-    console.log('hiiiii')
+    img.attr('src', philosophers[2].img)
 
 
   }
-  // var img = $('img')
 })
 
 
