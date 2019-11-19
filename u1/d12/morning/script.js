@@ -107,6 +107,20 @@ button.click(function(){
     school.text(aristotle.school)
     quote.text(aristotle.famousLine)
   }
+
+  if(input === 'beauvoir') {
+    img.attr('src', beauvoir.img)
+    nameText.text(beauvoir.name)
+    school.text(beauvoir.school)
+    quote.text(beauvoir.famousLine)
+  }
+
+  if(input === 'heidegger'){
+    img.attr('src', heidegger.img)
+    nameText.text(heidegger.name)
+    school.text(heidegger.school)
+    quote.text(heidegger.famousLine)
+  }
 })
 
 
