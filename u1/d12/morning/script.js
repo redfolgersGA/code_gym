@@ -86,7 +86,7 @@ button.click(function(){
   var school = $('p.school')
   var quote = $('p.quote')
 
-
+// use toLowerCase to standardize the query
   if(input === 'hegel'){
     img.attr('src', hegel.img)
     nameText.text(hegel.name)
@@ -99,6 +99,13 @@ button.click(function(){
     nameText.text(nietzsche.name)
     school.text(nietzsche.school)
     quote.text(nietzsche.famousLine)
+  }
+
+  if(input === 'aristotle'){
+    img.attr('src', aristotle.img)
+    nameText.text(aristotle.name)
+    school.text(aristotle.school)
+    quote.text(aristotle.famousLine)
   }
 })
 
