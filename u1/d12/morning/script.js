@@ -77,10 +77,14 @@ var button = $('button#inputSubmit')
 button.click(function(){
   var input = $('input').val()
   var img = $('img')
+  var nameText = $('h2.name')
+  var school = $('p.school')
+  var quote = $('p.quote')
 
 
   if(input === 'hegel'){
     img.attr('src', philosophers[2].img)
+    nameText.text(philosophers[2].name)
 
 
   }
