@@ -86,36 +86,37 @@ button.click(function(){
   var school = $('p.school')
   var quote = $('p.quote')
 
+
 // use toLowerCase to standardize the query
-  if(input === 'hegel'){
+  if(input.toLowerCase() === 'hegel'){
     img.attr('src', hegel.img)
     nameText.text(hegel.name)
     school.text(hegel.school)
     quote.text(hegel.famousLine)
   }
 
-  if(input === 'nietzsche'){
+  if(input.toLowerCase() === 'nietzsche'){
     img.attr('src', nietzsche.img)
     nameText.text(nietzsche.name)
     school.text(nietzsche.school)
     quote.text(nietzsche.famousLine)
   }
 
-  if(input === 'aristotle'){
+  if(input.toLowerCase() === 'aristotle'){
     img.attr('src', aristotle.img)
     nameText.text(aristotle.name)
     school.text(aristotle.school)
     quote.text(aristotle.famousLine)
   }
 
-  if(input === 'beauvoir') {
+  if(input.toLowerCase() === 'beauvoir') {
     img.attr('src', beauvoir.img)
     nameText.text(beauvoir.name)
     school.text(beauvoir.school)
     quote.text(beauvoir.famousLine)
   }
 
-  if(input === 'heidegger'){
+  if(input.toLowerCase() === 'heidegger'){
     img.attr('src', heidegger.img)
     nameText.text(heidegger.name)
     school.text(heidegger.school)
