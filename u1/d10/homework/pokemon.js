@@ -169,10 +169,21 @@ function gameOver() {
   var enemyHealthNow = $('p.health').eq(1)
   var enemyHealthNowInteger = parseInt(enemyHealthNow.text())
 
+  // select buttons so you can make them hide
+  var attackButton = $('p#attack_btn')
+  var healButton = $('p#heal_btn')
+
   if(urHealthNowInteger <= 0){
     alert("YOU LOSE")
+    // attackButton.hide()
+    // healButton.hide()
+    location.reload()
+
   } else if (enemyHealthNowInteger <= 0){
     alert("YOU WIN")
+    // attackButton.hide()
+    // healButton.hide()
+    location.reload()
   }
 }
 
