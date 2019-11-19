@@ -73,6 +73,11 @@ $(document).ready(function() {
 // })
 
 var button = $('button#inputSubmit')
+var nietzsche = philosophers[0]
+var aristotle = philosophers[1]
+var hegel = philosophers[2]
+var beauvoir = philosophers[3]
+var heidegger = philosophers[4]
 
 button.click(function(){
   var input = $('input').val()
@@ -83,8 +88,10 @@ button.click(function(){
 
 
   if(input === 'hegel'){
-    img.attr('src', philosophers[2].img)
-    nameText.text(philosophers[2].name)
+    img.attr('src', hegel.img)
+    nameText.text(hegel.name)
+    school.text(hegel.school)
+    quote.text(hegel.famousLine)
 
 
   }
