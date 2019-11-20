@@ -57,6 +57,20 @@ var logData = function() {
 }
 logData()
 
+var logNames = function() {
+  for(var i=0; i<data.people.length;i++){
+    console.log(data.people[i].name)
+  }
+}
+logNames()
+
+var logNameEyes = function() {
+  for(var i=0; i<data.people.length;i++){
+    console.log(data.people[i].name + " has " + data.people[i].eye_color + " eyes.")
+  }
+}
+logNameEyes()
+
 
 
 
