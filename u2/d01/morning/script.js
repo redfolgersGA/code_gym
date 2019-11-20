@@ -92,6 +92,20 @@ var appendCharacterNames = function() {
 }
 appendCharacterNames()
 
+var appendByMass = function() {
+  var charactersDiv = $('div#characters')
+  var h1Tag = $('h1#title')
+  for(var i=0;i<data.people.length;i++){
+    if(parseInt(data.people[i].mass) > 75) {
+      h1Tag.text('Mass Greater Than 75')
+      charactersDiv.append('<p>' + data.people[i].name + " has a mass greater than 75.")
+
+
+    }
+  }
+}
+appendByMass()
+
 
 
 
