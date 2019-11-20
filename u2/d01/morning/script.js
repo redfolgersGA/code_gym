@@ -52,7 +52,6 @@ var data =  {
   	}]
 } // ends var data
 
-var charactersDiv = $('div#characters')
 
 var logData = function() {
   console.log(data.people)
@@ -83,6 +82,15 @@ var logByMass = function() {
   }
 }
 logByMass()
+
+var appendCharacterNames = function() {
+  var charactersDiv = $('div#characters')
+  for(var i=0;i<data.people.length;i++){
+    charactersDiv.append('<p>' + data.people[i].name + '</>')
+  }
+
+}
+appendCharacterNames()
 
 
 
