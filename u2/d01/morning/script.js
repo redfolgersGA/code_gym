@@ -52,6 +52,8 @@ var data =  {
   	}]
 } // ends var data
 
+var charactersDiv = $('div#characters')
+
 var logData = function() {
   console.log(data.people)
 }
@@ -70,6 +72,19 @@ var logNameEyes = function() {
   }
 }
 logNameEyes()
+
+var logByMass = function() {
+  for(var i=0; i<data.people.length;i++){
+    if(parseInt(data.people[i].mass) > 75){
+      console.log(data.people[i].name + " has a mass that is greater than 75. It is " +
+        data.people[i].mass)
+
+    }
+  }
+}
+logByMass()
+
+
 
 
 
