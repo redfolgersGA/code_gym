@@ -52,75 +52,100 @@ var data =  {
   	}]
 } // ends var data
 
-var logData = function () {
-  console.log(data)
+var logData = function() {
+  console.log(data.people)
 }
-
 logData()
 
-var logNames = function() {
-  for (i=0; i < data.people.length; i++){
-  console.log(data.people[i].name)
-}
-
-}
-
-logNames()
-
-var logNameEyes = function () {
-  for(i=0; i< data.people.length; i++){
-    console.log(data.people[i].name +"'s eye color is " + data.people[i].eye_color)
-  }
-}
-
-logNameEyes()
-
-var logByMass = function () {
-  for(i=0; i < data.people.length; i++){
-    if(parseInt(data.people[i].mass) > 75) {
-    console.log(data.people[i].name + " has mass greater than 75")
-}
-  }
-    }
-
-logByMass()
-
-
-var appendCharacterNames = function () {
-  var charactersDiv = $('#characters')
-  data.people.forEach(function(person){
-    charactersDiv.append('<p>'+ person.name + '</p>' )
 
 
 
-  })
-}
-
-
-appendCharacterNames()
 
 
 
-var appendByMass = function () {
-  var charactersDiv = $('#characters')
-  var title = $('#title')
-  var personPTags = $('p')
-
-  for(i=0 ; i <data.people.length; i++){
-    if(data.people[i].mass > 75){
-      personPTags.remove()
-      charactersDiv.append('<p>' + data.people[i].name + '</p>')
-    }
-
-  }
 
 
 
-    }
-setTimeout(appendByMass, 3000)
 
 
 
+
+
+
+
+
+
+
+// -----------------------------------------------------new trial 11/20
+// var logData = function () {
+//   console.log(data)
+// }
+
+// logData()
+
+// var logNames = function() {
+//   for (i=0; i < data.people.length; i++){
+//   console.log(data.people[i].name)
+// }
+
+// }
+
+// logNames()
+
+// var logNameEyes = function () {
+//   for(i=0; i< data.people.length; i++){
+//     console.log(data.people[i].name +"'s eye color is " + data.people[i].eye_color)
+//   }
+// }
+
+// logNameEyes()
+
+// var logByMass = function () {
+//   for(i=0; i < data.people.length; i++){
+//     if(parseInt(data.people[i].mass) > 75) {
+//     console.log(data.people[i].name + " has mass greater than 75")
+// }
+//   }
+//     }
+
+// logByMass()
+
+
+// var appendCharacterNames = function () {
+//   var charactersDiv = $('#characters')
+//   data.people.forEach(function(person){
+//     charactersDiv.append('<p>'+ person.name + '</p>' )
+
+
+
+//   })
+// }
+
+
+// appendCharacterNames()
+
+
+
+// var appendByMass = function () {
+//   var charactersDiv = $('#characters')
+//   var title = $('#title')
+//   var personPTags = $('p')
+
+//   for(i=0 ; i <data.people.length; i++){
+//     if(data.people[i].mass > 75){
+//       personPTags.remove()
+//       charactersDiv.append('<p>' + data.people[i].name + '</p>')
+//     }
+
+//   }
+
+
+
+//     }
+// setTimeout(appendByMass, 3000)
+
+
+// ------------------------------------------------------------------
 
 
 // 1.
