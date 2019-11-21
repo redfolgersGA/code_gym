@@ -29,40 +29,65 @@ var frameworks = {
   ]
 }
 
-var modifiedFrontEnd = frameworks.frontEnd.map(function(fw){
-  return fw.name + ".js"
+var modifiedFrontEnd = frameworks.frontEnd.map(function(framework){
+  return framework.name + ".js"
 })
 
 console.log(modifiedFrontEnd)
 
-var modifiedBackEnd = frameworks.backEnd.map(function(fw){
-  return fw.name + ".js"
-})
 
-console.log(modifiedBackEnd)
 
-var filteredFrontEnd = frameworks.frontEnd.filter(function(fw){
-  if(fw.description.length > 30){
-    return fw
-  }
-})
 
-console.log(filteredFrontEnd)
 
-var filteredBackEnd = frameworks.backEnd.filter(function(fw){
-  if(fw.name[0] === 'A' || fw.name[0] === 'E' || fw.name[0] === 'I' || fw.name[0] === 'O' || fw.name[0] === 'U'){
-    return fw
-  }
-})
 
-console.log(filteredBackEnd)
 
-var frontEndNames = frameworks.frontEnd.reduce(function(sum,current){
-  var concatStrings = current
-  return var added += current.name
-})
 
-console.log(frontEndNames)
+
+
+
+
+
+
+
+
+
+
+// --------------------------------------------------------------------------NewTrial
+
+// var modifiedFrontEnd = frameworks.frontEnd.map(function(fw){
+//   return fw.name + ".js"
+// })
+
+// console.log(modifiedFrontEnd)
+
+// var modifiedBackEnd = frameworks.backEnd.map(function(fw){
+//   return fw.name + ".js"
+// })
+
+// console.log(modifiedBackEnd)
+
+// var filteredFrontEnd = frameworks.frontEnd.filter(function(fw){
+//   if(fw.description.length > 30){
+//     return fw
+//   }
+// })
+
+// console.log(filteredFrontEnd)
+
+// var filteredBackEnd = frameworks.backEnd.filter(function(fw){
+//   if(fw.name[0] === 'A' || fw.name[0] === 'E' || fw.name[0] === 'I' || fw.name[0] === 'O' || fw.name[0] === 'U'){
+//     return fw
+//   }
+// })
+
+// console.log(filteredBackEnd)
+
+// var frontEndNames = frameworks.frontEnd.reduce(function(sum,current){
+//   var concatStrings = current
+//   return var added += current.name
+// })
+
+// console.log(frontEndNames)
 
 
 
