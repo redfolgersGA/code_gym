@@ -1,9 +1,40 @@
 $(document).ready(function(){
 
+$.ajax({
+  type: "GET",
+  url: "",
+
+  success: function(data){
+    console.log(data)
+  }
+})
 
 
 
-var movieTitle = "babe"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // -------------------------------------------------------------NEW TRIAL 11/25/19
+
+
+
+
+// var movieTitle = "babe"
 // var input = $('input.u-full-width')
 // var movieTitle = input.val()
 
@@ -33,14 +64,14 @@ var movieTitle = "babe"
 
 
 
-  var getData = function(movieTitle){
-    var h5 = $('h5')
-    h5.text(movieTitle)
+  // var getData = function(movieTitle){
+  //   var h5 = $('h5')
+  //   h5.text(movieTitle)
 
 
-  };
+  // };
 
-  getData();
+  // getData();
 
 
 
@@ -49,17 +80,17 @@ var movieTitle = "babe"
 
 //every input tag has a hidden "value=" attribute that by default is
 //an empty string " " . .val() takes what the user writes in the input and holds it
-  var addAJAXFunction = function(){
-    $('button').on('click', function(){
-    var inputValue = $('input').val();
-    console.log(inputValue);
-    getData(inputValue);
+  // var addAJAXFunction = function(){
+  //   $('button').on('click', function(){
+  //   var inputValue = $('input').val();
+  //   console.log(inputValue);
+  //   getData(inputValue);
 
 
-    })
-  };
+  //   })
+  // };
 
-  addAJAXFunction()
+  // addAJAXFunction()
 
   // var appendMovie = function(name,imagePath){
   //   $('h5').text(name);
