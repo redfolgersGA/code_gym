@@ -35,6 +35,12 @@ console.log('jsloaded')
 var userName = $("p#user_value")
 // var data = "data.results"
 var userPhoto = $('img')
+var liTags = $('li')
+var nameLi = liTags.eq(0)
+var emailLi = liTags.eq(1)
+var bDayLi = liTags.eq(2)
+var addressLi = liTags.eq(3)
+var passwordLi = liTags.eq(4)
 
 
 $.ajax({
@@ -43,7 +49,12 @@ $.ajax({
   success: function(data) {
     var shortData = data.results[0]
     userName.text(shortData.name.first + " " + shortData.name.last)
+
+
     userPhoto.attr('src', shortData.picture.large)
+    nameLi.click(function(){
+      userName.text(shortData.name.first + " " + shortData.name.last)
+    })
   }
 
 
