@@ -33,52 +33,86 @@ console.log('jsloaded')
 // }
 
 
-
-
 $.ajax({
   type: "GET",
-  url: "https://randomuser.me/api/",
-  success: function(data){
-    console.log(data.results[0].dob.date)
-    var img = $('img')
-    img.attr('src', data.results[0].picture.medium)
-    var titleParagraph = $('#user_title')
-    var userValue = $('#user_value')
-    userValue.text(data.results[0].name.first + " " + data.results[0].name.last)
-    var nameLi = $('li').eq(0)
-    nameLi.on('mouseover', function(){
-      userValue.text(data.results[0].name.first + " " + data.results[0].name.last)
-      titleParagraph.text('Hello, My name is ')
-
-
-    })
-    var emailLi = $('li').eq(1)
-      emailLi.on('mouseover', function(){
-        var titleParagraph = $('#user_title')
-        titleParagraph.text('My email is ')
-        userValue.text(data.results[0].email)
-
-      })
-    var birthdayLi = $('li').eq(2)
-      birthdayLi.on('mouseover', function(){
-        titleParagraph.text("My birthday is ")
-        userValue.text(data.results[0].dob.date)
-      })
-    var addressLi = $('li').eq(3);
-      addressLi.on('mouseover', function(){
-        titleParagraph.text("My address is ")
-        userValue.text(data.results[0].location.street)
-      })
-    var passwordLi = $('li').eq(4);
-      passwordLi.on('mouseover', function(){
-        titleParagraph.text("My password is ")
-        userValue.text(data.results[0].login.password)
-      })
-
-
-
+  url: "https://randomuser.me",
+  success: function(data) {
+    console.log(data)
   }
+
+
+
+
+
+
+
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ------------------------------------------------------New Trial Starts Above
+
+// $.ajax({
+//   type: "GET",
+//   url: "https://randomuser.me/api/",
+//   success: function(data){
+//     console.log(data)
+//     // console.log(data.results[0].dob.date)
+//     var img = $('img')
+//     img.attr('src', data.results[0].picture.medium)
+//     var titleParagraph = $('#user_title')
+//     var userValue = $('#user_value')
+//     userValue.text(data.results[0].name.first + " " + data.results[0].name.last)
+//     var nameLi = $('li').eq(0)
+//     nameLi.on('mouseover', function(){
+//       userValue.text(data.results[0].name.first + " " + data.results[0].name.last)
+//       titleParagraph.text('Hello, My name is ')
+
+
+//     })
+//     var emailLi = $('li').eq(1)
+//       emailLi.on('mouseover', function(){
+//         var titleParagraph = $('#user_title')
+//         titleParagraph.text('My email is ')
+//         userValue.text(data.results[0].email)
+
+//       })
+//     var birthdayLi = $('li').eq(2)
+//       birthdayLi.on('mouseover', function(){
+//         titleParagraph.text("My birthday is ")
+//         userValue.text(data.results[0].dob.date)
+//       })
+//     var addressLi = $('li').eq(3);
+//       addressLi.on('mouseover', function(){
+//         titleParagraph.text("My address is ")
+//         userValue.text(data.results[0].location.street)
+//       })
+//     var passwordLi = $('li').eq(4);
+//       passwordLi.on('mouseover', function(){
+//         titleParagraph.text("My password is ")
+//         userValue.text(data.results[0].login.password)
+//       })
+
+
+
+//   }
+// })
 
 
 
