@@ -32,12 +32,16 @@ console.log('jsloaded')
 
 // }
 
+var userName = $("p#user_value")
+// var data = "data.results"
+
 
 $.ajax({
   type: "GET",
-  url: "https://randomuser.me",
+  url: "https://randomuser.me/api/",
   success: function(data) {
-    console.log(data)
+    var shortData = data.results[0]
+    userName.text(shortData.name.first + " " + shortData.name.last)
   }
 
 
