@@ -34,6 +34,7 @@ console.log('jsloaded')
 
 var userName = $("p#user_value")
 // var data = "data.results"
+var userPhoto = $('img')
 
 
 $.ajax({
@@ -42,6 +43,7 @@ $.ajax({
   success: function(data) {
     var shortData = data.results[0]
     userName.text(shortData.name.first + " " + shortData.name.last)
+    userPhoto.attr('src', shortData.picture.large)
   }
 
 
