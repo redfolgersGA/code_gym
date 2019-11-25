@@ -35,6 +35,12 @@ var modifiedFrontEnd = frameworks.frontEnd.map(function(framework){
 
 console.log(modifiedFrontEnd)
 
+var modifiedBackEnd = frameworks.backEnd.map(function(framework){
+  return framework.name + ".js"
+})
+
+console.log(modifiedBackEnd)
+
 
 
 
