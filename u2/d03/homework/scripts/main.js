@@ -3,32 +3,49 @@ console.log("script unloaded sikedd")
 
 // when you press submit the form triggers an ajax request
 
-var $formInput = $('form.pure-form')
+var planetEntered = $
 
 
-$formInput.on("submit", function(event){
-  event.preventDefault()
-  var city = $('input#city_entered').val()
-  console.log(city)
-  // grab value of form with value property
-
-  console.log('submit')
-
-  $.ajax({
+$.ajax({
   type: "GET",
-  url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "{APIKEY}",
-  success: function (data){
-    var $pForecast = $('p#forecast');
+  url: "http://swapi.co/api/planets",
+  dataType: "json",
 
-
-    $pForecast.text("The temperature in " + data.name + " is " + data.main.temp)
-
+  success: function(data) {
+    console.log(data.results)
+  },
+  error: function(data) {
+    console.log("failed")
   }
-
-
-
 })
-})
+
+// var $formInput = $('form.pure-form')
+
+
+// $formInput.on("submit", function(event){
+//   event.preventDefault()
+//   var city = $('input#city_entered').val()
+//   console.log(city)
+//   // grab value of form with value property
+
+//   console.log('submit')
+
+//   $.ajax({
+//   method: "get",
+//   url: "http://api.openweathermap.org/data/2.5/weather?q="+ city +",
+//   success: function (data){
+//     console.log('YASSS')
+//     var $pForecast = $('p#forecast');
+
+
+//     $pForecast.text("The temperature in " + data.name + " is " + data.main.temp)
+
+//   }
+
+
+
+// })
+// })
 
 
 
