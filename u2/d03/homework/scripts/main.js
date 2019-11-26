@@ -4,8 +4,11 @@ console.log("script unloaded sikedd")
 // when you press submit the form triggers an ajax request
 
 var planetEntered = $('input#city_entered')
-
 var button = $('button#submit_button')
+var forecast = $('div#forecastInformation')
+var date = $('p.date')
+var imgTag = $('img')
+
 
 button.click(function(e){
 e.preventDefault()
@@ -19,11 +22,11 @@ $.ajax({
 
   success: function(data) {
 
-    for(var i=0;i<data.results.length;i++){
-      console.log(data.results[i])
-
-
+    if(planetEnteredVal.toLowerCase() === "alderaan"){
+      console.log(data.results[0])
+      imgTag.attr('src', 'img/alderaan.gif')
     }
+    console.log(data.results)
 
   },
   error: function(data) {
