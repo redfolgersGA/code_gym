@@ -12,21 +12,29 @@ e.preventDefault()
 var planetEnteredVal = planetEntered.val()
 console.log(planetEnteredVal)
 
-})
-
-
 $.ajax({
   type: "GET",
   url: "http://swapi.co/api/planets",
   dataType: "json",
 
   success: function(data) {
-    console.log(data.results)
+
+    for(var i=0;i<data.results.length;i++){
+      console.log(data.results[i])
+
+
+    }
+
   },
   error: function(data) {
     console.log("failed")
   }
 })
+
+})
+
+
+
 
 // var $formInput = $('form.pure-form')
 
