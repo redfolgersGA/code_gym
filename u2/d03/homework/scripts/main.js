@@ -3,7 +3,16 @@ console.log("script unloaded sikedd")
 
 // when you press submit the form triggers an ajax request
 
-var planetEntered = $
+var planetEntered = $('input#city_entered')
+
+var button = $('button#submit_button')
+
+button.click(function(e){
+e.preventDefault()
+var planetEnteredVal = planetEntered.val()
+console.log(planetEnteredVal)
+
+})
 
 
 $.ajax({
