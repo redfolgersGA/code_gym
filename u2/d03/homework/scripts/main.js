@@ -27,7 +27,10 @@ $.ajax({
       imgTag.attr('src', 'img/alderaan.gif')
     } else if(planetEnteredVal.toLowerCase() === "yavin" || planetEnteredVal.toLowerCase() === "yavin iv"){
       imgTag.attr('src', "https://media.giphy.com/media/26BRQjZejh2vgXPJ6/source.gif")
-    } else if(planetEnteredVal.towLowerCase() === "hoth")
+    } else if(planetEnteredVal.toLowerCase() === "hoth"){
+      imgTag.attr('src', "https://media.giphy.com/media/SROav5OKGxqUM/source.gif")
+
+    }
     console.log(data.results)
 
   },
