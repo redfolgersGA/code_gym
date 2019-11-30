@@ -27,8 +27,21 @@ hamlets.forEach(function(hamlet){
 var newHam = [];
 
 hamlets.forEach(function(hamlet){
-  hamlet.split(', ')
+  newHam.push(hamlet.split(', '))
+  // console.log(hamlet.split(', ')[1])
+  console.log(newHam)
 })
+
+for(var i=0;i<newHam.length;i++){
+  for(var j=0;j<newHam[i].length;j++){
+    console.log(newHam[i][j])
+  }
+
+}
+
+
+
+
 
 
 
