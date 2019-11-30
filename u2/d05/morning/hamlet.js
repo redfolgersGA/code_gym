@@ -9,70 +9,128 @@ var hamlets = [
   "Michael Almereyda, 2000"
 ];
 
+
+
 // Scene I
 
-hamlets.forEach(function(ham){
-  var hamSplit = ham.split(', ')
-  console.log("O the venerable " + hamSplit[0] + " starred as hamlet in " + hamSplit[1])
+
+hamlets.forEach(function(hamlet){
+
+  console.log("O!,The venerable " + hamlet.split(', ')[0] + " played Hamlet in the year " +
+    hamlet.split(', ')[1])
 })
 
 // Scene II
-var finalArrayOfArrays;
+// Programatically convert the `hamlets` array into an array of arrays where the
+// first element, name, is a string, and the second element, year, is an integer.
 
-function hamletsArrayofArrays (){
-  var hamletArrays = [];
-  var hamStringToInteger = [];
-  var finalArrayStringAndNumber = [];
-  hamlets.forEach(function(ham){
-    var hamsplit = ham.split(', ')
-    // var stringToInteger = [];
-    // var stringToInteger = stringToInteger + [parseInt(hamsplit[1])]
-    hamletArrays.push(hamsplit)
+var newHam = [];
 
+hamlets.forEach(function(hamlet){
+  newHam.push(hamlet.split(', '))
 
+  console.log(newHam)
 
-
-
-    // console.log(hamsplit)
-  })
-
-
-    hamletArrays.forEach(function(ham){
-      hamStringToInteger.push(ham[0], parseInt(ham[1]))
-  })
-  console.log(hamStringToInteger)
-  finalArrayStringAndNumber.push(hamStringToInteger)
-  console.log(finalArrayStringAndNumber)
-
-  finalArrayOfArrays = finalArrayStringAndNumber
-
-
-}
-
-hamletsArrayofArrays()
-
-console.log("-----------------")
-console.log(finalArrayOfArrays)
+})
 
 
 
 
 
-// Scene III
 
 
 
-var countedNames = finalArrayOfArrays[0].reduce(function (allNames, name) {
 
-  if (name in allNames) {
-    allNames[name]++;
-  }
-  else {
-    allNames[name] = 1;
-  }
-  return allNames;
-}, {});
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -----------------------------------------------NEW TRIAL 11/30/19
+
+// // Scene I
+
+// hamlets.forEach(function(ham){
+//   var hamSplit = ham.split(', ')
+//   console.log("O the venerable " + hamSplit[0] + " starred as hamlet in " + hamSplit[1])
+// })
+
+// // Scene II
+// var finalArrayOfArrays;
+
+// function hamletsArrayofArrays (){
+//   var hamletArrays = [];
+//   var hamStringToInteger = [];
+//   var finalArrayStringAndNumber = [];
+//   hamlets.forEach(function(ham){
+//     var hamsplit = ham.split(', ')
+//     // var stringToInteger = [];
+//     // var stringToInteger = stringToInteger + [parseInt(hamsplit[1])]
+//     hamletArrays.push(hamsplit)
+
+
+
+
+
+//     // console.log(hamsplit)
+//   })
+
+
+//     hamletArrays.forEach(function(ham){
+//       hamStringToInteger.push(ham[0], parseInt(ham[1]))
+//   })
+//   console.log(hamStringToInteger)
+//   finalArrayStringAndNumber.push(hamStringToInteger)
+//   console.log(finalArrayStringAndNumber)
+
+//   finalArrayOfArrays = finalArrayStringAndNumber
+
+
+// }
+
+// hamletsArrayofArrays()
+
+// console.log("-----------------")
+// console.log(finalArrayOfArrays)
+
+
+
+
+
+// // Scene III
+
+
+// var objFromHamArray = finalArrayOfArrays[0].map(function(item){
+//   var obj = {};
+//   obj.name = item
+//   obj.year = item
+//   return obj
+
+// })
+
+// console.log(objFromHamArray)
+
+
+                                                          // allNames, name
+// var countedNames = finalArrayOfArrays[0].reduce(function (emptObj, item, index, arr) {
+//   console.log(emptObj)
+//   index = arr[0]
+//   emptObj[index] = item
+
+
+//   return emptObj;
+// }, {});
+
+// console.log(countedNames)
 
 
 
