@@ -30,6 +30,8 @@ $.ajax({
     } else if(planetEnteredVal.toLowerCase() === "hoth"){
       imgTag.attr('src', "https://media.giphy.com/media/SROav5OKGxqUM/source.gif")
 
+    } else if(planetEnteredVal.toLowerCase() === "dagobah"){
+      imgTag.attr('src', "img/dagobah.png" )
     }
     console.log(data.results)
 
