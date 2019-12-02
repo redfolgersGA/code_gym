@@ -24,20 +24,33 @@ hamlets.forEach(function(hamlet){
 // Programatically convert the `hamlets` array into an array of arrays where the
 // first element, name, is a string, and the second element, year, is an integer.
 
-var newHam = [];
+// var newHam = [];
+
+// hamlets.forEach(function(hamlet){
+//   newHam.push(hamlet.split(', '))
+//   // console.log(hamlet.split(', ')[1])
+//   console.log(newHam)
+// })
+
+// for(var i=0;i<newHam.length;i++){
+//   for(var j=0;j<newHam[i].length;j++){
+//     console.log(newHam[i][j].split(', '))
+//   }
+
+// }
+
+// Scene III
+// Programatically convert the `hamlets` array of arrays
+// into an array of objects where the keys are `name` and `year`
+var hamletsArrayofArrays = [];
 
 hamlets.forEach(function(hamlet){
-  newHam.push(hamlet.split(', '))
-  // console.log(hamlet.split(', ')[1])
-  console.log(newHam)
+  hamletsArrayofArrays.push(hamlet.split(', '))
+
+
 })
 
-for(var i=0;i<newHam.length;i++){
-  for(var j=0;j<newHam[i].length;j++){
-    console.log(newHam[i][j])
-  }
-
-}
+console.log(hamletsArrayofArrays)
 
 
 
