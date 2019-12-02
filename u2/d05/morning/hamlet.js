@@ -52,6 +52,18 @@ hamlets.forEach(function(hamlet){
 
 console.log(hamletsArrayofArrays)
 
+var toObject = function(arr) {
+  var rv = {};
+  console.log(rv)
+  for(var i=0; i<arr.length;i++){
+    rv[i] = arr[i]
+  return rv
+  console.log(rv)
+  }
+
+}
+toObject(hamletsArrayofArrays)
+
 
 
 
