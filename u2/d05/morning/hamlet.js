@@ -52,17 +52,12 @@ hamlets.forEach(function(hamlet){
 
 console.log(hamletsArrayofArrays)
 
-var toObject = function(arr) {
-  var rv = {};
-  console.log(rv)
-  for(var i=0; i<arr.length;i++){
-    rv[i] = arr[i]
-  return rv
-  console.log(rv)
-  }
+var obj = Object.assign({hamletsArrayofArrays})
 
-}
-toObject(hamletsArrayofArrays)
+console.log(obj)
+
+// The global environment and the global object are our base execution context
+// the global environment creates the global object and the this keyword
 
 
 
