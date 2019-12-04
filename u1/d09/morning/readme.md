@@ -24,7 +24,7 @@ var buenosAires = {
   specimens: ["Dilophosaurus","Brachiosaurus"]
 };
 
-var mexico = { l
+var mexico = { 
   location: "Mexico",
   depthInMeters: "350",
   annualBudget: 900000,

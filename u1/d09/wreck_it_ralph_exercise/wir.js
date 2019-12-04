@@ -1,7 +1,8 @@
 "use strict";
 
-(function(){
+
 	$(document).ready(function(){
+    console.log("ready")
 		// Hey XFiles!
 		// --------------
 		// Let's have some fun!
@@ -24,6 +25,59 @@
 	  // i.e. ralph1 should become ralph2, ralph2 becomes ralph3 and so on...
 	  // You'll might into an issue here. Maybe you should log the number you are
 	  // incrementing and then look at the class names in the css file. (DEBUG IT!)
+   //
+
+   var counter = 2
+
+ $ralph.click(function(){
+  // $ralph.attr('id', 'ralph')
+  console.log($ralph)
+  $ralph.attr('id', 'ralph' + counter)
+  counter++
+  console.log(counter)
+  console.log($ralph)
+
+  if(counter == 6){
+    var speech1 = $('<div id ="speech1"></div>')
+    $body.append(speech1)
+
+  }else if(counter == 7){
+    var speech1 = $('<div id ="speech1"></div>')
+
+    var speech2 = $('<div id="speech2"></div>')
+
+    $('#speech1').remove()
+    $body.append(speech2)
+  } else if(counter == 12) {
+    var speech2 = $('div#speech2')
+    speech2.remove()
+    counter = 1
+
+  }
+
+  // }else(counter == 12){
+  //   counter = 1
+  // }
+
+ })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    // var counter = 2
    //  $($ralph).click(function(){
    //    $ralph.attr('id', 'ralph' +(counter-1))
@@ -45,4 +99,4 @@
 
 
 })
-})
+

@@ -104,7 +104,9 @@ var appendByMass = function() {
     }
   }
 }
-appendByMass()
+  setTimeout(appendByMass,2000)
+
+
 
 
 

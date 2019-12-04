@@ -122,6 +122,7 @@ button.click(function(){
     school.text(heidegger.school)
     quote.text(heidegger.famousLine)
   }
+
 })
 
 

@@ -1,30 +1,41 @@
 $(document).ready(function(){
 
 
-var h5TagOne = $('h5').eq(0)
-var imgTagOne = $('img').eq(0)
-var h5TagTwo = $('h5').eq(1)
-var imgTagTwo = $('img').eq(1)
+// var h5TagOne = $('h5').eq(0)
+// var imgTagOne = $('img').eq(0)
+// var h5TagTwo = $('h5').eq(1)
+// var imgTagTwo = $('img').eq(1)
 
 var fourColumnsDiv = $('div.four')
+var inputVal = $('input')
+var button = $('button')
 
 
-$.ajax({
+
+
+button.click(function(){
+  var apiKey = "http://www.omdbapi.com/?s=" + inputVal.val() + "apikey"
+  console.log(inputVal.val())
+  var h5Tags = $('h5')
+  var imgTags = $('img')
+
+  h5Tags.remove()
+  imgTags.remove()
+
+  $.ajax({
   type: "GET",
-  url: "getapikey",
+  url: apiKey,
 
   success: function(data){
+    console.log(apiKey)
+
+
     for(var i =0; i<data.Search.length;i++){
       fourColumnsDiv.append('<h5>' + data.Search[i].Title + '</h5>')
       fourColumnsDiv.append('<img src=' + data.Search[i].Poster +">")
 
 
     }
-      // h5TagOne.text(data.Search[0].Title)
-      // imgTagOne.attr('src', data.Search[0].Poster)
-
-      // h5TagTwo.text(data.Search[1].Title)
-      // imgTagTwo.attr('src', data.Search[1].Poster)
 
 
 
@@ -39,6 +50,11 @@ $.ajax({
     console.log(data)
   }
 })
+
+
+    })
+
+
 
 
 

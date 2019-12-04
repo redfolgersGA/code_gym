@@ -32,6 +32,8 @@ $.ajax({
 
     } else if(planetEnteredVal.toLowerCase() === "dagobah"){
       imgTag.attr('src', "img/dagobah.png" )
+    } else if(planetEnteredVal.toLowerCase() === "bespin"){
+      imgTag.attr('src', "img/dagobah.png")
     }
     console.log(data.results)
 

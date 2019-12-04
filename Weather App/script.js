@@ -23,9 +23,16 @@ weatherForm.on("submit", function(e){
 
       }
 
-      forecastPTag.text("the temperature in" + data.name + " is " + Math.floor(kelvinToFah(data.main.temp)))
+      forecastPTag.text("the temperature in" + data.name + " is " + Math.floor(kelvinToFah(data.main.temp)) + " degrees Fahrenheit")
 
-      forecastImage.attr("src", "images/earth.jpg")
+      if(data.weather[0].main === "Rain"){
+        forecastImage.attr("src", "images/rain.jpg")
+
+      } else{
+        forecastImage.attr("src", "images/earth.jpg")
+
+      }
+
 
     }
   })

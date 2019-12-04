@@ -1,4 +1,109 @@
-console.log("script loaded");
+console.log("script is loaded now")
+
+
+// FORMULA (32F- 32) * 5/9 = 0C
+
+// var tempInput = prompt("Whats the temperature in Farenheit?")
+
+// var toCels = function(temp){
+
+//   var farToCels = (temp-32) * 5/9
+//   alert(tempInput + " degrees Farenheit is " + Math.round(farToCels) + " degrees in Celsius")
+// }
+
+// toCels(tempInput)
+
+// var weightInput = prompt("Enter weight in LBS")
+
+// function lbsToKilos(weight){
+//   // divide mass value by 2.205
+//   var lbsToKilograms = weight / 2.205
+//   alert(weight + "lbs is equal to " + lbsToKilograms + "kilograms" )
+
+
+
+// }
+
+// lbsToKilos(weightInput)
+
+// // pytahgorean theorem
+
+// var sideOne = prompt("how long is the first side? (inches)")
+// var sideTwo = prompt("how long is the second side? (inches)")
+
+
+// function pythagoras (a,b){
+
+//   alert("The third side is equal to " + a * b)
+// }
+
+// pythagoras(sideOne,sideTwo)
+
+// function alertLongestWord (){
+//   // captures your string
+//   var input = prompt("Say something")
+//   // splits string into an array of elements
+//   var splitString = input.split(' ')
+//   console.log(splitString)
+//   // a variable to store the longest word in the array
+//   var longestWord = ""
+//   var longestWordIndex = 0
+
+//   for(var i = 0; i < splitString.length; i++){
+//     if(splitString[i].length > longestWordIndex){
+//       longestWord = splitString[i]
+//       longestWordIndex = splitString[i].length
+//     }
+
+//     console.log(longestWord)
+
+
+//   }
+
+//   alert("the longest word is " + longestWord)
+
+
+
+
+
+//   }
+// alertLongestWord()
+
+// BONUS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // var tempPrompt = prompt("Enter temperature in Farenheit please.")
@@ -44,53 +149,53 @@ console.log("script loaded");
 
 // findsPytagoresTheorem()
 
-var sentencePrompt = prompt("Say something");
+// var sentencePrompt = prompt("Say something");
 
-function alertLongestWord (value) {
-  var longWordLength = 0;
-  var longWordNow = "";
+// function alertLongestWord (value) {
+//   var longWordLength = 0;
+//   var longWordNow = "";
 
-  var sentenceToArray = sentencePrompt.split(' ')
-  for(i = 0; i < sentenceToArray.length ; i++){
-    if(sentenceToArray[i].length >= longWordLength) {
-     var longWordLength = sentenceToArray[i].length
-     var longWordNow = sentenceToArray[i]
-    }
-    console.log(longWordNow)
+//   var sentenceToArray = sentencePrompt.split(' ')
+//   for(i = 0; i < sentenceToArray.length ; i++){
+//     if(sentenceToArray[i].length >= longWordLength) {
+//      var longWordLength = sentenceToArray[i].length
+//      var longWordNow = sentenceToArray[i]
+//     }
+//     console.log(longWordNow)
 
-    }
-
-
-
-  // maybe use array.filter to compare word lengths and store the longest word into a variable that
-  // will then be alerted to the user
-
-
-}
-
-alertLongestWord(sentencePrompt)
+//     }
 
 
 
-function camelCaseThePrompt () {
-  var statementPrompt = prompt ("Enter a statement")
+//   // maybe use array.filter to compare word lengths and store the longest word into a variable that
+//   // will then be alerted to the user
 
-  var statementArr = statementPrompt.split(' ')
 
-  for(i = 0; i < statementArr.length; i++){
+// }
 
-    var upperCasedArray = statementArr[i][0].toUpperCase() + statementArr[i]
-    // eliminate the second letter in each array item\
-    var slicedUpperCasedArray = upperCasedArray.slice(0) + upperCasedArray.slice(4)
-    console.log(slicedUpperCasedArray)
-
-  }
+// alertLongestWord(sentencePrompt)
 
 
 
+// function camelCaseThePrompt () {
+//   var statementPrompt = prompt ("Enter a statement")
 
-}
-camelCaseThePrompt()
+//   var statementArr = statementPrompt.split(' ')
+
+//   for(i = 0; i < statementArr.length; i++){
+
+//     var upperCasedArray = statementArr[i][0].toUpperCase() + statementArr[i]
+//     // eliminate the second letter in each array item\
+//     var slicedUpperCasedArray = upperCasedArray.slice(0) + upperCasedArray.slice(4)
+//     console.log(slicedUpperCasedArray)
+
+//   }
+
+
+
+
+// }
+// camelCaseThePrompt()
 // var degreesInFahrenheit = prompt("give temperature Fahrenheit and I will convert it to Celsius");
 
 // var degreesInCelsius = degreesInFahrenheit + " in Fahrenheit is " + ((degreesInFahrenheit - 32) * 5 / 9) + " in celsius";
@@ -190,6 +295,12 @@ var...i think my brain ran out of glucose at this point so i just added a pictur
 //     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
 //   }).join('');
 // }
+
+// toCamelCase("foxes are big")
+
+
+
+
 
 
 

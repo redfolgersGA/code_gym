@@ -10,7 +10,7 @@ $(document).ready(function()){ //this calls the code
 var i = 0
   $('p').each(function(object){
     i++
-    this.innerText = "Paragraph: " =i
+    this.innerText = "Paragraph: " + i
   })
 
   //grab first in collection

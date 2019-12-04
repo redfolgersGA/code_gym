@@ -1,4 +1,128 @@
-// console.log("linked")
+console.log("linked")
+
+
+var detectives = {
+  mulder: {
+    name: "Fox Mulder",
+    actor: "David Duchovny",
+    school: "Oxford",
+    degree: "Psychology"
+  },
+  scully: {
+    name: "Dana Scully",
+    actor: "Gillian Anderson",
+    school: "University of Maryland",
+    degree: "Physics"
+  }
+};
+
+console.log(detectives.scully.name)
+
+for(var properties in detectives.mulder){
+  console.log(detectives.mulder[properties])
+
+}
+
+console.log(detectives.mulder.name + " and " + detectives.scully.name + ", played by "
+  + detectives.mulder.actor + " and " + detectives.scully.actor + ", are detectives in the X-Files")
+
+var readingList = [
+{
+  title: "The Hobbit",
+  author: "J.R.R. Tolkien",
+  alreadyRead: false
+},
+  {title: "Harry Potter and the Order of the Phoenix",
+  author: "J.K. Rowling",
+  alreadyRead: true
+  },
+]
+
+for(var i = 0; i < readingList.length; i++){
+  if(readingList[i].alreadyRead === true){
+  console.log(" You already read " + readingList[i].title + " by " + readingList[i].author)
+} else {
+  console.log("You still need to read " + readingList[i].title + " by " + readingList[i].author)
+}
+}
+
+var alien = {
+  title: "Alien",
+  director: "Ridley Scott",
+  duration: 117,
+  releaseYear: 1979,
+  stars: ["Tom Skerritt", "Sigourney Weaver", "Veronica Cartwright", "Harry Dean Stanton", "John Hurt", "Ian Holm", "Yaphet Kotto"]
+}
+
+function printMovieInfo(obj){
+  var stars = ""
+  var starsLength = alien.stars.length
+  for(var i = 0; i < alien.stars.length; i++) {
+    stars += alien.stars[i] + ", "
+    if(i+1 == starsLength){
+      stars += alien.stars[i] + "."
+    }
+
+
+  }
+
+  console.log(alien.title + " directed by " + alien.director + " and released in " +
+    alien.releaseYear + ",lasts for " + alien.duration + " It stars: " + stars)
+
+}
+
+printMovieInfo(alien)
+
+var emmanuel = {
+  firstName: "Emmanuel",
+  lastName: "Paulino",
+  age: 30,
+  homeTown: "New York City",
+  favoriteAnimal: "flamingo"
+
+}
+
+emmanuel.printData = function () {
+  var dataString = ""
+    for( var props in this){
+
+      if(typeof(this[props]) === "function"){
+        console.log("this a function fool")
+
+      } else {
+        dataString+= props + ":" + this[props] + ", "
+      }
+ }
+
+
+    console.log(dataString)
+  }
+
+ emmanuel.printData()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // var detectives = {
 //   mulder: {
@@ -87,37 +211,37 @@
 
 // logFavoriteMovie(favoriteMovie)
 
-var aboutMe = {
-  firstName: 'Emmanuel',
-  lastName: 'Paulino',
-  age: 29,
-  hometown: 'New York',
-  favoriteAnimal: 'Lion',
-  printData: function () {
+// var aboutMe = {
+//   firstName: 'Emmanuel',
+//   lastName: 'Paulino',
+//   age: 29,
+//   hometown: 'New York',
+//   favoriteAnimal: 'Lion',
+//   printData: function () {
 
-    for(var property in aboutMe){
+//     for(var property in aboutMe){
 
-      singleString = property + ":" + aboutMe[property]
-      var singleString;
+//       singleString = property + ":" + aboutMe[property]
+//       var singleString;
 
-      console.log(singleString)
-
-
-      // var logged = this.firstName + this.lastName + this.age + this.hometown + this.favoriteAnimal
-      // console.log(logged)
-
-    }
+//       console.log(singleString)
 
 
-  }
-}
+//       // var logged = this.firstName + this.lastName + this.age + this.hometown + this.favoriteAnimal
+//       // console.log(logged)
 
-aboutMe.printData()
+//     }
 
-var hoverListItem = document.getElementById('hoverListItem');
-hoverListItem.addEventListener('mouseover', function() {
-  alert("hovered")
-})
+
+//   }
+// }
+
+// aboutMe.printData()
+
+// var hoverListItem = document.getElementById('hoverListItem');
+// hoverListItem.addEventListener('mouseover', function() {
+//   alert("hovered")
+// })
 
 // `Fox Mulder and Dana Scully, played by David Duchovny and Gillian Anderson, are detectives in the X-Files `
 

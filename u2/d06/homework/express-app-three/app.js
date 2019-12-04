@@ -10,6 +10,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
   res.send('index');
+  console.log("index.html loaded")
 });
 
 var npmPackages = {
@@ -49,3 +50,9 @@ var npmPackages = {
   }
   ]
 }
+
+app.get('/api/npmPackages', function(req, res){
+  var json_data = npmPackages;
+  res.json(json_data)
+  console.log(json_data.text)
+})

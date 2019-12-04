@@ -1,38 +1,55 @@
 $(document).ready(function(){
-  var mainUrl = 'https://swapi.co/api/'
-  var first_film_url = "https://swapi.co/api/films/1/";
-
-$.ajax({
-  type: "GET",
-  url: first_film_url,
-  success: function(data){
-    console.log(data)
-    $.ajax({
-    type: "GET",
-    url: first_film_url,
-    success: function(data){
-    console.log(data.starships[6])
-      $.ajax({
-      type: "GET",
-      url: "https://swapi.co/api/starships/12/",
-      success: function (data) {
-      console.log(data.pilots[2])
-      $.ajax({
-      type: "GET",
-      url: "https://swapi.co/api/people/18/",
-      success: function (data) {
-      var container = $('#titles #titlecontent p');
-      container.text(JSON.stringify(data));
-  }
-})
 
 
-    }
-  })
-  }
-})
-  }
-})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   var mainUrl = 'https://swapi.co/api/'
+//   var first_film_url = "https://swapi.co/api/films/1/";
+
+// $.ajax({
+//   type: "GET",
+//   url: first_film_url,
+//   success: function(data){
+//     console.log(data)
+//     $.ajax({
+//     type: "GET",
+//     url: first_film_url,
+//     success: function(data){
+//     console.log(data.starships[6])
+//       $.ajax({
+//       type: "GET",
+//       url: "https://swapi.co/api/starships/12/",
+//       success: function (data) {
+//       console.log(data.pilots[2])
+//       $.ajax({
+//       type: "GET",
+//       url: "https://swapi.co/api/people/18/",
+//       success: function (data) {
+//       var container = $('#titles #titlecontent p');
+//       container.text(JSON.stringify(data));
+//   }
+// })
+
+
+//     }
+//   })
+//   }
+// })
+//   }
+// })
 
 
 

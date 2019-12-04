@@ -1,0 +1,45 @@
+.themed-grid-col {
+  padding-top: 15px;
+  padding-bottom:  15px;
+  background-color: rgba(255, 192, 203, .30);
+  border: 1px solid rgba(86, 61, 124, .2);
+  display: block;
+
+}
+
+
+.col-4 {
+  flex:  0 0 33.33%;
+  max-width:  33.33%;
+  display:  block;
+}
+
+.container-fluid {
+  padding-top: 15px;
+  padding-bottom:  15px;
+  background-color: rgba(255, 192, 203, .30);
+  border: 1px solid rgba(86, 61, 124, .2);
+  display: block;
+  height: 150px;
+  margin: 20px auto;
+
+}
+
+.container {
+  padding: 15px;
+  margin-bottom: 30px;
+  background-color: rgba(0, 123,255, .15);
+  border: 1px solid rgba(0, 123, 255, .2);
+  height: 250px;
+  width: 250px;
+  display: inline-block;
+
+}
+
+.pokemon {
+  background-image: url("../images/pokeball.jpg");
+  background-size: 130% 100%;
+
+
+}
+

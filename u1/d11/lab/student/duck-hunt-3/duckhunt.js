@@ -38,7 +38,7 @@ jQuery(function() {
   }
 
   function checkForWinner(){
-    if($('.duck').length ===0){
+    if($('div.flap').length ===0){
       alert('YOU WIN!');
     }
   }

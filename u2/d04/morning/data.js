@@ -82,7 +82,9 @@ var slips = [
 // .shuffle
 Array.prototype.shuffle = function() {
   for (var i = this.length-1; i >= 0; i--) {
+    console.log(this)
     var j = Math.floor(Math.random() * (i + 1));
+
     var temp = this[i];
     this[i] = this[j];
     this[j] = temp;
@@ -95,13 +97,13 @@ var zip = function(students, values) {
   hashName = {};
   if (students.length !== values.length) {
     console.log("Warning: Arrays are not equal lengths.");
-  } 
+  }
 
   for (var i = 0; i < students.length; i++) {
     hashName[students[i]] = values[i];
   }
   return hashName;
-  
+
 }
 
 // pkeyValue
