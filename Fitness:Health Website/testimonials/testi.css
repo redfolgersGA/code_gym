@@ -15,7 +15,7 @@ nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
+  min-height: 15vh;
   background-color: #5d4954;
   font-family: 'Poppins', sans-serif;
 }
@@ -30,7 +30,7 @@ nav{
 .nav-links{
   display: flex;
   justify-content: space-around;
-  width: 30%;
+  width: 60%;
 }
 
 .nav-links li{
@@ -42,7 +42,7 @@ nav{
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
 
 }
 
@@ -56,6 +56,7 @@ nav{
   height: 3px;
   background-color: rgb(226, 226, 226);
   margin: 5px;
+  transition: all 0.3s ease;
 }
 
 @media screen and (max-width:1024px){
@@ -104,6 +105,20 @@ nav{
     opacity: 1;
     transform: translateX(0px);
   }
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+
+}
+.toggle .line2{
+  opacity: 0;
+
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+
+
 }
 
 
