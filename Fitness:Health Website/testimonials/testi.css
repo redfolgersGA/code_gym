@@ -189,21 +189,15 @@ h4{
 
 .emmanuelDiv{
   text-align: center;
+  margin: 20px;
+  border: 1px solid;
 
 }
 
-.emmanuel-description-div{
-  border-right: 5px solid;
-  width: 600px;
-}
-
-#emmanuel-description:{
-  text-align: left;
-}
 .profile-pic{
   box-shadow: 0px 4px 6px 2px lightgrey;
   width: 200px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   border-radius: 50%;
 
 }
