@@ -16,8 +16,14 @@ nav{
   justify-content: space-around;
   align-items: center;
   min-height: 15vh;
-  background-color: #5d4954;
-  font-family: 'Poppins', sans-serif;
+  background-color: #36B592;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: normal;
+
+}
+
+h4{
+  color: black;
 }
 
 .logo{
@@ -38,11 +44,11 @@ nav{
 }
 
 .nav-links a{
-  color: rgb(226, 226, 226);
+  color: #FFFFFF;
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
 
 }
 
@@ -73,8 +79,8 @@ nav{
     position: absolute;
     right: 0px;
     height: 92vh;
-    top: 8vh;
-    background-color: #5D4954;
+    top: 15vh;
+    background-color: rgb(226, 226, 226);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,6 +100,7 @@ nav{
 
 .nav-active{
   transform: translateX(0%);
+
 }
 
 @keyframes navLinkFade{
@@ -167,15 +174,43 @@ nav{
   display:  block;
 }
  */
-.first-div {
-  padding-top: 0px;
-  padding-bottom:  0px;
-  background-color: white;
-  border: 0px solid rgba(86, 61, 124, .2);
+
+#background-div{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
   display: block;
-  height: 400px;
-  margin: 0 auto;
-  width: 100%;
+}
+
+.pre-first-div{
+  height: 200px;
+  color: #333;
+  border: 1px solid;
+}
+
+.first-div {
+  padding-top: 1em;
+  padding-right: 2em;
+  padding-bottom:  1em;
+  padding-left: 2em;
+  margin-top: 20px;
+  margin-right: 200px;
+  margin-bottom: 4em;
+  margin-left: 200px;
+  box-shadow: inset 10px 10px 2px 4px #FFFF;
+  background-color: white;
+  border: 1px solid #EBEBEB;
+  background: #FAFAFA;
+  display: block;
+ /*  height: 400px;
+
+  width: 100%; */
+  /* background-color: #2098D1; */
+
 
 
 }
