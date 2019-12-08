@@ -1,5 +1,6 @@
 .main-div{
-width: 800px;
+width: 1000px;
+
 text-align: center;
 
 
@@ -7,12 +8,15 @@ text-align: center;
 }
 
 .first-div{
-  height: 500px;
+  margin: 100px;
+
+  height: 460px;
   border: 1px solid;
-  width: 200px;
-  float: right;
+  width: 314px;
+
   display: inline-block;
-  position: absolute;
+  /* float: left; */
+
 
 
 }
@@ -25,4 +29,13 @@ text-align: center;
   float: right;
   position: absolute;
 
+
+}
+
+img{
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+ /*  width: 314px;
+  height: 463px; */
 }
