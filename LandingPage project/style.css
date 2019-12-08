@@ -1,3 +1,28 @@
-.div-one{
-  color: red;
+.main-div{
+width: 800px;
+text-align: center;
+
+
+
+}
+
+.first-div{
+  height: 500px;
+  border: 1px solid;
+  width: 200px;
+  float: right;
+  display: inline-block;
+  position: absolute;
+
+
+}
+
+.second-div{
+  height: 500px;
+  width: 500px;
+  border: 1px solid;
+  display: inline-block;
+  float: right;
+  position: absolute;
+
 }
