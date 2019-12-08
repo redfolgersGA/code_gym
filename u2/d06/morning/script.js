@@ -1,114 +1,130 @@
 $(document).ready(function(){
-console.log("loaded")
+console.log("loaded new")
 
-var searchTerm = "drake"
+var button = $('#click-me')
 
-var button = $('button#click-me')
-
-button.on("click", getResults);
-
-// button.on("click", function(){ var searchTerm = $('input#itunes-search').val()
-// console.log(searchTerm)});
-
-function getResults() {
-  var searchTerm = $('input#itunes-search').val()
-  console.log(searchTerm)
-  var classItem = $('.item');
-  classItem.remove()
- $.ajax({
-  type: "GET",
-  url: "https://itunes.apple.com/search?term=",
-  dataType: 'jsonp',
-  data : { term: searchTerm, media: "music", entity: "album", limit: 25},
-  success: function(data) {
-  // result is an array
-
-  var result = data.results;
-  if(result.length === 0){
-    console.log("error")
-
-  } else {
-
-
-
-  console.log(result)
-  $results = $('<ul>');
-
-  var $item, $thumbnail, $description, $artist, $album, $price;
-  var $body = $('body')
-
-
-  // Use a forEach method to iterate over all of the result items and then do
-  // the following in the for loop:
-
-  result.forEach(function(item){
-    var $item = $('<li></li>')
-    var $thumbnail = $('<img>')
-    var $description = $('<div></div>')
-    var $artist = $('<p></p>')
-    var $album = $('<p></p>')
-    var $price = $('<p></p>')
-
-    $item.addClass('item')
-    $thumbnail.addClass('albumCover')
-    $artist.addClass('artist')
-    $album.addClass('album')
-    $price.addClass('price')
-
-
-    $thumbnail.attr('src', item.artworkUrl100)
-    $artist.text(item.artistName)
-    console.log($artist.text())
-    $album.text(item.collectionName)
-    $price.text(item.collectionPrice)
+button.click(function(e){
+  console.log('clicked')
+})
 
 
 
 
-    $description.append($artist)
-    $description.append($album)
-    $description.append($price)
-
-
-
-    $item.append($thumbnail)
-    $item.append($description)
-
-
-    $results.append($item)
-
-
-  })
-
-  $body.append($results)
-
-  //   - USING JQUERY, create a 'li' element and store it in '$item',
-  //   create a '<img>' element and store it in '$thumbnail', create
-  //   a '<div>' element and store it in $decription, and create '<p>'
-  //   elements and store them in $artist, $album, $price
-  //   - Add a class of 'item' to '$item'
-  //   - Add a class of 'albumCover' to '$thumbnail'
-  //   - Add a calss of 'artist' to '$artist'
-  //   - Add a class of 'album' to '$album'
-  //   - Add a class of 'price' to '$price'
-  //   - Find where the thumbnail image is being stored in the result
-  //   object and then set the '$thumbnail's src attribute to it
-  //   - Find where the artist's name is being stored in the object
-  //   and set artist text to that, do the same for the album and price
-  //   - Append $artist, $album, $price to $description
-  //   - Append $thumbmail and $desciption to $item
-  //   - Append $item to $results
-  //  - End forEach method
-  //  - Append $results to $body
-}}
- })
-
-
-}
 
 
 
 
+
+
+// --------------------------------------------------------12/8/19 HERE
+// var searchTerm = "drake"
+
+// var button = $('button#click-me')
+
+// button.on("click", getResults);
+
+// // button.on("click", function(){ var searchTerm = $('input#itunes-search').val()
+// // console.log(searchTerm)});
+
+// function getResults() {
+//   var searchTerm = $('input#itunes-search').val()
+//   console.log(searchTerm)
+//   var classItem = $('.item');
+//   classItem.remove()
+//  $.ajax({
+//   type: "GET",
+//   url: "https://itunes.apple.com/search?term=",
+//   dataType: 'jsonp',
+//   data : { term: searchTerm, media: "music", entity: "album", limit: 25},
+//   success: function(data) {
+//   // result is an array
+
+//   var result = data.results;
+//   if(result.length === 0){
+//     console.log("error")
+
+//   } else {
+
+
+
+//   console.log(result)
+//   $results = $('<ul>');
+
+//   var $item, $thumbnail, $description, $artist, $album, $price;
+//   var $body = $('body')
+
+
+//   // Use a forEach method to iterate over all of the result items and then do
+//   // the following in the for loop:
+
+//   result.forEach(function(item){
+//     var $item = $('<li></li>')
+//     var $thumbnail = $('<img>')
+//     var $description = $('<div></div>')
+//     var $artist = $('<p></p>')
+//     var $album = $('<p></p>')
+//     var $price = $('<p></p>')
+
+//     $item.addClass('item')
+//     $thumbnail.addClass('albumCover')
+//     $artist.addClass('artist')
+//     $album.addClass('album')
+//     $price.addClass('price')
+
+
+//     $thumbnail.attr('src', item.artworkUrl100)
+//     $artist.text(item.artistName)
+//     console.log($artist.text())
+//     $album.text(item.collectionName)
+//     $price.text(item.collectionPrice)
+
+
+
+
+//     $description.append($artist)
+//     $description.append($album)
+//     $description.append($price)
+
+
+
+//     $item.append($thumbnail)
+//     $item.append($description)
+
+
+//     $results.append($item)
+
+
+//   })
+
+//   $body.append($results)
+
+//   //   - USING JQUERY, create a 'li' element and store it in '$item',
+//   //   create a '<img>' element and store it in '$thumbnail', create
+//   //   a '<div>' element and store it in $decription, and create '<p>'
+//   //   elements and store them in $artist, $album, $price
+//   //   - Add a class of 'item' to '$item'
+//   //   - Add a class of 'albumCover' to '$thumbnail'
+//   //   - Add a calss of 'artist' to '$artist'
+//   //   - Add a class of 'album' to '$album'
+//   //   - Add a class of 'price' to '$price'
+//   //   - Find where the thumbnail image is being stored in the result
+//   //   object and then set the '$thumbnail's src attribute to it
+//   //   - Find where the artist's name is being stored in the object
+//   //   and set artist text to that, do the same for the album and price
+//   //   - Append $artist, $album, $price to $description
+//   //   - Append $thumbmail and $desciption to $item
+//   //   - Append $item to $results
+//   //  - End forEach method
+//   //  - Append $results to $body
+// }}
+//  })
+
+
+// }
+
+
+
+// ---------------------------------------------------------12/8/19 HERE
 
 
 
