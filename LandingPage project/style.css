@@ -50,11 +50,22 @@ border: 1px solid;
 
 }
 
-#secptag{
+#sech3tag{
   color: red;
   position: absolute;
-  left: 600px;
-  top: 400px;
+  left: 700px;
+  top: 30px;
+  color: rgb(0, 117, 178);
+  font-size: 28px;
+
+}
+
+#secndh1tag{
+  color: red;
+  position: absolute;
+  left: 670px;
+  top: 60px;
+  font-size: 42px;
 }
 
 
