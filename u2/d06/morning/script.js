@@ -3,12 +3,12 @@ console.log("loaded new")
 
 var button = $('#click-me')
 
-button.click(function(e){
-  console.log('clicked')
-})
+button.click(getResults)
 
 
-
+function getResults(e){
+  console.log("got results")
+}
 
 
 
