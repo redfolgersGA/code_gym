@@ -1,11 +1,14 @@
 $(document).ready(function(){
 console.log("loaded")
+var d = new Date();
   // MAKE .banner into a countdown for christmas
 var banner = $('.banner')
 var xmasMonth = 11;
 var xmasDay = 25
+var daysTillXmas = xmasDay - d.getUTCDate()
+console.log(daysTillXmas)
 
-var d = new Date();
+
 
 console.log(d.toDateString())
 
