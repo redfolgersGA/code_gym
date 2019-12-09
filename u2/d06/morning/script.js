@@ -9,8 +9,20 @@ button.click(getResults)
 
 function getResults(e){
   item.remove()
-  var query = $('#itunes-search')
-  console.log(query)
+  var inputTag = $('#itunes-search')
+  var query = inputTag.val()
+
+  $.ajax({
+    type: "GET",
+    url: "https://itunes.apple.com/search",
+    dataType: "jsonp",
+    data: { term: query, media: "music", entity: "album", limit: 25},
+    success: function(data){
+      console.log(data)
+    }
+
+
+  })
 
 
 }
