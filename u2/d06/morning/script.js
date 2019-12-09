@@ -1,6 +1,7 @@
 $(document).ready(function(){
 console.log("loaded new")
 
+var body = $('body')
 var button = $('#click-me')
 var item = $('.item')
 
@@ -18,7 +19,50 @@ function getResults(e){
     dataType: "jsonp",
     data: { term: query, media: "music", entity: "album", limit: 25},
     success: function(data){
-      console.log(data)
+      result = data.results
+      console.log(result)
+      $results = $('<ul>')
+
+      var $item, $thumbnail, $description, $artist, $album, $price;
+
+      result.forEach(function(res){
+        $item = $('<li>')
+        $thumbnail = $('<img>')
+        $description = $('<div>')
+        $artist = $('<p>')
+        $album = $('<p>')
+        $price = $('<p>')
+
+        $item.addClass('item')
+
+        $thumbnail.addClass('albumCover')
+        $thumbnail.attr('src', res.artworkUrl60)
+        console.log($thumbnail)
+
+
+        $artist.addClass('artist')
+        $artist.text(res.artistName)
+
+        $album.addClass('album')
+        $album.text(res.collectionName)
+
+        $price.addClass('price')
+        $price.text(res.collectionPrice)
+
+        $description.append($artist)
+        $description.append($album)
+        $description.append($price)
+
+        $item.append($thumbnail)
+        $item.append($description)
+
+        $results.append($item)
+
+
+
+      })
+
+      body.append($results)
     }
 
 
