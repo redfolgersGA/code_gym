@@ -1,3 +1,16 @@
-p {
-  color: red;
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 15vh;
+  background-color: green;
+  font-family: helvetica,arial, sans-serif;
+
+
+
 }
+
+/* li{
+  display: inline-block;
+  text-align: center;
+} */
