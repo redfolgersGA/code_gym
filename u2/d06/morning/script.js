@@ -2,12 +2,17 @@ $(document).ready(function(){
 console.log("loaded new")
 
 var button = $('#click-me')
+var item = $('.item')
 
 button.click(getResults)
 
 
 function getResults(e){
-  console.log("got results")
+  item.remove()
+  var query = $('#itunes-search')
+  console.log(query)
+
+
 }
 
 
