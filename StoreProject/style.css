@@ -1,5 +1,6 @@
 body{
   margin: 0;
+  position: relative;
 }
 
 .banner{
@@ -7,7 +8,7 @@ body{
   /* position: absolute; */
 
   border: 1px solid;
-  min-height: 10vh;
+  min-height: 45px;
   justify-content: space-around;
   background-color: #134b33;
 
@@ -16,6 +17,8 @@ body{
 
 .banner h1{
   color: white;
+  justify-content: space-around;
+
 }
 
 
@@ -23,11 +26,14 @@ nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 15vh;
-  background-color: green;
+  min-height: 45px;
+  background-color: #FFFFFF;
   font-family: helvetica,arial, sans-serif;
   font-weight: normal;
-  border-bottom: 5px solid;
+  border-bottom: 1px solid rgba(0, 0, 0,.2);
+  position: relative;
+
+
 
 
 
@@ -47,14 +53,27 @@ nav{
 
 .nav-links li{
   list-style: none;
+  font-size: 12px;
+
+  /* letter-spacing: -4px;
+  color: black; */
 }
 
 .nav-links a{
   text-decoration: none;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
+  color: black;
+
 }
 
-/* li{
-  display: inline-block;
-  text-align: center;
+/* .burger{
+  display: none;
+  cursor: pointer;
+} */
+
+/* .burger div{
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
 } */

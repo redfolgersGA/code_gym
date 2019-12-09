@@ -27,9 +27,9 @@ banner.text('ONLY' + daysTillXmas + ' DAYS LEFT TO GET YOUR GIFTS!')
 banner.css({
       "color": "white",
       "font-weight": "bolder",
-      "font-family": "helvetica,arial, sans-serif",
-      "display": "flex",
-      "justify-content": "space-around"
+      "font-family": "helvetica,arial, sans-serif"
+      // "display": "flex",
+      // "justify-content": "space-around"
 
     })
 
