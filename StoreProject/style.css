@@ -7,11 +7,15 @@ body{
   /* position: absolute; */
 
   border: 1px solid;
-  min-height: 15vh;
+  min-height: 10vh;
   justify-content: space-around;
-  width: 100vw;
-  background-color: red;
+  background-color: #134b33;
 
+
+}
+
+.banner h1{
+  color: white;
 }
 
 
