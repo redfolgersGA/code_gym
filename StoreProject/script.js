@@ -24,15 +24,18 @@ if(d.getUTCDate() === xmasDay && d.getUTCMonth() === xmasMonth){
 
 // get banner.text to change '16' dynamically based on how many days left till xmas
 
-banner.text('ONLY' + daysTillXmas + ' DAYS LEFT TO GET YOUR GIFTS!')
-banner.css({
-      "color": "white",
-      "font-weight": "bolder",
-      "font-family": "helvetica,arial, sans-serif"
-      // "display": "flex",
-      // "justify-content": "space-around"
+// banner.text('ONLY' + daysTillXmas + ' DAYS LEFT TO GET YOUR GIFTS!')
+banner.append('<p>Only ' + daysTillXmas + ' DAYS LEFT TO GET YOUR GIFTS!</p>')
+// banner.css({
+//       "color": "white",
+//       "font-weight": "bolder",
+//       "font-family": "helvetica,arial, sans-serif",
+//       "position": "relative",
+//       "left": "200px"
+//       // "display": "flex",
+//       // "justify-content": "space-around"
 
-    })
+//     })
 
 
 
