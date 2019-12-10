@@ -18,13 +18,10 @@ body{
 }
 
 .banner p{
-  /* justify-content: space-around; */
   color: white;
   font-weight: bolder;
   font-family: helvetica,arial, sans-serif;
-  text-align: center;
   margin: 0 auto;
-
 }
 
 
