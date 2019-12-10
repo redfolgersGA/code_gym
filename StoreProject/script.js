@@ -3,6 +3,7 @@ console.log("loaded")
 var d = new Date();
   // MAKE .banner into a countdown for christmas
 var banner = $('.banner')
+var burger = $('.burger')
 var xmasMonth = 11;
 var xmasDay = 25
 var daysTillXmas = xmasDay - d.getUTCDate()
