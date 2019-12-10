@@ -35,16 +35,10 @@ nav{
   font-weight: normal;
   border-bottom: 1px solid rgba(0, 0, 0,.2);
   position: relative;
-
-
-
-
-
 }
 
 .logo{
   letter-spacing: 5px;
-
 }
 
 .nav-links{
@@ -53,8 +47,6 @@ nav{
   /* justify-content: space-around; */
   width: 60%;
   position: relative;
-
-
 }
 
 .nav-links li{
@@ -73,7 +65,8 @@ nav{
   padding: 5px;
   position: relative;
   top: 8px;
-  left: 150px;
+  left: 50px;
+  margin: 0 auto;
 
 
 }
@@ -91,9 +84,13 @@ input{
   }
 }
 
-@media screen and (max-width: 966px){
+@media screen and (max-width: 1012px){
   body{
     overflow-x: hidden;
+  }
+
+  nav{
+    min-height: 60px;
   }
   .nav-links{
     position: absolute;
@@ -106,7 +103,7 @@ input{
     align-items: center;
     width: 50%;
     transform: translateX(100%);
-    /* transition: transform 0.5s ease-in; */
+    /* transition: transform 0.5s ease-in;
 
   }
   .nav-links li{
