@@ -39,13 +39,28 @@ banner.append('<p>Only ' + daysTillXmas + ' DAYS LEFT TO GET YOUR GIFTS!</p>')
 //     })
 
 
+
+
 burger.click(function(){
-  burger.addClass('toggle')
-  navLinks.addClass('nav-active')
-  console.log('toggled')
+    burger.toggleClass('toggle')
+    navLinks.toggleClass('nav-active')
+    console.log('toggled')
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// ENDEND ENDEND
 
 })
 
