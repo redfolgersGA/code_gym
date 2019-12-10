@@ -4,6 +4,7 @@ var d = new Date();
   // MAKE .banner into a countdown for christmas
 var banner = $('.banner')
 var burger = $('.burger')
+var navLinks = $('.nav-links')
 var xmasMonth = 11;
 var xmasDay = 25
 var daysTillXmas = xmasDay - d.getUTCDate()
@@ -38,9 +39,11 @@ banner.append('<p>Only ' + daysTillXmas + ' DAYS LEFT TO GET YOUR GIFTS!</p>')
 //     })
 
 
-
-
-
+burger.click(function(){
+  burger.addClass('toggle')
+  navLinks.addClass('nav-active')
+  console.log('toggled')
+})
 
 
 
