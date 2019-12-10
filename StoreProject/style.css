@@ -69,7 +69,7 @@ nav{
   padding: 5px;
   position: relative;
   top: 8px;
-  left: 50px;
+  left: -40px;
   margin: 0 auto;
 
 
@@ -93,8 +93,12 @@ input{
     overflow-x: hidden;
   }
 
+  .banner{
+    min-height: 80px;
+  }
+
   nav{
-    min-height: 100px;
+    min-height: 120px;
   }
 
   .logo{
