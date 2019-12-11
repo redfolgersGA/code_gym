@@ -118,12 +118,22 @@ input{
     align-items: center;
     width: 50%;
     transform: translateX(100%);
+    border-top: 1px solid;
     /* transition: transform 0.5s ease-in; */
 
   }
 
+
   .nav-links li{
     /* opacity: 0; */
+
+  }
+
+  .nav-links a{
+    font-size: 30px;
+    margin: 0 auto;
+    border: 1px solid;
+
   }
   .burger{
     display: block;
