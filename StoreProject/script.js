@@ -42,6 +42,7 @@ banner.append('<p>Only ' + daysTillXmas + ' DAYS LEFT TO GET YOUR GIFTS!</p>')
 
 
 burger.click(function(){
+    banner.remove()
     burger.toggleClass('toggle')
     navLinks.toggleClass('nav-active')
     console.log('toggled')
