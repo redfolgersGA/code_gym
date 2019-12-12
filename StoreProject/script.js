@@ -5,11 +5,19 @@ var d = new Date();
 var banner = $('.banner')
 var burger = $('.burger')
 var navLinks = $('.nav-links')
+var loudAd = $('.loud-ad-here')
+var loudAdImage = $('#ad-image')
 var xmasMonth = 11;
 var xmasDay = 25
 var daysTillXmas = xmasDay - d.getUTCDate()
 
-
+$.ajax({
+  type: "GET",
+  url: "https://api.unsplash.com/photos/?client_id=",
+  success: function(data){
+    loudAdImage.attr('src', data[0].urls.small)
+  }
+})
 
 
 console.log(d.toDateString())
@@ -49,6 +57,7 @@ burger.click(function(){
     console.log('toggled')
     console.log(clicked)
 })
+
 
 
 

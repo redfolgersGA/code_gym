@@ -186,8 +186,11 @@ input{
   margin: 5px;
 }
 
-/* .loud-ad-here{
-  position: relative;
-  top: 500px;
+.loud-ad-here{
+  /* position: relative;
+  top: 500px; */
+  height: 500px;
+  width: 500px;
+  border: 1px solid;
 
-} */
+}
