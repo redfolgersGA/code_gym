@@ -11,14 +11,15 @@ var xmasMonth = 11;
 var xmasDay = 25
 var daysTillXmas = xmasDay - d.getUTCDate()
 
-$.ajax({
-  type: "GET",
-  url: "https://api.unsplash.com/photos/?client_id=",
-  success: function(data){
-    loudAdImage.attr('src', data[0].urls.small)
-  }
-})
+// $.ajax({
+//   type: "GET",
+//   url: "https://api.unsplash.com/photos/?client_id=",
+//   success: function(data){
+//     loudAdImage.attr('src', data[0].urls.small)
+//   }
+// })
 
+// loudAdImage.attr('src', 'images/model1.jpg')
 
 console.log(d.toDateString())
 

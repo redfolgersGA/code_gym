@@ -189,8 +189,15 @@ input{
 .loud-ad-here{
   /* position: relative;
   top: 500px; */
+  height: 124px;
+  width: 920px;
+  border: 1px solid;
+
+}
+
+.models{
   height: 500px;
   width: 500px;
   border: 1px solid;
-
+  display: inline-block;
 }
