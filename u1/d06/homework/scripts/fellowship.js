@@ -106,6 +106,51 @@ var makeBuddies = function(){
 
 makeBuddies()
 
+var beautifulStranger = function() {
+  var allLis = document.querySelectorAll('li')
+  var allLisArray = Array.from(allLis)
+
+  console.log(allLisArray)
+
+  for(var i=0 ; i < allLisArray.length; i++){
+    if(allLisArray[i].textContent === "Strider"){
+      alert('changing strider to aragorn')
+      allLisArray[i].textContent = 'Aragorn'
+    }
+  }
+
+}
+
+
+beautifulStranger()
+
+var leaveTheShire = function(){
+  var rivendell = document.querySelectorAll('article')[1]
+
+
+
+
+  var hobbitOne = document.querySelectorAll('li')[0]
+  var hobbitTwo= document.querySelectorAll('li')[1]
+  var hobbitThree = document.querySelectorAll('li')[2]
+  var hobbitFour = document.querySelectorAll('li')[3]
+
+
+  rivendell.appendChild(hobbitOne)
+  rivendell.appendChild(hobbitTwo)
+  rivendell.appendChild(hobbitThree)
+  rivendell.appendChild(hobbitFour)
+
+
+
+
+
+
+  // console.log(allHobbits)
+}
+
+leaveTheShire()
+
 
 // var makeMiddleEarth = function() {
 //   var middleEarthSectionTag = document.createElement('section')
