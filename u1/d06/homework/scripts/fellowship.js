@@ -151,6 +151,22 @@ var leaveTheShire = function(){
 
 leaveTheShire()
 
+var forgeTheFellowShip = function() {
+  var theFellowShipDiv = document.createElement('div')
+  var allLis = document.querySelectorAll('li')
+  var rivendell = document.querySelectorAll('article')[1]
+
+  rivendell.appendChild(theFellowShipDiv)
+
+  for(var i=0; i < allLis.length; i++){
+    theFellowShipDiv.appendChild(allLis[i])
+    alert(allLis[i].textContent + " has joined the party")
+
+  }
+}
+
+forgeTheFellowShip()
+
 
 // var makeMiddleEarth = function() {
 //   var middleEarthSectionTag = document.createElement('section')
