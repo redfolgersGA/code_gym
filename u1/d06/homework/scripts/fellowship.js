@@ -75,10 +75,36 @@ var makeHobbits = function() {
 makeHobbits()
 
 var keepItSecretKeepItSafe = function() {
-  var theRingDiv = document.createElement('#the-ring')
+  var frodo = document.querySelector('li')
+  var theRingDiv = document.createElement('div')
+  theRingDiv.setAttribute('id', 'the-ring')
+  theRingDiv.classList.add("magic-imbued-jewelry")
+
+  frodo.appendChild(theRingDiv)
 
 }
 
+keepItSecretKeepItSafe()
+
+var makeBuddies = function(){
+  var rivendell = document.querySelectorAll('article')[1]
+  var asideTagForUl = document.createElement('aside')
+  var ulTagForBuddies = document.createElement('ulTagForBuddies')
+
+  buddies.forEach(function(buddy){
+    var liTagForBuddy = document.createElement('li')
+    liTagForBuddy.innerHTML = buddy
+    ulTagForBuddies.appendChild(liTagForBuddy)
+  })
+
+  asideTagForUl.appendChild(ulTagForBuddies)
+
+  rivendell.appendChild(asideTagForUl)
+
+
+}
+
+makeBuddies()
 
 
 // var makeMiddleEarth = function() {
