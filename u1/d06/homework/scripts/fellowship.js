@@ -200,8 +200,19 @@ var hornOfGondor = function () {
 hornOfGondor()
 
 var itsDangerousToGoAlone = function(){
+  var allLis = document.querySelectorAll('li')
+  var mordor = document.querySelectorAll('article')[2]
 
+  for(var i=0; i<allLis.length; i++){
+    if(allLis[i].textContent === "Frodo Baggins" || allLis[i].textContent === 'Samwise \'Sam\' Gamgee'){
+
+      mordor.appendChild(allLis[i])
+
+    }
+  }
 }
+
+itsDangerousToGoAlone()
 
 
 // var makeMiddleEarth = function() {
