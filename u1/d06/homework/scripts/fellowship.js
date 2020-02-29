@@ -167,6 +167,42 @@ var forgeTheFellowShip = function() {
 
 forgeTheFellowShip()
 
+var theBalrog = function(){
+  var allLis = document.querySelectorAll('li')
+
+  for(var i=0; i<allLis.length;i++){
+    if(allLis[i].textContent === "Gandalf the Grey"){
+      alert("gandalf is white now")
+      allLis[i].textContent = "Gandalf the White"
+      allLis[i].setAttribute("style", "border: 1px solid grey; background: white")
+
+    }
+  }
+}
+
+theBalrog()
+
+var hornOfGondor = function () {
+  alert("the horn of gondor has been blown")
+  alert("boromir has been killed by the uruk hai")
+
+  var allLis = document.querySelectorAll('li')
+
+  for(var i=0;i<allLis.length;i++){
+    if(allLis[i].textContent === "Boromir"){
+      allLis[i].setAttribute("style", "text-decoration: line-through")
+    }
+  }
+
+
+}
+
+hornOfGondor()
+
+var itsDangerousToGoAlone = function(){
+
+}
+
 
 // var makeMiddleEarth = function() {
 //   var middleEarthSectionTag = document.createElement('section')
