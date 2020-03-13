@@ -57,6 +57,7 @@ var makeHobbits = function() {
   hobbits.forEach(function(hobbit){
     var liTagForHobbits = document.createElement('li')
     liTagForHobbits.innerHTML = hobbit
+    liTagForHobbits.classList.add('hobbit')
 
     ulForHobbitsTag.appendChild(liTagForHobbits)
 
@@ -94,6 +95,7 @@ var makeBuddies = function(){
   buddies.forEach(function(buddy){
     var liTagForBuddy = document.createElement('li')
     liTagForBuddy.innerHTML = buddy
+    liTagForBuddy.classList.add('buddy')
     ulTagForBuddies.appendChild(liTagForBuddy)
   })
 
@@ -213,6 +215,45 @@ var itsDangerousToGoAlone = function(){
 }
 
 itsDangerousToGoAlone()
+
+var weWantsIt = function(){
+  var gollumDiv = document.createElement('div')
+  gollumDiv.setAttribute('id', 'gollum')
+  var mordor = document.querySelectorAll('article')[2]
+  var frodo = document.querySelectorAll('li')[7]
+  var theRing = document.querySelector('#the-ring')
+
+  mordor.appendChild(gollumDiv)
+
+  gollumDiv.appendChild(theRing)
+}
+
+weWantsIt()
+
+var thereAndBackAgain = function(){
+  var gollum = document.querySelector('#gollum')
+  var buddies = document.querySelectorAll('.buddy')
+  var hobbits = document.querySelectorAll('.hobbit')
+  var theShire = document.querySelector('article')
+
+
+
+  gollum.remove()
+
+  for(var i= 0; i<buddies.length; i++){
+
+    buddies[i].remove()
+  }
+
+
+  for(var i=0; i<hobbits.length; i++){
+
+    theShire.appendChild(hobbits[i])
+  }
+
+}
+
+thereAndBackAgain()
 
 
 // var makeMiddleEarth = function() {
