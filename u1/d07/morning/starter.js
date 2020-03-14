@@ -42,6 +42,42 @@ function randomValue (arr) {
 
 randomValue(fullSuite)
 
+function twoCardsAdded() {
+  var cardOne = fullSuite[Math.floor(Math.random() * fullSuite.length)][1]
+  var cardTwo = fullSuite[Math.floor(Math.random() * fullSuite.length)][1]
+
+  if(cardOne === "J" || cardOne === "Q" || cardOne === "K"){
+    console.log(cardOne)
+    cardOne = 10
+    console.log("card One was J,Q or K and is now 10")
+
+  } else if(cardOne === "A"){
+    console.log(cardOne)
+    cardOne = 11
+    console.log("card One was A and is now 11")
+
+  }
+
+  if(cardTwo === "J" || cardTwo === "Q" || cardTwo === "K"){
+    console.log(cardTwo)
+    cardTwo = 10
+    console.log("cardTwo was J, Q, or K and is now 10")
+  } else if(cardTwo === "A"){
+    console.log(cardTwo)
+    cardTwo = 11
+    console.log("cardTwo was A and is now 11")
+  }
+
+  console.log(cardOne, cardTwo)
+  console.log(parseInt(cardOne) + parseInt(cardTwo))
+
+
+
+}
+
+twoCardsAdded()
+
+
 
 
 
