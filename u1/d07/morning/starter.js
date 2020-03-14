@@ -81,6 +81,8 @@ twoCardsAdded()
 
 
 
+
+
 // function cardsTwo () {
 //   for(var i = 0; i< values.length; i++){
 //     for(var j =0; j< suits.length; j++){
@@ -194,6 +196,46 @@ var candidates = [
   }
 
 ]
+
+function youngestCandidate(){
+  var checker = candidates[0].age
+  var youngest;
+
+  for(var i=0; i < candidates.length; i++){
+
+    if(candidates[i].age <= checker){
+      checker = candidates[i].age
+      youngest = candidates[i].name
+
+    }
+  }
+
+  console.log(youngest + " is the youngest candidate. He is " + checker + " years old.")
+
+  console.log(checker)
+
+
+
+}
+
+youngestCandidate()
+
+function runForOffice(name, age){
+  var newCandidate = {name: name,
+  age: age}
+
+  candidates.push(newCandidate)
+
+}
+
+runForOffice("Michael Bloomberg", 73)
+
+
+
+runForOffice("Emmanuel Paulino", 40)
+console.log(candidates)
+
+youngestCandidate()
 
 // var candidateAge = 0;
 
