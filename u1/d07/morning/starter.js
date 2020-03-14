@@ -6,6 +6,44 @@ var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 var fullSuite = [];
 var tracker = 0;
 
+// 3/14/20
+
+for(var i=0; i<suits.length;i++){
+  for(var j=0; j<values.length;j++){
+    // console.log(suits[i] + values[j])
+    fullSuite.push(suits[i] + values[j])
+  }
+}
+
+var randomNumber = Math.floor(Math.random() * fullSuite.length)
+
+
+
+
+function randomValue (arr) {
+
+  var randomNumberChosen = arr[randomNumber]
+
+  var cardValue = randomNumberChosen[1]
+
+
+
+  if(cardValue === "J" || cardValue === "Q" || cardValue === "K") {
+    console.log("card was a " + cardValue)
+    cardValue = 10
+
+  } else if(cardValue === "A"){
+    console.log("card was a " + cardValue)
+    cardValue = 11
+  }
+
+  console.log(cardValue + "-----------")
+}
+
+randomValue(fullSuite)
+
+
+
 
 // function cardsTwo () {
 //   for(var i = 0; i< values.length; i++){
@@ -121,30 +159,30 @@ var candidates = [
 
 ]
 
-var candidateAge = 0;
+// var candidateAge = 0;
 
-function youngestCandidate (arr) {
-  var counter = 0;
-
-
-  for(var i = 0; i < arr.length; i++){
-    console.log(arr[i])
-    console.log(counter)
-
-    if(arr[i].age <= counter){
-      counter = arr[i].age
-      console.log(counter)
-
-    }
-
-  }
+// function youngestCandidate (arr) {
+//   var counter = 0;
 
 
+//   for(var i = 0; i < arr.length; i++){
+//     console.log(arr[i])
+//     console.log(counter)
+
+//     if(arr[i].age <= counter){
+//       counter = arr[i].age
+//       console.log(counter)
+
+//     }
+
+//   }
 
 
-}
 
-youngestCandidate(candidates)
+
+// }
+
+// youngestCandidate(candidates)
 
 
 
