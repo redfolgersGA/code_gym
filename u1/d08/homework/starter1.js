@@ -50,7 +50,7 @@ for(var i = 0; i< allZones.length; i++){
 
 
 function checkIfWon(){
-  if(counter === 4){
+  if(counter === allZones.length){
     alert("you won the game")
   }
 }
