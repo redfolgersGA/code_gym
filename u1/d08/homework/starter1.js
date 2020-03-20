@@ -2,10 +2,13 @@
 
 console.log('u01d09 hw starter.js linked1');
 
+var counter = 0
+
 
 var allZones = document.querySelectorAll('.zone')
 
 for(var i=0;i<allZones.length;i++){
+
   allZones[i].onmouseover = function(){
     this.style.backgroundColor ="green"
 
@@ -16,8 +19,23 @@ for(var i=0;i<allZones.length;i++){
 
   }
 
+
+}
+
+for(var i = 0; i< allZones.length; i++){
   allZones[i].addEventListener('click', function(){
     this.style.backgroundColor = "green"
+    this.classList.add("clicked")
+    if(this.style.backgroundColor === "green"){
+      console.log(counter)
+      counter++
+      console.log("counter is now" + counter)
+
+    }
+    checkIfWon()
+    console.log(this)
+
+
 
     this.onmouseover = function () {
 
@@ -27,12 +45,15 @@ for(var i=0;i<allZones.length;i++){
 
     }
   })
+
+  }
+
+
+function checkIfWon(){
+  if(counter === 4){
+    alert("you won the game")
+  }
 }
-
-
-
-
-
 
 
 
