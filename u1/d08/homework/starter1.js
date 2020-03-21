@@ -140,6 +140,33 @@ function turnZoneThreeGreen() {
   zoneThree.onmouseover = function() {
     this.style.backgroundColor = 'green'
   }
+
+  zoneThree.onclick = function() {
+    arrayChecker[2] = winningArray[2]
+    turnZoneFourGreen()
+    this.onmouseout = function() {
+
+    }
+  }
+}
+
+function turnZoneFourGreen() {
+  zoneFour.onmouseover = function() {
+    this.style.backgroundColor = 'green'
+  }
+
+  zoneFour.onclick = function() {
+    arrayChecker[3] = winningArray[3]
+    checkToWin()
+    this.onmouseout = function(){
+
+    }
+  }
+}
+
+function checkToWin() {
+  alert("YOU WON!")
+  location.reload()
 }
 
 
