@@ -93,6 +93,22 @@ function zoneOneTurnGreen () {
       zoneThree.onmouseout = function () {
         this.style.backgroundColor = 'white'
       }
+
+      zoneOne.onmouseout = function () {
+        this.style.backgroundColor = 'white'
+      }
+
+      zoneOne.onclick = function () {
+        this.onmouseout = function () {
+
+        }
+
+        this.onmouseover = function () {
+
+        }
+
+        this.style.backgroundColor = 'green'
+      }
     }
 
   })
