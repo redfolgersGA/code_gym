@@ -70,8 +70,10 @@ var zoneTwo = document.querySelector('#zone-2')
 var zoneThree = document.querySelector('#zone-3')
 var zoneFour = document.querySelector('#zone-4')
 
-function turnZonesGreen() {
+function turnZoneOneGreen() {
   if(winningArray[0] === 'zone-1')
+
+
     zoneOne.onmouseover = function(e){
       this.style.backgroundColor = 'green'
     }
@@ -81,6 +83,9 @@ function turnZonesGreen() {
     }
 
     zoneOne.onclick = function() {
+      arrayChecker[0] = winningArray[0]
+      console.log(arrayChecker)
+      turnZoneTwoGreen()
       this.onmouseout = function () {
 
       }
@@ -109,9 +114,33 @@ function turnZonesGreen() {
     zoneFour.onmouseout = function(){
       this.style.backgroundColor = 'white'
     }
+
+
 }
 
-turnZonesGreen()
+turnZoneOneGreen()
+
+function turnZoneTwoGreen() {
+  zoneTwo.onmouseover = function (){
+    this.style.backgroundColor = 'green'
+  }
+
+  zoneTwo.onclick = function() {
+    arrayChecker[1]= winningArray[1]
+    console.log(arrayChecker)
+    turnZoneThreeGreen()
+    this.onmouseout = function() {
+
+    }
+
+  }
+}
+
+function turnZoneThreeGreen() {
+  zoneThree.onmouseover = function() {
+    this.style.backgroundColor = 'green'
+  }
+}
 
 
 
