@@ -165,8 +165,35 @@ function turnZoneFourGreen() {
 }
 
 function checkToWin() {
+  if(arrayChecker = winningArray){
   alert("YOU WON!")
-  location.reload()
+  setTimeout(function(){
+    for(var i=0; i<allZonesTwo.length;i++){
+      allZonesTwo[i].style.backgroundColor = 'yellow'
+    }
+  }, 1000)
+
+  setTimeout(function(){
+    for(var i=0; i<allZonesTwo.length;i++){
+      allZonesTwo[i].style.backgroundColor = 'red'
+    }
+  }, 2000)
+
+  setTimeout(function(){
+    for(var i=0; i<allZonesTwo.length;i++){
+      allZonesTwo[i].style.backgroundColor = 'white'
+    }
+  }, 3000)
+
+
+
+   setTimeout(turnZoneOneGreen, 3000)
+
+ }
+
+ arrayChecker = []
+
+
 }
 
 
