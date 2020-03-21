@@ -85,6 +85,30 @@ function turnZonesGreen() {
 
       }
     }
+
+    zoneTwo.onmouseover = function(){
+      this.style.backgroundColor = 'red'
+    }
+
+    zoneTwo.onmouseout = function(){
+      this.style.backgroundColor = 'white'
+    }
+
+    zoneThree.onmouseover = function(){
+      this.style.backgroundColor = 'red'
+    }
+
+    zoneThree.onmouseout = function(){
+      this.style.backgroundColor = 'white'
+    }
+
+    zoneFour.onmouseover = function(){
+      this.style.backgroundColor = 'red'
+    }
+
+    zoneFour.onmouseout = function(){
+      this.style.backgroundColor = 'white'
+    }
 }
 
 turnZonesGreen()
