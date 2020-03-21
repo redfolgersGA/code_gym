@@ -58,27 +58,48 @@ console.log('u01d09 hw starter.js linked1');
 
 // PART 2
 
-var winningArray = ['zone-3', 'zone-4', 'zone-1', 'zone-2']
+var winningArray = ['zone-1', 'zone-2', 'zone-3', 'zone-4']
 var arrayChecker =[];
-
-var allZonesGameTwo = document.querySelectorAll('.zone')
 
 var zoneNow;
 
-for(var i=0;i<allZonesGameTwo.length;i++){
+var allZonesTwo = document.querySelectorAll('.zone')
 
-  allZonesGameTwo[i].onmouseover = function () {
-    if(this.id === 'zone-3'){
-      this.style.backgroundColor = "green"
+var zoneOne = document.querySelector('#zone-1')
+var zoneTwo = document.querySelector('#zone-2')
+var zoneThree = document.querySelector('#zone-3')
+var zoneFour = document.querySelector('#zone-4')
 
+function zoneOneTurnGreen () {
+  zoneOne.addEventListener('mouseover', function(e){
+    if(winningArray[0] === zoneOne.id){
+      this.style.backgroundColor = 'green'
+
+      arrayChecker[0] = zoneOne.id
+      console.log(arrayChecker)
+
+      zoneTwo.onmouseover = function () {
+        this.style.backgroundColor = 'red'
+      }
+
+      zoneTwo.onmouseout = function () {
+        this.style.backgroundColor = 'white'
+      }
+
+      zoneThree.onmouseover = function () {
+        this.style.backgroundColor = 'red'
+      }
+
+      zoneThree.onmouseout = function () {
+        this.style.backgroundColor = 'white'
+      }
     }
 
-
-  }
+  })
 }
 
+zoneOneTurnGreen()
 
-allZonesGameTwo[0].id
 
 
 
