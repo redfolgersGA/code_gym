@@ -305,3 +305,11 @@ mostCostlySite(hammondsMines)
 
 console.log(mostCostly)
 
+function oneString() {
+  for(var i=0;i<hammondsMines.length;i++){
+    console.log(hammondsMines[i].location + " has an ann budget of " + hammondsMines[i].annualBudget + " and is " + hammondsMines[i].depthInMeters + " deep")
+  }
+}
+
+oneString()
+
