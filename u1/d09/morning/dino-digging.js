@@ -283,3 +283,25 @@ function calculateTotalBudget (arr){
 
 calculateTotalBudget(hammondsMines)
 
+function costPerMeter() {
+  console.log(totalBudget/total)
+}
+
+costPerMeter()
+
+var mostCostly = 0
+
+function mostCostlySite(arr){
+  for(var i=0;i<arr.length;i++){
+    if(arr[i].annualBudget > mostCostly){
+      mostCostly = arr[i].annualBudget
+      console.log(arr[i].location)
+    }
+  }
+
+}
+
+mostCostlySite(hammondsMines)
+
+console.log(mostCostly)
+
