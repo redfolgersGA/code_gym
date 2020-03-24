@@ -230,11 +230,17 @@ function calculateDepth (obj) {
 
 
   for (var prop in obj){
-    if(prop === "annualBudget"){
-      total = total + obj[prop]
+    if(prop === "depthInMeters"){
+      total = total + parseInt(obj[prop])
     }
   }
 
+
+}
+
+function calculateAverageDepth () {
+  var average = total / 4
+  console.log("the average depth of all sites is " + average)
 
 }
 
@@ -243,14 +249,37 @@ calculateDepth(buenosAires)
 calculateDepth(nicaragua)
 calculateDepth(snakewaterMontana)
 
-console.log(total + " is the total")
+console.log(total + " is the total for all sites")
+
+calculateAverageDepth()
+
+var hammondsMines = [];
+
+hammondsMines.push(buenosAires, mexico, snakewaterMontana, nicaragua)
+
+console.log(hammondsMines)
 
 
 
+function locationNames (arr) {
+  for(var i=0; i<arr.length;i++){
+    console.log(arr[i].location)
+  }
 
+}
 
+locationNames(hammondsMines)
 
+var totalBudget = 0
 
+function calculateTotalBudget (arr){
+  for(var i = 0; i<arr.length;i++){
+    totalBudget = totalBudget + arr[i].annualBudget
 
+  }
+  console.log(totalBudget)
 
+}
+
+calculateTotalBudget(hammondsMines)
 
