@@ -212,6 +212,41 @@ calculateAverageDepth(buenosAires,mexico,nicaragua,snakewaterMontana)
 // outputSpecimen(nicaragua)
 // console.log('-----------')
 
+function outputSpec (obj){
+  for(var i=0;i<obj.specimens.length;i++){
+    console.log(obj.specimens[i])
+  }
+
+}
+outputSpec(mexico)
+outputSpec(nicaragua)
+outputSpec(snakewaterMontana)
+outputSpec(buenosAires)
+
+
+var total = 0
+
+function calculateDepth (obj) {
+
+
+  for (var prop in obj){
+    if(prop === "annualBudget"){
+      total = total + obj[prop]
+    }
+  }
+
+
+}
+
+calculateDepth(mexico)
+calculateDepth(buenosAires)
+calculateDepth(nicaragua)
+calculateDepth(snakewaterMontana)
+
+console.log(total + " is the total")
+
+
+
 
 
 
