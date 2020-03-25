@@ -9,14 +9,22 @@
 
 	  // I'll do some of the work for you, first I will grab the <body></body>
 	  // and I'll create a <div> with the id of ralph.
-	  var $body = $('body');
-		var $ralph = $('<div id="ralph1"></div>');
+	 //  var $body = $('body');
+		// var $ralph = $('<div id="ralph1"></div>');
+
+    var body = $('body')
+    var ralph = $('<div id="ralph1"></div>')
+
+
 
 
 	  // 1. Add the class "ralph" to this div. Append $ralph to the page.
-    $ralph.addClass('ralph')
+    // $ralph.addClass('ralph')
 
-    $($body).append($ralph)
+    // $($body).append($ralph)
+
+    ralph.attr('class', 'ralph')
+    body.append(ralph)
 
 
 
@@ -27,39 +35,39 @@
 	  // incrementing and then look at the class names in the css file. (DEBUG IT!)
    //
 
-   var counter = 2
+ //   var counter = 2
 
- $ralph.click(function(){
-  // $ralph.attr('id', 'ralph')
-  console.log($ralph)
-  $ralph.attr('id', 'ralph' + counter)
-  counter++
-  console.log(counter)
-  console.log($ralph)
+ // $ralph.click(function(){
+ //  // $ralph.attr('id', 'ralph')
+ //  console.log($ralph)
+ //  $ralph.attr('id', 'ralph' + counter)
+ //  counter++
+ //  console.log(counter)
+ //  console.log($ralph)
 
-  if(counter == 6){
-    var speech1 = $('<div id ="speech1"></div>')
-    $body.append(speech1)
+ //  if(counter == 6){
+ //    var speech1 = $('<div id ="speech1"></div>')
+ //    $body.append(speech1)
 
-  }else if(counter == 7){
-    var speech1 = $('<div id ="speech1"></div>')
+ //  }else if(counter == 7){
+ //    var speech1 = $('<div id ="speech1"></div>')
 
-    var speech2 = $('<div id="speech2"></div>')
+ //    var speech2 = $('<div id="speech2"></div>')
 
-    $('#speech1').remove()
-    $body.append(speech2)
-  } else if(counter == 12) {
-    var speech2 = $('div#speech2')
-    speech2.remove()
-    counter = 1
+ //    $('#speech1').remove()
+ //    $body.append(speech2)
+ //  } else if(counter == 12) {
+ //    var speech2 = $('div#speech2')
+ //    speech2.remove()
+ //    counter = 1
 
-  }
+ //  }
 
   // }else(counter == 12){
   //   counter = 1
   // }
 
- })
+ // })
 
 
 
