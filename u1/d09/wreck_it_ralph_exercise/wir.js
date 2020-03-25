@@ -14,6 +14,8 @@
 
     var body = $('body')
     var ralph = $('<div id="ralph1"></div>')
+    var speech1 = $('#speech1')
+    var speech2 = $('#speech2')
 
 
 
@@ -34,6 +36,36 @@
 	  // You'll might into an issue here. Maybe you should log the number you are
 	  // incrementing and then look at the class names in the css file. (DEBUG IT!)
    //
+
+   var counter = 0
+
+   ralph.click(function(){
+    ralph.attr('id', 'ralph' + counter++)
+    console.log(ralph)
+
+    if(counter===12){
+      counter=0
+    }
+
+   })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  //   var counter = 2
 
