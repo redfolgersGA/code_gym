@@ -14,8 +14,9 @@
 
     var body = $('body')
     var ralph = $('<div id="ralph1"></div>')
-    var speech1 = $('#speech1')
-    var speech2 = $('#speech2')
+    var speech1 = $('<div id="speech1"></div>')
+    var speech2 = $('<div id="speech2"></div>')
+
 
 
 
@@ -37,15 +38,36 @@
 	  // incrementing and then look at the class names in the css file. (DEBUG IT!)
    //
 
-   var counter = 0
+   var counter = 2
 
    ralph.click(function(){
-    ralph.attr('id', 'ralph' + counter++)
+    ralph.attr('id', 'ralph' + counter)
+    counter++
     console.log(ralph)
+    console.log(counter)
 
     if(counter===12){
       counter=0
     }
+
+    if(counter === 6){
+
+      console.log(speech1)
+      body.append(speech1)
+
+    }
+
+    if(counter===7){
+      speech1.remove()
+      body.append(speech2)
+
+    }
+
+    if(counter===11){
+      speech2.remove()
+      counter = 1
+    }
+
 
    })
 
