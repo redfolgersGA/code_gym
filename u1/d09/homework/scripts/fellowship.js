@@ -24,9 +24,66 @@ var makeMiddleEarth = function (){
 
 
 
+
+
 }
 
 makeMiddleEarth()
+
+var makeHobbits = function(){
+  console.log("makehobbits")
+  var theShire = $('article.land').eq(0)
+  var ulTagForHobbits = $('<ul></ul>')
+  ulTagForHobbits.attr('id', 'hobbits')
+
+
+
+  // hobbits.forEach(function(hobbit){
+
+  //   var liTagForHobbit = $('<li>' + hobbit + '</li>')
+  //   console.log(liTagForHobbit)
+  //   liTagForHobbit.text(hobbit)
+  //   liTagForHobbit.attr('class', 'hobbit')
+
+  //   ulTagForHobbits.append(liTagForHobbit.text())
+
+  //   theShire.append(ulTagForHobbits)
+
+  // })
+
+  for(var i=0;i<hobbits.length;i++){
+     // var liTagForHobbit = $('<li>' + hobbits[i] + '</li>')
+     // liTagForHobbit.attr('class', 'hobbit')
+
+     ulTagForHobbits.append('<li class = "hobbit">' + hobbits[i] + '</li>')
+
+
+  }
+
+  theShire.append(ulTagForHobbits)
+
+
+
+}
+
+// function makeHobbits () {
+//   var theShire = $('article.land').eq(0)
+//   var hobbitsUl = $('<ul></ul>')
+//   hobbitsUl.attr('id', 'hobbits')
+
+//   console.log(hobbitsUl)
+
+//   for(var i =0; i < hobbits.length; i++){
+//     hobbitsUl.append('<li class=hobbit>' + hobbits[i] + '</li>')
+//   }
+
+//   theShire.append(hobbitsUl)
+
+//   setTimeout(keepItSecretKeepItSafe, 2000)
+
+// }
+
+makeHobbits()
 
 
 
