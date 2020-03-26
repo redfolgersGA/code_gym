@@ -142,6 +142,17 @@ var forgeTheFellowShip = function () {
 
 forgeTheFellowShip()
 
+var theBalrog = function() {
+  var gandalf = $('li.buddy').eq(0)
+
+  gandalf.text('Gandalf the White')
+  gandalf.css({'border-style': 'solid',
+              'border-width': '3px',
+              'border-color': 'black'})
+}
+
+theBalrog()
+
 
 
 
