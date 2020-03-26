@@ -86,8 +86,31 @@ keepItSecretKeepItSafe()
 var makeBuddies = function() {
   var buddyAside = $('<aside></aside>')
   var ulTagForBuddies = $('<ul id="buddies"></ul>')
+  buddyAside.append(ulTagForBuddies)
+  var rivendell = $('article.land').eq(1)
+
+
+  buddies.forEach(function(buddy){
+    ulTagForBuddies.append('<li class="buddy">' + buddy + '</li>')
+
+    rivendell.append(ulTagForBuddies)
+
+
+  })
+
 }
 
+makeBuddies()
+
+var beautifulStranger = function() {
+  var strider = $('li.buddy').eq(3)
+
+  strider.text('Aragorn')
+
+  strider.css('color', 'green')
+}
+
+beautifulStranger()
 
 
 
