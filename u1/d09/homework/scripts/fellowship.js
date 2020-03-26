@@ -112,8 +112,35 @@ var beautifulStranger = function() {
 
 beautifulStranger()
 
+var leaveTheShire = function() {
+  var allHobbits = $('li.hobbit')
+  var rivendell = $('article.land').eq(1)
+
+  rivendell.append(allHobbits)
 
 
+}
+
+leaveTheShire()
+
+var forgeTheFellowShip = function () {
+  var theFellowShipDiv = $('<div id ="the-fellowship"></div>')
+  var rivendell = $('article.land').eq(1)
+  var allBuddies = $('li')
+
+  rivendell.append(theFellowShipDiv)
+
+  for(var i =0; i<allBuddies.length;i++){
+    theFellowShipDiv.append(allBuddies[i])
+    console.log(allBuddies[i].textContent + " has joined the party")
+
+  }
+
+
+  console.log(theFellowShipDiv)
+}
+
+forgeTheFellowShip()
 
 
 
