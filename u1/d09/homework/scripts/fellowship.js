@@ -3,6 +3,7 @@ console.log("fellowship.js loaded code_gym redo");
 
 var body = $('body')
 
+
 var makeMiddleEarth = function (){
   var sectionTag = $('<section id="middle-earth"></section>')
 
@@ -20,15 +21,10 @@ var makeMiddleEarth = function (){
   body.append(sectionTag)
 
 
-
-
-
-
-
-
 }
-
 makeMiddleEarth()
+
+
 
 var makeHobbits = function(){
   console.log("makehobbits")
@@ -61,27 +57,11 @@ var makeHobbits = function(){
   }
 
   theShire.append(ulTagForHobbits)
+  // setTimeout(keepItSecretKeepItSafe, 1000)
 
 
 
 }
-
-// function makeHobbits () {
-//   var theShire = $('article.land').eq(0)
-//   var hobbitsUl = $('<ul></ul>')
-//   hobbitsUl.attr('id', 'hobbits')
-
-//   console.log(hobbitsUl)
-
-//   for(var i =0; i < hobbits.length; i++){
-//     hobbitsUl.append('<li class=hobbit>' + hobbits[i] + '</li>')
-//   }
-
-//   theShire.append(hobbitsUl)
-
-//   setTimeout(keepItSecretKeepItSafe, 2000)
-
-// }
 
 makeHobbits()
 
@@ -89,6 +69,24 @@ makeHobbits()
 
 
 
+var keepItSecretKeepItSafe = function () {
+  var theRingDiv = $('<div id="the-ring"></div>')
+  var frodo = $('.hobbit').eq(0)
+  theRingDiv.attr('class', 'magic-imbued-jewelry')
+
+  theRingDiv.click(nazgulScreech)
+
+  frodo.append(theRingDiv)
+}
+
+
+keepItSecretKeepItSafe()
+
+
+var makeBuddies = function() {
+  var buddyAside = $('<aside></aside>')
+  var ulTagForBuddies = $('<ul id="buddies"></ul>')
+}
 
 
 
