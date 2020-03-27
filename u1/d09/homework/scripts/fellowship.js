@@ -203,10 +203,12 @@ var thereAndBackAgain = function() {
  gollum.remove()
  theShire.append(allHobbits)
 
-
+ mordor.addClass("collapse")
 
 
 }
+
+thereAndBackAgain()
 
 
 
