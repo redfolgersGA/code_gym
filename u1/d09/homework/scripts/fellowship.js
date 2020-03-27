@@ -153,6 +153,63 @@ var theBalrog = function() {
 
 theBalrog()
 
+var hornOfGondor = function() {
+  console.log('horn of gondor has been blown')
+
+  var boromir = $('li.buddy').eq(4)
+  boromir.css({"text-decoration":"line-through", "opacity": "0.3"})
+
+}
+
+hornOfGondor()
+
+var itsDangerousToGoAlone = function() {
+  var frodo = $('li.hobbit').eq(0)
+  var sam = $('li.hobbit').eq(1)
+  var mordor = $('article.land').eq(2)
+
+  var mountDoomDiv = $('<div id="mount-doom"></div>')
+
+  mordor.append(frodo)
+  mordor.append(sam)
+  mordor.append(mountDoomDiv)
+}
+
+itsDangerousToGoAlone()
+
+var weWantsIt = function() {
+  var gollumDiv = $('<div id="gollum"></div>')
+  var mordor = $('article.land').eq(2)
+  var theRing = $('#the-ring')
+  var mountDoom = $('#mount-doom')
+
+  mordor.append(gollumDiv)
+
+  gollumDiv.append(theRing)
+
+  mountDoom.append(gollumDiv)
+
+
+}
+
+weWantsIt()
+
+var thereAndBackAgain = function() {
+ var gollum = $('div#gollum')
+ var theShire = $('article.land').eq(0)
+ var allHobbits = $('li.hobbit')
+ var mordor = $('article.land').eq(2)
+
+ gollum.remove()
+ theShire.append(allHobbits)
+
+
+
+
+}
+
+
+
 
 
 
