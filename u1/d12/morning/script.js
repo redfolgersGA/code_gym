@@ -112,10 +112,10 @@ var quote = $('p.quote')
 
 submitButton.click(function(){
   var inputValue = $('input').val()
-  // if(inputValue === "Frederick Nietzsche"){
-  //   img.attr('src', fred.img)
+    if(inputValue === "Frederick Nietzsche"){
+      img.attr('src', fred.img)
 
-  // }
+    }
   console.log(inputValue)
 
 
