@@ -120,6 +120,42 @@ submitButton.click(function(){
 
 
     }
+
+    if(inputValue.toLowerCase() === "aristotle"){
+      img.attr('src', aristotle.img)
+      name.text(aristotle.name)
+      school.text(aristotle.school)
+      quote.text(aristotle.famousLine)
+
+
+    }
+
+    if(inputValue.toLowerCase() === "frederick nietzsche"){
+      img.attr('src', fred.img)
+      name.text(fred.name)
+      school.text(fred.school)
+      quote.text(fred.famousLine)
+
+
+    }
+
+    if(inputValue.toLowerCase() === "frederick nietzsche"){
+      img.attr('src', fred.img)
+      name.text(fred.name)
+      school.text(fred.school)
+      quote.text(fred.famousLine)
+
+
+    }
+
+    if(inputValue.toLowerCase() === "frederick nietzsche"){
+      img.attr('src', fred.img)
+      name.text(fred.name)
+      school.text(fred.school)
+      quote.text(fred.famousLine)
+
+
+    }
   console.log(inputValue)
 
 
