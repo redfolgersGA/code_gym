@@ -74,14 +74,48 @@ $(document).ready(function() {
 
 
 var fred;
+var aristotle;
+var hegel;
+var simone;
+var heidegger;
 
-for(var i=0;i<philosophers.length;i++){
+
+function assignPhilosophers(){
+  for(var i=0;i<philosophers.length;i++){
   if(philosophers[i].name === "Frederick Nietzsche"){
     fred = philosophers[i]
+  } else if(philosophers[i].name === "Aristotle The Great") {
+    aristotle = philosophers[i]
+  } else if(philosophers[i].name === "Georg Wilhelm Friedrich Hegel") {
+    hegel = philosophers[i]
+  } else if(philosophers[i].name === "Simone de Beauvoir") {
+    simone = philosophers[i]
+
+  } else if(philosophers[i].name === "Martin Heidegger") {
+    heidegger = philosophers[i]
+
   }
+
 }
 
+}
+
+assignPhilosophers()
+
+var inputValue = $('input').val()
+var submitButton = $('button#inputSubmit')
+
+submitButton.click(function(){
+  console.log('clicked')
+})
+
+
+
 console.log(fred)
+console.log(aristotle)
+console.log(heidegger)
+
+// use same logic to assign variables to the other philosophers
 
 
 
