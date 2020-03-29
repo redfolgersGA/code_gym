@@ -72,58 +72,131 @@ $(document).ready(function() {
 //   console.log('clicked')
 // })
 
-var button = $('button#inputSubmit')
-var nietzsche = philosophers[0]
-var aristotle = philosophers[1]
-var hegel = philosophers[2]
-var beauvoir = philosophers[3]
-var heidegger = philosophers[4]
 
-button.click(function(){
-  var input = $('input').val()
-  var img = $('img')
-  var nameText = $('h2.name')
-  var school = $('p.school')
-  var quote = $('p.quote')
+var fred;
 
-
-// use toLowerCase to standardize the query
-  if(input.toLowerCase() === 'hegel'){
-    img.attr('src', hegel.img)
-    nameText.text(hegel.name)
-    school.text(hegel.school)
-    quote.text(hegel.famousLine)
+for(var i=0;i<philosophers.length;i++){
+  if(philosophers[i].name === "Frederick Nietzsche"){
+    fred = philosophers[i]
   }
+}
 
-  if(input.toLowerCase() === 'nietzsche'){
-    img.attr('src', nietzsche.img)
-    nameText.text(nietzsche.name)
-    school.text(nietzsche.school)
-    quote.text(nietzsche.famousLine)
-  }
+console.log(fred)
 
-  if(input.toLowerCase() === 'aristotle'){
-    img.attr('src', aristotle.img)
-    nameText.text(aristotle.name)
-    school.text(aristotle.school)
-    quote.text(aristotle.famousLine)
-  }
 
-  if(input.toLowerCase() === 'beauvoir') {
-    img.attr('src', beauvoir.img)
-    nameText.text(beauvoir.name)
-    school.text(beauvoir.school)
-    quote.text(beauvoir.famousLine)
-  }
 
-  if(input.toLowerCase() === 'heidegger'){
-    img.attr('src', heidegger.img)
-    nameText.text(heidegger.name)
-    school.text(heidegger.school)
-    quote.text(heidegger.famousLine)
-  }
 
-})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var button = $('button#inputSubmit')
+// var nietzsche = philosophers[0]
+// var aristotle = philosophers[1]
+// var hegel = philosophers[2]
+// var beauvoir = philosophers[3]
+// var heidegger = philosophers[4]
+
+// button.click(function(){
+//   var input = $('input').val()
+//   var img = $('img')
+//   var nameText = $('h2.name')
+//   var school = $('p.school')
+//   var quote = $('p.quote')
+
+
+// // use toLowerCase to standardize the query
+//   if(input.toLowerCase() === 'hegel'){
+//     img.attr('src', hegel.img)
+//     nameText.text(hegel.name)
+//     school.text(hegel.school)
+//     quote.text(hegel.famousLine)
+//   }
+
+//   if(input.toLowerCase() === 'nietzsche'){
+//     img.attr('src', nietzsche.img)
+//     nameText.text(nietzsche.name)
+//     school.text(nietzsche.school)
+//     quote.text(nietzsche.famousLine)
+//   }
+
+//   if(input.toLowerCase() === 'aristotle'){
+//     img.attr('src', aristotle.img)
+//     nameText.text(aristotle.name)
+//     school.text(aristotle.school)
+//     quote.text(aristotle.famousLine)
+//   }
+
+//   if(input.toLowerCase() === 'beauvoir') {
+//     img.attr('src', beauvoir.img)
+//     nameText.text(beauvoir.name)
+//     school.text(beauvoir.school)
+//     quote.text(beauvoir.famousLine)
+//   }
+
+//   if(input.toLowerCase() === 'heidegger'){
+//     img.attr('src', heidegger.img)
+//     nameText.text(heidegger.name)
+//     school.text(heidegger.school)
+//     quote.text(heidegger.famousLine)
+//   }
+
+// })
 
 
 
