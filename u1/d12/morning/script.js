@@ -102,11 +102,23 @@ function assignPhilosophers(){
 
 assignPhilosophers()
 
-var inputValue = $('input').val()
+
 var submitButton = $('button#inputSubmit')
 
+var img = $('img')
+var name = $('h2.name')
+var school = $('p.school')
+var quote = $('p.quote')
+
 submitButton.click(function(){
-  console.log('clicked')
+  var inputValue = $('input').val()
+  // if(inputValue === "Frederick Nietzsche"){
+  //   img.attr('src', fred.img)
+
+  // }
+  console.log(inputValue)
+
+
 })
 
 
