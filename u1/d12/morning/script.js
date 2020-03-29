@@ -112,8 +112,12 @@ var quote = $('p.quote')
 
 submitButton.click(function(){
   var inputValue = $('input').val()
-    if(inputValue === "Frederick Nietzsche"){
+    if(inputValue.toLowerCase() === "frederick nietzsche"){
       img.attr('src', fred.img)
+      name.text(fred.name)
+      school.text(fred.school)
+      quote.text(fred.famousLine)
+
 
     }
   console.log(inputValue)
