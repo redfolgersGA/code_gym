@@ -29,25 +29,48 @@ var frameworks = {
   ]
 }
 
-var modifiedFrontEnd = frameworks.frontEnd.map(function(framework){
-  return framework.name + ".js"
+console.log(frameworks.frontEnd)
+
+
+var newFrontEnd = frameworks.frontEnd.map(function(fw){
+  return fw.name + ".js"
+
 })
 
-console.log(modifiedFrontEnd)
+console.log(newFrontEnd)
 
-var modifiedBackEnd = frameworks.backEnd.map(function(framework){
-  return framework.name + ".js"
-})
 
-console.log(modifiedBackEnd)
 
-var filteredBackEnd = frameworks.backEnd.filter(function(fw){
-  if(fw.name[0] === "A" || fw.name[0] === "E" || fw.name[0] === "I" || fw.name[0] === "O" || fw.name[0] === "U")
 
-  return fw
-})
 
-console.log(filteredBackEnd)
+
+
+
+
+
+
+
+
+
+// var modifiedFrontEnd = frameworks.frontEnd.map(function(framework){
+//   return framework.name + ".js"
+// })
+
+// console.log(modifiedFrontEnd)
+
+// var modifiedBackEnd = frameworks.backEnd.map(function(framework){
+//   return framework.name + ".js"
+// })
+
+// console.log(modifiedBackEnd)
+
+// var filteredBackEnd = frameworks.backEnd.filter(function(fw){
+//   if(fw.name[0] === "A" || fw.name[0] === "E" || fw.name[0] === "I" || fw.name[0] === "O" || fw.name[0] === "U")
+
+//   return fw
+// })
+
+// console.log(filteredBackEnd)
 
 
 
