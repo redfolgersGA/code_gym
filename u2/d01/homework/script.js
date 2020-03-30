@@ -39,6 +39,12 @@ var newFrontEnd = frameworks.frontEnd.map(function(fw){
 
 console.log(newFrontEnd)
 
+var newBackEnd = frameworks.backEnd.map(function(fw){
+  return fw.name + ".js"
+})
+
+console.log(newBackEnd)
+
 
 
 
