@@ -67,9 +67,35 @@ var logNames = function () {
 
 logNames()
 
+var logNameEyes = function () {
+  data.people.forEach(function(person){
+    console.log(person.name + " has " + person.eye_color + " eyes.")
+  })
+}
 
+logNameEyes()
 
+var logByMass = function () {
+  data.people.forEach(function(person){
+    if(person.mass > 75){
+      console.log(person.name + ' has mass greater than 75')
+    }
+  })
+}
 
+logByMass()
+
+var appendCharacterNames = function () {
+var characDiv = $('div#characters')
+ data.people.forEach(function(person){
+  var pTag = $('<p></p>')
+
+  pTag.text(person.name)
+  characDiv.append(pTag)
+ })
+}
+
+appendCharacterNames()
 
 
 
