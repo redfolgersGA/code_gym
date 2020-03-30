@@ -45,6 +45,23 @@ var newBackEnd = frameworks.backEnd.map(function(fw){
 
 console.log(newBackEnd)
 
+var filteredFrontEnd = frameworks.frontEnd.filter(function(fw){
+  if(fw.description.length > 30){
+    return fw
+  }
+
+})
+
+console.log(filteredFrontEnd)
+
+var filteredBackEnd = frameworks.backEnd.filter(function(fw){
+  if(fw.name[0].toLowerCase() === "a" || fw.name[0].toLowerCase() === "e" || fw.name[0].toLowerCase() === "i" || fw.name[0].toLowerCase() === "o" || fw.name[0].toLowerCase() === "u"){
+    return fw
+  }
+})
+
+console.log(filteredBackEnd)
+
 
 
 
