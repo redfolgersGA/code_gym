@@ -53,58 +53,98 @@ var data =  {
 } // ends var data
 
 
-var logData = function() {
+var logData = function () {
   console.log(data.people)
 }
+
 logData()
 
-var logNames = function() {
-  for(var i=0; i<data.people.length;i++){
+var logNames = function () {
+  for(var i=0;i<data.people.length;i++){
     console.log(data.people[i].name)
   }
 }
+
 logNames()
 
-var logNameEyes = function() {
-  for(var i=0; i<data.people.length;i++){
-    console.log(data.people[i].name + " has " + data.people[i].eye_color + " eyes.")
-  }
-}
-logNameEyes()
-
-var logByMass = function() {
-  for(var i=0; i<data.people.length;i++){
-    if(parseInt(data.people[i].mass) > 75){
-      console.log(data.people[i].name + " has a mass that is greater than 75. It is " +
-        data.people[i].mass)
-
-    }
-  }
-}
-logByMass()
-
-var appendCharacterNames = function() {
-  var charactersDiv = $('div#characters')
-  for(var i=0;i<data.people.length;i++){
-    charactersDiv.append('<p>' + data.people[i].name + '</>')
-  }
-
-}
-appendCharacterNames()
-
-var appendByMass = function() {
-  var charactersDiv = $('div#characters')
-  var h1Tag = $('h1#title')
-  for(var i=0;i<data.people.length;i++){
-    if(parseInt(data.people[i].mass) > 75) {
-      h1Tag.text('Mass Greater Than 75')
-      charactersDiv.append('<p>' + data.people[i].name + " has a mass greater than 75.")
 
 
-    }
-  }
-}
-  setTimeout(appendByMass,2000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var logData = function() {
+//   console.log(data.people)
+// }
+// logData()
+
+// var logNames = function() {
+//   for(var i=0; i<data.people.length;i++){
+//     console.log(data.people[i].name)
+//   }
+// }
+// logNames()
+
+// var logNameEyes = function() {
+//   for(var i=0; i<data.people.length;i++){
+//     console.log(data.people[i].name + " has " + data.people[i].eye_color + " eyes.")
+//   }
+// }
+// logNameEyes()
+
+// var logByMass = function() {
+//   for(var i=0; i<data.people.length;i++){
+//     if(parseInt(data.people[i].mass) > 75){
+//       console.log(data.people[i].name + " has a mass that is greater than 75. It is " +
+//         data.people[i].mass)
+
+//     }
+//   }
+// }
+// logByMass()
+
+// var appendCharacterNames = function() {
+//   var charactersDiv = $('div#characters')
+//   for(var i=0;i<data.people.length;i++){
+//     charactersDiv.append('<p>' + data.people[i].name + '</>')
+//   }
+
+// }
+// appendCharacterNames()
+
+// var appendByMass = function() {
+//   var charactersDiv = $('div#characters')
+//   var h1Tag = $('h1#title')
+//   for(var i=0;i<data.people.length;i++){
+//     if(parseInt(data.people[i].mass) > 75) {
+//       h1Tag.text('Mass Greater Than 75')
+//       charactersDiv.append('<p>' + data.people[i].name + " has a mass greater than 75.")
+
+
+//     }
+//   }
+// }
+//   setTimeout(appendByMass,2000)
 
 
 
