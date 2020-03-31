@@ -33,6 +33,8 @@ console.log('jsloaded')
 // }
 
 var imgTag = $('img')
+var nameLi = $('li').eq(0)
+var userTitle = $('p#user_title')
 
 $.ajax({
   url: 'https://randomuser.me/api/',
@@ -40,6 +42,9 @@ $.ajax({
   success: function(data){
     console.log(data.results[0].gender)
     imgTag.attr('src', data.results[0].picture.large)
+    nameLi.mouseover(function(){
+      userTitle.text('hello my name is ' + data.results[0].name.first)
+    })
   }
 })
 
