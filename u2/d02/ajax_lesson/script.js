@@ -42,6 +42,7 @@ $.ajax({
   success: function(data){
     console.log(data.results[0].gender)
     imgTag.attr('src', data.results[0].picture.large)
+    userTitle.text('hello my name is ' + data.results[0].name.first)
     nameLi.mouseover(function(){
       userTitle.text('hello my name is ' + data.results[0].name.first)
     })
