@@ -35,6 +35,10 @@ console.log('jsloaded')
 var imgTag = $('img')
 var nameLi = $('li').eq(0)
 var userTitle = $('p#user_title')
+var emailLi = $('li').eq(1)
+var bdayLi = $('li').eq(2)
+var addressLi $('li').eq(3)
+var passLi = $('li').eq(4)
 
 $.ajax({
   url: 'https://randomuser.me/api/',
