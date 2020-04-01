@@ -37,18 +37,34 @@ var nameLi = $('li').eq(0)
 var userTitle = $('p#user_title')
 var emailLi = $('li').eq(1)
 var bdayLi = $('li').eq(2)
-var addressLi $('li').eq(3)
+var addressLi = $('li').eq(3)
 var passLi = $('li').eq(4)
 
 $.ajax({
   url: 'https://randomuser.me/api/',
   dataType: 'json',
   success: function(data){
-    console.log(data.results[0].gender)
+    console.log(data.results[0])
     imgTag.attr('src', data.results[0].picture.large)
     userTitle.text('hello my name is ' + data.results[0].name.first)
     nameLi.mouseover(function(){
       userTitle.text('hello my name is ' + data.results[0].name.first)
+    })
+
+    emailLi.mouseover(function(){
+      userTitle.text('My email is ' + data.results[0].email)
+    })
+
+    bdayLi.mouseover(function(){
+      userTitle.text('My bday is on ' + data.results[0].dob.date)
+    })
+
+    addressLi.mouseover(function(){
+      userTitle.text('My address is ' + data.results[0].location.city + " " + data.results[0].location.state)
+    })
+
+    passLi.mouseover(function(){
+      userTitle.text('My password is ' + data.results[0].login.password)
     })
   }
 })
