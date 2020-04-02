@@ -14,7 +14,7 @@ var button = $('button')
 
 
 button.click(function(){
-  var apiKey = "http://www.omdbapi.com/?s=" + inputVal.val() + "apikey"
+  var apiKey = "http://www.omdbapi.com/?s=" + inputVal.val() + "&apikey="
   console.log(inputVal.val())
   var h5Tags = $('h5')
   var imgTags = $('img')
