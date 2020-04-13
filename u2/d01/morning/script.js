@@ -97,6 +97,28 @@ var characDiv = $('div#characters')
 
 appendCharacterNames()
 
+var appendByMass = function() {
+  $('p').remove()
+  var characDiv = $('div#characters')
+  var h1 = $('h1#title')
+  data.people.forEach(function(person){
+
+
+    if(person.mass > 75){
+
+      var pTag = $('<p></p>')
+      h1.text('> 75')
+
+      pTag.append(person.name)
+      characDiv.append(pTag)
+
+
+    }
+  })
+}
+
+appendByMass()
+
 
 
 

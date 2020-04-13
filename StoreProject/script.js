@@ -11,6 +11,8 @@ var xmasMonth = 11;
 var xmasDay = 25
 var daysTillXmas = xmasDay - d.getUTCDate()
 
+console.log(d.getUTCDate())
+
 // $.ajax({
 //   type: "GET",
 //   url: "https://api.unsplash.com/photos/?client_id=",
