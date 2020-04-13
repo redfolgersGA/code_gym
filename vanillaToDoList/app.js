@@ -62,7 +62,13 @@ function deleteCheck(e){
 }
 
 // API calls
-// https://api.edamam.com/api/food-database/parser
+$.ajax({
+  type: "GET",
+  url: "https://api.edamam.com/api/food-database/parser?ingr=banana
+  success: function(data){
+    console.log(data)
+  }
+})
 
 
 
