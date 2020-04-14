@@ -2,6 +2,8 @@
 const todoInput = document.querySelector('.todo-input')
 const todoButton = document.querySelector('.todo-button')
 const todoList = document.querySelector('.todo-list')
+const body = document.querySelector('body')
+const imgDiv = $('#image-1')
 
 
 // event listeners
@@ -64,9 +66,15 @@ function deleteCheck(e){
 // API calls
 $.ajax({
   type: "GET",
-  url: "https://api.edamam.com/api/food-database/parser?ingr=banana
+  url: "https://api.edamam.com/api/food-database/parser?ingr=orange&",
   success: function(data){
-    console.log(data)
+    imgDiv.attr('src', data.parsed[0].food.image)
+
+
+    // img.attr('src', data.parsed[0].food.image)
+    // imgDiv.append(img)
+    // body.append(imgDiv)
+    // console.log(data.parsed[0].food.image)
   }
 })
 
