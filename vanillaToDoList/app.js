@@ -11,25 +11,42 @@ foodLogButton.on('click', function(e){
 
     $.ajax({
       type: "GET",
-      url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&
+      url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&",
+      success: function(data){
+        const foodNutrients = data.parsed[0].food.nutrients
         const liTagForFood = $("<li></li>")
-        const divForImageTag = $("<div class='imageDiv'></div")
-        const imgTagForFoodLi = $("<img class='foodImage'>")
+        const description = $("<div class='imageDiv'></div")
+        const imageOfFood = $("<img class='foodImage'>")
+        const foodName = $('<p></p>')
+        const foodCalories = $('<p></p>')
+        const foodProtein = $('<p></p>')
+        const foodFats = $('<p></p>')
+        const foodCarbs = $('<p></p>')
+        const foodFiber = $('<p></p>')
+
+        foodLoggedDivContainer.append(liTagForFood)
+
+        liTagForFood.append(description)
+        liTagForFood.append(imageOfFood)
 
 
+        foodName.text(data.text)
+        foodCalories.text(foodNutrients.ENERC_KCAL + " calories")
 
-        liTagForFood.text(data.text)
 
-        imgTagForFoodLi.attr('src', data.parsed[0].food.image)
+        description.append(foodName)
+        description.append(foodCalories)
 
-        divForImageTag.append(imgTagForFoodLi)
+
+        imageOfFood.attr('src', data.parsed[0].food.image)
+
+
 
 
 
 
 
         foodLoggedUlTag.append(liTagForFood)
-        foodLoggedUlTag.append(divForImageTag)
 
 
       }
