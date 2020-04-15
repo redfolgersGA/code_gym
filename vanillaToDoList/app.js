@@ -6,7 +6,7 @@ const foodLoggedUlTag = $('.foodList')
 
 foodLogButton.on('click', function(){
   type: "GET",
-  url:
+  url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&",
 
 
 
@@ -14,7 +14,7 @@ foodLogButton.on('click', function(){
 })
 //   $.ajax({
 //   type: "GET",
-//   url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&app_id=e8f6cb8b&app_key=c04363f7864d5ed01cc4d1933f2cb2d8",
+//   url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging,
 //   success: function(data){
 
 // }
