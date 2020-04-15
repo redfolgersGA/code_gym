@@ -42,12 +42,16 @@ form button:hover{
   color: white;
 }
 
-.todo-container{
+.foodContainer{
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  border: solid 1px;
+  height: 200px;
+  width: 200px;
 
+}
+/*
 .todo-list{
   min-width: 30%;
   list-style: none;
@@ -99,7 +103,7 @@ form button:hover{
 .fall{
   transform: translateY(8rem) rotateZ(20deg);
   opacity: 0;
-}
+} */
 
 
 
