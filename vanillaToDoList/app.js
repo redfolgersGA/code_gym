@@ -11,20 +11,27 @@ foodLogButton.on('click', function(e){
 
     $.ajax({
       type: "GET",
-      url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&,
-      success: function(data){
+      url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&
         const liTagForFood = $("<li></li>")
-        const imgTagForFoodLi = $("<img>")
+        const divForImageTag = $("<div class='imageDiv'></div")
+        const imgTagForFoodLi = $("<img class='foodImage'>")
+
+
 
         liTagForFood.text(data.text)
-        liTagForFood.append(imgTagForFoodLi)
 
         imgTagForFoodLi.attr('src', data.parsed[0].food.image)
 
+        divForImageTag.append(imgTagForFoodLi)
+
+
+
+
 
         foodLoggedUlTag.append(liTagForFood)
-        console.log(data.parsed[0].food.image)
-        foodLoggedDivContainer.css({"border": "solid 1px", "height": "200px", "width": "200px"})
+        foodLoggedUlTag.append(divForImageTag)
+
+
       }
 
     })

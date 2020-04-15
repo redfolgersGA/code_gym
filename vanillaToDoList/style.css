@@ -42,16 +42,45 @@ form button:hover{
   color: white;
 }
 
-/* .foodContainer{
-  display: flex;
+.foodContainer{
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   border: solid 1px;
-  height: 200px;
-  width: 200px;
+  height: 100%;
+  width: 600px;
+  margin: 0 auto;
 
 }
 
+/* ul{
+  list-style-type: none;
+} */
+
+li{
+  display: inline-block;
+  width: 200px;
+  height: 20px;
+  margin: 0 auto;
+  border: 2px solid #000;
+  float: right;
+}
+
+img{
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  float: right;
+  margin: 10px;
+}
+
+.imageDiv{
+  dispaly: inline-block;
+  height: 200px;
+  width: 200px;
+  float: right
+}
+/*
 .todo-list{
   min-width: 30%;
   list-style: none;
