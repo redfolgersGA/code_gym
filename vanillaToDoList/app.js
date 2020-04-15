@@ -14,15 +14,16 @@ foodLogButton.on('click', function(e){
       url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&",
       success: function(data){
         const foodNutrients = data.parsed[0].food.nutrients
+        console.log(foodNutrients)
         const liTagForFood = $("<li></li>")
-        const description = $("<div class='imageDiv'></div")
+        const description = $("<div class='description'></div")
         const imageOfFood = $("<img class='foodImage'>")
-        const foodName = $('<p></p>')
-        const foodCalories = $('<p></p>')
-        const foodProtein = $('<p></p>')
-        const foodFats = $('<p></p>')
-        const foodCarbs = $('<p></p>')
-        const foodFiber = $('<p></p>')
+        const foodName = $('<p id="foodName"></p>')
+        const foodCalories = $('<p class="calories"></p>')
+        const foodProtein = $('<p class="protein"></p>')
+        const foodFats = $('<p class="fats"></p>')
+        const foodCarbs = $('<p class="carbs"></p>')
+        const foodFiber = $('<p class="fiber"></p>')
 
         foodLoggedDivContainer.append(liTagForFood)
 
@@ -31,11 +32,20 @@ foodLogButton.on('click', function(e){
 
 
         foodName.text(data.text)
-        foodCalories.text(foodNutrients.ENERC_KCAL + " calories")
+        foodCalories.text("Calories " + foodNutrients.ENERC_KCAL)
+        foodProtein.text("Protein " + foodNutrients.PROCNT + " g")
+        foodFats.text("Total Fat " + foodNutrients.FAT)
+        foodCarbs.text("Total Carbs " + foodNutrients.CHOCDF)
+
 
 
         description.append(foodName)
         description.append(foodCalories)
+        description.append(foodProtein)
+        description.append(foodFats)
+        description.append(foodCarbs)
+
+
 
 
         imageOfFood.attr('src', data.parsed[0].food.image)
