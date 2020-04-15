@@ -42,7 +42,7 @@ form button:hover{
   color: white;
 }
 
-.foodContainer{
+/* .foodContainer{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +51,7 @@ form button:hover{
   width: 200px;
 
 }
-/*
+
 .todo-list{
   min-width: 30%;
   list-style: none;
@@ -88,14 +88,14 @@ form button:hover{
 
 .todo-item{
   padding: 0rem 0.5rem;
-}
+} */
 
 .fa-trash,
 .fa-check{
   pointer-events: none;
 }
 
-.completed{
+/* .completed{
   text-decoration: line-through;
   opacity: 0.5;
 }
@@ -103,8 +103,8 @@ form button:hover{
 .fall{
   transform: translateY(8rem) rotateZ(20deg);
   opacity: 0;
-} */
-
+}
+ */
 
 
 
