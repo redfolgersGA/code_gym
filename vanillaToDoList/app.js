@@ -3,6 +3,7 @@ const foodLogInput = $('.foodLogInput')
 const foodLogButton = $('.foodLogButton')
 const foodLoggedDivContainer = $('.foodContainer')
 const foodLoggedUlTag = $('.foodList')
+const body = $('body')
 
 // next step is to grab a div/ul/li and visually represent your APIdata on the DOM
 
@@ -24,6 +25,7 @@ foodLogButton.on('click', function(e){
         const foodFats = $('<p class="fats"></p>')
         const foodCarbs = $('<p class="carbs"></p>')
         const foodFiber = $('<p class="fiber"></p>')
+        const totalsDiv = $('.totals')
 
         foodLoggedDivContainer.append(liTagForFood)
 
@@ -39,6 +41,7 @@ foodLogButton.on('click', function(e){
 
 
 
+
         description.append(foodName)
         description.append(foodCalories)
         description.append(foodProtein)
@@ -49,14 +52,15 @@ foodLogButton.on('click', function(e){
 
 
         imageOfFood.attr('src', data.parsed[0].food.image)
-
-
-
-
-
-
-
         foodLoggedUlTag.append(liTagForFood)
+
+        totalsDiv.text(foodNutrients.ENERC_KCAL + "totals Div")
+
+
+        totalsDiv.removeClass("hide")
+        totalsDiv.addClass("show")
+        body.append(totalsDiv)
+
 
 
       }
