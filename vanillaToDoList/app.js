@@ -5,6 +5,7 @@ const foodLoggedDivContainer = $('.foodContainer')
 const foodLoggedUlTag = $('.foodList')
 const body = $('body')
 
+// ADDS UP TOTALS FOR THE DAY
 var calories = 0
 var protein = 0
 var fats = 0
@@ -23,9 +24,9 @@ foodLogButton.on('click', function(e){
         console.log(data)
         const foodNutrients = data.totalNutrients
 
-        const liTagForFood = $("<li></li>")
+        const liTagForFood = $("<li class='foodLi'></li>")
         const description = $("<div class='description'></div")
-        const imageOfFood = $("<img class='foodImage'>")
+        // const imageOfFood = $("<img class='foodImage'>")
         const foodName = $('<p id="foodName"></p>')
         const foodCalories = $('<p class="calories"></p>')
         const foodProtein = $('<p class="protein"></p>')
@@ -37,14 +38,14 @@ foodLogButton.on('click', function(e){
         foodLoggedDivContainer.append(liTagForFood)
 
         liTagForFood.append(description)
-        liTagForFood.append(imageOfFood)
+
 
 
         foodName.text(foodLogInput.val())
         foodCalories.text("Calories " + data.calories)
-        foodProtein.text("Protein " + foodNutrients.PROCNT.quantity + " g")
-        foodFats.text("Total Fat " + foodNutrients.FAT.quantity + " g")
-        foodCarbs.text("Total Carbs " + foodNutrients.CHOCDF.quantity + " g")
+        foodProtein.text("Protein " + Math.round(foodNutrients.PROCNT.quantity) + " g")
+        foodFats.text("Total Fat " + Math.round(foodNutrients.FAT.quantity) + " g")
+        foodCarbs.text("Total Carbs " + Math.round(foodNutrients.CHOCDF.quantity) + " g")
 
         calories = calories + foodNutrients.ENERC_KCAL.quantity
         protein = protein + foodNutrients.PROCNT.quantity
@@ -62,7 +63,7 @@ foodLogButton.on('click', function(e){
 
 
 
-        // imageOfFood.attr('src', data.parsed[0].food.image)
+        // imageOfFood.attr('src', data.parsed[0].)
         foodLoggedUlTag.append(liTagForFood)
 
         totalsDiv.text("Total Calories " + calories)
