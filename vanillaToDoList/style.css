@@ -115,6 +115,11 @@ left: 420px; */
 
 }
 
+.totals{
+ color: black;
+
+}
+
 .show{
   width:500px;
   height: 110px;
@@ -128,6 +133,7 @@ left: 420px; */
 .hide{
   visibility: hidden;
 }
+
 
 /* ul{
   list-style-type: none;
