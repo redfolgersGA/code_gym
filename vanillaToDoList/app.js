@@ -24,7 +24,7 @@ foodLogButton.on('click', function(e){
         console.log(data)
         const foodNutrients = data.totalNutrients
 
-        const liTagForFood = $("<li class='foodLi'></li>")
+        const liTagForFood = $("<li></li>")
         const description = $("<div class='description'></div")
         // const imageOfFood = $("<img class='foodImage'>")
         const foodName = $('<p id="foodName"></p>')
@@ -42,7 +42,7 @@ foodLogButton.on('click', function(e){
 
 
         foodName.text(foodLogInput.val())
-        foodCalories.text("Calories " + data.calories)
+        foodCalories.text("Calories  " + data.calories)
         foodProtein.text("Protein " + Math.round(foodNutrients.PROCNT.quantity) + " g")
         foodFats.text("Total Fat " + Math.round(foodNutrients.FAT.quantity) + " g")
         foodCarbs.text("Total Carbs " + Math.round(foodNutrients.CHOCDF.quantity) + " g")
@@ -66,7 +66,7 @@ foodLogButton.on('click', function(e){
         // imageOfFood.attr('src', data.parsed[0].)
         foodLoggedUlTag.append(liTagForFood)
 
-        totalsDiv.text("Total Calories " + calories)
+        totalsDiv.text("Total Calories " + Math.floor(calories))
         totalsDiv.append('<p>' + "Total Protein " + Math.round(protein) + "g" + '</p>')
         totalsDiv.append('<p>' + "Total Fats " + Math.round(fats) + "g" + '</p>')
         totalsDiv.append('<p>' + "Total Carbs " + Math.round(carbs) + "g" + '</p>')
@@ -76,18 +76,40 @@ foodLogButton.on('click', function(e){
         totalsDiv.removeClass("hide")
         totalsDiv.addClass("show")
         body.append(totalsDiv)
-
-
-
       }
 
     })
 
 })
 
+// THIS FEATURE WILL ALLOW USER TO SELECT WHAT TYPE OF FOOD WAS CONSUMED AND ADD AN IMAGE OF FOOD TO THE DOM
+// $.ajax({
+//         type: "GET",
+//         url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&app_id=e8f6cb8b&app_key=f55817f083b2b4ff70ce048485ee9db2",
+//         success: function(data){
+//         const descript = $("div.description")
+//         const imageOfFood = $("<img class='foodImage'>")
 
-//   $.ajax({
-//   type: "GET",
-//   url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging,
-//   success: function(data){
+//         imageOfFood.attr('src', data.parsed[0].food.image)
+
+//         descript.append(imageOfFood)
+//         console.log(data._links.next.href)
+
+//         // $('div.description').append(liTag)
+
+//           $.ajax({
+//             type: "GET",
+//             url: data._links.next.href,
+//             success: function(data){
+//               console.log(data)
+//             }
+
+//           })
+
+//         }
+
+// })
+
+
+
 
