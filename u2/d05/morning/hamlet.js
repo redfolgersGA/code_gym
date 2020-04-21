@@ -60,6 +60,31 @@ updatedHamArray.push(updatedHam)
 
 console.log(updatedHamArray)
 
+// Scene IV (maybe use for in or FILTER)
+var swinging_hamlets = []
+
+function findSixtiesHamlets(){
+  for(var i=0;i<updatedHamArray.length;i++){
+
+  if(updatedHamArray[i].year.toString()[2] === '6'){
+    swinging_hamlets.push(updatedHamArray[i])
+
+    }
+  }
+
+}
+
+findSixtiesHamlets()
+
+
+console.log(swinging_hamlets)
+
+// for(var i =0; i<emptyHam.length;i++){
+//   for(var j=0; j<emptyHam[i].length;j++){
+//     console.log(emptyHam[i][j])
+//   }
+// }
+
 
 
 
