@@ -4,7 +4,7 @@
 
 2. There is a disturbance in the force. The Jedi with red lightsabers have been temped by the dark side. They gather together. Display all the jedi with red lightsabers.
 
-A: SELECT * FROM jedis WHERE light_sabercolor = 'red'; 
+A: SELECT * FROM jedis WHERE lightsaber_color = 'red'; 
 
 3. The Jedi with red lightsabers attack and assainate the Jedi who posess green lightsabers. Delete all the jedi with green lightsabers.
 
