@@ -79,6 +79,23 @@ findSixtiesHamlets()
 
 console.log(swinging_hamlets)
 
+// Scene V
+var future_hamlets = []
+
+function findFutureHamlets (){
+  for(var i=0;i<updatedHamArray.length;i++){
+
+    if(updatedHamArray[i].year.toString()[2] === '0'){
+      future_hamlets.push(updatedHamArray[i])
+    }
+  }
+}
+
+findFutureHamlets()
+
+console.log(future_hamlets)
+
+
 // for(var i =0; i<emptyHam.length;i++){
 //   for(var j=0; j<emptyHam[i].length;j++){
 //     console.log(emptyHam[i][j])
