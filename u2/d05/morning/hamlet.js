@@ -41,6 +41,27 @@ for(var i =0; i<emptyHam.length;i++){
 
 console.log(emptyHam)
 
+// Scene III
+function ArrToObj (name, year){
+  this.name = name;
+  this.year = year;
+
+
+}
+
+var updatedHamArray = []
+
+for(var i=0;i<emptyHam.length;i++){
+var updatedHam = new ArrToObj(emptyHam[i][0], emptyHam[i][1])
+updatedHamArray.push(updatedHam)
+
+}
+
+
+console.log(updatedHamArray)
+
+
+
 
 
 
