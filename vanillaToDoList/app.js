@@ -110,6 +110,50 @@ foodLogButton.on('click', function(e){
 
 // })
 
+var date = new Date()
+var monthNow = date.getUTCMonth()
+console.log(monthNow)
 
+function convertMonthNow(){
+  if(monthNow === 0){
+    console.log("January")
+  }
+  if(monthNow === 1){
+    console.log("February")
+  }
+  if(monthNow === 2){
+    console.log("March")
+  }
+  if(monthNow === 3){
+    console.log("April")
+  }
+  if(monthNow === 4){
+    console.log("May")
+  }
+  if(monthNow === 5){
+    console.log("June")
+  }
+  if(monthNow === 6){
+    console.log("July")
+  }
+  if(monthNow === 7){
+    console.log("August")
+  }
+  if(monthNow === 8){
+    console.log("September")
+  }
+  if(monthNow === 9){
+    console.log("October")
+  }
+  if(monthNow === 10){
+    console.log("Novemeber")
+  }
+  if(monthNow === 11){
+    console.log("Decemeber")
+  }
+}
 
+convertMonthNow()
+
+// $('.showDateNow').text()
 
