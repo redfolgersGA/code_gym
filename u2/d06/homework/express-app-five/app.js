@@ -56,5 +56,25 @@ app.get('/api/npmPackages', function(req,res){
 
 })
 
+var languages = {
+ languages :
+ [
+   {
+      name: "javascript",
+      description: "Awesome frontend browserbased language"
+
+   }
+ ]
+}
+
+app.get("/api/languages", function(req,res){
+  var json_data = languages;
+  res.json(json_data)
+})
+
+
+
+
+
 
 
