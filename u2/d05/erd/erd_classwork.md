@@ -1,4 +1,6 @@
 # Modeling for Fun and Profit
+see for useful information about ERD's
+https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/
 
 ## Setup
 
