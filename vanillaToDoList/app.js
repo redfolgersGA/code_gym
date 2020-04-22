@@ -18,8 +18,8 @@ foodLogButton.on('click', function(e){
 
     $.ajax({
       type: "GET",
-      url: "https://api.edamam.com/api/nutrition-data?&ingr="+foodLogInput.val(),
-      // url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&",
+      url: "https://api.edamam.com/api/nutrition-data?app_id=7e672af5&app_key=5f43d45e665379d615a8ed38552e69d7&ingr="+foodLogInput.val(),
+      // url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&app_id=e8f6cb8b&app_key=f55817f083b2b4ff70ce048485ee9db2",
       success: function(data){
         console.log(data)
         const foodNutrients = data.totalNutrients
@@ -112,48 +112,57 @@ foodLogButton.on('click', function(e){
 
 var date = new Date()
 var monthNow = date.getUTCMonth()
+var monthConverted
+var dayNow = date.getDate()
+var yearNow = date.getFullYear()
+
 console.log(monthNow)
 
-function convertMonthNow(){
+function showDate(){
   if(monthNow === 0){
-    console.log("January")
+    monthConverted = "January"
   }
   if(monthNow === 1){
-    console.log("February")
+    monthConverted = "February"
   }
   if(monthNow === 2){
-    console.log("March")
+    monthConverted = "March"
   }
   if(monthNow === 3){
-    console.log("April")
+    monthConverted = "April"
   }
   if(monthNow === 4){
-    console.log("May")
+    monthConverted = "May"
   }
   if(monthNow === 5){
-    console.log("June")
+    monthConverted = "June"
   }
   if(monthNow === 6){
-    console.log("July")
+    monthConverted = "July"
   }
   if(monthNow === 7){
-    console.log("August")
+    monthConverted = "August"
   }
   if(monthNow === 8){
-    console.log("September")
+    monthConverted = "September"
   }
   if(monthNow === 9){
-    console.log("October")
+    monthConverted = "October"
   }
   if(monthNow === 10){
-    console.log("Novemeber")
+    monthConverted = "Novemeber"
   }
   if(monthNow === 11){
-    console.log("Decemeber")
+    monthConverted = "Decemeber"
   }
+
+  $('#showDateNow').text(monthConverted + " " + dayNow + "," + " " + yearNow)
+
 }
 
-convertMonthNow()
+showDate()
 
-// $('.showDateNow').text()
+console.log(monthConverted)
+
+
 

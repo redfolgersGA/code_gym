@@ -11,23 +11,63 @@
 </head>
 <body>
 
-  <div class="top date">
-    <p id="foodDiaryForDate">Your food diary for:</p>
-      <div id="dateNow">
-        <h1 id="showDateNow">4/21/2020</h1>
+  <div class="container top date">
+    <button class="previousDate"></button>
+
+      <div id="dateNow" class="container">
+        <p id="foodDiaryForDate">Your food diary for:</p>
+        <time id="showDateNow"></time>
       </div>
+    <button class="nextDate"></button>
+    <form>
+      <div class="form-group">
+        <label for="searchBar">Search our food database by name</label>
+        <input type="text" class="form-control foodLogInput">
+      </div>
+      <button type="button" class="foodLogButton btn btn-primary" type="submit" value="Search">
+          Search
+       <!-- <i class="fas fa-plus-square"></i> -->
+      </button>
+    </form>
+
     <!-- <img class="topImage" src="./images/eggs2.jpg">
     <h1> Macro Journal <br> for WeightLoss <br> I am healthy I am strong </h1> -->
+    <!-- TABLE TO BE GENERATED DYNAMICALLY -->
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">Breakfast</th>
+          <th scope="col">Calories</th>
+          <th scope="col">Carbs</th>
+          <th scope="col">Fat</th>
+          <th scope="col">Protein</th>
+          <th scope="col">Sodium</th>
+          <th scope="col">Sugar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1 almonds</th>
+          <td>300</td>
+          <td>21</td>
+          <td>5</td>
+          <td>23</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-  <form>
-    <h2>Search our food database by name</h2>
-    <input type="text" class="foodLogInput">
-    <button class="foodLogButton" type="submit" value="Search">
-      Search
-     <!-- <i class="fas fa-plus-square"></i> -->
-    </button>
-  </form>
   <div class="foodContainer">
     <ul class="foodList">
 
