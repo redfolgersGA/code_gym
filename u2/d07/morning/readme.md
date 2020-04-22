@@ -35,21 +35,31 @@ INSERT INTO Games(title, year, developers, genre) VALUES('Tony Hawk\'s Pro Skate
 Use SQL queries to complete the following tasks
 
 1. Select the title of all games
+SELECT * FROM Games;
 
 2. Show all the years in the database.
+SELECT title, year FROM Games;
 
 3. Show the title of each game made by 'Rare'.
+SELECT * FROM Games WHERE developers = 'Rare';
 
 4. Select all games that were made before 1998.
+SELECT * FROM Games WHERE year < 1998;
 
 5. Find the average release year of all games made by 'Nintendo EAD'
+SELECT AVG(year) FROM Games WHERE developers = 'Nintendo EAD';
 
 6. Show the developer names of each game, in alphabetical order.
+SELECT title, developers FROM Games ORDER BY developers ASC;
 
 7. Show the titles of games not made by 'Nintendo EAD'.
+ SELECT * FROM Games WHERE developers NOT IN ('Nintendo EAD');
 
 8. Add the the game 'F-Zero X', released in 1998, made by 'Nintendo EAD', and with the genre 'Racing'.
+INSERT INTO Games(title, year, developers, genre) VALUES ('F-Zero X', 1998, 'Nintendo EAD', 'Racing');
 
 9. Show all the game titles ordered by their release year.
+SELECT title, year FROM Games ORDER BY year ASC;
 
 10. Remove all games not made by 'Hudson Soft'.
+DELETE FROM Games WHERE developers NOT IN ('Hudson Soft');
