@@ -18,8 +18,8 @@ foodLogButton.on('click', function(e){
 
     $.ajax({
       type: "GET",
-      url: "https://api.edamam.com/api/nutrition-data?app_id=7e672af5&app_key=5f43d45e665379d615a8ed38552e69d7&ingr="+foodLogInput.val(),
-      // url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&app_id=e8f6cb8b&app_key=f55817f083b2b4ff70ce048485ee9db2",
+      url: "https://api.edamam.com/api/nutrition-data?app_id=&ingr="+foodLogInput.val(),
+      // url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&app_id=",
       success: function(data){
         console.log(data)
         const foodNutrients = data.totalNutrients
