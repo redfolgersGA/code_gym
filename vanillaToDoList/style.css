@@ -74,9 +74,14 @@ table{
   border: 1px solid black;
   position: relative;
   top: 300px;
+  background-color: white;
 /*   height: 20px;
   width: 20px; */
 }
+
+/* th.description{
+  height: 40px;
+} */
 
 header{
   font-size: 1.5rem;
@@ -157,13 +162,25 @@ form button:hover{
 
 }
 
-li {
+li{
   width:500px;
-  height: 110px;
+  height: 50px;
   margin-top: 10px;
   list-style-type: none;
   box-shadow: -4px 2px 1px #222222;
   background-color: white;
+}
+
+.deleteBttn{
+  width:10px;
+  height: 50px;
+  margin-top: 10px;
+  list-style-type: none;
+  /* box-shadow: -4px 2px 1px #222222; */
+  background-color: white;
+  position: relative;
+  top: -60px;
+  left: 504px;
 }
 
 .foodImage{
