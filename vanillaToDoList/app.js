@@ -1,6 +1,6 @@
 // selectors
 const foodLogInput = $('.foodLogInput')
-const foodLogButton = $('.foodLogButton')
+const breakfastButton = $('#breakfastBttn')
 const foodLoggedDivContainer = $('.foodContainer')
 const foodLoggedDivBreakfast = $('#breakfast')
 const foodLoggedUlTag = $('.foodList')
@@ -18,76 +18,85 @@ var carbs = 0
 
 // next step is to grab a div/ul/li and visually represent your APIdata on the DOM
 var counter = 1;
-foodLogButton.on('click', function(e){
-  e.preventDefault()
-
-    $.ajax({
-      type: "GET",
-      url: "https://api.edamam.com/api/nutrition-data?&ingr="+foodLogInput.val(),
-      // url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&",
-      success: function(data){
-        console.log(data)
-        const foodNutrients = data.totalNutrients
 
 
-        const liTagForFood = $("<li class='list-group-item' id=" + counter + "></li>")
-        const description = $("<div class='description'></div")
-        // const imageOfFood = $("<img class='foodImage'>")
-        const foodName = $('<p id="foodName"></p>')
-        const foodCalories = $('<p class="calories"></p>')
-        const foodProtein = $('<p class="protein"></p>')
-        const foodFats = $('<p class="fats"></p>')
-        const foodCarbs = $('<p class="carbs"></p>')
-        const foodFiber = $('<p class="fiber"></p>')
+function addBreakfast(){
+  breakfastButton.on('click', function(e){
+    e.preventDefault()
 
-        const deleteLiBttn = $('<button type="button" class="btn btn-primary deleteBttn" id=' + counter + '></button>')
+      $.ajax({
+        type: "GET",
+        url: "https://api.edamam.com/api/nutrition-data?&ingr="+foodLogInput.val(),
+        // url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&",
+        success: breakfastSuccess
+      })
 
-        foodLoggedDivBreakfast.append(liTagForFood)
+  })
+}
 
-        liTagForFood.append(description)
-        liTagForFood.append(deleteLiBttn)
+addBreakfast()
+
+function breakfastSuccess(data){
+
+          console.log(data)
+          const foodNutrients = data.totalNutrients
 
 
+          const liTagForFood = $("<li class='list-group-item' id=" + counter + "></li>")
+          const description = $("<div class='description'></div")
+          // const imageOfFood = $("<img class='foodImage'>")
+          const foodName = $('<p id="foodName"></p>')
+          const foodCalories = $('<p class="calories"></p>')
+          const foodProtein = $('<p class="protein"></p>')
+          const foodFats = $('<p class="fats"></p>')
+          const foodCarbs = $('<p class="carbs"></p>')
+          const foodFiber = $('<p class="fiber"></p>')
 
-        foodName.text(foodLogInput.val())
-        foodCalories.text("Calories " + Math.floor(data.calories))
-        foodProtein.text("Protein " + Math.round(foodNutrients.PROCNT.quantity) + " g")
-        foodFats.text("Total Fat " + Math.round(foodNutrients.FAT.quantity) + " g")
-        foodCarbs.text("Total Carbs " + Math.round(foodNutrients.CHOCDF.quantity) + " g")
+          const deleteLiBttn = $('<button type="button" class="btn btn-primary deleteBttn" id=' + counter + '></button>')
 
-        calories = calories + Math.floor(foodNutrients.ENERC_KCAL.quantity)
-        console.log(calories, 'calories')
-        protein = protein + Math.round(foodNutrients.PROCNT.quantity)
-        console.log(protein, 'protein')
-        fats = fats + Math.round(foodNutrients.FAT.quantity)
-        console.log(fats, 'fats')
-        carbs = carbs + Math.round(foodNutrients.CHOCDF.quantity)
-        console.log(carbs, 'carbs')
+          foodLoggedDivBreakfast.append(liTagForFood)
+
+          liTagForFood.append(description)
+          liTagForFood.append(deleteLiBttn)
 
 
 
-        description.append(foodName)
-        description.append(foodCalories)
-        description.append(foodProtein)
-        description.append(foodFats)
-        description.append(foodCarbs)
+          foodName.text(foodLogInput.val())
+          foodCalories.text("Calories " + Math.floor(data.calories))
+          foodProtein.text("Protein " + Math.round(foodNutrients.PROCNT.quantity) + " g")
+          foodFats.text("Total Fat " + Math.round(foodNutrients.FAT.quantity) + " g")
+          foodCarbs.text("Total Carbs " + Math.round(foodNutrients.CHOCDF.quantity) + " g")
+
+          calories = calories + Math.floor(foodNutrients.ENERC_KCAL.quantity)
+          console.log(calories, 'calories')
+          protein = protein + Math.round(foodNutrients.PROCNT.quantity)
+          console.log(protein, 'protein')
+          fats = fats + Math.round(foodNutrients.FAT.quantity)
+          console.log(fats, 'fats')
+          carbs = carbs + Math.round(foodNutrients.CHOCDF.quantity)
+          console.log(carbs, 'carbs')
+
+
+
+          description.append(foodName)
+          description.append(foodCalories)
+          description.append(foodProtein)
+          description.append(foodFats)
+          description.append(foodCarbs)
 
 
 
 
-        // imageOfFood.attr('src', data.parsed[0].)
-        foodLoggedBreakfastUl.append(liTagForFood)
+          // imageOfFood.attr('src', data.parsed[0].)
+          foodLoggedBreakfastUl.append(liTagForFood)
 
-        // YOU MAY HAVE TO MOVE THIS OUTSIDE OR INTO A FUNCTION
-        updateTotalsDiv()
+          // YOU MAY HAVE TO MOVE THIS OUTSIDE OR INTO A FUNCTION
+          updateTotalsDiv()
 
-        deleteLiBttn.on('click', deleteTheLi)
-        counter++
-      }
+          deleteLiBttn.on('click', deleteTheLi)
+          counter++
 
-    })
-
-})
+}
 
 
 function deleteTheLi(e){
@@ -151,9 +160,7 @@ function updateTotalsDiv () {
 
 }
 
-function addBreakfast(){
 
-}
 
 
 
