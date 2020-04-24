@@ -2,7 +2,9 @@
 const foodLogInput = $('.foodLogInput')
 const foodLogButton = $('.foodLogButton')
 const foodLoggedDivContainer = $('.foodContainer')
+const foodLoggedDivBreakfast = $('#breakfast')
 const foodLoggedUlTag = $('.foodList')
+const foodLoggedBreakfastUl = $('.breakfastUl')
 const totalsDiv = $('.totals')
 const body = $('body')
 var tableClass = $('.table')
@@ -40,7 +42,7 @@ foodLogButton.on('click', function(e){
 
         const deleteLiBttn = $('<button type="button" class="btn btn-primary deleteBttn" id=' + counter + '></button>')
 
-        foodLoggedDivContainer.append(liTagForFood)
+        foodLoggedDivBreakfast.append(liTagForFood)
 
         liTagForFood.append(description)
         liTagForFood.append(deleteLiBttn)
@@ -48,12 +50,12 @@ foodLogButton.on('click', function(e){
 
 
         foodName.text(foodLogInput.val())
-        foodCalories.text("Calories" + Math.round(data.calories))
-        foodProtein.text("Protein" + Math.round(foodNutrients.PROCNT.quantity) + " g")
-        foodFats.text("Total Fat" + Math.round(foodNutrients.FAT.quantity) + " g")
-        foodCarbs.text("Total Carbs" + Math.round(foodNutrients.CHOCDF.quantity) + " g")
+        foodCalories.text("Calories " + Math.floor(data.calories))
+        foodProtein.text("Protein " + Math.round(foodNutrients.PROCNT.quantity) + " g")
+        foodFats.text("Total Fat " + Math.round(foodNutrients.FAT.quantity) + " g")
+        foodCarbs.text("Total Carbs " + Math.round(foodNutrients.CHOCDF.quantity) + " g")
 
-        calories = calories + Math.round(foodNutrients.ENERC_KCAL.quantity)
+        calories = calories + Math.floor(foodNutrients.ENERC_KCAL.quantity)
         console.log(calories, 'calories')
         protein = protein + Math.round(foodNutrients.PROCNT.quantity)
         console.log(protein, 'protein')
@@ -74,7 +76,7 @@ foodLogButton.on('click', function(e){
 
 
         // imageOfFood.attr('src', data.parsed[0].)
-        foodLoggedUlTag.append(liTagForFood)
+        foodLoggedBreakfastUl.append(liTagForFood)
 
         // YOU MAY HAVE TO MOVE THIS OUTSIDE OR INTO A FUNCTION
         updateTotalsDiv()
@@ -146,6 +148,10 @@ function updateTotalsDiv () {
   totalsDiv.removeClass("hide")
   totalsDiv.addClass("show")
   body.append(totalsDiv)
+
+}
+
+function addBreakfast(){
 
 }
 
