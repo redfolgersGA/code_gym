@@ -3,6 +3,7 @@ const foodLogInput = $('.foodLogInput')
 const foodLogButton = $('.foodLogButton')
 const foodLoggedDivContainer = $('.foodContainer')
 const foodLoggedUlTag = $('.foodList')
+const totalsDiv = $('.totals')
 const body = $('body')
 var tableClass = $('.table')
 var tableBody = $('<tbody></tbody>')
@@ -36,7 +37,7 @@ foodLogButton.on('click', function(e){
         const foodFats = $('<p class="fats"></p>')
         const foodCarbs = $('<p class="carbs"></p>')
         const foodFiber = $('<p class="fiber"></p>')
-        const totalsDiv = $('.totals')
+
         const deleteLiBttn = $('<button type="button" class="btn btn-primary deleteBttn" id=' + counter + '></button>')
 
         foodLoggedDivContainer.append(liTagForFood)
@@ -47,7 +48,7 @@ foodLogButton.on('click', function(e){
 
 
         foodName.text(foodLogInput.val())
-        foodCalories.text("Calories" + data.calories)
+        foodCalories.text("Calories" + Math.round(data.calories))
         foodProtein.text("Protein" + Math.round(foodNutrients.PROCNT.quantity) + " g")
         foodFats.text("Total Fat" + Math.round(foodNutrients.FAT.quantity) + " g")
         foodCarbs.text("Total Carbs" + Math.round(foodNutrients.CHOCDF.quantity) + " g")
@@ -76,16 +77,7 @@ foodLogButton.on('click', function(e){
         foodLoggedUlTag.append(liTagForFood)
 
         // YOU MAY HAVE TO MOVE THIS OUTSIDE OR INTO A FUNCTION
-        totalsDiv.text("Total Calories " + Math.round(calories))
-        totalsDiv.append('<p>' + "Total Protein " + Math.round(protein) + "g" + '</p>')
-        totalsDiv.append('<p>' + "Total Fats " + Math.round(fats) + "g" + '</p>')
-        totalsDiv.append('<p>' + "Total Carbs " + Math.round(carbs) + "g" + '</p>')
-
-
-
-        totalsDiv.removeClass("hide")
-        totalsDiv.addClass("show")
-        body.append(totalsDiv)
+        updateTotalsDiv()
 
         deleteLiBttn.on('click', deleteTheLi)
         counter++
@@ -106,9 +98,14 @@ function deleteTheLi(e){
   e.target.parentElement.remove()
   // console.log(Math.round(fats), "is now")
 
-  console.log(fats)
+  console.log(carbs)
  fats = fats - foodFats.text().match(/\d+/g).map(Number)[0];
-  console.log(fats)
+ protein = protein - foodProtein.text().match(/\d+/g).map(Number)[0];
+ carbs = carbs - foodCarbs.text().match(/\d+/g).map(Number)[0];
+ calories = calories - foodCalories.text().match(/\d+/g).map(Number)[0];
+
+  console.log(carbs)
+
 
  // console.log(convertFatStringToNumber)
  // console.log(foodFats)
@@ -132,9 +129,23 @@ function deleteTheLi(e){
 
 
 
+ updateTotalsDiv()
 
 
 
+}
+
+function updateTotalsDiv () {
+  totalsDiv.text("Total Calories " + Math.round(calories))
+  totalsDiv.append('<p>' + "Total Protein " + Math.round(protein) + "g" + '</p>')
+  totalsDiv.append('<p>' + "Total Fats " + Math.round(fats) + "g" + '</p>')
+  totalsDiv.append('<p>' + "Total Carbs " + Math.round(carbs) + "g" + '</p>')
+
+
+
+  totalsDiv.removeClass("hide")
+  totalsDiv.addClass("show")
+  body.append(totalsDiv)
 
 }
 
