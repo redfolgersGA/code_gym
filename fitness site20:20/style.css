@@ -1,0 +1,58 @@
+/* .container1{
+  height: 200px;
+  width: 200px;
+} */
+
+/* .mybtn{
+  height: 200px;
+  width: 200px;
+}
+ */
+.navbar{
+  background-color: #ff0066;
+
+}
+
+
+
+
+
+body{
+  margin: auto 0;
+}
+.mybtn{
+  background-color: red;
+ }
+
+ .girlimage{
+  background-image: url("images/girlsfit.jpg");
+  height: 500px;
+  margin-bottom: 0;
+ }
+
+ h1{
+  color: white;
+ }
+
+ p{
+  color: white;
+ }
+
+ .about-me{
+  border: solid;
+ }
+
+ #about-para{
+  color: black;
+ }
+
+ #image-app{
+  background-image: url("images/legs.png");
+ }
+
+ img {
+  height:  200px;
+  width:  200px;
+ }
+
+

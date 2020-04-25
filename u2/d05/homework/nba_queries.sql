@@ -6,7 +6,7 @@
 
 
 -- select all new york knick players
-SELECT * FROM players = 'NYK';
+SELECT * FROM players WHERE team = 'NYK';
 
 -- select all players on indiana pacers that are under age 26
 
@@ -18,5 +18,5 @@ SELECT * FROM players ORDER BY points ASC;
 
 -- Name and Points per game (points/games), for the players with the top 20 points per game.
         -- selects column points and column games from players table
-SELECT points, games FROM players;
+SELECT points, games FROM players WHERE points > '20';
 

@@ -7,11 +7,6 @@ CREATE TABLE players (
   team varchar,
   games varchar,
   points varchar
-
-
-
-
-
 );
 
 

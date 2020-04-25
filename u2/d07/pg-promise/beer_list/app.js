@@ -48,7 +48,7 @@ app.get("/beers/:id", function(req, res) {
 app.post("/beer/:name/:category/:country/:alcohol/:price", function(req, res) {
   console.log(req.params);
   db.none("INSERT INTO beers (name, category, country, alcohol, price")
-  VALUES ($1, $2, $3, $4, $5)",
+  VALUES ($1, $2, $3, $4, $5),
     [req.params.name, req.params.categorym req.params.country, req.params.alcohol,
     req.params.price].then(function() {
       res.send("ok");
