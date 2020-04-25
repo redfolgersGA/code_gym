@@ -1,17 +1,31 @@
-// selectors
+// SELECT BODY
+const body = $('body')
+
+// SELECT INPUT TAG
 const foodLogInput = $('.foodLogInput')
+
+// BUTTONS
 const breakfastButton = $('#breakfastBttn')
 const lunchButton = $('#lunchBttn')
+const dinnerButton = $('#dinnerBttn')
+
+// DIVS FOR UL's in the HTML (HARDCODED)
 const foodLoggedDivContainer = $('.foodContainer')
 const foodLoggedDivBreakfast = $('div#breakfast')
 const foodLoggedDivLunch = $('div#lunch')
+const foodLoggedDivDinner = $('div#dinner')
+
+// UL's for the dynamically generated LI TAGS in the HTML (HARDCODED)
 const foodLoggedUlTag = $('.foodList')
 const foodLoggedBreakfastUl = $('.breakfastUl')
 const foodLoggedLunchUl = $('.lunchUl')
+const foodLoggedDinnerUl = $('.dinnerUl')
+
+
+// TOTALS DIV located at bottom of DOCUMENT (HARD CODED)
+const breakfastTotals = $('div.breakfastTotals')
 const totalsDiv = $('.totals')
-const body = $('body')
-var tableClass = $('.table')
-var tableBody = $('<tbody></tbody>')
+
 
 // ADDS UP TOTALS FOR THE DAY
 var calories = 0
@@ -95,9 +109,44 @@ function breakfastSuccess(data){
 
           // YOU MAY HAVE TO MOVE THIS OUTSIDE OR INTO A FUNCTION
           updateTotalsDiv()
+          updateBreakfastTotals()
 
           deleteLiBttn.on('click', deleteTheLi)
           counter++
+
+}
+
+function updateBreakfastTotals(){
+  // pretty much the same logic as updateTotalsDiv FUNCTION except itll grab totals from the break fast div only
+  const breakfastCarbs = $('.breakfastLi div.description p.carbs').text()
+  const breakfastFats = $('.breakfastLi div.description p.fats').text()
+  const breakfastProtein = $('.breakfastLi div.description p.protein').text()
+  const breakfastCalories = $('.breakfastLi div.description p.calories').text()
+  const breakfastTotals = $('div.breakfastTotals')
+
+
+  const pTagForFats = $('<p>' + breakfastFats +'</p>')
+  console.log(pTagForFats)
+  pTagForFats.css({"background-color": "yellow", "float": "right"})
+
+  const pTagForProtein = $('<p>' + breakfastProtein + '</p>')
+  pTagForProtein.css({"background-color": "green", "float": "right"})
+
+  const pTagForCarbs = $('<p>' + breakfastCarbs +'</p>')
+  pTagForCarbs.css({"background-color": "green", "float": "right"})
+
+
+
+  breakfastTotals.append(pTagForCarbs)
+  breakfastTotals.append(pTagForFats)
+  breakfastTotals.append('<p>' + breakfastProtein +'</p>')
+  breakfastTotals.append('<p>' + breakfastCalories +'</p>')
+
+  console.log(breakfastFats)
+  // breakfastTotals.text("total Carbs")
+
+
+
 
 }
 
@@ -179,6 +228,89 @@ function lunchSuccess(data){
 
 }
 
+function addDinner(){
+  dinnerButton.on('click', function(e){
+    e.preventDefault();
+
+    $.ajax({
+        type: "GET",
+        url: "https://api.edamam.com/api/nutrition-data?&ingr="+"1 large egg",
+        // url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&",
+        success: dinnerSuccess
+      })
+
+  })
+
+}
+
+addDinner()
+
+function dinnerSuccess(data) {
+  console.log("dinnerButton")
+
+  const foodNutrients = data.totalNutrients
+
+  const liTagForFood = $("<li class='list-group-item dinnerLi' id=" + counter + "></li>")
+          const description = $("<div class='description'></div")
+          // const imageOfFood = $("<img class='foodImage'>")
+          const foodName = $('<p id="foodName"></p>')
+          const foodCalories = $('<p class="calories"></p>')
+          const foodProtein = $('<p class="protein"></p>')
+          const foodFats = $('<p class="fats"></p>')
+          const foodCarbs = $('<p class="carbs"></p>')
+          const foodFiber = $('<p class="fiber"></p>')
+
+          const deleteLiBttn = $('<button type="button" class="btn btn-primary deleteBttn" id=' + counter + '></button>')
+
+          foodLoggedDivDinner.append(liTagForFood)
+
+          liTagForFood.append(description)
+          liTagForFood.append(deleteLiBttn)
+
+
+
+          foodName.text(foodLogInput.val())
+          foodCalories.text("Calories " + Math.floor(data.calories))
+          foodProtein.text("Protein " + Math.round(foodNutrients.PROCNT.quantity) + " g")
+          foodFats.text("Total Fat " + Math.round(foodNutrients.FAT.quantity) + " g")
+          foodCarbs.text("Total Carbs " + Math.round(foodNutrients.CHOCDF.quantity) + " g")
+
+          calories = calories + Math.floor(foodNutrients.ENERC_KCAL.quantity)
+          console.log(calories, 'calories')
+          protein = protein + Math.round(foodNutrients.PROCNT.quantity)
+          console.log(protein, 'protein')
+          fats = fats + Math.round(foodNutrients.FAT.quantity)
+          console.log(fats, 'fats')
+          carbs = carbs + Math.round(foodNutrients.CHOCDF.quantity)
+          console.log(carbs, 'carbs')
+
+
+
+          description.append(foodName)
+          description.append(foodCalories)
+          description.append(foodProtein)
+          description.append(foodFats)
+          description.append(foodCarbs)
+
+
+
+
+          // imageOfFood.attr('src', data.parsed[0].)
+          foodLoggedDinnerUl.append(liTagForFood)
+
+          // YOU MAY HAVE TO MOVE THIS OUTSIDE OR INTO A FUNCTION
+          updateTotalsDiv()
+
+
+
+
+          deleteLiBttn.on('click', deleteTheLi)
+          counter++
+
+
+
+}
+
 
 function deleteTheLi(e){
   const deleteLiBttn = $('button.deleteBttn')
@@ -220,12 +352,16 @@ function deleteTheLi(e){
  //  console.log(convertFatStringToNumber)
 
 
-
+ // ALSO UPDATE BREAKFAST, LUNCH AND DINNER TOTALS DIV
  updateTotalsDiv()
 
 
 
 }
+
+
+
+
 
 function updateTotalsDiv () {
   totalsDiv.text("Total Calories " + Math.round(calories))

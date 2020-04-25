@@ -69,20 +69,6 @@ time#showDateNow{
 
 }
 
-table{
-  /* color: black; */
-  border: 1px solid black;
-  position: relative;
-  top: 300px;
-  background-color: white;
-/*   height: 20px;
-  width: 20px; */
-}
-
-/* th.description{
-  height: 40px;
-} */
-
 header{
   font-size: 1.5rem;
   position: absolute;
@@ -145,6 +131,40 @@ form button:hover{
   background: #d88771;
   color: white;
 } */
+
+/* These totals DIVS use the same styling as the dynamically generated LI TAGS */
+.breakfastTotals{
+  width:500px;
+  height: 50px;
+  margin-top: 10px;
+  list-style-type: none;
+  box-shadow: -4px 2px 1px #222222;
+  background-color: white;
+}
+
+/* .breakfastLi div.description p.carbs{
+  size: 20px;
+  height: 20px;
+  width: 20px;
+} */
+
+.lunchTotals{
+  width:500px;
+  height: 50px;
+  margin-top: 10px;
+  list-style-type: none;
+  box-shadow: -4px 2px 1px #222222;
+  background-color: white;
+}
+
+.dinnerTotals{
+  width:500px;
+  height: 50px;
+  margin-top: 10px;
+  list-style-type: none;
+  box-shadow: -4px 2px 1px #222222;
+  background-color: white;
+}
 
 
 
