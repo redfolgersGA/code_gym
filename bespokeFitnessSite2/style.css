@@ -1,0 +1,38 @@
+
+div.siteHeader{
+  height: 300px;
+  width: 100%;
+  background-color: #39e09b;
+  border: 1px solid black;
+}
+
+div.navCenter{
+  position: absolute;
+}
+
+.nav{
+  position: relative;
+  top: 200px;
+  left: 100px;
+  /* text-align: center; */
+
+}
+
+a{
+  display: inline-block;
+  color: #FFFFFF;
+
+  font-size: 17px;
+}
+
+.headline{
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
+}
+/*
+div.textCenter{
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
+} */
