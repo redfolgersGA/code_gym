@@ -142,6 +142,13 @@ form button:hover{
   background-color: white;
 }
 
+#breakfastFatsPTag,
+#breakfastCaloriesPTag,
+#breakfastProteinPTag,
+#breakfastCarbsPTag{
+  float: right;
+}
+
 /* .breakfastLi div.description p.carbs{
   size: 20px;
   height: 20px;

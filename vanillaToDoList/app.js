@@ -43,8 +43,6 @@ function addBreakfast(){
 // foodLogInput.val() YOU MUST ADD THIS TO THE END OF YOUR API CALL
       $.ajax({
         type: "GET",
-        url: "https://api.edamam.com/api/nutrition-data?&ingr="+ "1 large egg",
-        // url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&",
         success: breakfastSuccess
       })
 
@@ -81,8 +79,8 @@ function breakfastSuccess(data){
           foodName.text(foodLogInput.val())
           foodCalories.text("Calories " + Math.floor(data.calories))
           foodProtein.text("Protein " + Math.round(foodNutrients.PROCNT.quantity) + " g")
-          foodFats.text("Total Fat " + Math.round(foodNutrients.FAT.quantity) + " g")
-          foodCarbs.text("Total Carbs " + Math.round(foodNutrients.CHOCDF.quantity) + " g")
+          foodFats.text("Fat " + Math.round(foodNutrients.FAT.quantity) + " g")
+          foodCarbs.text("Carbs " + Math.round(foodNutrients.CHOCDF.quantity) + " g")
 
           calories = calories + Math.floor(foodNutrients.ENERC_KCAL.quantity)
           console.log(calories, 'calories')
@@ -116,34 +114,49 @@ function breakfastSuccess(data){
 
 }
 
+var totalCarbsNumber = 0
+var totalFatsNumber = 0
+var totalProteinNumber = 0
+var totalCaloriesNumber = 0
+
+
 function updateBreakfastTotals(){
   // pretty much the same logic as updateTotalsDiv FUNCTION except itll grab totals from the break fast div only
+  // QUERY THE DOM
   const breakfastCarbs = $('.breakfastLi div.description p.carbs').text()
   const breakfastFats = $('.breakfastLi div.description p.fats').text()
   const breakfastProtein = $('.breakfastLi div.description p.protein').text()
   const breakfastCalories = $('.breakfastLi div.description p.calories').text()
   const breakfastTotals = $('div.breakfastTotals')
 
+  const breakfastFatsPTag = $('#breakfastFatsPTag')
+  const breakfastProteinPTag = $('#breakfastProteinPTag')
+  const breakfastCarbsPTag = $('#breakfastCarbsPTag')
+  const breakfastCaloriesPTag = $('#breakfastCaloriesPTag')
 
-  const pTagForFats = $('<p>' + breakfastFats +'</p>')
-  console.log(pTagForFats)
-  pTagForFats.css({"background-color": "yellow", "float": "right"})
-
-  const pTagForProtein = $('<p>' + breakfastProtein + '</p>')
-  pTagForProtein.css({"background-color": "green", "float": "right"})
-
-  const pTagForCarbs = $('<p>' + breakfastCarbs +'</p>')
-  pTagForCarbs.css({"background-color": "green", "float": "right"})
-
+  totalFatsNumber = totalFatsNumber + breakfastFats.match(/\d+/g).map(Number)[0]
+  totalProteinNumber = totalProteinNumber + breakfastProtein.match(/\d+/g).map(Number)[0]
+  totalCarbsNumber = totalCarbsNumber + breakfastCarbs.match(/\d+/g).map(Number)[0]
+  totalCaloriesNumber = totalCaloriesNumber + breakfastCalories.match(/\d+/g).map(Number)[0]
 
 
-  breakfastTotals.append(pTagForCarbs)
-  breakfastTotals.append(pTagForFats)
-  breakfastTotals.append('<p>' + breakfastProtein +'</p>')
-  breakfastTotals.append('<p>' + breakfastCalories +'</p>')
+  breakfastFatsPTag.text("Total Fat " + totalFatsNumber)
+  breakfastProteinPTag.text("Total Protein " + totalProteinNumber)
+  breakfastCarbsPTag.text("Total Carbs " + totalCarbsNumber)
+  breakfastCaloriesPTag.text("Total Calories " + totalCaloriesNumber)
 
-  console.log(breakfastFats)
-  // breakfastTotals.text("total Carbs")
+  // REPLICATE THE ABOVE LOGIC FOR LUNCH AND DINNER
+  // ADD LOGIC TO SUBTRACT FROM BREAKFAST DIV TOTALS WHEN LI ITEM IS REMOVED
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -156,8 +169,6 @@ function addLunch() {
 
     $.ajax({
         type: "GET",
-        url: "https://api.edamam.com/api/nutrition-data?&ingr="+"1 large egg",
-        // url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&",
         success: lunchSuccess
       })
 
@@ -234,8 +245,6 @@ function addDinner(){
 
     $.ajax({
         type: "GET",
-        url: "https://api.edamam.com/api/nutrition-data?&ingr="+"1 large egg",
-        // url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&",
         success: dinnerSuccess
       })
 
@@ -385,7 +394,6 @@ function updateTotalsDiv () {
 // THIS FEATURE WILL ALLOW USER TO SELECT WHAT TYPE OF FOOD WAS CONSUMED AND ADD AN IMAGE OF FOOD TO THE DOM
 // $.ajax({
 //         type: "GET",
-//         url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&app_id=e8f6cb8b&app_key=f55817f083b2b4ff70ce048485ee9db2",
 //         success: function(data){
 //         const descript = $("div.description")
 //         const imageOfFood = $("<img class='foodImage'>")
