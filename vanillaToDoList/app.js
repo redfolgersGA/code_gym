@@ -43,6 +43,8 @@ function addBreakfast(){
 // foodLogInput.val() YOU MUST ADD THIS TO THE END OF YOUR API CALL
       $.ajax({
         type: "GET",
+        url: "https://api.edamam.com/api/nutrition-data?&ingr="+ "1 large egg",
+        // url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&",
         success: breakfastSuccess
       })
 
@@ -114,10 +116,10 @@ function breakfastSuccess(data){
 
 }
 
-var totalCarbsNumber = 0
-var totalFatsNumber = 0
-var totalProteinNumber = 0
-var totalCaloriesNumber = 0
+var totalBFastCarbsNumber = 0
+var totalBFastFatsNumber = 0
+var totalBFastProteinNumber = 0
+var totalBFastCaloriesNumber = 0
 
 
 function updateBreakfastTotals(){
@@ -134,16 +136,18 @@ function updateBreakfastTotals(){
   const breakfastCarbsPTag = $('#breakfastCarbsPTag')
   const breakfastCaloriesPTag = $('#breakfastCaloriesPTag')
 
-  totalFatsNumber = totalFatsNumber + breakfastFats.match(/\d+/g).map(Number)[0]
-  totalProteinNumber = totalProteinNumber + breakfastProtein.match(/\d+/g).map(Number)[0]
-  totalCarbsNumber = totalCarbsNumber + breakfastCarbs.match(/\d+/g).map(Number)[0]
-  totalCaloriesNumber = totalCaloriesNumber + breakfastCalories.match(/\d+/g).map(Number)[0]
+  totalBFastFatsNumber = totalBFastFatsNumber + breakfastFats.match(/\d+/g).map(Number)[0]
+  totalBFastProteinNumber = totalBFastProteinNumber + breakfastProtein.match(/\d+/g).map(Number)[0]
+  totalBFastCarbsNumber = totalBFastCarbsNumber + breakfastCarbs.match(/\d+/g).map(Number)[0]
+  totalBFastCaloriesNumber = totalBFastCaloriesNumber + breakfastCalories.match(/\d+/g).map(Number)[0]
 
 
-  breakfastFatsPTag.text("Total Fat " + totalFatsNumber)
-  breakfastProteinPTag.text("Total Protein " + totalProteinNumber)
-  breakfastCarbsPTag.text("Total Carbs " + totalCarbsNumber)
-  breakfastCaloriesPTag.text("Total Calories " + totalCaloriesNumber)
+  breakfastFatsPTag.text("Total Fat " + totalBFastFatsNumber)
+  breakfastProteinPTag.text("Total Protein " + totalBFastProteinNumber)
+  breakfastCarbsPTag.text("Total Carbs " + totalBFastCarbsNumber)
+  breakfastCaloriesPTag.text("Total Calories " + totalBFastCaloriesNumber)
+
+  console.log(totalBFastCaloriesNumber)
 
   // REPLICATE THE ABOVE LOGIC FOR LUNCH AND DINNER
   // ADD LOGIC TO SUBTRACT FROM BREAKFAST DIV TOTALS WHEN LI ITEM IS REMOVED
@@ -169,6 +173,8 @@ function addLunch() {
 
     $.ajax({
         type: "GET",
+        url: "https://api.edamam.com/api/nutrition-data?app_id=&ingr="+"1 large egg",
+        // url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&app_id=",
         success: lunchSuccess
       })
 
@@ -245,6 +251,8 @@ function addDinner(){
 
     $.ajax({
         type: "GET",
+        url: "https://api.edamam.com/api/nutrition-data?app_id=&ingr="+"1 large egg",
+        // url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&app_id=",
         success: dinnerSuccess
       })
 
@@ -331,34 +339,30 @@ function deleteTheLi(e){
   e.target.parentElement.remove()
   // console.log(Math.round(fats), "is now")
 
-  console.log(carbs)
+// OVERALL DAILY TOTALS subtracted from when the DELETE BUTTON IS PRESSED
  fats = fats - foodFats.text().match(/\d+/g).map(Number)[0];
  protein = protein - foodProtein.text().match(/\d+/g).map(Number)[0];
  carbs = carbs - foodCarbs.text().match(/\d+/g).map(Number)[0];
  calories = calories - foodCalories.text().match(/\d+/g).map(Number)[0];
 
-  console.log(carbs)
 
 
- // console.log(convertFatStringToNumber)
- // console.log(foodFats)
+// BREAKFAST DELETE LOGIC--------------------------------------------
 
+  // First QUERY the DOM for the HTML ELEMENTS THAT WILL DYNAMICALLY CHANGE
+ const breakFastCaloriesPTag = $('#breakfastCaloriesPTag')
+ const breakFastProteinPTag = $('#breakfastProteinPTag')
+ const breakFastFatsPTag = $('#breakfastFatsPTag')
+ const breakFastCarbsPTag = $('#breakfastCarbsPTag')
 
-// for(var i=0;i<convertFatStringToNumber.length;i++){
-//   foodFats
-// }
-//  console.log(convertFatStringToNumber[0])
+  // BREAKFAST TOTALS subtracted from when the DELETE BUTTON IS PRESSED
 
- // const reducer = (accumulator, currentValue) => accumulator + currentValue;
- // console.log(convertFatStringToNumber.reduce(reducer))
+ // totalBFastCarbsNumber = totalBFastCarbsNumber -  foodCarbs.text().match(/\d+/g).map(Number)[0];
+ // console.log(totalBFastCarbsNumber)
+ // totalBFastFatsNumber
+ // totalBFastProteinNumber
+ // totalBFastCaloriesNumber
 
-
-
- // fats = fats - convertFatStringToNumber.reduce(reducer)
- // console.log(fats, "is now")
-
-
- //  console.log(convertFatStringToNumber)
 
 
  // ALSO UPDATE BREAKFAST, LUNCH AND DINNER TOTALS DIV
@@ -394,6 +398,7 @@ function updateTotalsDiv () {
 // THIS FEATURE WILL ALLOW USER TO SELECT WHAT TYPE OF FOOD WAS CONSUMED AND ADD AN IMAGE OF FOOD TO THE DOM
 // $.ajax({
 //         type: "GET",
+//         url: "https://api.edamam.com/api/food-database/parser?ingr="+foodLogInput.val()+"&nutrition-type=logging&app_id=e8f6cb8b&app_key=f55817f083b2b4ff70ce048485ee9db2",
 //         success: function(data){
 //         const descript = $("div.description")
 //         const imageOfFood = $("<img class='foodImage'>")
