@@ -1,43 +1,18 @@
-
-div.siteHeader{
-
-  height: 300px;
-  width: 100%;
-  background-color: #39e09b;
-  border: 1px solid black;
-  position: absolute;
-}
-
-div.navCenter{
-  position: absolute;
-}
-
-.nav{
-  position: relative;
-  top: 200px;
-  left: 100px;
-  /* text-align: center; */
-
-}
-
-a{
-  /* display: inline-block; */
-  color: #FFFFFF;
-
-  font-size: 20px;
-  margin: 0 auto;
+html, body {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
 }
 
 .headline{
-  height: 250px;
+  height: 400px;
   max-width: 100%;
-  border: 1px solid black;
   position: relative;
   top: 0px;
   margin: 0, auto;
   padding: 0;
   /* background-color: #E7BE; */
-  /* background-image: url('Images4LandingPages/girlFighter.jpg'); */
+  background-color: #ABBDF9;
 }
 
 .headline h1{
@@ -46,11 +21,32 @@ a{
   font-weight: bold;
   background-color: #ABBDF9;
   text-shadow: white 0px 0px 10px;
+  position: relative;
+  top: 40px;
+}
+
+.headline p{
+  position: relative;
+  top: 60px;
+  font-size: 60px;
+  text-shadow: white 0px 0px 10px;
+}
+
+.headline #CTA{
+  /* color: white; */
+  position: relative;
+  top: 30px;
+  text-decoration: underline;
+
 }
 
 .headline p{
   text-align: center;
   font-size: 20px;
+}
+
+#bookCall{
+  color: red;
 }
 
 .headline h1 b{
@@ -62,26 +58,459 @@ a{
   top: 0px;
   height: 200px;
   max-width: 100%;
-  background-color: #E7BEF2;
+  background-color: white;
 
 }
 
-#ifThenImage{
-  position: relative;
-  height: 290px;
-  max-width: 100%;
-  top: 0px;
-  left: 600px;
-  /* margin: 0; */
-}
 
 .canYouImagine{
+  position: relative;
+  /* max-width: 100%; */
+  margin: 0 auto;
+  padding: 0;
+  height: 820px;
+  width: 100%;
+  top: 20px;
+  /* left: -120px; */
+  line-height: 8.5rem;
+/*   border: 1px solid black;
+  box-shadow: -6px 4px 1px #222222;
+  background-color: white; */
+
+}
+
+.canYouImagine h3{
+  position: relative;
+  top: -380px;
+  font-size: 25px;
+  line-height: 3.5em
+
+}
+
+#becomingMoreConfident{
+  color: red;
+}
+
+#yesOneButton{
+  position: relative;
+  top: -420px;
+  width: 100%;
+  /* justify-content: center; */
+  height: 80px;
+  background-color: #ABBDF9;
+}
+
+#girlFighterPic{
+  position: relative;
+  top: 50px;
+  left: 600px;
+  /* height: 300px; */
+  max-width: 100%;
+  width: 500px;
+  height: auto;
+
+}
+
+#factOne{
+  position: relative;
+  top: -200px;
+  left: 0px;
   height: 200px;
-  width: 580px;
+  width: 500px;
+  border: 1px solid black;
+  box-shadow: -4px 2px 1px #222222;
+  background-color: white;
+  /* text-shadow: blue 0px 0px 10px; */
+}
+
+/* #sourceOne{
+  position: relative;
+  top: 10px;
+  font-size: 10px;
+} */
+
+.skeptical{
+  position: relative;
+  top: -400px;
+  left: 0px;
+  height: 1800px;
+  /* border: 1px solid black;
+  box-shadow: -6px 4px 1px #222222;
+  background-color: white; */
+}
+
+.skeptical h3{
+  line-height: 2.5em;
+  position: relative;
+  top: -250px;
+  float: left;
+  left: 0px;
+}
+
+#calmGirl{
+  position: relative;
+  height: 500px;
+  max-width: 100%;
+  top: -50px;
+  left: 650px;
+
+}
+
+#factTwo{
+  border: 1px solid black;
+  box-shadow: -4px 2px 1px #222222;
+  background-color: white;
+  /* text-shadow: blue 0px 0px 10px; */
+  position: relative;
+  /* height: 200px; */
+  top: -1900px;
+  left: -100px;
+  width: 400px;
+}
+
+.iveBeenThereToo{
+  position: relative;
+  top: -1780px;
+  left: 0px;
+  height: 300px;
+  margin: 0;
+}
+
+.iveBeenThereToo #anxiousEmmanuel{
+  position: relative;
+  top: 20px;
+  left: 40px;
+
+  height: 350px;
+}
+
+.whyHasntItBeenSolved{
+  position: relative;
+  top: -1600px;
+  left: 20px;
+
+}
+
+#factThree{
+  border: 1px solid black;
+  box-shadow: -4px 2px 1px #222222;
+  background-color: white;
+  /* text-shadow: black 0px 0px 10px; */
+  position: relative;
+
+}
+
+.anxietyTriggers h1{
+  text-align: center;
+  color: red;
+  text-decoration: underline;
+}
+
+#noStructure{
+  height: 500px;
+  position: relative;
+  left: 100px;
+  top: 0px;
+}
+
+.whyHasntItBeenSolved h3{
+  line-height: 4.5em;
+}
+
+.whyHasntItBeenSolve img{
+
+}
+
+#butlerOne{
+  position: relative;
+  height: 500px;
+  top: 10px;
+
+}
+
+#meaningForYouH1{
+  position: relative;
+  top: -1500px;
+  text-align: center;
+  color: red;
+}
+
+.whatsPossibleNow h1{
+  position: relative;
+  top: -1500px;
+  text-align: center;
+  color: red;
+
+}
+
+.whatsPossibleNow h3{
+  line-height: 5.5rem;
+  position: relative;
+  top: -1500px;
+
+}
+
+#travelH3{
+  text-align: right;
+  position: relative;
+  top: -1500px;
+  left: 50px;
+}
+
+#travelPic{
+  height: 350px;
+  position: relative;
+  top: -1500px;
+  left: 300px;
+}
+
+#datingH3{
+  position: relative;
+  top: -1500px;
+
+}
+
+#datingPic{
+  position: relative;
+  height: 400px;
+  top: -1500px;
+}
+
+#standUpH3{
+  position: relative;
+  top: -1700px;
+  left: 265px;
+
+}
+
+#standUpPic{
+  position: relative;
+  height: 400px;
+  top: -1700px;
+  left: 265px;
+
+}
+
+#sayNoH3{
+  position: relative;
+  top: -1660px;
+
+}
+
+#sayNoPic{
+  position: relative;
+  height: 450px;
+  top: -1650px;
+
+}
+
+#relaxedGirlH3{
+ position: relative;
+ top: -2000px;
+ left: 380px;
+}
+
+#relaxedGirlPic{
+  position: relative;
+  height: 300px;
+  top: -2000px;
+  left: 400px;
+}
+
+#programTailored{
+  position: relative;
+  top: -1950px;
+  text-decoration: underline;
+}
+
+.featuresAndBenefits{
+  position: relative;
+  top: -1950px;
+  border: 1px solid black;
+  box-shadow: -6px 2px 1px #222222;
+  background-color: white;
+  /* text-shadow: blue 0px 0px 10px; */
+}
+
+.featuresAndBenefits h3{
+  line-height: 4.5rem;
+  /* height: 300px;
+  width: 300px;
+  border: 1px solid black;
+ */
+}
+
+.thisIsWhatYouGet{
+  /* line-height: 2.5rem;
+
+  text-align: center;
+  text-decoration: underline; */
+  position: relative;
+  top: -1880px;
+  line-height: 8.5rem;
+  border: 1px solid black;
+  box-shadow: -6px 2px 1px #222222;
+  background-color: white;
+}
+
+.thisIsWhatYouGet h1{
+  color: red;
+  text-decoration: underline;
+  text-align: center;
+
+}
+
+span#anxietyAnalysis{
+  position: relative;
+  top: 30px;
+
+}
+
+span#anxietyAnalysis h2{
+ text-decoration: underline;
+
+}
+
+span#anxietyAnalysis p{
+  font-size: 20px;
+  line-height: 4.5rem;
+}
+
+span#anxietyAnalysis li{
+  font-size: 25px;
+  line-height: 4.5rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+span#customizedNutrition{
+  position: relative;
+  top: 40px;
+}
+
+span#customizedNutrition h2{
+ text-decoration: underline;
+
+}
+
+span#customizedNutrition p{
+  font-size: 20px;
+  line-height: 4.5rem;
+}
+
+span#customizedNutrition li{
+  font-size: 25px;
+  line-height: 4.5rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+span#trainingPractice{
+  position: relative;
+  top: 40px;
+}
+
+span#trainingPractice h2{
+ text-decoration: underline;
+
+}
+
+span#trainingPractice p{
+  font-size: 20px;
+  line-height: 4.5rem;
+}
+
+span#trainingPractice li{
+  font-size: 25px;
+  line-height: 4.5rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+span#privateFBGroup{
+  position: relative;
+  top: 140px;
+
+}
+
+span#privateFBGroup h2{
+  position: relative;
+  top: 0px;
+  text-decoration: underline;
+
+}
+
+span#privateFBGroup p{
+  font-size: 20px;
+  line-height: 6.5rem;
+}
+
+/* #faceBookPic{
+ height: 100px;
+ position: relative;
+ left: 400px;
+ top: -2400px;
+}
+
+#instaGramPic{
+ height: 100px;
+ position: relative;
+ left: 100px;
+ top: -1750px;
+} */
+
+#socialMediaPics{
+  position: relative;
+  top: -3200px;
+  left: 600px;
+}
+
+#faceBookPic{
+  height: 50px;
+}
+
+#instaGramPic{
+  height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.programIntro{
+  height: 250px;
+  /* max-width: 100%; */
   border: 1px solid black;
   position: relative;
-  left: -200px;
-  top: -280px;
+  top: -500px;
+  margin: 0;
+  padding: 0;
+  /* background-color: #E7BE; */
+  /* background-color: #ABBDF9; */
+}
+
+.programIntro h3{
+  line-height: 2.5em;
+  position: relative;
+  left: 0px;
+
+}
+
+.featuresBenefits{
+  height: 400px;
+  width: 500px;
+  border: 1px solid black;
+  box-shadow: -4px 2px 1px #222222;
+  background-color: white;
+  text-shadow: blue 0px 0px 10px;
+
+
 }
 
 /*
