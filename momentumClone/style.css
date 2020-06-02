@@ -14,7 +14,12 @@
 }
 
 #time{
+ /* position: relative; */
  font-size: 8vh;
+ display: inline-block;
+ margin:0 auto;
+ text-align: center;
+ /* width:100px; */
 
 
 }
