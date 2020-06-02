@@ -7,7 +7,7 @@ const time = document.getElementById('time')
 function setTime(){
   let today = new Date()
   let hours = today.getHours()
-  let minutes = 4
+  let minutes = today.getMinutes()
   let seconds = today.getSeconds()
 
   if(seconds < 9){
@@ -23,15 +23,15 @@ function setTime(){
   time.textContent = `${hours} ${minutes} ${seconds}`
 
 
-
-
-
   console.log(minutes)
   console.log(today)
 
 }
 
 setInterval(setTime, 1000)
+
+
+
 
 
 
