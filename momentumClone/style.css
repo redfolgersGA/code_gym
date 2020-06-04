@@ -26,4 +26,13 @@
 
 }
 
+#quote{
+  position: relative;
+  font-family: 'Indie Flower', cursive;
+  font-size: 18px;
+  text-align: center;
+  top: -50px;
+
+}
+
 
