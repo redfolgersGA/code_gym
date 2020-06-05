@@ -1,0 +1,14 @@
+{
+  "name": "momentumclone",
+  "version": "1.0.0",
+  "description": "momentumclone",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "em",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
