@@ -26,17 +26,10 @@ $.ajax({
   success: function(data){
     console.log(data.contents.quotes[0].quote)
     pTagForQuote.text(data.contents.quotes[0].quote)
-
-    // if(data.quote.length < 105){
-    //   pTagForQuote.text(data.quote)
-
-    // } else{
-    //   console.log("more than 105")
-    // }
-
-    // console.log(data.quote.length)
   }
 })
+
+
 
 function setTime(){
   let today = new Date()
@@ -68,21 +61,27 @@ nameButton.on("click", captureName)
 function captureName(e){
   e.preventDefault()
   let today = new Date()
+  let inputNameTag = $('input#inputName')
+  let submitNameButton = $('button#submitName')
   let nameInputValue = nameInput.val()
 
   if(nameInputValue === ""){
     console.log('its empty dude')
-  } else {
+  } else if(nameInputValue !== "" && today.toLocaleString("en-US").includes('AM')){
     console.log(nameInputValue)
-
+    inputNameTag.hide()
+    submitNameButton.hide()
+    greetingSpan.text("Good morning,")
+    spanFirstName.text(nameInputValue + ".")
+  } else if(nameInputValue !== "" && today.toLocaleString("en-US").includes('PM')){
+    inputNameTag.hide()
+    submitNameButton.hide()
+    greetingSpan.text("Good evening,")
     spanFirstName.text(nameInputValue)
   }
 
-  if(today.toLocaleString("en-US").includes('AM')){
-   greetingSpan.text("Good Morning")
-    } else {
-      greetingSpan.text("Good Evening")
-    }
+
+
 }
 
 focusButton.on('click', captureFocus)
