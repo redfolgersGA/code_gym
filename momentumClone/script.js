@@ -13,6 +13,10 @@ let focusSpan = $('span#focus')
 let inputFocus = $('input#inputFocus')
 let focusButton = $('button#submitFocus')
 
+let todoDiv = $('div.showTodo')
+let focusLabelTag = $('label#focusLabel')
+
+
 
 
 $.ajax({
@@ -93,6 +97,24 @@ function captureFocus(e){
   focusSpan.hide()
   inputFocus.hide()
   focusButton.hide()
+
+  todoDiv.css('display', 'inline-block')
+
+  focusLabelTag.text(focusCaptured)
+
+
+
+  $('input[type="checkbox"]'). click(function(){
+if($(this).prop("checked") == true){
+
+  focusLabelTag.css('text-decoration', 'line-through')
+console.log("Checkbox is checked." );
+} else if($(this).prop("checked") == false){
+  focusLabelTag.css("text-decoration", "")
+}
+
+})
+
 
 
 
