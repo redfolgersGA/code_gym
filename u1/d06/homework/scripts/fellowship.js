@@ -57,7 +57,7 @@ var makeHobbits = function(){
     liForHobbits.textContent = hobbits[i]
 
     ulForTheShire.appendChild(liForHobbits)
-    console.log(ulForTheShire)
+
   }
 }
 
@@ -98,6 +98,50 @@ let makeBuddies = () => {
 
 makeBuddies()
 
+
+let beautifulStranger = () => {
+  let allHobbits = document.querySelectorAll('.hobbit')
+  let rivendell = document.querySelectorAll('article')[1]
+
+  for(let i=0;i<allHobbits.length;i++){
+    rivendell.appendChild(allHobbits[i])
+
+
+  }
+
+}
+
+beautifulStranger()
+
+let forgeTheFellowShip = () =>{
+  let rivendell = document.querySelectorAll('article')[1]
+  let allMembers = document.querySelectorAll('li')
+
+  let theFellowShipDiv = document.createElement('div')
+  theFellowShipDiv.setAttribute('id', 'the-fellowship')
+  rivendell.appendChild(theFellowShipDiv)
+
+  for(let i=0;i<allMembers.length;i++){
+    if(allMembers[i].classList[0] === undefined){
+      allMembers[i].setAttribute('class', 'buddy')
+    }
+
+    theFellowShipDiv.appendChild(allMembers[i])
+
+    alert(`${allMembers[i].textContent} has joined the party`)
+
+
+
+  }
+
+
+}
+
+forgeTheFellowShip()
+
+let theBalrog = () => {
+
+}
 
 
 
