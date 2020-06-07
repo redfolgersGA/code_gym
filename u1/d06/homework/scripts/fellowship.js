@@ -45,6 +45,59 @@ var makeMiddleEarth = function(){
 
 makeMiddleEarth()
 
+var makeHobbits = function(){
+  var theShire = document.querySelector('article')
+  var ulForTheShire = document.createElement('ul')
+
+  theShire.appendChild(ulForTheShire)
+
+  for(var i=0;i<hobbits.length;i++){
+    var liForHobbits = document.createElement('li')
+    liForHobbits.setAttribute('class', 'hobbit')
+    liForHobbits.textContent = hobbits[i]
+
+    ulForTheShire.appendChild(liForHobbits)
+    console.log(ulForTheShire)
+  }
+}
+
+makeHobbits()
+
+var keepItSecretKeepItSafe = function(){
+  var divForRing = document.createElement('div')
+  divForRing.setAttribute('id', 'the-ring')
+  divForRing.setAttribute('class', 'magic-imbued-jewelry')
+  console.log(divForRing)
+
+  var frodo = document.querySelectorAll('.hobbit')[0]
+  frodo.appendChild(divForRing)
+
+
+}
+
+keepItSecretKeepItSafe()
+
+let makeBuddies = () => {
+  let rivendell = document.querySelectorAll('article')[1]
+  let asideTagForBuddies = document.createElement('aside')
+  let ulTagForBuddies = document.createElement('ul')
+
+  asideTagForBuddies.appendChild(ulTagForBuddies)
+
+  for(let i=0;i<buddies.length;i++){
+    let liTagForBuddy = document.createElement('li')
+    liTagForBuddy.textContent = buddies[i]
+
+    asideTagForBuddies.appendChild(liTagForBuddy)
+  }
+
+  rivendell.appendChild(asideTagForBuddies)
+
+
+}
+
+makeBuddies()
+
 
 
 
