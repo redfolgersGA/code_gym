@@ -128,7 +128,7 @@ let forgeTheFellowShip = () =>{
 
     theFellowShipDiv.appendChild(allMembers[i])
 
-    alert(`${allMembers[i].textContent} has joined the party`)
+    // alert(`${allMembers[i].textContent} has joined the party`)
 
 
 
@@ -139,9 +139,35 @@ let forgeTheFellowShip = () =>{
 
 forgeTheFellowShip()
 
-let theBalrog = () => {
+
+
+// let theBalrog = () => {
+//   let allMembers = document.querySelectorAll('li')
+//   let gandalf = allMembers[0];
+
+//   gandalf.textContent = "Gandalf the White"
+
+// }
+
+var theBalrog = function(){
+  var gandalf;
+  var allMembers = document.querySelectorAll('li')
+
+  for(var i=0;i<allMembers.length;i++){
+    if(allMembers[i].textContent === 'Gandalf the Grey'){
+      allMembers[i].textContent = 'Gandalf the White'
+      allMembers[i].style.background = 'white'
+      allMembers[i].style.border = '5px solid black'
+
+
+    }
+
+  }
+  console.log(gandalf)
 
 }
+
+theBalrog()
 
 
 
