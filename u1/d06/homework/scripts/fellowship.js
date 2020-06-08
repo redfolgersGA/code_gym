@@ -149,11 +149,11 @@ forgeTheFellowShip()
 
 // }
 
-var theBalrog = function(){
-  var gandalf;
-  var allMembers = document.querySelectorAll('li')
+let theBalrog = () =>{
+  let gandalf;
+  let allMembers = document.querySelectorAll('li')
 
-  for(var i=0;i<allMembers.length;i++){
+  for(let i=0;i<allMembers.length;i++){
     if(allMembers[i].textContent === 'Gandalf the Grey'){
       allMembers[i].textContent = 'Gandalf the White'
       allMembers[i].style.background = 'white'
@@ -163,13 +163,66 @@ var theBalrog = function(){
     }
 
   }
-  console.log(gandalf)
+
 
 }
 
 theBalrog()
 
+let hornOfGondor = () => {
+  alert('the horn of gondor has been blown')
+  let allMembers = document.querySelectorAll('li')
+  let boromir;
 
+  for(let i=0;i<allMembers.length;i++){
+    if(allMembers[i].textContent === 'Boromir'){
+      allMembers[i].style.textDecoration = 'line-through'
+      boromir = allMembers[i]
+    }
+  }
+  console.log(boromir)
+
+  setTimeout(function(){
+    boromir.remove()
+
+  },2000)
+}
+
+hornOfGondor()
+
+let itsDangerousToGoAlone = () => {
+  let frodo = document.querySelectorAll('li.hobbit')[0];
+  let sam = document.querySelectorAll('li.hobbit')[1];
+  let mordor = document.querySelectorAll('article')[2];
+
+  let mountDoomDiv = document.createElement('div')
+  mountDoomDiv.setAttribute('id', 'mount-doom')
+  mordor.appendChild(mountDoomDiv)
+
+
+
+  mordor.appendChild(frodo)
+  mordor.appendChild(sam)
+
+
+
+  // console.log(frodo)
+  // console.log(sam)
+
+ }
+
+itsDangerousToGoAlone()
+
+let weWantsIt = () => {
+  let gollumDiv = document.createElement('div')
+  gollumDiv.setAttribute('id', 'gollum')
+
+  let mordor = document.querySelectorAll('article')[2]
+
+  mordor.appendChild(gollumDiv)
+}
+
+weWantsIt()
 
 
 
