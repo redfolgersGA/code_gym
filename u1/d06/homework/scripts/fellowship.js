@@ -218,11 +218,41 @@ let weWantsIt = () => {
   gollumDiv.setAttribute('id', 'gollum')
 
   let mordor = document.querySelectorAll('article')[2]
-
   mordor.appendChild(gollumDiv)
+
+  let theRing = document.querySelector('.magic-imbued-jewelry')
+  gollumDiv.appendChild(theRing)
+
+  let mountDoom = document.querySelector('#mount-doom')
+  mountDoom.appendChild(gollumDiv)
 }
 
 weWantsIt()
+
+let thereAndBackAgain = () => {
+  let gollumDiv = document.querySelector('#gollum')
+  let theRing = document.querySelector('.magic-imbued-jewelry')
+  let buddies = document.querySelectorAll('.buddy')
+  let theShire = document.querySelectorAll('article')[0]
+  let hobbits = document.querySelectorAll('.hobbit')
+
+  for(let i=0;i<buddies.length;i++){
+    buddies[i].remove()
+  }
+
+  gollumDiv.remove()
+  theRing.remove()
+
+  for(let i=0;i<hobbits.length;i++){
+    theShire.appendChild(hobbits[i])
+
+
+  }
+
+}
+
+thereAndBackAgain()
+
 
 
 
