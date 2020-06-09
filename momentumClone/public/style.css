@@ -4,6 +4,15 @@
     padding: 0;
 }
 
+body{
+  width: 500px;
+  height: 500px;
+  background: url('http://upload.wikimedia.org/wikipedia/commons/1/1a/Bachalpseeflowers.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
 
 .main{
   display: flex;
@@ -21,9 +30,20 @@
  text-align: center;
  font-family: 'Indie Flower', cursive;
  font-size: 91px;
+ color: #ffff;
  /* width:100px; */
+}
 
+#firstName{
+  color: #ffff;
+}
 
+#greeting{
+  color: #ffff;
+}
+
+#focus{
+  color: #ffff;
 }
 
 #quote{
@@ -32,6 +52,7 @@
   font-size: 18px;
   text-align: center;
   top: -50px;
+  color: #ffff;
 
 }
 

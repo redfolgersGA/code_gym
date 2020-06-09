@@ -30,6 +30,20 @@ $.ajax({
 
 
 
+$.ajax({
+  type: "GET",
+  url: "https://quotes.rest/qod",
+  method: "GET",
+  success: function(data){
+    console.log(data.contents.quotes[0].quote)
+    pTagForQuote.text(data.contents.quotes[0].quote)
+  }
+})
+
+
+
+
+
 function setTime(){
   let today = new Date()
   let hours = today.getHours()
@@ -71,6 +85,7 @@ function captureName(e){
     inputNameTag.hide()
     submitNameButton.hide()
     greetingSpan.text("Good morning,")
+    console.log(greetingSpan)
     spanFirstName.text(nameInputValue + ".")
   } else if(nameInputValue !== "" && today.toLocaleString("en-US").includes('PM')){
     inputNameTag.hide()
@@ -78,6 +93,22 @@ function captureName(e){
     greetingSpan.text("Good evening,")
     spanFirstName.text(nameInputValue)
   }
+
+//   const data = {
+//   name: nameInputValue,
+
+// }
+// const options = {
+//   method: 'POST',
+//   headers: {
+//     'Content-Type': 'application/json'
+//   },
+//   body: JSON.stringify(data)
+// }
+
+// fetch('/api', options).then(response =>{
+//   console.log(response)
+// })
 
 
 

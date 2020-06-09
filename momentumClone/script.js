@@ -11,14 +11,27 @@ const express = require('express');
 const app = express()
 require('dotenv').config()
 
-console.log(process.env, "is process.env")
+// console.log(process.env, "is process.env")
 
 app.listen(8080, () => console.log('listening at port 8080'))
 
 app.use(express.static('public'))
+app.use(express.json({limit: '1mb'}))
 
 
 console.log("script loaded")
+
+// app.post('/api', (request, response) => {
+//   console.log('i got a request')
+//   console.log(request.body, 'is request');
+//   const data = request.body;
+//   response.json({
+//     status: "success",
+//     name: data
+
+
+//   })
+// })
 
 
 
