@@ -1,8 +1,57 @@
-p {
-  color: red;
 
-}
 
 img {
   width: 200px;
 }
+
+.queryContainer{
+/*   background: yellow;
+  height: 900px;
+  width: 900px;
+  border-radius: 50%; */
+}
+
+.mainContain{
+  border: 1px solid pink;
+
+}
+
+#forecast{
+  font-size: 12px;
+}
+
+#spanForTempNumb{
+  font-size: 50px;
+}
+
+.changeTemp{
+  height: 200px;
+  width: 200px;
+  border: 1px solid red;
+}
+.daysWeather{
+  border: 1px solid black;
+  display: inline-block;
+  width: 123px;
+}
+
+.hiTempOfDay,
+.loTempOfDay{
+  display: inline-block;
+
+}
+
+.weatherPic{
+  position: relative;
+  left: -30px;
+  width: 100px;
+}
+
+
+
+
+
+
+
+
+
