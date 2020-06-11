@@ -58,14 +58,19 @@ weatherForm.on("submit", function(e){
         let spanTagForHiForecast = $('<span class="hiNumbOfDay"></span>')
 
         let pTagsForLoForecast = $('<p class="loTempOfDay"></p>')
+        let spanTagForLoForecast = $('<span class="loNumbOfDay"></span>')
 
         pTagsForHiForecast.text(`Hi `)
         spanTagForHiForecast.text(`${Math.floor(convertKelvinToFaren(data.list[i].temp.max))}`)
-        pTagsForLoForecast.text(`Lo ${Math.floor(convertKelvinToFaren(data.list[i].temp.min))}`)
+
+        pTagsForLoForecast.text(`Lo `)
+        spanTagForLoForecast.text(`${Math.floor(convertKelvinToFaren(data.list[i].temp.min))}`)
 
         divForWeatherOfDay.append(pTagsForHiForecast)
         divForWeatherOfDay.append(spanTagForHiForecast)
+
         divForWeatherOfDay.append(pTagsForLoForecast)
+        divForWeatherOfDay.append(spanTagForLoForecast)
 
         body.append(divForWeatherOfDay)
 
@@ -91,16 +96,35 @@ weatherForm.on("submit", function(e){
 
       // logic for celsius and farenheit conversion buttons
       let isCelsius = false;
+      let isDailyCels = false;
 
       butnToCels.on('click', function(){
 
         if(isCelsius === false){
           let spanForTempNumb = $('#spanForTempNumb')
+          let spanForHiOfDay = $('.hiNumbOfDay')
+          let spanForLoOfDay = $('.loNumbOfDay')
+
           let celsiusNow = Math.ceil(convertFarenToCels(spanForTempNumb.text()))
           console.log(celsiusNow)
 
           spanForTempNumb.text(celsiusNow)
-          console.log(forecastPTag)
+
+          // maybe put this variable accessible to my butnToFaren
+
+          if (isDailyCels === false){
+            for(let i=0;i<spanForHiOfDay.length;i++){
+            let tempForDay = spanForHiOfDay.eq(i).text()
+            let farenToCelsForDay = Math.ceil(convertFarenToCels(spanForHiOfDay.eq(i).text()))
+
+            spanForHiOfDay.eq(i).text(farenToCelsForDay)
+            console.log(farenToCelsForDay)
+            }
+          isDailyCels = true;
+
+          }
+
+
           isCelsius = true;
 
         }
@@ -111,10 +135,20 @@ weatherForm.on("submit", function(e){
 
         if(isCelsius === true){
           let spanForTempNumb = $('#spanForTempNumb')
+          let spanForHiOfDay = $('.hiNumbOfDay')
+          let spanForLoOfDay = $('.loNumbOfDay')
+
           let farenheitNow = Math.floor(convertCelsiusToFarenheit(spanForTempNumb.text()))
           console.log(farenheitNow)
 
           spanForTempNumb.text(farenheitNow)
+
+          for(let i=0;i<spanForHiOfDay.length;i++){
+            console.log(spanForHiOfDay.eq(i))
+          }
+
+
+
           isCelsius = false;
         }
 
