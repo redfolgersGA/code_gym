@@ -31,14 +31,98 @@ function inputWeatherEmoji(data){
   }
 }
 
-function logCityPlaceAndTime(){
-  let dateToday = new Date();
-  console.log(dateToday.getUTCDate())
+function logCityLocation(data){
+  $('#locationDescrip').remove()
+  let divForDescription = $('<div id="locationDescrip" class="container"></div>')
+  let cityNameH2Tag = $('<h2 id="cityName"></h2>')
+  let cityCountryH2Tag = $('<h2 id="cityCountry"></h2>')
+  let weatherDescriptPTag = $('<p id="weatherIsNow"></p>')
 
+  let cityName = data.city.name
+  let cityCountry = data.city.country
+  let weatherDescript = data.list[0].weather[0].description
+
+  cityNameH2Tag.text(cityName)
+  cityCountryH2Tag.text(cityCountry)
+  weatherDescriptPTag.text(weatherDescript)
+
+  divForDescription.append(cityNameH2Tag)
+  divForDescription.append(cityCountryH2Tag)
+  divForDescription.append(weatherDescript)
+
+  body.append(divForDescription)
+
+  console.log(weatherDescript)
 
 }
 
-logCityPlaceAndTime()
+// REACH GOAL: this function will display time based on time zone in weather location
+// can maybe be done by referencing coordinates long and lat
+function setTime(){
+  let today = new Date()
+  let hours = today.getHours()
+  let minutes = today.getMinutes()
+  let seconds = today.getSeconds()
+
+  if(seconds <= 9){
+    seconds = "0" + seconds;
+  }
+
+  if (minutes <= 9){
+    minutes = "0" + minutes
+  }
+
+
+
+  time.textContent = `${hours} ${minutes} ${seconds}`
+
+}
+
+// setInterval(setTime, 0)
+
+function givesDayOfWeekToWeatherDivs() {
+  let today = new Date()
+  // let dayToday = today.getDay()
+
+
+  let dayOfWeekDivs = $('.daysWeather')
+
+  let sevenDaysArr = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat',]
+
+  // let dayOfWeek = sevenDaysArr[dayToday]
+
+  for(let i=0;i<dayOfWeekDivs.length;i++){
+    let dayToday = today.getDay()
+    let spanForDayOfWeek = $('<span class="weekDay"></span>')
+    dayOfWeekDivs.eq(i).append(spanForDayOfWeek)
+
+    spanForDayOfWeek.text(sevenDaysArr[dayToday])
+    dayToday++
+    console.log(dayToday)
+
+  }
+
+  let spanToday = $('.weekDay')
+  console.log(spanToday)
+
+//   if(dayToday === 5){
+//     for(let i=0;i<dayOfWeekDivs.length;i++){
+//       let spanForDayOfWeek = $('<span class="weekDay"></span>')
+//       dayOfWeekDivs.eq(i).append(spanForDayOfWeek)
+
+//       spanForDayOfWeek.text(tenDaysArr[5])
+
+//       // spanForDayOfWeek.text(tenDaysArr[i])
+//     }
+//     console.log('Fri')
+//   } else if(dayToday === 1){
+//     console.log('Mon')
+//   }
+
+ }
+
+
+
 
 
 
@@ -56,6 +140,7 @@ weatherForm.on("submit", function(e){
     type: "GET",
     url: "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&cnt=10&appid=" + apiKey,
     success: function(data){
+      logCityLocation(data)
 
       let mainContainer = $('.mainContain')
 
@@ -85,6 +170,8 @@ weatherForm.on("submit", function(e){
 
       }
       inputWeatherEmoji(data)
+      givesDayOfWeekToWeatherDivs()
+
 
 
       let farenheitTemp = Math.floor(convertKelvinToFaren(data.list[0].feels_like.day))
