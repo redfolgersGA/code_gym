@@ -31,6 +31,15 @@ function inputWeatherEmoji(data){
   }
 }
 
+function logCityPlaceAndTime(){
+  let dateToday = new Date();
+  console.log(dateToday.getUTCDate())
+
+
+}
+
+logCityPlaceAndTime()
+
 
 
 weatherForm.on("submit", function(e){
@@ -106,20 +115,26 @@ weatherForm.on("submit", function(e){
           let spanForLoOfDay = $('.loNumbOfDay')
 
           let celsiusNow = Math.ceil(convertFarenToCels(spanForTempNumb.text()))
-          console.log(celsiusNow)
+
 
           spanForTempNumb.text(celsiusNow)
 
           // maybe put this variable accessible to my butnToFaren
 
           if (isDailyCels === false){
-            for(let i=0;i<spanForHiOfDay.length;i++){
-            let tempForDay = spanForHiOfDay.eq(i).text()
-            let farenToCelsForDay = Math.ceil(convertFarenToCels(spanForHiOfDay.eq(i).text()))
 
-            spanForHiOfDay.eq(i).text(farenToCelsForDay)
-            console.log(farenToCelsForDay)
+            for(let i=0;i<spanForHiOfDay.length;i++){
+            let hiTempForDay = spanForHiOfDay.eq(i).text()
+            let loTempForDay = spanForLoOfDay.eq(i).text()
+
+            let farenToCelsHiForDay = Math.ceil(convertFarenToCels(hiTempForDay))
+            let farenToCelsLoForDay = Math.ceil(convertFarenToCels(loTempForDay))
+
+            spanForHiOfDay.eq(i).text(farenToCelsHiForDay)
+            spanForLoOfDay.eq(i).text(farenToCelsLoForDay)
+
             }
+
           isDailyCels = true;
 
           }
@@ -139,18 +154,29 @@ weatherForm.on("submit", function(e){
           let spanForLoOfDay = $('.loNumbOfDay')
 
           let farenheitNow = Math.floor(convertCelsiusToFarenheit(spanForTempNumb.text()))
-          console.log(farenheitNow)
+
 
           spanForTempNumb.text(farenheitNow)
 
           for(let i=0;i<spanForHiOfDay.length;i++){
-            console.log(spanForHiOfDay.eq(i))
+            let hiTempOfDay = spanForHiOfDay.eq(i).text()
+            let loTempOfDay = spanForLoOfDay.eq(i).text()
+
+            let celsToFarenHiForDay = Math.floor(convertCelsiusToFarenheit(hiTempOfDay))
+            let celsToFarenLoForDay = Math.floor(convertCelsiusToFarenheit(loTempOfDay))
+
+
+
+            spanForHiOfDay.eq(i).text(celsToFarenHiForDay)
+            spanForLoOfDay.eq(i).text(celsToFarenLoForDay)
           }
 
 
 
           isCelsius = false;
         }
+
+        isDailyCels = false;
 
 
       })
