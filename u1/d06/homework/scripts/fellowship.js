@@ -24,234 +24,299 @@ var lands = ['The Shire', 'Rivendell', 'Mordor'];
 var body = document.querySelector('body')
 
 
-var makeMiddleEarth = function(){
-  var sectionTag = document.createElement('section')
-  sectionTag.setAttribute('id', 'middle-earth')
-  console.log(sectionTag)
+var makeMiddleEarth = function() {
+  var middleEarthSectionTag = document.createElement('section')
+  middleEarthSectionTag.setAttribute('id', 'middle-earth')
 
-  for(var i=0; i<lands.length;i++){
-   var articleTagForLand = document.createElement('article')
-   var h1TagForArticle = document.createElement('h1')
-   // var body = document.querySelector('body')
+  for(var i=0;i<lands.length;i++){
+    var articleTagForLand = document.createElement('article')
+    var h1ForLand = document.createElement('h1')
 
-   articleTagForLand.appendChild(h1TagForArticle)
+    h1ForLand.textContent = lands[i]
 
-   h1TagForArticle.textContent =lands[i]
-   console.log(articleTagForLand)
-   sectionTag.appendChild(articleTagForLand)
+    articleTagForLand.appendChild(h1ForLand)
+    middleEarthSectionTag.appendChild(articleTagForLand)
   }
-  body.appendChild(sectionTag)
+
+  body.appendChild(middleEarthSectionTag)
 }
 
 makeMiddleEarth()
 
 var makeHobbits = function(){
-  var theShire = document.querySelector('article')
-  var ulForTheShire = document.createElement('ul')
+  var theShire = document.querySelectorAll('article')[0]
 
-  theShire.appendChild(ulForTheShire)
+  var ulForHobbits = document.createElement('ul')
+  theShire.appendChild(ulForHobbits)
 
   for(var i=0;i<hobbits.length;i++){
-    var liForHobbits = document.createElement('li')
-    liForHobbits.setAttribute('class', 'hobbit')
-    liForHobbits.textContent = hobbits[i]
+    var liForHobbit = document.createElement('li')
 
-    ulForTheShire.appendChild(liForHobbits)
+    liForHobbit.textContent = hobbits[i]
+    liForHobbit.setAttribute('class', 'hobbit')
 
+    ulForHobbits.appendChild(liForHobbit)
   }
 }
 
 makeHobbits()
 
-var keepItSecretKeepItSafe = function(){
+var keepItSecretKeepItSafe = function() {
   var divForRing = document.createElement('div')
   divForRing.setAttribute('id', 'the-ring')
   divForRing.setAttribute('class', 'magic-imbued-jewelry')
-  console.log(divForRing)
 
   var frodo = document.querySelectorAll('.hobbit')[0]
   frodo.appendChild(divForRing)
-
-
 }
 
 keepItSecretKeepItSafe()
 
-let makeBuddies = () => {
-  let rivendell = document.querySelectorAll('article')[1]
-  let asideTagForBuddies = document.createElement('aside')
-  let ulTagForBuddies = document.createElement('ul')
-
-  asideTagForBuddies.appendChild(ulTagForBuddies)
-
-  for(let i=0;i<buddies.length;i++){
-    let liTagForBuddy = document.createElement('li')
-    liTagForBuddy.textContent = buddies[i]
-
-    asideTagForBuddies.appendChild(liTagForBuddy)
-  }
-
-  rivendell.appendChild(asideTagForBuddies)
-
-
-}
-
-makeBuddies()
-
-
-let beautifulStranger = () => {
-  let allHobbits = document.querySelectorAll('.hobbit')
-  let rivendell = document.querySelectorAll('article')[1]
-
-  for(let i=0;i<allHobbits.length;i++){
-    rivendell.appendChild(allHobbits[i])
-
-
-  }
-
-}
-
-beautifulStranger()
-
-let forgeTheFellowShip = () =>{
-  let rivendell = document.querySelectorAll('article')[1]
-  let allMembers = document.querySelectorAll('li')
-
-  let theFellowShipDiv = document.createElement('div')
-  theFellowShipDiv.setAttribute('id', 'the-fellowship')
-  rivendell.appendChild(theFellowShipDiv)
-
-  for(let i=0;i<allMembers.length;i++){
-    if(allMembers[i].classList[0] === undefined){
-      allMembers[i].setAttribute('class', 'buddy')
-    }
-
-    theFellowShipDiv.appendChild(allMembers[i])
-
-    // alert(`${allMembers[i].textContent} has joined the party`)
 
 
 
-  }
-
-
-}
-
-forgeTheFellowShip()
 
 
 
-// let theBalrog = () => {
-//   let allMembers = document.querySelectorAll('li')
-//   let gandalf = allMembers[0];
 
-//   gandalf.textContent = "Gandalf the White"
+
+
+
+
+
+
+
+
+
+
+// var makeMiddleEarth = function(){
+//   var sectionTag = document.createElement('section')
+//   sectionTag.setAttribute('id', 'middle-earth')
+//   console.log(sectionTag)
+
+//   for(var i=0; i<lands.length;i++){
+//    var articleTagForLand = document.createElement('article')
+//    var h1TagForArticle = document.createElement('h1')
+//    // var body = document.querySelector('body')
+
+//    articleTagForLand.appendChild(h1TagForArticle)
+
+//    h1TagForArticle.textContent =lands[i]
+//    console.log(articleTagForLand)
+//    sectionTag.appendChild(articleTagForLand)
+//   }
+//   body.appendChild(sectionTag)
+// }
+
+// makeMiddleEarth()
+
+// var makeHobbits = function(){
+//   var theShire = document.querySelector('article')
+//   var ulForTheShire = document.createElement('ul')
+
+//   theShire.appendChild(ulForTheShire)
+
+//   for(var i=0;i<hobbits.length;i++){
+//     var liForHobbits = document.createElement('li')
+//     liForHobbits.setAttribute('class', 'hobbit')
+//     liForHobbits.textContent = hobbits[i]
+
+//     ulForTheShire.appendChild(liForHobbits)
+
+//   }
+// }
+
+// makeHobbits()
+
+// var keepItSecretKeepItSafe = function(){
+//   var divForRing = document.createElement('div')
+//   divForRing.setAttribute('id', 'the-ring')
+//   divForRing.setAttribute('class', 'magic-imbued-jewelry')
+//   console.log(divForRing)
+
+//   var frodo = document.querySelectorAll('.hobbit')[0]
+//   frodo.appendChild(divForRing)
+
 
 // }
 
-let theBalrog = () =>{
-  let gandalf;
-  let allMembers = document.querySelectorAll('li')
+// keepItSecretKeepItSafe()
 
-  for(let i=0;i<allMembers.length;i++){
-    if(allMembers[i].textContent === 'Gandalf the Grey'){
-      allMembers[i].textContent = 'Gandalf the White'
-      allMembers[i].style.background = 'white'
-      allMembers[i].style.border = '5px solid black'
+// let makeBuddies = () => {
+//   let rivendell = document.querySelectorAll('article')[1]
+//   let asideTagForBuddies = document.createElement('aside')
+//   let ulTagForBuddies = document.createElement('ul')
 
+//   asideTagForBuddies.appendChild(ulTagForBuddies)
 
-    }
+//   for(let i=0;i<buddies.length;i++){
+//     let liTagForBuddy = document.createElement('li')
+//     liTagForBuddy.textContent = buddies[i]
 
-  }
+//     asideTagForBuddies.appendChild(liTagForBuddy)
+//   }
 
-
-}
-
-theBalrog()
-
-let hornOfGondor = () => {
-  alert('the horn of gondor has been blown')
-  let allMembers = document.querySelectorAll('li')
-  let boromir;
-
-  for(let i=0;i<allMembers.length;i++){
-    if(allMembers[i].textContent === 'Boromir'){
-      allMembers[i].style.textDecoration = 'line-through'
-      boromir = allMembers[i]
-    }
-  }
-  console.log(boromir)
-
-  setTimeout(function(){
-    boromir.remove()
-
-  },2000)
-}
-
-hornOfGondor()
-
-let itsDangerousToGoAlone = () => {
-  let frodo = document.querySelectorAll('li.hobbit')[0];
-  let sam = document.querySelectorAll('li.hobbit')[1];
-  let mordor = document.querySelectorAll('article')[2];
-
-  let mountDoomDiv = document.createElement('div')
-  mountDoomDiv.setAttribute('id', 'mount-doom')
-  mordor.appendChild(mountDoomDiv)
+//   rivendell.appendChild(asideTagForBuddies)
 
 
+// }
 
-  mordor.appendChild(frodo)
-  mordor.appendChild(sam)
-
-
-
-  // console.log(frodo)
-  // console.log(sam)
-
- }
-
-itsDangerousToGoAlone()
-
-let weWantsIt = () => {
-  let gollumDiv = document.createElement('div')
-  gollumDiv.setAttribute('id', 'gollum')
-
-  let mordor = document.querySelectorAll('article')[2]
-  mordor.appendChild(gollumDiv)
-
-  let theRing = document.querySelector('.magic-imbued-jewelry')
-  gollumDiv.appendChild(theRing)
-
-  let mountDoom = document.querySelector('#mount-doom')
-  mountDoom.appendChild(gollumDiv)
-}
-
-weWantsIt()
-
-let thereAndBackAgain = () => {
-  let gollumDiv = document.querySelector('#gollum')
-  let theRing = document.querySelector('.magic-imbued-jewelry')
-  let buddies = document.querySelectorAll('.buddy')
-  let theShire = document.querySelectorAll('article')[0]
-  let hobbits = document.querySelectorAll('.hobbit')
-
-  for(let i=0;i<buddies.length;i++){
-    buddies[i].remove()
-  }
-
-  gollumDiv.remove()
-  theRing.remove()
-
-  for(let i=0;i<hobbits.length;i++){
-    theShire.appendChild(hobbits[i])
+// makeBuddies()
 
 
-  }
+// let beautifulStranger = () => {
+//   let allHobbits = document.querySelectorAll('.hobbit')
+//   let rivendell = document.querySelectorAll('article')[1]
 
-}
+//   for(let i=0;i<allHobbits.length;i++){
+//     rivendell.appendChild(allHobbits[i])
 
-thereAndBackAgain()
+
+//   }
+
+// }
+
+// beautifulStranger()
+
+// let forgeTheFellowShip = () =>{
+//   let rivendell = document.querySelectorAll('article')[1]
+//   let allMembers = document.querySelectorAll('li')
+
+//   let theFellowShipDiv = document.createElement('div')
+//   theFellowShipDiv.setAttribute('id', 'the-fellowship')
+//   rivendell.appendChild(theFellowShipDiv)
+
+//   for(let i=0;i<allMembers.length;i++){
+//     if(allMembers[i].classList[0] === undefined){
+//       allMembers[i].setAttribute('class', 'buddy')
+//     }
+
+//     theFellowShipDiv.appendChild(allMembers[i])
+
+//     // alert(`${allMembers[i].textContent} has joined the party`)
+
+
+
+//   }
+
+
+// }
+
+// forgeTheFellowShip()
+
+
+
+// // let theBalrog = () => {
+// //   let allMembers = document.querySelectorAll('li')
+// //   let gandalf = allMembers[0];
+
+// //   gandalf.textContent = "Gandalf the White"
+
+// // }
+
+// let theBalrog = () =>{
+//   let gandalf;
+//   let allMembers = document.querySelectorAll('li')
+
+//   for(let i=0;i<allMembers.length;i++){
+//     if(allMembers[i].textContent === 'Gandalf the Grey'){
+//       allMembers[i].textContent = 'Gandalf the White'
+//       allMembers[i].style.background = 'white'
+//       allMembers[i].style.border = '5px solid black'
+
+
+//     }
+
+//   }
+
+
+// }
+
+// theBalrog()
+
+// let hornOfGondor = () => {
+//   alert('the horn of gondor has been blown')
+//   let allMembers = document.querySelectorAll('li')
+//   let boromir;
+
+//   for(let i=0;i<allMembers.length;i++){
+//     if(allMembers[i].textContent === 'Boromir'){
+//       allMembers[i].style.textDecoration = 'line-through'
+//       boromir = allMembers[i]
+//     }
+//   }
+//   console.log(boromir)
+
+//   setTimeout(function(){
+//     boromir.remove()
+
+//   },2000)
+// }
+
+// hornOfGondor()
+
+// let itsDangerousToGoAlone = () => {
+//   let frodo = document.querySelectorAll('li.hobbit')[0];
+//   let sam = document.querySelectorAll('li.hobbit')[1];
+//   let mordor = document.querySelectorAll('article')[2];
+
+//   let mountDoomDiv = document.createElement('div')
+//   mountDoomDiv.setAttribute('id', 'mount-doom')
+//   mordor.appendChild(mountDoomDiv)
+
+
+
+//   mordor.appendChild(frodo)
+//   mordor.appendChild(sam)
+
+
+
+//   // console.log(frodo)
+//   // console.log(sam)
+
+//  }
+
+// itsDangerousToGoAlone()
+
+// let weWantsIt = () => {
+//   let gollumDiv = document.createElement('div')
+//   gollumDiv.setAttribute('id', 'gollum')
+
+//   let mordor = document.querySelectorAll('article')[2]
+//   mordor.appendChild(gollumDiv)
+
+//   let theRing = document.querySelector('.magic-imbued-jewelry')
+//   gollumDiv.appendChild(theRing)
+
+//   let mountDoom = document.querySelector('#mount-doom')
+//   mountDoom.appendChild(gollumDiv)
+// }
+
+// weWantsIt()
+
+// let thereAndBackAgain = () => {
+//   let gollumDiv = document.querySelector('#gollum')
+//   let theRing = document.querySelector('.magic-imbued-jewelry')
+//   let buddies = document.querySelectorAll('.buddy')
+//   let theShire = document.querySelectorAll('article')[0]
+//   let hobbits = document.querySelectorAll('.hobbit')
+
+//   for(let i=0;i<buddies.length;i++){
+//     buddies[i].remove()
+//   }
+
+//   gollumDiv.remove()
+//   theRing.remove()
+
+//   for(let i=0;i<hobbits.length;i++){
+//     theShire.appendChild(hobbits[i])
+
+
+//   }
+
+// }
+
+// thereAndBackAgain()
 
 
 
